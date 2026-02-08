@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "fruttita_benefits": {
+      "type": "fruttita-benefits",
+      "blocks": {
+        "benefit_vc": {
+          "type": "benefit",
+          "settings": {
+            "number": "420mg+",
+            "label": "天然维C",
+            "description": "熬夜后提亮气色"
+          }
+        },
+        "benefit_k": {
+          "type": "benefit",
+          "settings": {
+            "number": "380mg+",
+            "label": "高钾",
+            "description": "物理消肿，告别浮肿脸"
+          }
+        },
+        "benefit_na": {
+          "type": "benefit",
+          "settings": {
+            "number": "0mg",
+            "label": "钠",
+            "description": "真·零钠，不锁水"
+          }
+        },
+        "benefit_fiber": {
+          "type": "benefit",
+          "settings": {
+            "number": "10g+",
+            "label": "膳食纤维",
+            "description": "肠道清道夫"
+          }
+        },
+        "benefit_cal": {
+          "type": "benefit",
+          "settings": {
+            "number": "<65kcal",
+            "label": "低卡",
+            "description": "半个苹果的热量"
+          }
+        },
+        "benefit_poly": {
+          "type": "benefit",
+          "settings": {
+            "number": "828mg",
+            "label": "总多酚",
+            "description": "深层抗氧化"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_vc",
+        "benefit_k",
+        "benefit_na",
+        "benefit_fiber",
+        "benefit_cal",
+        "benefit_poly"
+      ],
+      "settings": {
+        "subtitle": "Hexagonal Warrior",
+        "title": "六边形战士，无短板"
+      }
+    },
+    "fruttita_marquee": {
+      "type": "fruttita-marquee",
+      "settings": {
+        "text": "• 0钠消肿 • 高钾排水 • 200%天然VC • 猴面包树原浆 • 0钠消肿 • 高钾排水 • 200%天然VC • 猴面包树原浆",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9",
+        "speed": 20
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "我们的产品",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "fruttita_story": {
+      "type": "fruttita-story",
+      "settings": {
+        "subtitle": "The Tree of Life",
+        "title": "把旷野的干净和野，带进日常",
+        "body": "关注每一个个体的 Well-being。在过度消耗的都市生活中，提供一种 0 负担、能快速回血的天然解决方案。",
+        "btn_text": "了解我们的故事",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "fruttita_comparison": {
+      "type": "fruttita-comparison",
+      "settings": {
+        "subtitle": "The Truth",
+        "title": "不是所有补水都一样",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9",
+        "comp1_name": "椰子水",
+        "comp1_list": "<li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>高钠（容易水肿）</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>维C含量低</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>无膳食纤维</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>含糖量高</li>",
+        "winner_name": "Fruttita Shot",
+        "winner_list": "<li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>0钠，不水肿</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>420mg+ 天然维C</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>10g+ 膳食纤维</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>&lt;65kcal 低卡</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>828mg 总多酚</strong></li>",
+        "btn_text": "选择 Fruttita",
+        "comp2_name": "能量饮料",
+        "comp2_list": "<li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>人工咖啡因</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>高糖高热量</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>添加剂多</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>无天然营养素</li>"
+      }
+    }
+  },
+  "order": [
+    "fruttita_benefits",
+    "fruttita_marquee",
+    "featured_collection",
+    "fruttita_story",
+    "fruttita_comparison"
+  ]
+}

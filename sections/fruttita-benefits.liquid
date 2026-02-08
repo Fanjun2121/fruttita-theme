@@ -1,0 +1,227 @@
+<!--
+  Fruttita Custom Section: Benefits Data Cards
+  "六边形战士" — 6 core nutritional highlights
+-->
+
+<style>
+  .fruttita-benefits-section {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 4rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+  }
+
+  .benefits-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .benefits-subtitle {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .benefits-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .benefit-card {
+    background: rgba(244, 227, 201, 0.08);
+    border: 1px solid rgba(244, 227, 201, 0.12);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    background: rgba(244, 227, 201, 0.14);
+  }
+
+  .benefit-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #D38235;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .benefit-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    color: rgba(244, 227, 201, 0.8);
+  }
+
+  .benefit-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(244, 227, 201, 0.65);
+  }
+
+  @media (max-width: 768px) {
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .benefit-card {
+      padding: 1.5rem 1rem;
+    }
+
+    .benefit-number {
+      font-size: 2rem;
+    }
+
+    .benefits-title {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<div class="fruttita-benefits-section">
+  <div class="benefits-header">
+    <span class="benefits-subtitle">{{ section.settings.subtitle }}</span>
+    <h2 class="benefits-title">{{ section.settings.title }}</h2>
+  </div>
+
+  <div class="benefits-grid">
+    {% for block in section.blocks %}
+      <div class="benefit-card" {{ block.shopify_attributes }}>
+        <div class="benefit-number">{{ block.settings.number }}</div>
+        <div class="benefit-label">{{ block.settings.label }}</div>
+        <div class="benefit-desc">{{ block.settings.description }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fruttita Benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Hexagonal Warrior"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "六边形战士，无短板"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#4F2C1D"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number / Value",
+          "default": "420mg+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "天然维C"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Benefit Description",
+          "default": "熬夜后提亮气色"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Benefits",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "number": "420mg+",
+            "label": "天然维C",
+            "description": "熬夜后提亮气色"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "number": "380mg+",
+            "label": "高钾",
+            "description": "物理消肿，告别浮肿脸"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "number": "0mg",
+            "label": "钠",
+            "description": "真·零钠，不锁水"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "number": "10g+",
+            "label": "膳食纤维",
+            "description": "肠道清道夫"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "number": "<65kcal",
+            "label": "低卡",
+            "description": "半个苹果的热量"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "number": "828mg",
+            "label": "总多酚",
+            "description": "深层抗氧化"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

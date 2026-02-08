@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Fruttita Brand VI Stylesheet
+   Self-hosted Latin fonts + brand colors + global styling overrides
+   ========================================================================== */
+
+/* --- @font-face: Self-hosted Latin fonts --- */
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('Switzer-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('Switzer-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('Switzer-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('Pacifico-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CJK fonts loaded via CDN in theme.liquid:
+   - ChillRoundGothic (寒蝉圆黑体) from ZeoSeven
+   - HarmonyOS Sans SC from jsDelivr
+*/
+
+/* --- Brand color tokens --- */
+
+:root {
+  --fruttita-earth-yellow: #F4E3C9;
+  --fruttita-brown: #4F2C1D;
+  --fruttita-gold: #D38235;
+  --fruttita-green: #78AA00;
+
+  /* Override Dawn's font variables */
+  --font-heading-family: 'Switzer', 'Chill Round Gothic Medium', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-body-family: 'Switzer', 'HarmonyOS Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+/* --- Global typography --- */
+
+body {
+  font-family: var(--font-body-family);
+  color: var(--fruttita-brown);
+  background-color: #F9F1E6;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5 {
+  font-family: var(--font-heading-family);
+  color: var(--fruttita-brown);
+}
+
+/* Accent / decorative font utility */
+.fruttita-accent {
+  font-family: 'Pacifico', cursive;
+}
+
+/* --- Global background --- */
+
+.gradient {
+  background-color: #F9F1E6;
+}
+
+/* Transparent content blocks */
+.page-width,
+.image-with-text__content,
+.rich-text__blocks {
+  background: transparent;
+}
+
+/* --- Buttons --- */
+
+.button,
+.btn,
+.shopify-payment-button__button--unbranded {
+  background-color: var(--fruttita-brown);
+  color: var(--fruttita-earth-yellow);
+  border: 1px solid var(--fruttita-brown);
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+.btn:hover,
+.shopify-payment-button__button--unbranded:hover {
+  background-color: transparent;
+  color: var(--fruttita-brown);
+}
+
+/* --- Cards --- */
+
+.card,
+.card-wrapper {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.card__content {
+  background: transparent;
+}
+
+/* --- Inputs --- */
+
+input,
+textarea,
+select,
+.field__input {
+  background-color: transparent;
+  border: 1px solid var(--fruttita-brown);
+  color: var(--fruttita-brown);
+  border-radius: 8px;
+}
+
+::placeholder {
+  color: rgba(79, 44, 29, 0.5);
+}
+
+/* --- Links --- */
+
+a:not(.button):not(.origin-btn) {
+  color: var(--fruttita-brown);
+  text-decoration-color: rgba(79, 44, 29, 0.3);
+}
+
+a:not(.button):not(.origin-btn):hover {
+  color: var(--fruttita-gold);
+}
+
+/* --- Origin section protection ---
+   Ensure the hero section retains its light-on-dark styling */
+
+.fruttita-origin-section,
+.fruttita-origin-section h2,
+.fruttita-origin-section p,
+.fruttita-origin-section span,
+.fruttita-origin-section a:not(.origin-btn) {
+  color: #F4E3C9 !important;
+}
+
+.fruttita-origin-section .origin-btn {
+  color: #4F2C1D !important;
+  background-color: #F4E3C9 !important;
+  border-color: #F4E3C9 !important;
+}
+
+.fruttita-origin-section .origin-btn:hover {
+  color: #F4E3C9 !important;
+  background-color: transparent !important;
+}

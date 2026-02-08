@@ -1,0 +1,183 @@
+<!-- 
+  Fruttita Custom Section: Comparison Table
+-->
+
+<style>
+  .fruttita-comparison-section {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 4rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+  }
+
+  .comparison-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .comparison-subtitle {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .comparison-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .comparison-grid {
+      grid-template-columns: 1fr 1.1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .comp-card {
+    background: rgba(244, 227, 201, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .comp-card.competitor { opacity: 0.7; }
+  .comp-card.competitor:hover { opacity: 1; }
+
+  .comp-card.winner {
+    background: #F4E3C9;
+    color: #4F2C1D;
+    border: 4px solid #78AA00;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .winner-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #78AA00;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  .comp-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .comp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .comp-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .icon-check { color: #78AA00; width: 20px; height: 20px; }
+  .icon-x { color: #EF4444; width: 20px; height: 20px; }
+
+  .comp-btn {
+    display: block;
+    width: 100%;
+    background: #4F2C1D;
+    color: #F4E3C9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 2rem;
+    transition: background 0.3s;
+  }
+
+  .comp-btn:hover { background: #3E2216; }
+</style>
+
+<div class="fruttita-comparison-section">
+  <div class="comparison-header">
+    <span class="comparison-subtitle">{{ section.settings.subtitle }}</span>
+    <h2 class="comparison-title">{{ section.settings.title }}</h2>
+  </div>
+
+  <div class="comparison-grid">
+    <!-- Competitor 1 -->
+    <div class="comp-card competitor">
+      <h3 class="comp-name">{{ section.settings.comp1_name }}</h3>
+      <div class="comp-list">
+        {{ section.settings.comp1_list }}
+      </div>
+    </div>
+
+    <!-- Fruttita (Winner) -->
+    <div class="comp-card winner">
+      <div class="winner-badge">WINNER</div>
+      <h3 class="comp-name">{{ section.settings.winner_name }}</h3>
+      <div class="comp-list">
+        {{ section.settings.winner_list }}
+      </div>
+      <a href="{{ section.settings.btn_link }}" class="comp-btn">{{ section.settings.btn_text }}</a>
+    </div>
+
+    <!-- Competitor 2 -->
+    <div class="comp-card competitor">
+      <h3 class="comp-name">{{ section.settings.comp2_name }}</h3>
+      <div class="comp-list">
+        {{ section.settings.comp2_list }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fruttita Comparison",
+  "settings": [
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "The Truth" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Not All Hydration is Equal" },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#4F2C1D" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#F4E3C9" },
+    
+    { "type": "header", "content": "Competitor 1 (Left)" },
+    { "type": "text", "id": "comp1_name", "label": "Name", "default": "Coconut Water" },
+    { "type": "html", "id": "comp1_list", "label": "List HTML", "default": "<li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>High Sodium (Bloating)</li>" },
+
+    { "type": "header", "content": "Winner (Center)" },
+    { "type": "text", "id": "winner_name", "label": "Name", "default": "Fruttita Shot" },
+    { "type": "html", "id": "winner_list", "label": "List HTML", "default": "<li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>0 Sodium (No Bloat)</strong></li>" },
+    { "type": "text", "id": "btn_text", "label": "Button Text", "default": "Switch to Fruttita" },
+    { "type": "url", "id": "btn_link", "label": "Button Link" },
+
+    { "type": "header", "content": "Competitor 2 (Right)" },
+    { "type": "text", "id": "comp2_name", "label": "Name", "default": "Energy Drinks" },
+    { "type": "html", "id": "comp2_list", "label": "List HTML", "default": "<li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>Artificial Caffeine</li>" }
+  ],
+  "presets": [
+    { "name": "Fruttita Comparison" }
+  ]
+}
+{% endschema %}
