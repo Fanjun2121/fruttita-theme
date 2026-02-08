@@ -1,18 +1,36 @@
-<!-- 
+<!--
   Fruttita Custom Section: Comparison Table
+  With data visualization bars, noise texture, scroll animation
 -->
 
 <style>
   .fruttita-comparison-section {
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 4rem 1.5rem;
+    padding: 6rem 1.5rem;
     font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-comparison-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .comparison-inner {
+    position: relative;
+    z-index: 1;
   }
 
   .comparison-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
 
   .comparison-subtitle {
@@ -39,49 +57,76 @@
 
   @media (min-width: 768px) {
     .comparison-grid {
-      grid-template-columns: 1fr 1.1fr 1fr;
-      align-items: center;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      align-items: stretch;
     }
   }
 
   .comp-card {
-    background: rgba(244, 227, 201, 0.1);
-    border-radius: 1rem;
+    background: rgba(244, 227, 201, 0.06);
+    border: 1px solid rgba(244, 227, 201, 0.1);
+    border-radius: 1.25rem;
     padding: 2rem;
     text-align: center;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
   }
 
-  .comp-card.competitor { opacity: 0.7; }
+  .comp-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .comp-card.competitor {
+    opacity: 0;
+  }
+
+  .comp-card.competitor.is-visible {
+    opacity: 0.7;
+  }
+
   .comp-card.competitor:hover { opacity: 1; }
 
   .comp-card.winner {
     background: #F4E3C9;
     color: #4F2C1D;
-    border: 4px solid #78AA00;
+    border: none;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     z-index: 10;
+  }
+
+  @media (min-width: 768px) {
+    .comp-card.winner {
+      transform: scale(1.05) translateY(30px);
+    }
+    .comp-card.winner.is-visible {
+      transform: scale(1.05) translateY(0);
+    }
   }
 
   .winner-badge {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #78AA00;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #78AA00, #5a8800);
     color: white;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 12px rgba(120,170,0,0.3);
   }
 
   .comp-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   .comp-list {
@@ -99,8 +144,53 @@
     font-size: 0.95rem;
   }
 
-  .icon-check { color: #78AA00; width: 20px; height: 20px; }
-  .icon-x { color: #EF4444; width: 20px; height: 20px; }
+  .icon-check { color: #78AA00; width: 20px; height: 20px; flex-shrink: 0; }
+  .icon-x { color: #EF4444; width: 20px; height: 20px; flex-shrink: 0; }
+
+  /* Data visualization bars for winner */
+  .winner-stat {
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+
+  .winner-stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+  }
+
+  .winner-stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(79,44,29,0.7);
+  }
+
+  .winner-stat-value {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #4F2C1D;
+  }
+
+  .winner-stat-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(79,44,29,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .winner-stat-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #78AA00, #9CC833);
+    width: 0%;
+    transition: width 1.2s ease;
+  }
+
+  .comp-card.winner.is-visible .winner-stat-fill {
+    width: var(--fill);
+  }
 
   .comp-btn {
     display: block;
@@ -108,50 +198,125 @@
     background: #4F2C1D;
     color: #F4E3C9;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
-    margin-top: 2rem;
-    transition: background 0.3s;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.03em;
   }
 
-  .comp-btn:hover { background: #3E2216; }
+  .comp-btn:hover {
+    background: #3E2216;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79,44,29,0.3);
+  }
+
+  @media (max-width: 767px) {
+    .fruttita-comparison-section {
+      padding: 4rem 1rem;
+    }
+
+    .comparison-title {
+      font-size: 2rem;
+    }
+
+    .comp-card.winner {
+      order: -1;
+    }
+  }
 </style>
 
 <div class="fruttita-comparison-section">
-  <div class="comparison-header">
-    <span class="comparison-subtitle">{{ section.settings.subtitle }}</span>
-    <h2 class="comparison-title">{{ section.settings.title }}</h2>
-  </div>
-
-  <div class="comparison-grid">
-    <!-- Competitor 1 -->
-    <div class="comp-card competitor">
-      <h3 class="comp-name">{{ section.settings.comp1_name }}</h3>
-      <div class="comp-list">
-        {{ section.settings.comp1_list }}
-      </div>
+  <div class="comparison-inner">
+    <div class="comparison-header">
+      <span class="comparison-subtitle">{{ section.settings.subtitle }}</span>
+      <h2 class="comparison-title">{{ section.settings.title }}</h2>
     </div>
 
-    <!-- Fruttita (Winner) -->
-    <div class="comp-card winner">
-      <div class="winner-badge">WINNER</div>
-      <h3 class="comp-name">{{ section.settings.winner_name }}</h3>
-      <div class="comp-list">
-        {{ section.settings.winner_list }}
+    <div class="comparison-grid" id="compGrid">
+      <!-- Competitor 1 -->
+      <div class="comp-card competitor" style="transition-delay: 0ms;">
+        <h3 class="comp-name">{{ section.settings.comp1_name }}</h3>
+        <div class="comp-list">
+          {{ section.settings.comp1_list }}
+        </div>
       </div>
-      <a href="{{ section.settings.btn_link }}" class="comp-btn">{{ section.settings.btn_text }}</a>
-    </div>
 
-    <!-- Competitor 2 -->
-    <div class="comp-card competitor">
-      <h3 class="comp-name">{{ section.settings.comp2_name }}</h3>
-      <div class="comp-list">
-        {{ section.settings.comp2_list }}
+      <!-- Fruttita (Winner) -->
+      <div class="comp-card winner" style="transition-delay: 150ms;">
+        <div class="winner-badge">WINNER</div>
+        <h3 class="comp-name">{{ section.settings.winner_name }}</h3>
+
+        <div class="winner-stat">
+          <div class="winner-stat-header">
+            <span class="winner-stat-label">天然维C</span>
+            <span class="winner-stat-value">420mg+</span>
+          </div>
+          <div class="winner-stat-bar"><div class="winner-stat-fill" style="--fill: 95%"></div></div>
+        </div>
+
+        <div class="winner-stat">
+          <div class="winner-stat-header">
+            <span class="winner-stat-label">高钾</span>
+            <span class="winner-stat-value">380mg+</span>
+          </div>
+          <div class="winner-stat-bar"><div class="winner-stat-fill" style="--fill: 85%"></div></div>
+        </div>
+
+        <div class="winner-stat">
+          <div class="winner-stat-header">
+            <span class="winner-stat-label">零钠</span>
+            <span class="winner-stat-value">0mg</span>
+          </div>
+          <div class="winner-stat-bar"><div class="winner-stat-fill" style="--fill: 100%"></div></div>
+        </div>
+
+        <div class="winner-stat">
+          <div class="winner-stat-header">
+            <span class="winner-stat-label">膳食纤维</span>
+            <span class="winner-stat-value">10g+</span>
+          </div>
+          <div class="winner-stat-bar"><div class="winner-stat-fill" style="--fill: 78%"></div></div>
+        </div>
+
+        <div class="winner-stat">
+          <div class="winner-stat-header">
+            <span class="winner-stat-label">总多酚</span>
+            <span class="winner-stat-value">828mg</span>
+          </div>
+          <div class="winner-stat-bar"><div class="winner-stat-fill" style="--fill: 90%"></div></div>
+        </div>
+
+        <a href="{{ section.settings.btn_link }}" class="comp-btn">{{ section.settings.btn_text }}</a>
+      </div>
+
+      <!-- Competitor 2 -->
+      <div class="comp-card competitor" style="transition-delay: 300ms;">
+        <h3 class="comp-name">{{ section.settings.comp2_name }}</h3>
+        <div class="comp-list">
+          {{ section.settings.comp2_list }}
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    var cards = document.querySelectorAll('#compGrid .comp-card');
+    if (!cards.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(card) { observer.observe(card); });
+  })();
+</script>
 
 {% schema %}
 {
@@ -161,14 +326,14 @@
     { "type": "text", "id": "title", "label": "Title", "default": "Not All Hydration is Equal" },
     { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#4F2C1D" },
     { "type": "color", "id": "text_color", "label": "Text Color", "default": "#F4E3C9" },
-    
+
     { "type": "header", "content": "Competitor 1 (Left)" },
     { "type": "text", "id": "comp1_name", "label": "Name", "default": "Coconut Water" },
     { "type": "html", "id": "comp1_list", "label": "List HTML", "default": "<li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>High Sodium (Bloating)</li>" },
 
     { "type": "header", "content": "Winner (Center)" },
     { "type": "text", "id": "winner_name", "label": "Name", "default": "Fruttita Shot" },
-    { "type": "html", "id": "winner_list", "label": "List HTML", "default": "<li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>0 Sodium (No Bloat)</strong></li>" },
+    { "type": "html", "id": "winner_list", "label": "List HTML (legacy)", "default": "" },
     { "type": "text", "id": "btn_text", "label": "Button Text", "default": "Switch to Fruttita" },
     { "type": "url", "id": "btn_link", "label": "Button Link" },
 

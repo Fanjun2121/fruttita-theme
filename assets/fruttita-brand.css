@@ -42,13 +42,23 @@
    - HarmonyOS Sans SC from jsDelivr
 */
 
-/* --- Brand color tokens --- */
+/* --- Brand color tokens + design tokens --- */
 
 :root {
   --fruttita-earth-yellow: #F4E3C9;
   --fruttita-brown: #4F2C1D;
   --fruttita-gold: #D38235;
   --fruttita-green: #78AA00;
+
+  /* Unified shadow system */
+  --fruttita-shadow-sm: 0 2px 8px rgba(79,44,29,0.06);
+  --fruttita-shadow-md: 0 8px 24px rgba(79,44,29,0.1);
+  --fruttita-shadow-lg: 0 20px 60px rgba(79,44,29,0.15);
+
+  /* Unified radius */
+  --fruttita-radius-sm: 0.75rem;
+  --fruttita-radius-md: 1.25rem;
+  --fruttita-radius-lg: 1.5rem;
 
   /* Override Dawn's font variables */
   --font-heading-family: 'Switzer', 'Chill Round Gothic Medium', 'PingFang SC', 'Microsoft YaHei', sans-serif;
@@ -170,4 +180,33 @@ a:not(.button):not(.origin-btn):hover {
 .fruttita-origin-section .origin-btn:hover {
   color: #F4E3C9 !important;
   background-color: transparent !important;
+}
+
+/* --- Section breathing room --- */
+
+.shopify-section + .shopify-section {
+  margin-top: 0;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Card unified styling --- */
+
+.card,
+.card-wrapper {
+  border-radius: var(--fruttita-radius-md);
+}
+
+.card:hover {
+  box-shadow: var(--fruttita-shadow-md);
+}
+
+/* --- Featured collection section spacing --- */
+
+.shopify-section .featured-collection {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }

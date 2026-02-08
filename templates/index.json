@@ -17,7 +17,8 @@
           "settings": {
             "number": "420mg+",
             "label": "天然维C",
-            "description": "熬夜后提亮气色"
+            "description": "熬夜后提亮气色",
+            "icon": "vitamin-c"
           }
         },
         "benefit_k": {
@@ -25,7 +26,8 @@
           "settings": {
             "number": "380mg+",
             "label": "高钾",
-            "description": "物理消肿，告别浮肿脸"
+            "description": "物理消肿，告别浮肿脸",
+            "icon": "potassium"
           }
         },
         "benefit_na": {
@@ -33,7 +35,8 @@
           "settings": {
             "number": "0mg",
             "label": "钠",
-            "description": "真·零钠，不锁水"
+            "description": "真·零钠，不锁水",
+            "icon": "sodium"
           }
         },
         "benefit_fiber": {
@@ -41,7 +44,8 @@
           "settings": {
             "number": "10g+",
             "label": "膳食纤维",
-            "description": "肠道清道夫"
+            "description": "肠道清道夫",
+            "icon": "fiber"
           }
         },
         "benefit_cal": {
@@ -49,7 +53,8 @@
           "settings": {
             "number": "<65kcal",
             "label": "低卡",
-            "description": "半个苹果的热量"
+            "description": "半个苹果的热量",
+            "icon": "low-cal"
           }
         },
         "benefit_poly": {
@@ -57,7 +62,8 @@
           "settings": {
             "number": "828mg",
             "label": "总多酚",
-            "description": "深层抗氧化"
+            "description": "深层抗氧化",
+            "icon": "polyphenol"
           }
         }
       },
