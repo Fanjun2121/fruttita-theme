@@ -1,0 +1,211 @@
+<!--
+  Fruttita Custom Section: Personality Cards
+  3-column brand personality cards (平实克制 / 聪明自嘲 / 人间清醒)
+-->
+
+<style>
+  .fruttita-personality-{{ section.id }} {
+    background-color: #F9F1E6;
+    color: #4F2C1D;
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-personality-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .pc-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .pc-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .pc-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .pc-title-{{ section.id }} {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .pc-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .pc-card-{{ section.id }} {
+    background: rgba(79, 44, 29, 0.04);
+    border: 1px solid rgba(79, 44, 29, 0.1);
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .pc-card-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .pc-card-{{ section.id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(79,44,29,0.08);
+  }
+
+  .pc-card-title-{{ section.id }} {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    color: #4F2C1D;
+  }
+
+  .pc-card-body-{{ section.id }} {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: rgba(79, 44, 29, 0.7);
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-personality-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .pc-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .pc-title-{{ section.id }} {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<div class="fruttita-personality-{{ section.id }}">
+  <div class="pc-inner-{{ section.id }}">
+    <div class="pc-header-{{ section.id }}">
+      {% if section.settings.subtitle != blank %}
+        <span class="pc-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+      {% endif %}
+      <h2 class="pc-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="pc-grid-{{ section.id }}" id="pcGrid-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="pc-card-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
+          <h3 class="pc-card-title-{{ section.id }}">{{ block.settings.title }}</h3>
+          <p class="pc-card-body-{{ section.id }}">{{ block.settings.body }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var cards = document.querySelectorAll('#pcGrid-{{ section.id }} .pc-card-{{ section.id }}');
+    if (!cards.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(card) { observer.observe(card); });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Personality",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "Our Voice"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "我们怎么说话"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Personality Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "平实克制"
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Card Body",
+          "default": "我们不喊口号，不造概念，不用感叹号轰炸。好东西不需要大声说。"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Personality",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "平实克制",
+            "body": "我们不喊口号，不造概念，不用感叹号轰炸。好东西不需要大声说。"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "聪明自嘲",
+            "body": "\u201c即使像吃土，也要吃最有营养的那口土。\u201d我们认真做产品，但不把自己太当回事。"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "人间清醒",
+            "body": "不贩卖焦虑，不夸大功效。配料表只有一项，数据来自第三方检测。说到做到，仅此而已。"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,229 @@
+<!--
+  Fruttita Custom Section: Prose (Reusable centered long-text)
+  Supports multiple paragraphs via blocks, optional CTA, optional bg image
+-->
+
+<style>
+  .fruttita-prose-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  {% if section.settings.bg_image != blank %}
+  .fruttita-prose-{{ section.id }}::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('{{ section.settings.bg_image | image_url: width: 1920 }}');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+  }
+  {% endif %}
+
+  .fruttita-prose-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .prose-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .prose-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .prose-title-{{ section.id }} {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+  }
+
+  .prose-paragraph-{{ section.id }} {
+    font-size: 1.05rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .prose-btn-{{ section.id }} {
+    display: inline-block;
+    background: transparent;
+    color: {{ section.settings.text_color }};
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    border: 2px solid currentColor;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  .prose-btn-{{ section.id }}:hover {
+    background: {{ section.settings.text_color }};
+    color: {{ section.settings.bg_color }};
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  .fruttita-prose-{{ section.id }}.is-visible .prose-subtitle-{{ section.id }},
+  .fruttita-prose-{{ section.id }}.is-visible .prose-title-{{ section.id }},
+  .fruttita-prose-{{ section.id }}.is-visible .prose-paragraph-{{ section.id }},
+  .fruttita-prose-{{ section.id }}.is-visible .prose-btn-{{ section.id }} {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-prose-{{ section.id }} {
+      padding: 4rem 1.5rem;
+    }
+
+    .prose-title-{{ section.id }} {
+      font-size: 1.8rem;
+    }
+
+    .prose-paragraph-{{ section.id }} {
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+  }
+</style>
+
+<div class="fruttita-prose-{{ section.id }}" id="prose-{{ section.id }}">
+  <div class="prose-inner-{{ section.id }}">
+    {% if section.settings.subtitle != blank %}
+      <span class="prose-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <h2 class="prose-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    {% for block in section.blocks %}
+      <p class="prose-paragraph-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index | times: 100 | plus: 200 }}ms;">
+        {{ block.settings.text_paragraph }}
+      </p>
+    {% endfor %}
+
+    {% if section.settings.btn_text != blank %}
+      <a href="{{ section.settings.btn_link }}" class="prose-btn-{{ section.id }}">{{ section.settings.btn_text }}</a>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    var el = document.getElementById('prose-{{ section.id }}');
+    if (!el) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    observer.observe(el);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Prose",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "About Fruttita"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "ABOUT FRUTTITA"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9F1E6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#4F2C1D"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image (optional)"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text_paragraph",
+          "label": "Text",
+          "default": "Enter paragraph text here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Prose"
+    }
+  ]
+}
+{% endschema %}

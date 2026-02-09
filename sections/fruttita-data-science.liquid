@@ -1,0 +1,401 @@
+<!--
+  Fruttita Custom Section: Data Science
+  6 metrics with progress bars + expandable easter egg (总多酚)
+-->
+
+<style>
+  .fruttita-data-science-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-data-science-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .ds-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .ds-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .ds-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .ds-title-{{ section.id }} {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .ds-metric-{{ section.id }} {
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .ds-metric-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ds-metric-header-{{ section.id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+
+  .ds-metric-label-{{ section.id }} {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .ds-metric-value-{{ section.id }} {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #D38235;
+  }
+
+  .ds-metric-desc-{{ section.id }} {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-bottom: 0.6rem;
+  }
+
+  .ds-bar-{{ section.id }} {
+    width: 100%;
+    height: 8px;
+    background: rgba(244, 227, 201, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .ds-bar-fill-{{ section.id }} {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #78AA00, #9CC833);
+    width: 0%;
+    transition: width 1.2s ease;
+  }
+
+  .ds-metric-{{ section.id }}.is-visible .ds-bar-fill-{{ section.id }} {
+    width: var(--fill);
+  }
+
+  .ds-easter-egg-{{ section.id }} {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .ds-egg-toggle-{{ section.id }} {
+    display: inline-block;
+    background: rgba(244, 227, 201, 0.08);
+    border: 1px solid rgba(244, 227, 201, 0.15);
+    color: {{ section.settings.text_color }};
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.03em;
+    font-family: 'Switzer', sans-serif;
+  }
+
+  .ds-egg-toggle-{{ section.id }}:hover {
+    background: rgba(244, 227, 201, 0.15);
+  }
+
+  .ds-egg-content-{{ section.id }} {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+
+  .ds-egg-content-{{ section.id }}.is-open {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .ds-egg-inner-{{ section.id }} {
+    padding: 2rem 0 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ds-egg-title-{{ section.id }} {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #D38235;
+  }
+
+  .ds-egg-text-{{ section.id }} {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    opacity: 0.75;
+  }
+
+  .ds-source-{{ section.id }} {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.4;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-data-science-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .ds-title-{{ section.id }} {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<div class="fruttita-data-science-{{ section.id }}">
+  <div class="ds-inner-{{ section.id }}">
+    <div class="ds-header-{{ section.id }}">
+      {% if section.settings.subtitle != blank %}
+        <span class="ds-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+      {% endif %}
+      <h2 class="ds-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    </div>
+
+    <div id="dsMetrics-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="ds-metric-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 100 }}ms;">
+          <div class="ds-metric-header-{{ section.id }}">
+            <span class="ds-metric-label-{{ section.id }}">{{ block.settings.label }}</span>
+            <span class="ds-metric-value-{{ section.id }}">{{ block.settings.value }}</span>
+          </div>
+          {% if block.settings.description != blank %}
+            <div class="ds-metric-desc-{{ section.id }}">{{ block.settings.description }}</div>
+          {% endif %}
+          <div class="ds-bar-{{ section.id }}">
+            <div class="ds-bar-fill-{{ section.id }}" style="--fill: {{ block.settings.bar_pct }}%"></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.easter_egg_title != blank %}
+      <div class="ds-easter-egg-{{ section.id }}">
+        <button class="ds-egg-toggle-{{ section.id }}" id="dsEggToggle-{{ section.id }}">
+          + 还有一项隐藏王牌
+        </button>
+        <div class="ds-egg-content-{{ section.id }}" id="dsEggContent-{{ section.id }}">
+          <div class="ds-egg-inner-{{ section.id }}">
+            <div class="ds-egg-title-{{ section.id }}">{{ section.settings.easter_egg_title }}</div>
+            <p class="ds-egg-text-{{ section.id }}">{{ section.settings.easter_egg_text }}</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.source_note != blank %}
+      <div class="ds-source-{{ section.id }}">{{ section.settings.source_note }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    var metrics = document.querySelectorAll('#dsMetrics-{{ section.id }} .ds-metric-{{ section.id }}');
+    if (metrics.length) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      metrics.forEach(function(m) { observer.observe(m); });
+    }
+
+    var toggle = document.getElementById('dsEggToggle-{{ section.id }}');
+    var content = document.getElementById('dsEggContent-{{ section.id }}');
+    if (toggle && content) {
+      toggle.addEventListener('click', function() {
+        content.classList.toggle('is-open');
+        toggle.textContent = content.classList.contains('is-open') ? '- 收起' : '+ 还有一项隐藏王牌';
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Data Science",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "The Data"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "好不好，数据说了算"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#4F2C1D"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    },
+    {
+      "type": "text",
+      "id": "source_note",
+      "label": "Source Note",
+      "default": "数据来源：SGS / Eurofins 第三方检测报告"
+    },
+    {
+      "type": "text",
+      "id": "easter_egg_title",
+      "label": "Easter Egg Title",
+      "default": "总多酚：828mg"
+    },
+    {
+      "type": "textarea",
+      "id": "easter_egg_text",
+      "label": "Easter Egg Text",
+      "default": "多酚是深层抗氧化的关键指标。828mg 总多酚含量，远超蓝莓、石榴等常见抗氧化水果。你的身体值得最有效的抗氧。"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "metric",
+      "name": "Data Metric",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Metric Label",
+          "default": "天然维C"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Metric Value",
+          "default": "420mg+"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "相当于7个柠檬的维C含量"
+        },
+        {
+          "type": "range",
+          "id": "bar_pct",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Progress Bar %",
+          "default": 85
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Data Science",
+      "blocks": [
+        {
+          "type": "metric",
+          "settings": {
+            "label": "天然维C",
+            "value": "420mg+",
+            "description": "相当于7个柠檬的维C含量",
+            "bar_pct": 95
+          }
+        },
+        {
+          "type": "metric",
+          "settings": {
+            "label": "钾含量",
+            "value": "380mg+",
+            "description": "物理消肿的关键电解质",
+            "bar_pct": 85
+          }
+        },
+        {
+          "type": "metric",
+          "settings": {
+            "label": "钠含量",
+            "value": "0mg",
+            "description": "真·零钠，不锁水不水肿",
+            "bar_pct": 100
+          }
+        },
+        {
+          "type": "metric",
+          "settings": {
+            "label": "膳食纤维",
+            "value": "10g+",
+            "description": "优质益生元纤维，肠道清道夫",
+            "bar_pct": 78
+          }
+        },
+        {
+          "type": "metric",
+          "settings": {
+            "label": "热量",
+            "value": "<65kcal",
+            "description": "低于半个苹果的热量",
+            "bar_pct": 30
+          }
+        },
+        {
+          "type": "metric",
+          "settings": {
+            "label": "配料项数",
+            "value": "1",
+            "description": "只有猴面包树果肉原浆，nothing else",
+            "bar_pct": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

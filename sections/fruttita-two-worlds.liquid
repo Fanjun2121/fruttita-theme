@@ -1,0 +1,210 @@
+<!--
+  Fruttita Custom Section: Two Worlds
+  Split screen — Wilderness vs Daily Life with bridge text
+-->
+
+<style>
+  .fruttita-two-worlds-{{ section.id }} {
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-two-worlds-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .tw-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+  }
+
+  .tw-panel-{{ section.id }} {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+  }
+
+  .tw-panel-bg-{{ section.id }} {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+  }
+
+  .tw-panel-bg-{{ section.id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .tw-panel-{{ section.id }}:hover .tw-panel-bg-{{ section.id }} img {
+    transform: scale(1.05);
+  }
+
+  .tw-panel-overlay-{{ section.id }} {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+  }
+
+  .tw-panel-label-{{ section.id }} {
+    position: relative;
+    z-index: 3;
+    color: #F4E3C9;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .tw-panel-label-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tw-bridge-{{ section.id }} {
+    background: #F9F1E6;
+    color: #4F2C1D;
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .tw-bridge-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .tw-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .tw-panel-{{ section.id }} {
+      min-height: 40vh;
+    }
+
+    .tw-panel-label-{{ section.id }} {
+      font-size: 1.2rem;
+    }
+
+    .tw-bridge-{{ section.id }} {
+      font-size: 1rem;
+      padding: 2.5rem 1.5rem;
+    }
+  }
+</style>
+
+<div class="fruttita-two-worlds-{{ section.id }}">
+  <div class="tw-grid-{{ section.id }}" id="twGrid-{{ section.id }}">
+    <div class="tw-panel-{{ section.id }}">
+      {% if section.settings.left_image != blank %}
+        <div class="tw-panel-bg-{{ section.id }}">
+          {{ section.settings.left_image | image_url: width: 960 | image_tag: loading: 'lazy' }}
+        </div>
+      {% endif %}
+      <div class="tw-panel-overlay-{{ section.id }}"></div>
+      <div class="tw-panel-label-{{ section.id }}">{{ section.settings.left_label }}</div>
+    </div>
+    <div class="tw-panel-{{ section.id }}">
+      {% if section.settings.right_image != blank %}
+        <div class="tw-panel-bg-{{ section.id }}">
+          {{ section.settings.right_image | image_url: width: 960 | image_tag: loading: 'lazy' }}
+        </div>
+      {% endif %}
+      <div class="tw-panel-overlay-{{ section.id }}"></div>
+      <div class="tw-panel-label-{{ section.id }}">{{ section.settings.right_label }}</div>
+    </div>
+  </div>
+
+  {% if section.settings.bridge_text != blank %}
+    <div class="tw-bridge-{{ section.id }}" id="twBridge-{{ section.id }}">
+      {{ section.settings.bridge_text }}
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  (function() {
+    var labels = document.querySelectorAll('#twGrid-{{ section.id }} .tw-panel-label-{{ section.id }}');
+    var bridge = document.getElementById('twBridge-{{ section.id }}');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    labels.forEach(function(l) { observer.observe(l); });
+    if (bridge) observer.observe(bridge);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Two Worlds",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image (Wilderness)"
+    },
+    {
+      "type": "text",
+      "id": "left_label",
+      "label": "Left Label",
+      "default": "THE WILDERNESS"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Image (Daily Life)"
+    },
+    {
+      "type": "text",
+      "id": "right_label",
+      "label": "Right Label",
+      "default": "YOUR DAILY LIFE"
+    },
+    {
+      "type": "textarea",
+      "id": "bridge_text",
+      "label": "Bridge Text",
+      "default": "一边是非洲旷野中千年的猴面包树，一边是你每天醒来的日常。Fruttita 把这两个世界连在一起——用最短的配料表，最远的原产地，给你最干净的补给。"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Two Worlds"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,240 @@
+<!--
+  Fruttita Custom Section: Dual Cards
+  Two side-by-side cards — "干净" (CLEAN) + "野性" (WILD)
+-->
+
+<style>
+  .fruttita-dual-cards-{{ section.id }} {
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+    background: #F9F1E6;
+  }
+
+  .fruttita-dual-cards-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .dc-grid-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .dc-card-{{ section.id }} {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    min-height: 450px;
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .dc-card-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dc-card-bg-{{ section.id }} {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+  }
+
+  .dc-card-bg-{{ section.id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .dc-card-{{ section.id }}:hover .dc-card-bg-{{ section.id }} img {
+    transform: scale(1.05);
+  }
+
+  .dc-card-overlay-{{ section.id }} {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+  }
+
+  .dc-card-text-{{ section.id }} {
+    position: relative;
+    z-index: 2;
+  }
+
+  .dc-card-title-{{ section.id }} {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.02em;
+  }
+
+  .dc-card-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    color: #C6812B;
+    margin-bottom: 1rem;
+  }
+
+  .dc-card-body-{{ section.id }} {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    opacity: 0.85;
+    max-width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-dual-cards-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .dc-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .dc-card-{{ section.id }} {
+      min-height: 350px;
+    }
+
+    .dc-card-title-{{ section.id }} {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<div class="fruttita-dual-cards-{{ section.id }}">
+  <div class="dc-grid-{{ section.id }}" id="dcGrid-{{ section.id }}">
+    {% for block in section.blocks %}
+      <div class="dc-card-{{ section.id }}" {{ block.shopify_attributes }}
+           style="background-color: {{ block.settings.bg_color }}; color: {{ block.settings.text_color }}; transition-delay: {{ forloop.index0 | times: 200 }}ms;">
+        {% if block.settings.bg_image != blank %}
+          <div class="dc-card-bg-{{ section.id }}">
+            {{ block.settings.bg_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+          </div>
+          <div class="dc-card-overlay-{{ section.id }}"></div>
+        {% endif %}
+        <div class="dc-card-text-{{ section.id }}">
+          <h3 class="dc-card-title-{{ section.id }}">{{ block.settings.title }}</h3>
+          {% if block.settings.subtitle != blank %}
+            <div class="dc-card-subtitle-{{ section.id }}">{{ block.settings.subtitle }}</div>
+          {% endif %}
+          <p class="dc-card-body-{{ section.id }}">{{ block.settings.body }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    var cards = document.querySelectorAll('#dcGrid-{{ section.id }} .dc-card-{{ section.id }}');
+    if (!cards.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(card) { observer.observe(card); });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Dual Cards",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "干净"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle (Pacifico)",
+          "default": "CLEAN"
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Body Text",
+          "default": "我们做减法。配料表只有一项，没有水，没有糖，没有稳定剂。你看到的就是你喝到的。"
+        },
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color",
+          "default": "#4F2C1D"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#F4E3C9"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Dual Cards",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "干净",
+            "subtitle": "CLEAN",
+            "body": "我们做减法。配料表只有一项，没有水，没有糖，没有稳定剂。你看到的就是你喝到的。",
+            "bg_color": "#4F2C1D",
+            "text_color": "#F4E3C9"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "野性",
+            "subtitle": "WILD",
+            "body": "猴面包树在非洲旷野存活数千年，果实自然脱水，不依赖任何人工干预。这种原始的生命力，就是我们想传递的。",
+            "bg_color": "#4F2C1D",
+            "text_color": "#F4E3C9"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

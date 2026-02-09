@@ -1,0 +1,264 @@
+<!--
+  Fruttita Custom Section: Subscribe + Social
+  Dark background email subscription + social icons
+-->
+
+<style>
+  .fruttita-subscribe-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 5rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-subscribe-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .sub-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .sub-title-{{ section.id }} {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .sub-subtitle-{{ section.id }} {
+    font-size: 1rem;
+    opacity: 0.6;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .sub-form-{{ section.id }} {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sub-input-{{ section.id }} {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border-radius: 50px;
+    border: 1.5px solid rgba(244, 227, 201, 0.2);
+    background: rgba(244, 227, 201, 0.06);
+    color: {{ section.settings.text_color }};
+    font-size: 0.95rem;
+    font-family: 'Switzer', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .sub-input-{{ section.id }}::placeholder {
+    color: rgba(244, 227, 201, 0.4);
+  }
+
+  .sub-input-{{ section.id }}:focus {
+    border-color: #C6812B;
+  }
+
+  .sub-btn-{{ section.id }} {
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    background: #F4E3C9;
+    color: #4F2C1D;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Switzer', sans-serif;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .sub-btn-{{ section.id }}:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
+  .sub-success-{{ section.id }} {
+    display: none;
+    font-size: 0.95rem;
+    color: #78AA00;
+    margin-bottom: 2rem;
+  }
+
+  .sub-social-{{ section.id }} {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(244, 227, 201, 0.1);
+  }
+
+  .sub-social-link-{{ section.id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(244, 227, 201, 0.15);
+    color: {{ section.settings.text_color }};
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .sub-social-link-{{ section.id }}:hover {
+    background: rgba(244, 227, 201, 0.1);
+    border-color: rgba(244, 227, 201, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .sub-social-link-{{ section.id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-subscribe-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .sub-title-{{ section.id }} {
+      font-size: 1.6rem;
+    }
+
+    .sub-form-{{ section.id }} {
+      flex-direction: column;
+    }
+
+    .sub-btn-{{ section.id }} {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="fruttita-subscribe-{{ section.id }}">
+  <div class="sub-inner-{{ section.id }}">
+    <h2 class="sub-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    {% if section.settings.subtitle != blank %}
+      <p class="sub-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    {% form 'customer', id: section.id %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="sub-form-{{ section.id }}">
+        <input
+          class="sub-input-{{ section.id }}"
+          type="email"
+          name="contact[email]"
+          placeholder="输入你的邮箱"
+          required
+          autocomplete="email"
+          aria-label="Email"
+        >
+        <button type="submit" class="sub-btn-{{ section.id }}">订阅</button>
+      </div>
+      {% if form.posted_successfully? %}
+        <p class="sub-success-{{ section.id }}" style="display:block;">感谢订阅！我们会偶尔聊点有用的。</p>
+      {% endif %}
+    {% endform %}
+
+    <div class="sub-social-{{ section.id }}">
+      {% if section.settings.xiaohongshu_url != blank %}
+        <a href="{{ section.settings.xiaohongshu_url }}" class="sub-social-link-{{ section.id }}" target="_blank" rel="noopener" aria-label="小红书">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        </a>
+      {% endif %}
+      {% if section.settings.wechat_url != blank %}
+        <a href="{{ section.settings.wechat_url }}" class="sub-social-link-{{ section.id }}" target="_blank" rel="noopener" aria-label="微信">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05a6.13 6.13 0 01-.235-1.676c0-3.424 3.317-6.2 7.408-6.2.502 0 .99.048 1.467.123C17.456 4.963 13.482 2.188 8.691 2.188zm-2.6 4.408c.56 0 1.013.46 1.013 1.03 0 .567-.453 1.028-1.013 1.028s-1.013-.46-1.013-1.029c0-.57.453-1.029 1.013-1.029zm5.21 0c.56 0 1.013.46 1.013 1.03 0 .567-.453 1.028-1.013 1.028s-1.013-.46-1.013-1.029c0-.57.453-1.029 1.013-1.029zM16.675 9.53c-3.571 0-6.467 2.43-6.467 5.425 0 2.997 2.896 5.426 6.467 5.426.71 0 1.393-.108 2.04-.29a.62.62 0 01.516.07l1.368.8a.234.234 0 00.12.04c.116 0 .21-.096.21-.212 0-.052-.02-.102-.035-.153l-.28-1.063a.426.426 0 01.153-.478C22.158 18.205 23.14 16.469 23.14 14.956c0-2.994-2.894-5.425-6.465-5.425zm-2.51 3.302c.403 0 .73.332.73.74 0 .41-.327.742-.73.742a.737.737 0 01-.73-.741c0-.41.327-.741.73-.741zm5.02 0c.403 0 .73.332.73.74 0 .41-.327.742-.73.742a.737.737 0 01-.73-.741c0-.41.327-.741.73-.741z"/></svg>
+        </a>
+      {% endif %}
+      {% if section.settings.douyin_url != blank %}
+        <a href="{{ section.settings.douyin_url }}" class="sub-social-link-{{ section.id }}" target="_blank" rel="noopener" aria-label="抖音">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.43V13.1a8.28 8.28 0 005.58 2.15V11.8a4.84 4.84 0 01-3.77-1.84V6.69h3.77z"/></svg>
+        </a>
+      {% endif %}
+      {% if section.settings.instagram_url != blank %}
+        <a href="{{ section.settings.instagram_url }}" class="sub-social-link-{{ section.id }}" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fruttita Subscribe",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "关注我们，偶尔聊点有用的。"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "不群发，不刷屏。新品上线、限时活动，第一时间知道。"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#3A2015"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    },
+    {
+      "type": "url",
+      "id": "xiaohongshu_url",
+      "label": "小红书 URL"
+    },
+    {
+      "type": "url",
+      "id": "wechat_url",
+      "label": "微信 URL"
+    },
+    {
+      "type": "url",
+      "id": "douyin_url",
+      "label": "抖音 URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Subscribe"
+    }
+  ]
+}
+{% endschema %}

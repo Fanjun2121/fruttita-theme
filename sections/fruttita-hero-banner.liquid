@@ -1,0 +1,237 @@
+<!--
+  Fruttita Custom Section: Hero Banner (Reusable)
+  Full-screen image background + centered text overlay
+-->
+
+<style>
+  .fruttita-hero-banner-{{ section.id }} {
+    position: relative;
+    width: 100%;
+    {% if section.settings.height == 'full' %}
+    height: 100vh;
+    min-height: 600px;
+    {% else %}
+    height: 80vh;
+    min-height: 500px;
+    {% endif %}
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    font-family: 'Switzer', sans-serif;
+  }
+
+  .hero-bg-{{ section.id }} {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+  }
+
+  .hero-bg-{{ section.id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay-{{ section.id }} {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+    z-index: 1;
+  }
+
+  .fruttita-hero-banner-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .hero-content-{{ section.id }} {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 700px;
+    padding: 0 2rem;
+  }
+
+  .hero-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3rem;
+    color: #C6812B;
+    display: block;
+    margin-bottom: 0.8rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroBannerFadeIn-{{ section.id }} 0.8s ease forwards 0.3s;
+  }
+
+  .hero-title-{{ section.id }} {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: heroBannerFadeIn-{{ section.id }} 0.8s ease forwards 0.6s;
+  }
+
+  .hero-body-{{ section.id }} {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroBannerFadeIn-{{ section.id }} 0.8s ease forwards 0.9s;
+  }
+
+  .hero-btn-{{ section.id }} {
+    display: inline-block;
+    background-color: {{ section.settings.text_color }};
+    color: {{ section.settings.bg_color }};
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    border: 1.5px solid {{ section.settings.text_color }};
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroBannerFadeIn-{{ section.id }} 0.8s ease forwards 1.2s;
+  }
+
+  .hero-btn-{{ section.id }}:hover {
+    background: transparent;
+    color: {{ section.settings.text_color }};
+    transform: translateY(-2px);
+  }
+
+  @keyframes heroBannerFadeIn-{{ section.id }} {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-hero-banner-{{ section.id }} {
+      min-height: 450px;
+    }
+
+    .hero-title-{{ section.id }} {
+      font-size: 2.2rem;
+    }
+
+    .hero-body-{{ section.id }} {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="fruttita-hero-banner-{{ section.id }}">
+  {% if section.settings.bg_image != blank %}
+    <div class="hero-bg-{{ section.id }}">
+      {{ section.settings.bg_image | image_url: width: 1920 | image_tag: loading: 'lazy' }}
+    </div>
+  {% endif %}
+  <div class="hero-overlay-{{ section.id }}"></div>
+
+  <div class="hero-content-{{ section.id }}">
+    {% if section.settings.subtitle != blank %}
+      <span class="hero-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <h2 class="hero-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.body != blank %}
+      <p class="hero-body-{{ section.id }}">{{ section.settings.body }}</p>
+    {% endif %}
+    {% if section.settings.btn_text != blank %}
+      <a href="{{ section.settings.btn_link }}" class="hero-btn-{{ section.id }}">{{ section.settings.btn_text }}</a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fruttita Hero Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#4F2C1D"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay Opacity",
+      "default": 30
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "Our Story"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "给身体，一份来自旷野的留白"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body Text"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Height",
+      "default": "80vh",
+      "options": [
+        { "value": "full", "label": "Full Screen (100vh)" },
+        { "value": "80vh", "label": "80vh" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Hero Banner"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,213 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_open": {
+      "type": "fruttita-hero-banner",
+      "settings": {
+        "bg_color": "#4F2C1D",
+        "overlay_opacity": 30,
+        "subtitle": "Our Story",
+        "title": "给身体，一份来自旷野的留白",
+        "text_color": "#F4E3C9",
+        "height": "80vh"
+      }
+    },
+    "brand_manifesto": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "m_p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "在非洲大陆的旷野中，猴面包树已经存在了数千年。它不需要灌溉，不需要施肥，果实在枝头自然脱水，保留了最完整的营养。"
+          }
+        },
+        "m_p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "而在都市的另一端，我们每天面对加工食品、营养焦虑、成分表上看不懂的名字。我们需要的不是更多选择，而是一个真正干净的答案。"
+          }
+        },
+        "m_p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "Fruttita 就是这个答案。我们把旷野中最干净的营养，带进你的日常——用最短的配料表，最远的原产地，给你最纯粹的补给。"
+          }
+        }
+      },
+      "block_order": ["m_p1", "m_p2", "m_p3"],
+      "settings": {
+        "subtitle": "Brand Manifesto",
+        "title": "品牌宣言",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "two_worlds": {
+      "type": "fruttita-two-worlds",
+      "settings": {
+        "left_label": "THE WILDERNESS",
+        "right_label": "YOUR DAILY LIFE",
+        "bridge_text": "一边是非洲旷野中千年的猴面包树，一边是你每天醒来的日常。Fruttita 把这两个世界连在一起——用最短的配料表，最远的原产地，给你最干净的补给。"
+      }
+    },
+    "dual_cards": {
+      "type": "fruttita-dual-cards",
+      "blocks": {
+        "card_clean": {
+          "type": "card",
+          "settings": {
+            "title": "干净",
+            "subtitle": "CLEAN",
+            "body": "我们做减法。配料表只有一项，没有水，没有糖，没有稳定剂。你看到的就是你喝到的。",
+            "bg_color": "#4F2C1D",
+            "text_color": "#F4E3C9"
+          }
+        },
+        "card_wild": {
+          "type": "card",
+          "settings": {
+            "title": "野性",
+            "subtitle": "WILD",
+            "body": "猴面包树在非洲旷野存活数千年，果实自然脱水，不依赖任何人工干预。这种原始的生命力，就是我们想传递的。",
+            "bg_color": "#4F2C1D",
+            "text_color": "#F4E3C9"
+          }
+        }
+      },
+      "block_order": ["card_clean", "card_wild"],
+      "settings": {}
+    },
+    "wellbeing": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "wb_p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们不贩卖焦虑，不追捧潮流超级食物的概念光环。"
+          }
+        },
+        "wb_p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们关注的是每一个个体的 Well-being：在过度消耗的都市生活中，提供一种零负担、能快速回血的天然解决方案。"
+          }
+        },
+        "wb_p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "好的营养不需要复杂的配方，不需要焦虑的营销，不需要你做出任何牺牲。它只需要足够干净，足够真实。"
+          }
+        }
+      },
+      "block_order": ["wb_p1", "wb_p2", "wb_p3"],
+      "settings": {
+        "subtitle": "What We Believe",
+        "title": "WELL-BEING",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9"
+      }
+    },
+    "personality": {
+      "type": "fruttita-personality-cards",
+      "blocks": {
+        "p_1": {
+          "type": "card",
+          "settings": {
+            "title": "平实克制",
+            "body": "我们不喊口号，不造概念，不用感叹号轰炸。好东西不需要大声说。"
+          }
+        },
+        "p_2": {
+          "type": "card",
+          "settings": {
+            "title": "聪明自嘲",
+            "body": "\u201c即使像吃土，也要吃最有营养的那口土。\u201d我们认真做产品，但不把自己太当回事。"
+          }
+        },
+        "p_3": {
+          "type": "card",
+          "settings": {
+            "title": "人间清醒",
+            "body": "不贩卖焦虑，不夸大功效。配料表只有一项，数据来自第三方检测。说到做到，仅此而已。"
+          }
+        }
+      },
+      "block_order": ["p_1", "p_2", "p_3"],
+      "settings": {
+        "subtitle": "Our Voice",
+        "title": "我们怎么说话"
+      }
+    },
+    "promises": {
+      "type": "fruttita-promise-cards",
+      "blocks": {
+        "pm_1": {
+          "type": "card",
+          "settings": {
+            "icon": "label",
+            "title": "Clean Label",
+            "body": "配料表只有一项。不添加水、糖、防腐剂、香精、色素。"
+          }
+        },
+        "pm_2": {
+          "type": "card",
+          "settings": {
+            "icon": "chart",
+            "title": "数据透明",
+            "body": "所有营养数据来自SGS/Eurofins第三方检测，不自说自话。"
+          }
+        },
+        "pm_3": {
+          "type": "card",
+          "settings": {
+            "icon": "globe",
+            "title": "可持续采购",
+            "body": "与非洲当地社区合作采集，支持公平贸易与可持续农业。"
+          }
+        },
+        "pm_4": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "合规底线",
+            "body": "符合中国及欧盟食品安全标准，具备完整进口资质与检测报告。"
+          }
+        }
+      },
+      "block_order": ["pm_1", "pm_2", "pm_3", "pm_4"],
+      "settings": {
+        "title": "我们的承诺"
+      }
+    },
+    "hero_close": {
+      "type": "fruttita-hero-banner",
+      "settings": {
+        "bg_color": "#4F2C1D",
+        "overlay_opacity": 30,
+        "subtitle": "Our Mission",
+        "title": "把旷野的干净和野，带进日常",
+        "body": "Fruttita — 来自非洲旷野的纯净能量",
+        "text_color": "#F4E3C9",
+        "height": "80vh"
+      }
+    }
+  },
+  "order": [
+    "hero_open",
+    "brand_manifesto",
+    "two_worlds",
+    "dual_cards",
+    "wellbeing",
+    "personality",
+    "promises",
+    "hero_close"
+  ]
+}

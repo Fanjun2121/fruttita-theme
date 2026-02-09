@@ -1,0 +1,268 @@
+<!--
+  Fruttita Custom Section: Value Propositions
+  3-column cards (消肿/去黄/干净)
+-->
+
+<style>
+  .fruttita-value-props-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-value-props-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .vp-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .vp-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .vp-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .vp-title-{{ section.id }} {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .vp-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .vp-card-{{ section.id }} {
+    background: rgba(244, 227, 201, 0.06);
+    border: 1px solid rgba(244, 227, 201, 0.12);
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .vp-card-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .vp-card-{{ section.id }}:hover {
+    transform: translateY(-6px);
+    background: rgba(244, 227, 201, 0.12);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  }
+
+  .vp-icon-{{ section.id }} {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1.2rem;
+    color: #D38235;
+    opacity: 0.85;
+  }
+
+  .vp-icon-{{ section.id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .vp-card-title-{{ section.id }} {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .vp-card-desc-{{ section.id }} {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-value-props-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .vp-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .vp-title-{{ section.id }} {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<div class="fruttita-value-props-{{ section.id }}">
+  <div class="vp-inner-{{ section.id }}">
+    <div class="vp-header-{{ section.id }}">
+      {% if section.settings.subtitle != blank %}
+        <span class="vp-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+      {% endif %}
+      <h2 class="vp-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="vp-grid-{{ section.id }}" id="vpGrid-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="vp-card-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
+          <div class="vp-icon-{{ section.id }}">
+            {% case block.settings.icon %}
+              {% when 'droplet' %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+              {% when 'sun' %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              {% when 'shield' %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              {% when 'leaf' %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
+              {% else %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            {% endcase %}
+          </div>
+          <h3 class="vp-card-title-{{ section.id }}">{{ block.settings.title }}</h3>
+          <p class="vp-card-desc-{{ section.id }}">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var cards = document.querySelectorAll('#vpGrid-{{ section.id }} .vp-card-{{ section.id }}');
+    if (!cards.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(card) { observer.observe(card); });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Value Props",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "你不需要知道猴面包树是什么。你只需要知道——"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#4F2C1D"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Value Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "default": "droplet",
+          "options": [
+            { "value": "droplet", "label": "Droplet (消肿)" },
+            { "value": "sun", "label": "Sun (去黄)" },
+            { "value": "shield", "label": "Shield (干净)" },
+            { "value": "leaf", "label": "Leaf (天然)" },
+            { "value": "check", "label": "Checkmark" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "消肿"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "0钠+高钾，物理消肿。不锁水，不虚胖。晨起一袋，肿脸拜拜。"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Value Props",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "icon": "droplet",
+            "title": "消肿",
+            "description": "0钠+高钾，物理消肿。不锁水，不虚胖。晨起一袋，肿脸拜拜。"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "icon": "sun",
+            "title": "去黄",
+            "description": "420mg+天然维C，熬夜后提亮气色。不是遮瑕，是从内透出来的干净感。"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "干净",
+            "description": "配料表只有一项：猴面包树果肉原浆。没有水，没有糖，没有你不认识的东西。"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

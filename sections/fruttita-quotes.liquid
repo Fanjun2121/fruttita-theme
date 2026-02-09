@@ -1,0 +1,232 @@
+<!--
+  Fruttita Custom Section: Brand Quotes Carousel
+  Full-screen background + 3 quotes with fade-in/fade-out rotation
+-->
+
+<style>
+  .fruttita-quotes-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 8rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fruttita-quotes-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .quotes-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .quotes-container-{{ section.id }} {
+    position: relative;
+    min-height: 120px;
+  }
+
+  .quote-slide-{{ section.id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+  }
+
+  .quote-slide-{{ section.id }}.is-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+  }
+
+  .quote-mark-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    line-height: 1;
+    color: #C6812B;
+    opacity: 0.3;
+    margin-bottom: -1rem;
+    display: block;
+  }
+
+  .quote-text-{{ section.id }} {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  .quotes-dots-{{ section.id }} {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 2.5rem;
+  }
+
+  .quotes-dot-{{ section.id }} {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: {{ section.settings.text_color }};
+    opacity: 0.2;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: none;
+    padding: 0;
+  }
+
+  .quotes-dot-{{ section.id }}.is-active {
+    opacity: 0.8;
+    transform: scale(1.3);
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-quotes-{{ section.id }} {
+      padding: 5rem 1.5rem;
+      min-height: 40vh;
+    }
+
+    .quote-text-{{ section.id }} {
+      font-size: 1.3rem;
+    }
+
+    .quote-mark-{{ section.id }} {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<div class="fruttita-quotes-{{ section.id }}">
+  <div class="quotes-inner-{{ section.id }}">
+    <div class="quotes-container-{{ section.id }}" id="quotesContainer-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="quote-slide-{{ section.id }}{% if forloop.first %} is-active{% endif %}" {{ block.shopify_attributes }}>
+          <span class="quote-mark-{{ section.id }}">&ldquo;</span>
+          <p class="quote-text-{{ section.id }}">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.blocks.size > 1 %}
+      <div class="quotes-dots-{{ section.id }}" id="quotesDots-{{ section.id }}">
+        {% for block in section.blocks %}
+          <button class="quotes-dot-{{ section.id }}{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Quote {{ forloop.index }}"></button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    var slides = document.querySelectorAll('#quotesContainer-{{ section.id }} .quote-slide-{{ section.id }}');
+    var dots = document.querySelectorAll('#quotesDots-{{ section.id }} .quotes-dot-{{ section.id }}');
+    if (slides.length < 2) return;
+
+    var current = 0;
+    var total = slides.length;
+    var interval;
+
+    function goTo(idx) {
+      slides[current].classList.remove('is-active');
+      if (dots[current]) dots[current].classList.remove('is-active');
+      current = idx % total;
+      slides[current].classList.add('is-active');
+      if (dots[current]) dots[current].classList.add('is-active');
+    }
+
+    function startAutoplay() {
+      interval = setInterval(function() {
+        goTo(current + 1);
+      }, 5000);
+    }
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        clearInterval(interval);
+        goTo(parseInt(dot.dataset.index));
+        startAutoplay();
+      });
+    });
+
+    startAutoplay();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Quotes",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9F1E6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#4F2C1D"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Quote",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Quote Text",
+          "default": "即使像吃土，也要吃最有营养的那口土。"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Quotes",
+      "blocks": [
+        {
+          "type": "quote",
+          "settings": {
+            "text": "即使像吃土，也要吃最有营养的那口土。"
+          }
+        },
+        {
+          "type": "quote",
+          "settings": {
+            "text": "配料表只有一项。只有你要的，没有你不要的。"
+          }
+        },
+        {
+          "type": "quote",
+          "settings": {
+            "text": "给身体，一份来自旷野的留白。"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -9,147 +9,382 @@
  */
 {
   "sections": {
-    "fruttita_benefits": {
-      "type": "fruttita-benefits",
-      "blocks": {
-        "benefit_vc": {
-          "type": "benefit",
-          "settings": {
-            "number": "420mg+",
-            "label": "天然维C",
-            "description": "熬夜后提亮气色",
-            "icon": "vitamin-c"
-          }
-        },
-        "benefit_k": {
-          "type": "benefit",
-          "settings": {
-            "number": "380mg+",
-            "label": "高钾",
-            "description": "物理消肿，告别浮肿脸",
-            "icon": "potassium"
-          }
-        },
-        "benefit_na": {
-          "type": "benefit",
-          "settings": {
-            "number": "0mg",
-            "label": "钠",
-            "description": "真·零钠，不锁水",
-            "icon": "sodium"
-          }
-        },
-        "benefit_fiber": {
-          "type": "benefit",
-          "settings": {
-            "number": "10g+",
-            "label": "膳食纤维",
-            "description": "肠道清道夫",
-            "icon": "fiber"
-          }
-        },
-        "benefit_cal": {
-          "type": "benefit",
-          "settings": {
-            "number": "<65kcal",
-            "label": "低卡",
-            "description": "半个苹果的热量",
-            "icon": "low-cal"
-          }
-        },
-        "benefit_poly": {
-          "type": "benefit",
-          "settings": {
-            "number": "828mg",
-            "label": "总多酚",
-            "description": "深层抗氧化",
-            "icon": "polyphenol"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_vc",
-        "benefit_k",
-        "benefit_na",
-        "benefit_fiber",
-        "benefit_cal",
-        "benefit_poly"
-      ],
-      "settings": {
-        "subtitle": "Hexagonal Warrior",
-        "title": "六边形战士，无短板"
-      }
-    },
     "fruttita_marquee": {
       "type": "fruttita-marquee",
       "settings": {
-        "text": "• 0钠消肿 • 高钾排水 • 200%天然VC • 猴面包树原浆 • 0钠消肿 • 高钾排水 • 200%天然VC • 猴面包树原浆",
+        "text": "0 钠 · 0 添加 · 0 脂 — 高钾 · 高 VC · 高纤维",
         "bg_color": "#4F2C1D",
         "text_color": "#F4E3C9",
         "speed": 20
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "fruttita_prose": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "prose_p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "Fruttita 是一个非洲猴面包树果肉品牌。"
+          }
+        },
+        "prose_p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们从非洲大陆采集猴面包树果实，以最少加工保留果肉的天然营养，做成随手可用的日常补给。"
+          }
+        },
+        "prose_p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "猴面包树被称为\u201c生命之树\u201d，在非洲旷野中已存在数千年。"
+          }
+        },
+        "prose_p4": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "它的果肉天然脱水，不需要任何人工干预就能保存完整的营养——高维C、高钾、高纤维、零钠、低卡。"
+          }
+        },
+        "prose_p5": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们相信：好的原料不需要复杂的配方。"
+          }
+        },
+        "prose_p6": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "所以 Fruttita 的配料表只有一项。没有水，没有糖，没有你不认识的东西。"
+          }
+        },
+        "prose_p7": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们不追求\u201c超级食物\u201d的概念光环，也不贩卖焦虑。"
+          }
+        },
+        "prose_p8": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "只是想把旷野里最干净的营养，带进你的日常。"
+          }
+        }
+      },
+      "block_order": [
+        "prose_p1",
+        "prose_p2",
+        "prose_p3",
+        "prose_p4",
+        "prose_p5",
+        "prose_p6",
+        "prose_p7",
+        "prose_p8"
+      ],
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "我们的产品",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
+        "subtitle": "About Fruttita",
+        "title": "ABOUT FRUTTITA",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D",
+        "btn_text": "了解我们的故事",
+        "btn_link": "/pages/about"
       }
     },
-    "fruttita_story": {
-      "type": "fruttita-story",
+    "fruttita_value_props": {
+      "type": "fruttita-value-props",
+      "blocks": {
+        "vp_1": {
+          "type": "card",
+          "settings": {
+            "icon": "droplet",
+            "title": "消肿",
+            "description": "0钠+高钾，物理消肿。不锁水，不虚胖。晨起一袋，肿脸拜拜。"
+          }
+        },
+        "vp_2": {
+          "type": "card",
+          "settings": {
+            "icon": "sun",
+            "title": "去黄",
+            "description": "420mg+天然维C，熬夜后提亮气色。不是遮瑕，是从内透出来的干净感。"
+          }
+        },
+        "vp_3": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "干净",
+            "description": "配料表只有一项：猴面包树果肉原浆。没有水，没有糖，没有你不认识的东西。"
+          }
+        }
+      },
+      "block_order": ["vp_1", "vp_2", "vp_3"],
       "settings": {
-        "subtitle": "The Tree of Life",
-        "title": "把旷野的干净和野，带进日常",
-        "body": "关注每一个个体的 Well-being。在过度消耗的都市生活中，提供一种 0 负担、能快速回血的天然解决方案。",
-        "btn_text": "了解我们的故事",
+        "title": "你不需要知道猴面包树是什么。你只需要知道——",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9"
+      }
+    },
+    "fruttita_product_showcase": {
+      "type": "fruttita-product-showcase",
+      "blocks": {
+        "product_shot": {
+          "type": "product",
+          "settings": {
+            "name_cn": "猴面包树原浆 Shot",
+            "name_en": "Baobab Shot",
+            "tagline": "晨起一袋，消肿回血。配料表只有一项。",
+            "scenarios": "晨起消肿, 熬夜急救, 健身补给",
+            "specs": "30ml \u00b7 0钠 \u00b7 420mg+维C \u00b7 10g+纤维",
+            "link": "/products/baobab-shot"
+          }
+        },
+        "product_pouch": {
+          "type": "product",
+          "settings": {
+            "name_cn": "猴面包树果泥 Pouch",
+            "name_en": "Baobab Pouch",
+            "tagline": "随身携带的维C补给站，挤着吃的水果能量。",
+            "scenarios": "通勤路上, 下午茶替代, 户外便携",
+            "specs": "100g \u00b7 0添加 \u00b7 天然果酸 \u00b7 高纤低卡",
+            "link": "/products/baobab-pouch"
+          }
+        },
+        "product_water": {
+          "type": "product",
+          "settings": {
+            "name_cn": "猴面包树风味水",
+            "name_en": "Baobab Water",
+            "tagline": "喝水也可以有营养。淡淡果香，0糖轻补给。",
+            "scenarios": "日常补水, 瑜伽搭配, 办公桌常备",
+            "specs": "350ml \u00b7 0糖 \u00b7 低卡 \u00b7 轻维C",
+            "link": "/products/baobab-water"
+          }
+        }
+      },
+      "block_order": ["product_shot", "product_pouch", "product_water"],
+      "settings": {
+        "subtitle": "Our Products",
+        "title": "产品一览",
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D"
       }
     },
-    "fruttita_comparison": {
-      "type": "fruttita-comparison",
+    "fruttita_data_science": {
+      "type": "fruttita-data-science",
+      "blocks": {
+        "ds_vc": {
+          "type": "metric",
+          "settings": {
+            "label": "天然维C",
+            "value": "420mg+",
+            "description": "相当于7个柠檬的维C含量",
+            "bar_pct": 95
+          }
+        },
+        "ds_k": {
+          "type": "metric",
+          "settings": {
+            "label": "钾含量",
+            "value": "380mg+",
+            "description": "物理消肿的关键电解质",
+            "bar_pct": 85
+          }
+        },
+        "ds_na": {
+          "type": "metric",
+          "settings": {
+            "label": "钠含量",
+            "value": "0mg",
+            "description": "真·零钠，不锁水不水肿",
+            "bar_pct": 100
+          }
+        },
+        "ds_fiber": {
+          "type": "metric",
+          "settings": {
+            "label": "膳食纤维",
+            "value": "10g+",
+            "description": "优质益生元纤维，肠道清道夫",
+            "bar_pct": 78
+          }
+        },
+        "ds_cal": {
+          "type": "metric",
+          "settings": {
+            "label": "热量",
+            "value": "<65kcal",
+            "description": "低于半个苹果的热量",
+            "bar_pct": 30
+          }
+        },
+        "ds_ingredient": {
+          "type": "metric",
+          "settings": {
+            "label": "配料项数",
+            "value": "1",
+            "description": "只有猴面包树果肉原浆，nothing else",
+            "bar_pct": 5
+          }
+        }
+      },
+      "block_order": ["ds_vc", "ds_k", "ds_na", "ds_fiber", "ds_cal", "ds_ingredient"],
       "settings": {
-        "subtitle": "The Truth",
-        "title": "不是所有补水都一样",
+        "subtitle": "The Data",
+        "title": "好不好，数据说了算",
         "bg_color": "#4F2C1D",
         "text_color": "#F4E3C9",
-        "comp1_name": "椰子水",
-        "comp1_list": "<li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>高钠（容易水肿）</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>维C含量低</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>无膳食纤维</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>含糖量高</li>",
-        "winner_name": "Fruttita Shot",
-        "winner_list": "<li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>0钠，不水肿</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>420mg+ 天然维C</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>10g+ 膳食纤维</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>&lt;65kcal 低卡</strong></li><li class='comp-item'><svg class='icon-check' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg><strong>828mg 总多酚</strong></li>",
-        "btn_text": "选择 Fruttita",
-        "comp2_name": "能量饮料",
-        "comp2_list": "<li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>人工咖啡因</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>高糖高热量</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>添加剂多</li><li class='comp-item'><svg class='icon-x' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'></path></svg>无天然营养素</li>"
+        "source_note": "数据来源：SGS / Eurofins 第三方检测报告",
+        "easter_egg_title": "总多酚：828mg",
+        "easter_egg_text": "多酚是深层抗氧化的关键指标。828mg 总多酚含量，远超蓝莓、石榴等常见抗氧化水果。你的身体值得最有效的抗氧。"
+      }
+    },
+    "fruttita_comparison": {
+      "type": "fruttita-comparison",
+      "blocks": {
+        "comp_na": {
+          "type": "metric",
+          "settings": {
+            "label": "钠含量",
+            "comp_value": "105mg",
+            "comp_status": "bad",
+            "fruttita_value": "0mg",
+            "fruttita_status": "good"
+          }
+        },
+        "comp_k": {
+          "type": "metric",
+          "settings": {
+            "label": "钾含量",
+            "comp_value": "250mg",
+            "comp_status": "good",
+            "fruttita_value": "380mg+",
+            "fruttita_status": "good"
+          }
+        },
+        "comp_vc": {
+          "type": "metric",
+          "settings": {
+            "label": "天然维C",
+            "comp_value": "2.4mg",
+            "comp_status": "bad",
+            "fruttita_value": "420mg+",
+            "fruttita_status": "good"
+          }
+        },
+        "comp_fiber": {
+          "type": "metric",
+          "settings": {
+            "label": "膳食纤维",
+            "comp_value": "0g",
+            "comp_status": "bad",
+            "fruttita_value": "10g+",
+            "fruttita_status": "good"
+          }
+        },
+        "comp_additive": {
+          "type": "metric",
+          "settings": {
+            "label": "添加剂",
+            "comp_value": "有（风味/酸度调节）",
+            "comp_status": "bad",
+            "fruttita_value": "无（纯原浆）",
+            "fruttita_status": "good"
+          }
+        }
+      },
+      "block_order": ["comp_na", "comp_k", "comp_vc", "comp_fiber", "comp_additive"],
+      "settings": {
+        "subtitle": "The Truth",
+        "title": "都说椰子水消肿，但你看过它的钠含量吗？",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9",
+        "conclusion": "同样是「消肿神器」，一个高钠锁水，一个零钠排水。选哪个，身体会告诉你。",
+        "source_note": "数据来源：SGS / Eurofins 第三方检测报告，主流椰子水取市售Top3品牌均值"
+      }
+    },
+    "fruttita_quotes": {
+      "type": "fruttita-quotes",
+      "blocks": {
+        "quote_1": {
+          "type": "quote",
+          "settings": {
+            "text": "即使像吃土，也要吃最有营养的那口土。"
+          }
+        },
+        "quote_2": {
+          "type": "quote",
+          "settings": {
+            "text": "配料表只有一项。只有你要的，没有你不要的。"
+          }
+        },
+        "quote_3": {
+          "type": "quote",
+          "settings": {
+            "text": "给身体，一份来自旷野的留白。"
+          }
+        }
+      },
+      "block_order": ["quote_1", "quote_2", "quote_3"],
+      "settings": {
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "fruttita_where_to_buy": {
+      "type": "fruttita-where-to-buy",
+      "blocks": {
+        "ch_tmall": {
+          "type": "channel",
+          "settings": {
+            "name": "天猫"
+          }
+        },
+        "ch_jd": {
+          "type": "channel",
+          "settings": {
+            "name": "京东"
+          }
+        },
+        "ch_xhs": {
+          "type": "channel",
+          "settings": {
+            "name": "小红书"
+          }
+        },
+        "ch_douyin": {
+          "type": "channel",
+          "settings": {
+            "name": "抖音"
+          }
+        }
+      },
+      "block_order": ["ch_tmall", "ch_jd", "ch_xhs", "ch_douyin"],
+      "settings": {
+        "subtitle": "Find Us",
+        "title": "想试试？",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "fruttita_subscribe": {
+      "type": "fruttita-subscribe",
+      "settings": {
+        "title": "关注我们，偶尔聊点有用的。",
+        "subtitle": "不群发，不刷屏。新品上线、限时活动，第一时间知道。",
+        "bg_color": "#3A2015",
+        "text_color": "#F4E3C9"
       }
     }
   },
   "order": [
-    "fruttita_benefits",
     "fruttita_marquee",
-    "featured_collection",
-    "fruttita_story",
-    "fruttita_comparison"
+    "fruttita_prose",
+    "fruttita_value_props",
+    "fruttita_product_showcase",
+    "fruttita_data_science",
+    "fruttita_comparison",
+    "fruttita_quotes",
+    "fruttita_where_to_buy",
+    "fruttita_subscribe"
   ]
 }

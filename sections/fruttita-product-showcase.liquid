@@ -1,0 +1,375 @@
+<!--
+  Fruttita Custom Section: Product Showcase
+  3-column custom product cards (Shot/Pouch/Water)
+  No price, no buy button — brand display only
+-->
+
+<style>
+  .fruttita-product-showcase-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-product-showcase-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .ps-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .ps-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .ps-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .ps-title-{{ section.id }} {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .ps-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .ps-card-{{ section.id }} {
+    background: rgba(79, 44, 29, 0.04);
+    border: 1px solid rgba(79, 44, 29, 0.1);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .ps-card-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ps-card-{{ section.id }}:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(79,44,29,0.12);
+  }
+
+  .ps-card-image-{{ section.id }} {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: rgba(79, 44, 29, 0.06);
+  }
+
+  .ps-card-image-{{ section.id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .ps-card-{{ section.id }}:hover .ps-card-image-{{ section.id }} img {
+    transform: scale(1.05);
+  }
+
+  .ps-card-image-placeholder-{{ section.id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(79, 44, 29, 0.25);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .ps-card-body-{{ section.id }} {
+    padding: 1.8rem 1.5rem 2rem;
+  }
+
+  .ps-card-name-cn-{{ section.id }} {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+
+  .ps-card-name-en-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    font-size: 0.9rem;
+    color: #C6812B;
+    margin-bottom: 0.8rem;
+  }
+
+  .ps-card-tagline-{{ section.id }} {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+
+  .ps-card-scenarios-{{ section.id }} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .ps-tag-{{ section.id }} {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    background: rgba(79, 44, 29, 0.08);
+    color: rgba(79, 44, 29, 0.7);
+  }
+
+  .ps-card-specs-{{ section.id }} {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    opacity: 0.6;
+    margin-bottom: 1.2rem;
+    border-top: 1px solid rgba(79, 44, 29, 0.08);
+    padding-top: 0.8rem;
+  }
+
+  .ps-card-link-{{ section.id }} {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #C6812B;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: opacity 0.3s ease;
+  }
+
+  .ps-card-link-{{ section.id }}:hover {
+    opacity: 0.7;
+  }
+
+  .ps-card-link-{{ section.id }}::after {
+    content: ' \2192';
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-product-showcase-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .ps-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .ps-title-{{ section.id }} {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<div class="fruttita-product-showcase-{{ section.id }}">
+  <div class="ps-inner-{{ section.id }}">
+    <div class="ps-header-{{ section.id }}">
+      {% if section.settings.subtitle != blank %}
+        <span class="ps-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+      {% endif %}
+      <h2 class="ps-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="ps-grid-{{ section.id }}" id="psGrid-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="ps-card-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
+          <div class="ps-card-image-{{ section.id }}">
+            {% if block.settings.image != blank %}
+              {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', alt: block.settings.name_cn }}
+            {% else %}
+              <div class="ps-card-image-placeholder-{{ section.id }}">Upload Image</div>
+            {% endif %}
+          </div>
+          <div class="ps-card-body-{{ section.id }}">
+            <h3 class="ps-card-name-cn-{{ section.id }}">{{ block.settings.name_cn }}</h3>
+            <div class="ps-card-name-en-{{ section.id }}">{{ block.settings.name_en }}</div>
+            <p class="ps-card-tagline-{{ section.id }}">{{ block.settings.tagline }}</p>
+
+            {% if block.settings.scenarios != blank %}
+              <div class="ps-card-scenarios-{{ section.id }}">
+                {% assign tags = block.settings.scenarios | split: ',' %}
+                {% for tag in tags %}
+                  <span class="ps-tag-{{ section.id }}">{{ tag | strip }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if block.settings.specs != blank %}
+              <div class="ps-card-specs-{{ section.id }}">{{ block.settings.specs }}</div>
+            {% endif %}
+
+            {% if block.settings.link != blank %}
+              <a href="{{ block.settings.link }}" class="ps-card-link-{{ section.id }}">了解更多</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var cards = document.querySelectorAll('#psGrid-{{ section.id }} .ps-card-{{ section.id }}');
+    if (!cards.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(card) { observer.observe(card); });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "Our Products"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "产品一览"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9F1E6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#4F2C1D"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name_cn",
+          "label": "Chinese Name",
+          "default": "猴面包树原浆 Shot"
+        },
+        {
+          "type": "text",
+          "id": "name_en",
+          "label": "English Name",
+          "default": "Baobab Shot"
+        },
+        {
+          "type": "textarea",
+          "id": "tagline",
+          "label": "One-line persona",
+          "default": "晨起一袋，消肿回血。配料表只有一项。"
+        },
+        {
+          "type": "text",
+          "id": "scenarios",
+          "label": "Scenario Tags (comma-separated)",
+          "default": "晨起消肿, 熬夜急救, 健身补给"
+        },
+        {
+          "type": "textarea",
+          "id": "specs",
+          "label": "Key Specs",
+          "default": "30ml · 0钠 · 420mg+维C · 10g+纤维"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Learn More Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Products",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "name_cn": "猴面包树原浆 Shot",
+            "name_en": "Baobab Shot",
+            "tagline": "晨起一袋，消肿回血。配料表只有一项。",
+            "scenarios": "晨起消肿, 熬夜急救, 健身补给",
+            "specs": "30ml · 0钠 · 420mg+维C · 10g+纤维"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "name_cn": "猴面包树果泥 Pouch",
+            "name_en": "Baobab Pouch",
+            "tagline": "随身携带的维C补给站，挤着吃的水果能量。",
+            "scenarios": "通勤路上, 下午茶替代, 户外便携",
+            "specs": "100g · 0添加 · 天然果酸 · 高纤低卡"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "name_cn": "猴面包树风味水",
+            "name_en": "Baobab Water",
+            "tagline": "喝水也可以有营养。淡淡果香，0糖轻补给。",
+            "scenarios": "日常补水, 瑜伽搭配, 办公桌常备",
+            "specs": "350ml · 0糖 · 低卡 · 轻维C"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
