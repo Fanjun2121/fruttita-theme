@@ -1,0 +1,175 @@
+{
+  "sections": {
+    "hero_open": {
+      "type": "fruttita-hero-banner",
+      "settings": {
+        "bg_color": "#4F2C1D",
+        "overlay_opacity": 30,
+        "subtitle": "The Baobab Tree",
+        "title": "生命之树",
+        "body": "它在非洲大草原上伫立了三千年。不浇水，不施肥，不依赖任何人。猴面包树是地球上最古老、最顽强的植物之一——而它的果实，正是 Fruttita 的唯一原料。",
+        "text_color": "#F4E3C9",
+        "height": "80vh"
+      }
+    },
+    "origin_story": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "os_p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "猴面包树（Adansonia digitata）原产于非洲撒哈拉以南的热带草原地带，从塞内加尔到马达加斯加，横跨整个大陆。"
+          }
+        },
+        "os_p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "它可以活到 3000 岁以上，树干直径超过 10 米，体内能储存多达 12 万升水——这是它在极端干旱中生存的秘密。"
+          }
+        },
+        "os_p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "在非洲，它被称为"生命之树"。人们用它的叶子入药，用树皮编绳，用果实解渴。千百年来，猴面包树一直是大草原上最慷慨的馈赠者。"
+          }
+        },
+        "os_p4": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "最神奇的是它的果实：在枝头经赤道阳光自然风干，果肉在硬壳内脱水成粉状，不经过任何人工处理，天然锁住了高浓度的维生素 C、钾、膳食纤维和多酚。"
+          }
+        },
+        "os_p5": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "这不是实验室里调配出来的超级食物——这是大自然花了三千年优化出的完美配方。"
+          }
+        }
+      },
+      "block_order": ["os_p1", "os_p2", "os_p3", "os_p4", "os_p5"],
+      "settings": {
+        "subtitle": "Origin",
+        "title": "一棵活了三千年的树",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "nutrition_data": {
+      "type": "fruttita-data-science",
+      "blocks": {
+        "nd_vc": {
+          "type": "metric",
+          "settings": {
+            "label": "天然维C",
+            "value": "420mg+",
+            "description": "相当于 7 个柠檬，且为天然形态，人体吸收率远高于合成维C",
+            "bar_pct": 95
+          }
+        },
+        "nd_k": {
+          "type": "metric",
+          "settings": {
+            "label": "钾含量",
+            "value": "380mg+",
+            "description": "超过香蕉 50%，是身体消肿、维持电解质平衡的关键矿物质",
+            "bar_pct": 85
+          }
+        },
+        "nd_fiber": {
+          "type": "metric",
+          "settings": {
+            "label": "膳食纤维",
+            "value": "10g+",
+            "description": "优质益生元纤维，支持肠道健康，增强饱腹感",
+            "bar_pct": 78
+          }
+        },
+        "nd_na": {
+          "type": "metric",
+          "settings": {
+            "label": "钠含量",
+            "value": "0mg",
+            "description": "真·零钠，不锁水、不水肿，对身体零负担",
+            "bar_pct": 100
+          }
+        },
+        "nd_polyphenol": {
+          "type": "metric",
+          "settings": {
+            "label": "总多酚",
+            "value": "828mg",
+            "description": "远超蓝莓、石榴等常见抗氧化水果，深层抗氧化的关键指标",
+            "bar_pct": 92
+          }
+        }
+      },
+      "block_order": ["nd_vc", "nd_k", "nd_fiber", "nd_na", "nd_polyphenol"],
+      "settings": {
+        "subtitle": "Nutrition",
+        "title": "旷野给的数据",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9",
+        "source_note": "数据来源：SGS / Eurofins 第三方检测报告（每 100g 果肉粉）",
+        "easter_egg_title": "天然风干，零加工",
+        "easter_egg_text": "猴面包树的果实在枝头自然脱水风干，采摘后只需物理破壳、过筛，全程无化学处理、无高温灭菌。你拿到的，就是大自然原本的样子。"
+      }
+    },
+    "sustainability": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "su_p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "猴面包树的果实成熟后会自然脱落或由当地社区手工采摘。采果不伐树——这棵树明年还会继续结果，后年也是，再过一千年也是。"
+          }
+        },
+        "su_p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们的原料来自非洲当地的采摘合作社。每一次采购，都直接支持产地社区的收入和生计。对他们来说，猴面包树不只是一棵树，是世代相传的生存资源。"
+          }
+        },
+        "su_p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "没有砍伐。没有种植园。没有化学农药。猴面包树在野外自由生长，果实由大自然决定产量——我们只是搬运工。"
+          }
+        },
+        "su_p4": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "选择 Fruttita，你不只是在喝一杯天然果饮。你也在参与一种更可持续的消费方式——对地球温柔一点，对产地社区多一份支持。"
+          }
+        }
+      },
+      "block_order": ["su_p1", "su_p2", "su_p3", "su_p4"],
+      "settings": {
+        "subtitle": "Sustainability",
+        "title": "采果，不伐树。",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "hero_close": {
+      "type": "fruttita-hero-banner",
+      "settings": {
+        "bg_color": "#4F2C1D",
+        "overlay_opacity": 30,
+        "subtitle": "Taste the Wilderness",
+        "title": "尝一口旷野的味道",
+        "body": "三千年的生命力，浓缩在一颗果实里。\n零添加，零负担，只有大自然最纯粹的馈赠。",
+        "btn_text": "探索产品",
+        "btn_link": "/collections/all",
+        "text_color": "#F4E3C9",
+        "height": "80vh"
+      }
+    }
+  },
+  "order": [
+    "hero_open",
+    "origin_story",
+    "nutrition_data",
+    "sustainability",
+    "hero_close"
+  ]
+}
