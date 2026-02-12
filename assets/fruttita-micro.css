@@ -1,0 +1,387 @@
+/* =============================================
+   Fruttita Micro-Interactions & Design Details
+   Global CSS — scroll bar, cursor, buttons, surprises
+   ============================================= */
+
+/* 1. Scroll Progress Bar */
+.fruttita-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #C6812B, #D38235);
+  z-index: 9999;
+  pointer-events: none;
+  transition: none;
+}
+
+/* 2. Branded Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #4F2C1D;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6812B;
+  border-radius: 5px;
+  border: 2px solid #4F2C1D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D38235;
+}
+/* Firefox */
+html {
+  scrollbar-color: #C6812B #4F2C1D;
+  scrollbar-width: thin;
+}
+
+/* 3. Cursor Follow Dot (desktop only) */
+@media (hover: hover) and (pointer: fine) {
+  .fruttita-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: #C6812B;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    transition: width 0.25s ease, height 0.25s ease, margin 0.25s ease, opacity 0.25s ease;
+    will-change: transform;
+    opacity: 0;
+  }
+  .fruttita-cursor-dot.is-active {
+    opacity: 1;
+  }
+  .fruttita-cursor-dot.is-hover {
+    width: 24px;
+    height: 24px;
+    margin: -8px 0 0 -8px;
+  }
+}
+
+/* Hide cursor dot on touch / mobile */
+@media (hover: none), (pointer: coarse) {
+  .fruttita-cursor-dot { display: none !important; }
+}
+
+/* 4. Button Fill Animation */
+.fruttita-prose .prose-btn,
+a[class*="prose-btn-"],
+a[class*="ps-card-link-"],
+button[class*="ds-egg-toggle-"],
+.fruttita-btn-fill {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fruttita-prose .prose-btn::after,
+a[class*="prose-btn-"]::after,
+.fruttita-btn-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F4E3C9;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.fruttita-prose .prose-btn:hover::after,
+a[class*="prose-btn-"]:hover::after,
+.fruttita-btn-fill:hover::after {
+  transform: scaleX(1);
+}
+
+/* 10. Bottom Surprise Toast */
+.fruttita-bottom-surprise {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #4F2C1D;
+  color: #F4E3C9;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Switzer', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9998;
+  box-shadow: 0 8px 32px rgba(79, 44, 29, 0.3);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fruttita-bottom-surprise.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 11. Logo Easter Egg Overlay */
+.fruttita-logo-egg {
+  position: fixed;
+  inset: 0;
+  background: rgba(79, 44, 29, 0.96);
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+.fruttita-logo-egg.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.fruttita-logo-egg__icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: fruttita-egg-float 2s ease-in-out infinite;
+}
+.fruttita-logo-egg__text {
+  color: #F4E3C9;
+  font-family: 'Switzer', sans-serif;
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: center;
+  max-width: 460px;
+  padding: 0 1.5rem;
+}
+.fruttita-logo-egg__close {
+  margin-top: 2rem;
+  background: transparent;
+  border: 1px solid rgba(244, 227, 201, 0.3);
+  color: #F4E3C9;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Switzer', sans-serif;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+.fruttita-logo-egg__close:hover {
+  background: rgba(244, 227, 201, 0.1);
+}
+
+@keyframes fruttita-egg-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* =============================================
+   Hero Savanna Atmosphere Enhancement
+   Grass silhouettes, birds, dust, shimmer, parallax
+   ============================================= */
+
+/* --- Baobab tree bottom alignment fix --- */
+.fruttita-origin-section .origin-tree {
+  bottom: -6px;
+}
+
+/* --- Grass Silhouettes --- */
+.hero-grass {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 52%, transparent 68%);
+  mask-image: linear-gradient(to right, black 0%, black 52%, transparent 68%);
+}
+.hero-grass--far {
+  height: 40px;
+  opacity: 0.14;
+  z-index: 1;
+  animation: heroGrassSway 8s ease-in-out infinite;
+}
+.hero-grass--near {
+  height: 60px;
+  opacity: 0.22;
+  z-index: 3;
+  animation: heroGrassSway 6s ease-in-out infinite reverse;
+}
+.hero-grass svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes heroGrassSway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+/* --- Flying Birds --- */
+.hero-bird {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  animation: heroFlyAcross linear infinite;
+}
+.hero-bird--1 {
+  top: 15%;
+  width: 28px;
+  height: 12px;
+  opacity: 0.16;
+  animation-duration: 18s;
+}
+.hero-bird--2 {
+  top: 25%;
+  width: 22px;
+  height: 10px;
+  opacity: 0.12;
+  animation-duration: 25s;
+  animation-delay: -8s;
+}
+.hero-bird--3 {
+  top: 12%;
+  width: 18px;
+  height: 8px;
+  opacity: 0.18;
+  animation-duration: 22s;
+  animation-delay: -14s;
+}
+
+@keyframes heroFlyAcross {
+  from { transform: translateX(-50px); }
+  to { transform: translateX(calc(100vw + 50px)); }
+}
+
+/* --- Golden Dust Canvas --- */
+.hero-dust-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+/* --- Subtitle Gold Shimmer --- */
+.origin-subtitle.hero-shimmer {
+  background: linear-gradient(90deg, #D38235 0%, #F4E3C9 45%, #F4E3C9 55%, #D38235 100%) !important;
+  background-size: 200% 100% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: heroShimmer 3s ease-in-out infinite, heroFadeIn 0.8s ease forwards 0.5s !important;
+}
+
+@keyframes heroShimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: -100% 50%; }
+}
+
+/* --- Parallax Layers (desktop only) --- */
+@media (hover: hover) and (pointer: fine) {
+  .origin-tree,
+  .origin-content,
+  .hero-grass--near {
+    will-change: transform;
+  }
+}
+
+/* --- Hero Banner Atmosphere (About/Baobab pages) --- */
+.hero-banner-grass {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.18;
+}
+.hero-banner-grass svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-banner-doodle {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  animation: heroBannerDoodleFadeIn 0.8s ease forwards;
+}
+@keyframes heroBannerDoodleFadeIn {
+  to { opacity: 1; }
+}
+/* Shimmer for hero-banner subtitles (reuse .hero-shimmer class) */
+[class*="hero-subtitle-"].hero-shimmer {
+  background: linear-gradient(90deg, #C6812B 0%, #F4E3C9 45%, #F4E3C9 55%, #C6812B 100%) !important;
+  background-size: 200% 100% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: heroShimmer 3s ease-in-out infinite !important;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+  .hero-bird--2,
+  .hero-bird--3 {
+    display: none;
+  }
+  .hero-grass--far { height: 28px; }
+  .hero-grass--near { height: 42px; }
+  .hero-grass {
+    -webkit-mask-image: linear-gradient(to right, black 0%, black 45%, transparent 62%);
+    mask-image: linear-gradient(to right, black 0%, black 45%, transparent 62%);
+  }
+  .hero-grass--far,
+  .hero-grass--near {
+    animation: none;
+  }
+  .hero-banner-grass {
+    height: 25px;
+  }
+  .hero-banner-doodle {
+    display: none;
+  }
+}
+
+/* === Accessibility: Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  .fruttita-scroll-progress,
+  .fruttita-cursor-dot,
+  .fruttita-bottom-surprise,
+  .fruttita-logo-egg,
+  .fruttita-logo-egg__icon,
+  .hero-grass,
+  .hero-bird,
+  .hero-banner-grass,
+  .hero-banner-doodle,
+  .origin-subtitle.hero-shimmer,
+  [class*="hero-subtitle-"].hero-shimmer {
+    transition: none !important;
+    animation: none !important;
+  }
+  .fruttita-cursor-dot {
+    display: none !important;
+  }
+  .hero-dust-canvas {
+    display: none !important;
+  }
+  .origin-subtitle.hero-shimmer,
+  [class*="hero-subtitle-"].hero-shimmer {
+    -webkit-text-fill-color: #C6812B !important;
+    background: none !important;
+  }
+}
