@@ -68,7 +68,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "关注我们，偶尔聊点有用的。",
         "newsletter_heading_en": "Stay in the loop. We only share what matters.",
         "newsletter_heading_pt": "Fica a par. Só partilhamos o que importa.",

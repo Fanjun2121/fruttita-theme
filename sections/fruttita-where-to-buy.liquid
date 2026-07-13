@@ -34,7 +34,7 @@
   .wtb-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
     color: #C6812B;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     display: block;
     margin-bottom: 0.5rem;
   }
@@ -89,7 +89,7 @@
   }
 
   .wtb-channel-{{ section.id }}:hover .wtb-logo-{{ section.id }} {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    box-shadow: var(--fruttita-shadow-md);
   }
 
   .wtb-logo-{{ section.id }} img {
@@ -99,15 +99,22 @@
     padding: 0.5rem;
   }
 
-  .wtb-logo-placeholder-{{ section.id }} {
-    font-size: 0.8rem;
-    opacity: 0.4;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+  .fruttita-where-to-buy-{{ section.id }} .wtb-channel-{{ section.id }} .wtb-logo-{{ section.id }} .wtb-logo-placeholder-{{ section.id }} {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4F2C1D;
+    color: #F4E3C9 !important;
+    font-family: 'Switzer', sans-serif;
+    font-size: var(--fruttita-text-small);
+    font-weight: 700;
   }
 
   .wtb-name-{{ section.id }} {
-    font-size: 0.9rem;
+    font-size: var(--fruttita-text-small);
     font-weight: 600;
     letter-spacing: 0.03em;
     opacity: 0.8;
@@ -154,13 +161,13 @@
 
     <div class="wtb-grid-{{ section.id }}" id="wtbGrid-{{ section.id }}">
       {% for block in section.blocks %}
+        {% capture channel_name %}{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}{% endcapture %}
         <a href="{{ block.settings.link }}" class="wtb-channel-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 100 }}ms;" target="_blank" rel="noopener">
           <div class="wtb-logo-{{ section.id }}">
             {% if block.settings.logo != blank %}
-              {% capture channel_name %}{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}{% endcapture %}
               {{ block.settings.logo | image_url: width: 160 | image_tag: loading: 'lazy', alt: channel_name | strip }}
             {% else %}
-              <span class="wtb-logo-placeholder-{{ section.id }}">Logo</span>
+              <span class="wtb-logo-placeholder-{{ section.id }}" aria-hidden="true">{{ channel_name | strip | slice: 0, 1 }}</span>
             {% endif %}
           </div>
           <span class="wtb-name-{{ section.id }}">{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}</span>
