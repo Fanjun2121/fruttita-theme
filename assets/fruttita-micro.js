@@ -112,6 +112,50 @@
   })();
 
   /* ------------------------------------------
+     5. Hand-drawn Section Dividers
+  ------------------------------------------ */
+  (function initSectionDividers() {
+    var sections = document.querySelectorAll('main .shopify-section');
+    if (sections.length < 2) return;
+
+    var wavePath = 'M0,18 C60,14 120,24 200,16 C280,8 340,22 440,17 C540,12 600,24 720,16 C840,8 920,22 1040,17 C1160,12 1240,24 1340,18 C1400,14 1430,18 1440,17 L1440,30 L0,30 Z';
+
+    function relativeLuminance(color) {
+      var channels = color.match(/[\d.]+/g);
+      if (!channels || channels.length < 3) return null;
+
+      var linear = channels.slice(0, 3).map(function (channel) {
+        var value = parseFloat(channel) / 255;
+        return value <= 0.03928
+          ? value / 12.92
+          : Math.pow((value + 0.055) / 1.055, 2.4);
+      });
+
+      return (0.2126 * linear[0]) + (0.7152 * linear[1]) + (0.0722 * linear[2]);
+    }
+
+    for (var i = 0; i < sections.length - 1; i++) {
+      var currentEl = sections[i].querySelector('div[class*="fruttita-"]');
+      var nextEl = sections[i + 1].querySelector('div[class*="fruttita-"]');
+      if (!currentEl || !nextEl) continue;
+
+      var currentBg = getComputedStyle(currentEl).backgroundColor;
+      var nextBg = getComputedStyle(nextEl).backgroundColor;
+      var currentLuminance = relativeLuminance(currentBg);
+      var nextLuminance = relativeLuminance(nextBg);
+      if (currentLuminance === null || nextLuminance === null) continue;
+      if (Math.abs(currentLuminance - nextLuminance) <= 0.35) continue;
+
+      var divider = document.createElement('div');
+      divider.className = 'fruttita-section-divider';
+      divider.style.cssText = 'position:absolute;bottom:0;left:0;width:100%;z-index:4;line-height:0;pointer-events:none;';
+      divider.innerHTML = '<svg style="display:block;width:100%;height:clamp(16px,2vw,24px)" viewBox="0 0 1440 30" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<path d="' + wavePath + '" fill="' + nextBg + '"/></svg>';
+      currentEl.appendChild(divider);
+    }
+  })();
+
+  /* ------------------------------------------
      Shared: Golden Dust Particle Canvas
   ------------------------------------------ */
   function initDustCanvas(container, count) {

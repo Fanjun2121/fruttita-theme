@@ -50,6 +50,22 @@
   --fruttita-gold: #D38235;
   --fruttita-green: #78AA00;
 
+  /* Layer tokens */
+  --fruttita-cream: #F9F1E6;
+  --fruttita-brown-soft: #6B4432;
+  --fruttita-gold-deep: #C6812B;
+  --fruttita-green-soft: #EAF0DB;
+  --fruttita-ink-60: rgba(79,44,29,0.6);
+  --fruttita-paper-80: rgba(244,227,201,0.85);
+
+  /* Fluid type scale */
+  --fruttita-text-hero: clamp(4.4rem, 5vw, 6.8rem);   /* 44–68px */
+  --fruttita-text-h2: clamp(3.2rem, 3.2vw, 4.4rem);   /* 32–44px */
+  --fruttita-text-h3: clamp(2rem, 1.8vw, 2.4rem);     /* 20–24px */
+  --fruttita-text-body: 1.7rem;                        /* 17px */
+  --fruttita-text-small: 1.4rem;                       /* 14px */
+  --fruttita-text-label: 2.4rem;                       /* 24px */
+
   /* Unified shadow system */
   --fruttita-shadow-sm: 0 2px 8px rgba(79,44,29,0.06);
   --fruttita-shadow-md: 0 8px 24px rgba(79,44,29,0.1);

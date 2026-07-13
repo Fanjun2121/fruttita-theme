@@ -83,7 +83,7 @@
       "settings": {
         "subtitle": "About Fruttita",
         "title": "ABOUT FRUTTITA",
-        "bg_color": "#F9F1E6",
+        "bg_color": "#F4E3C9",
         "text_color": "#4F2C1D",
         "btn_text": "了解我们的故事",
         "btn_link": "/pages/about"
@@ -121,7 +121,8 @@
       "settings": {
         "title": "你不需要知道猴面包树是什么。你只需要知道——",
         "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9"
+        "text_color": "#F4E3C9",
+        "card_bg": "#F4E3C9"
       }
     },
     "fruttita_product_showcase": {
@@ -296,8 +297,8 @@
       "settings": {
         "subtitle": "The Truth",
         "title": "都说椰子水消肿，但你看过它的钠含量吗？",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9",
+        "bg_color": "#F4E3C9",
+        "text_color": "#4F2C1D",
         "conclusion": "同样是「消肿神器」，一个高钠锁水，一个零钠排水。选哪个，身体会告诉你。",
         "source_note": "数据来源：SGS / Eurofins 第三方检测报告，主流椰子水取市售Top3品牌均值"
       }
