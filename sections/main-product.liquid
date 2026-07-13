@@ -216,13 +216,14 @@
                       <div class="summary__title">
                         {% render 'icon-accordion', icon: block.settings.icon %}
                         <h2 class="h4 accordion__title inline-richtext">
-                          {{ block.settings.heading | default: block.settings.page.title | escape }}
+                          {%- assign _ct_heading = block.settings.heading | default: block.settings.page.title -%}
+                          {%- render 'i18n-text', default: _ct_heading, en: block.settings.heading_en, pt: block.settings.heading_pt -%}
                         </h2>
                       </div>
                       {{- 'icon-caret.svg' | inline_asset_content -}}
                     </summary>
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {{ block.settings.content }}
+                      {%- render 'i18n-text', default: block.settings.content, en: block.settings.content_en, pt: block.settings.content_pt -%}
                       {{ block.settings.page.content }}
                     </div>
                   </details>
@@ -969,6 +970,16 @@
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
         },
         {
+          "type": "text",
+          "id": "heading_en",
+          "label": "Heading (English)"
+        },
+        {
+          "type": "text",
+          "id": "heading_pt",
+          "label": "Heading (Portuguese)"
+        },
+        {
           "type": "select",
           "id": "icon",
           "options": [
@@ -1156,6 +1167,16 @@
           "type": "richtext",
           "id": "content",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content_en",
+          "label": "Content (English)"
+        },
+        {
+          "type": "richtext",
+          "id": "content_pt",
+          "label": "Content (Portuguese)"
         },
         {
           "type": "page",

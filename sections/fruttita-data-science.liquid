@@ -45,7 +45,7 @@
 
   .ds-title-{{ section.id }} {
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
   }
@@ -76,12 +76,12 @@
 
   .ds-metric-value-{{ section.id }} {
     font-size: 1.1rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #D38235;
   }
 
   .ds-metric-desc-{{ section.id }} {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     opacity: 0.6;
     margin-bottom: 0.6rem;
   }
@@ -165,7 +165,7 @@
   .ds-source-{{ section.id }} {
     margin-top: 3rem;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     opacity: 0.4;
     letter-spacing: 0.03em;
   }
@@ -179,26 +179,38 @@
       font-size: 1.8rem;
     }
   }
+
+  :lang(en) .ds-title-{{ section.id }},
+  :lang(pt) .ds-title-{{ section.id }} {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .ds-title-{{ section.id }},
+    :lang(pt) .ds-title-{{ section.id }} {
+      font-size: 1.4rem;
+    }
+  }
 </style>
 
 <div class="fruttita-data-science-{{ section.id }}">
   <div class="ds-inner-{{ section.id }}">
     <div class="ds-header-{{ section.id }}">
       {% if section.settings.subtitle != blank %}
-        <span class="ds-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+        <span class="ds-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
       {% endif %}
-      <h2 class="ds-title-{{ section.id }}">{{ section.settings.title }}</h2>
+      <h2 class="ds-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
     </div>
 
     <div id="dsMetrics-{{ section.id }}">
       {% for block in section.blocks %}
         <div class="ds-metric-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 100 }}ms;">
           <div class="ds-metric-header-{{ section.id }}">
-            <span class="ds-metric-label-{{ section.id }}">{{ block.settings.label }}</span>
+            <span class="ds-metric-label-{{ section.id }}">{% render 'i18n-text', default: block.settings.label, en: block.settings.label_en, pt: block.settings.label_pt %}</span>
             <span class="ds-metric-value-{{ section.id }}">{{ block.settings.value }}</span>
           </div>
           {% if block.settings.description != blank %}
-            <div class="ds-metric-desc-{{ section.id }}">{{ block.settings.description }}</div>
+            <div class="ds-metric-desc-{{ section.id }}">{% render 'i18n-text', default: block.settings.description, en: block.settings.description_en, pt: block.settings.description_pt %}</div>
           {% endif %}
           <div class="ds-bar-{{ section.id }}">
             <div class="ds-bar-fill-{{ section.id }}" style="--fill: {{ block.settings.bar_pct }}%"></div>
@@ -209,32 +221,67 @@
 
     {% if section.settings.easter_egg_title != blank %}
       <div class="ds-easter-egg-{{ section.id }}">
-        <button class="ds-egg-toggle-{{ section.id }}" id="dsEggToggle-{{ section.id }}">
-          + 还有一项隐藏王牌
+        <button class="ds-egg-toggle-{{ section.id }}" id="dsEggToggle-{{ section.id }}" data-open-text="+ {% render 'i18n-text', default: section.settings.toggle_open_text, en: section.settings.toggle_open_text_en, pt: section.settings.toggle_open_text_pt %}" data-close-text="- {% render 'i18n-text', default: section.settings.toggle_close_text, en: section.settings.toggle_close_text_en, pt: section.settings.toggle_close_text_pt %}">
+          + {% render 'i18n-text', default: section.settings.toggle_open_text, en: section.settings.toggle_open_text_en, pt: section.settings.toggle_open_text_pt %}
         </button>
         <div class="ds-egg-content-{{ section.id }}" id="dsEggContent-{{ section.id }}">
           <div class="ds-egg-inner-{{ section.id }}">
-            <div class="ds-egg-title-{{ section.id }}">{{ section.settings.easter_egg_title }}</div>
-            <p class="ds-egg-text-{{ section.id }}">{{ section.settings.easter_egg_text }}</p>
+            <div class="ds-egg-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.easter_egg_title, en: section.settings.easter_egg_title_en, pt: section.settings.easter_egg_title_pt %}</div>
+            <p class="ds-egg-text-{{ section.id }}">{% render 'i18n-text', default: section.settings.easter_egg_text, en: section.settings.easter_egg_text_en, pt: section.settings.easter_egg_text_pt %}</p>
           </div>
         </div>
       </div>
     {% endif %}
 
     {% if section.settings.source_note != blank %}
-      <div class="ds-source-{{ section.id }}">{{ section.settings.source_note }}</div>
+      <div class="ds-source-{{ section.id }}">{% render 'i18n-text', default: section.settings.source_note, en: section.settings.source_note_en, pt: section.settings.source_note_pt %}</div>
     {% endif %}
   </div>
 </div>
 
 <script>
   (function() {
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* --- Number Counter Animation --- */
+    function animateCounter(el) {
+      var raw = el.textContent.trim();
+      // Parse: prefix (non-digit chars), number, suffix
+      var match = raw.match(/^([^\d]*?)([\d.]+)(.*)$/);
+      if (!match) return;
+      var prefix = match[1];
+      var target = parseFloat(match[2]);
+      var suffix = match[3];
+      var isFloat = match[2].indexOf('.') !== -1;
+
+      if (reducedMotion) { el.textContent = raw; return; }
+
+      var duration = 1200;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        // cubic ease-out
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = eased * target;
+        el.textContent = prefix + (isFloat ? current.toFixed(1) : Math.round(current)) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
     var metrics = document.querySelectorAll('#dsMetrics-{{ section.id }} .ds-metric-{{ section.id }}');
     if (metrics.length) {
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
+            // Trigger counter on the value element
+            var valueEl = entry.target.querySelector('.ds-metric-value-{{ section.id }}');
+            if (valueEl && !valueEl.dataset.counted) {
+              valueEl.dataset.counted = '1';
+              animateCounter(valueEl);
+            }
             observer.unobserve(entry.target);
           }
         });
@@ -247,7 +294,7 @@
     if (toggle && content) {
       toggle.addEventListener('click', function() {
         content.classList.toggle('is-open');
-        toggle.textContent = content.classList.contains('is-open') ? '- 收起' : '+ 还有一项隐藏王牌';
+        toggle.textContent = content.classList.contains('is-open') ? toggle.dataset.closeText : toggle.dataset.openText;
       });
     }
   })();
@@ -265,9 +312,29 @@
     },
     {
       "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (English)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (Portuguese)"
+    },
+    {
+      "type": "text",
       "id": "title",
       "label": "Title",
       "default": "好不好，数据说了算"
+    },
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "Title (English)"
+    },
+    {
+      "type": "text",
+      "id": "title_pt",
+      "label": "Title (Portuguese)"
     },
     {
       "type": "color",
@@ -289,15 +356,77 @@
     },
     {
       "type": "text",
+      "id": "source_note_en",
+      "label": "Source Note (English)"
+    },
+    {
+      "type": "text",
+      "id": "source_note_pt",
+      "label": "Source Note (Portuguese)"
+    },
+    {
+      "type": "text",
       "id": "easter_egg_title",
       "label": "Easter Egg Title",
       "default": "总多酚：828mg"
+    },
+    {
+      "type": "text",
+      "id": "easter_egg_title_en",
+      "label": "Easter Egg Title (English)"
+    },
+    {
+      "type": "text",
+      "id": "easter_egg_title_pt",
+      "label": "Easter Egg Title (Portuguese)"
     },
     {
       "type": "textarea",
       "id": "easter_egg_text",
       "label": "Easter Egg Text",
       "default": "多酚是深层抗氧化的关键指标。828mg 总多酚含量，远超蓝莓、石榴等常见抗氧化水果。你的身体值得最有效的抗氧。"
+    },
+    {
+      "type": "textarea",
+      "id": "easter_egg_text_en",
+      "label": "Easter Egg Text (English)"
+    },
+    {
+      "type": "textarea",
+      "id": "easter_egg_text_pt",
+      "label": "Easter Egg Text (Portuguese)"
+    },
+    {
+      "type": "text",
+      "id": "toggle_open_text",
+      "label": "Toggle Open Text",
+      "default": "还有一项你可能不知道"
+    },
+    {
+      "type": "text",
+      "id": "toggle_open_text_en",
+      "label": "Toggle Open Text (English)"
+    },
+    {
+      "type": "text",
+      "id": "toggle_open_text_pt",
+      "label": "Toggle Open Text (Portuguese)"
+    },
+    {
+      "type": "text",
+      "id": "toggle_close_text",
+      "label": "Toggle Close Text",
+      "default": "收起"
+    },
+    {
+      "type": "text",
+      "id": "toggle_close_text_en",
+      "label": "Toggle Close Text (English)"
+    },
+    {
+      "type": "text",
+      "id": "toggle_close_text_pt",
+      "label": "Toggle Close Text (Portuguese)"
     }
   ],
   "blocks": [
@@ -313,6 +442,16 @@
         },
         {
           "type": "text",
+          "id": "label_en",
+          "label": "Metric Label (English)"
+        },
+        {
+          "type": "text",
+          "id": "label_pt",
+          "label": "Metric Label (Portuguese)"
+        },
+        {
+          "type": "text",
           "id": "value",
           "label": "Metric Value",
           "default": "420mg+"
@@ -324,11 +463,21 @@
           "default": "相当于7个柠檬的维C含量"
         },
         {
+          "type": "textarea",
+          "id": "description_en",
+          "label": "Description (English)"
+        },
+        {
+          "type": "textarea",
+          "id": "description_pt",
+          "label": "Description (Portuguese)"
+        },
+        {
           "type": "range",
           "id": "bar_pct",
           "min": 0,
           "max": 100,
-          "step": 5,
+          "step": 1,
           "unit": "%",
           "label": "Progress Bar %",
           "default": 85

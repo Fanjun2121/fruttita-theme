@@ -40,7 +40,7 @@
             >
           {%- endif -%}
           <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
+            <span>{%- render 'i18n-text', default: section.blocks.first.settings.text, en: section.blocks.first.settings.text_en, pt: section.blocks.first.settings.text_pt -%}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
@@ -100,7 +100,7 @@
                       >
                     {%- endif -%}
                     <p class="announcement-bar__message h5">
-                      <span>{{ block.settings.text | escape }}</span>
+                      <span>{%- render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt -%}</span>
                       {%- if block.settings.link != blank -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       {%- endif -%}
@@ -239,6 +239,16 @@
           "id": "text",
           "default": "t:sections.announcement-bar.blocks.announcement.settings.text.default",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "text_en",
+          "label": "Text (English)"
+        },
+        {
+          "type": "text",
+          "id": "text_pt",
+          "label": "Text (Português)"
         },
         {
           "type": "url",

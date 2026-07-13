@@ -9,13 +9,70 @@
  */
 {
   "sections": {
-    "fruttita_marquee": {
-      "type": "fruttita-marquee",
+    "fruttita_claim_strip": {
+      "type": "fruttita-claim-strip",
+      "blocks": {
+        "c1": {
+          "type": "claim",
+          "settings": {
+            "text": "0 钠",
+            "text_en": "0 Sodium",
+            "text_pt": "0 Sódio"
+          }
+        },
+        "c2": {
+          "type": "claim",
+          "settings": {
+            "text": "0 添加",
+            "text_en": "0 Additives",
+            "text_pt": "0 Aditivos"
+          }
+        },
+        "c3": {
+          "type": "claim",
+          "settings": {
+            "text": "0 脂",
+            "text_en": "0 Fat",
+            "text_pt": "0 Gordura"
+          }
+        },
+        "c4": {
+          "type": "claim",
+          "settings": {
+            "text": "高钾",
+            "text_en": "High Potassium",
+            "text_pt": "Rico em Potássio"
+          }
+        },
+        "c5": {
+          "type": "claim",
+          "settings": {
+            "text": "高 VC",
+            "text_en": "High Vitamin C",
+            "text_pt": "Rico em Vitamina C"
+          }
+        },
+        "c6": {
+          "type": "claim",
+          "settings": {
+            "text": "高纤维",
+            "text_en": "High Fiber",
+            "text_pt": "Rico em Fibra"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
       "settings": {
-        "text": "0 钠 · 0 添加 · 0 脂 — 高钾 · 高 VC · 高纤维",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9",
-        "speed": 20
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D",
+        "accent_color": "#C6812B"
       }
     },
     "fruttita_prose": {
@@ -24,49 +81,41 @@
         "prose_p1": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "Fruttita 是一个非洲猴面包树果肉品牌。"
+            "text_paragraph": "Fruttita，把热带旷野里的那份干净和野，带进日常。",
+            "text_paragraph_en": "Fruttita is tropical fruit, barely touched. The wild kind.",
+            "text_paragraph_pt": "Fruttita é fruta tropical, quase intocada. Do tipo selvagem."
           }
         },
         "prose_p2": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "我们从非洲大陆采集猴面包树果实，以最少加工保留果肉的天然营养，做成随手可用的日常补给。"
+            "text_paragraph": "在非洲，有一种活了三千年的树。当地人叫它“生命之树”。",
+            "text_paragraph_en": "In Africa, there's a tree that's been around for 3,000 years. They call it the \"Tree of Life.\"",
+            "text_paragraph_pt": "Em África, há uma árvore que existe há 3.000 anos. Chamam-lhe a \"Árvore da Vida.\""
           }
         },
         "prose_p3": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "猴面包树被称为\u201c生命之树\u201d，在非洲旷野中已存在数千年。"
+            "text_paragraph": "它不靠人工催熟，不靠化学干预。只是在赤道阳光下，沉默地生长，把旷野最纯粹的能量，锁进果实里。",
+            "text_paragraph_en": "No one ripens it. No one sprays it. It just grows under the equatorial sun and dries on the branch.",
+            "text_paragraph_pt": "Ninguém a amadurece. Ninguém a pulveriza. Cresce ao sol equatorial e seca no ramo."
           }
         },
         "prose_p4": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "它的果肉天然脱水，不需要任何人工干预就能保存完整的营养——高维C、高钾、高纤维、零钠、低卡。"
+            "text_paragraph": "我们做的事很简单——把这份能量，变成你随时可以喝的东西。",
+            "text_paragraph_en": "We turn that into something you can drink.",
+            "text_paragraph_pt": "Nós transformamos isso em algo que podes beber."
           }
         },
         "prose_p5": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "我们相信：好的原料不需要复杂的配方。"
-          }
-        },
-        "prose_p6": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "所以 Fruttita 的配料表只有一项。没有水，没有糖，没有你不认识的东西。"
-          }
-        },
-        "prose_p7": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "我们不追求\u201c超级食物\u201d的概念光环，也不贩卖焦虑。"
-          }
-        },
-        "prose_p8": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "只是想把旷野里最干净的营养，带进你的日常。"
+            "text_paragraph": "不加糖，不加添加剂，不加任何你不需要的。",
+            "text_paragraph_en": "No added sugar. No additives. That's it.",
+            "text_paragraph_pt": "Sem açúcar adicionado. Sem aditivos. É isso."
           }
         }
       },
@@ -75,17 +124,18 @@
         "prose_p2",
         "prose_p3",
         "prose_p4",
-        "prose_p5",
-        "prose_p6",
-        "prose_p7",
-        "prose_p8"
+        "prose_p5"
       ],
       "settings": {
         "subtitle": "About Fruttita",
-        "title": "ABOUT FRUTTITA",
+        "subtitle_en": "About Fruttita",
+        "subtitle_pt": "Sobre a Fruttita",
+        "title": "",
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D",
-        "btn_text": "了解我们的故事",
+        "btn_text": "了解我们的故事 →",
+        "btn_text_en": "Our story →",
+        "btn_text_pt": "A nossa história →",
         "btn_link": "/pages/about"
       }
     },
@@ -96,30 +146,48 @@
           "type": "card",
           "settings": {
             "icon": "droplet",
-            "title": "消肿",
-            "description": "0钠+高钾，物理消肿。不锁水，不虚胖。晨起一袋，肿脸拜拜。"
+            "title": "熬夜后，不想肿成馒头",
+            "title_en": "Late night. No puffiness.",
+            "title_pt": "Noite longa. Sem inchaço.",
+            "description": "0 钠 + 380mg 高钾。\n钠会锁水，钾帮排水。\n这不是玄学，是电解质平衡。\n\n市面上 99% 的补水饮品都含钠，\n我们是那个例外。",
+            "description_en": "0 sodium + 380mg potassium per 100g.\nSodium holds water. Potassium doesn't.\n\n99% of hydration drinks have sodium. This one has none.",
+            "description_pt": "0 sódio + 380mg de potássio por 100g.\nO sódio retém líquidos. O potássio não.\n\n99% das bebidas de hidratação têm sódio. Esta não tem."
           }
         },
         "vp_2": {
           "type": "card",
           "settings": {
             "icon": "sun",
-            "title": "去黄",
-            "description": "420mg+天然维C，熬夜后提亮气色。不是遮瑕，是从内透出来的干净感。"
+            "title": "熬完夜，也想有个好气色",
+            "title_en": "Bad sleep. Still glowing.",
+            "title_pt": "Dormiste mal. Continuas a brilhar.",
+            "description": "200% NRV 天然维生素 C。\n对抗氧化压力，改善暗沉。\n\n脸色这件事，VC 说了算。\n好气色，从内到外。",
+            "description_en": "200% daily value of natural Vitamin C.\nThe kind your skin actually uses.\n\nNot synthetic. Not from a tablet. From a fruit.",
+            "description_pt": "200% do valor diário de Vitamina C natural.\nO tipo que a tua pele realmente usa.\n\nNão é sintética. Não é de um comprimido. É de um fruto."
           }
         },
         "vp_3": {
           "type": "card",
           "settings": {
-            "icon": "shield",
-            "title": "干净",
-            "description": "配料表只有一项：猴面包树果肉原浆。没有水，没有糖，没有你不认识的东西。"
+            "icon": "leaf",
+            "title": "只想喝点干净的东西",
+            "title_en": "Read the whole label. Done.",
+            "title_pt": "Lê o rótulo inteiro. Já está.",
+            "description": "配料表一眼就能读完：\n猴面包树果浆。\n\n没有你不认识的字。\n没有你不需要的添加。\n只有你要的，没有你不要的。",
+            "description_en": "Ingredients: baobab fruit pulp.\n\nThat's the entire list. We'd add more, but there isn't more.",
+            "description_pt": "Ingredientes: polpa de fruto de embondeiro.\n\nÉ a lista completa. Adicionaríamos mais, mas não há mais."
           }
         }
       },
-      "block_order": ["vp_1", "vp_2", "vp_3"],
+      "block_order": [
+        "vp_1",
+        "vp_2",
+        "vp_3"
+      ],
       "settings": {
-        "title": "你不需要知道猴面包树是什么。你只需要知道——",
+        "title": "猴面包树是什么，一会儿再说。先聊聊你更在意的——",
+        "title_en": "Before we explain the tree — here's what it does for you.",
+        "title_pt": "Antes de explicar a árvore — eis o que ela faz por ti.",
         "bg_color": "#4F2C1D",
         "text_color": "#F4E3C9"
       }
@@ -130,41 +198,82 @@
         "product_shot": {
           "type": "product",
           "settings": {
-            "name_cn": "猴面包树原浆 Shot",
-            "name_en": "Baobab Shot",
-            "tagline": "晨起一袋，消肿回血。配料表只有一项。",
-            "scenarios": "晨起消肿, 熬夜急救, 健身补给",
-            "specs": "30ml \u00b7 0钠 \u00b7 420mg+维C \u00b7 10g+纤维",
-            "link": "/products/baobab-shot"
+            "name_cn": "猴面包树原浆饮",
+            "name_en": "THE SHOT",
+            "name_cn_en": "Baobab Pulp Shot",
+            "name_cn_pt": "Shot de Polpa de Múcua",
+            "tagline": "一口闷的急救搭档。\n酸到清醒，有效到服气。",
+            "tagline_en": "50ml of pure pulp.\nTart. Potent. Over before you blink.",
+            "tagline_pt": "50ml de polpa pura.\nÁcido. Potente. Acaba antes de pestanejar.",
+            "scenarios": "熬夜后, 早起急救, 加班续命, 宿醉第二天",
+            "scenarios_en": "Post-late night, Morning reset, Overtime fuel, Hangover protocol",
+            "scenarios_pt": "Pós-noitada, Reset matinal, Combustível extra, Protocolo ressaca",
+            "specs": "0钠 | 200% VC | 高钾 311mg",
+            "specs_en": "0 Sodium | 200% VC | Potassium 311mg",
+            "specs_pt": "0 Sódio | 200% VC | Potássio 311mg",
+            "link": "/products/the-baobab-pulp-shot",
+            "link_text": "了解更多",
+            "link_text_en": "Learn more",
+            "link_text_pt": "Saber mais"
           }
         },
         "product_pouch": {
           "type": "product",
           "settings": {
-            "name_cn": "猴面包树果泥 Pouch",
-            "name_en": "Baobab Pouch",
-            "tagline": "随身携带的维C补给站，挤着吃的水果能量。",
-            "scenarios": "通勤路上, 下午茶替代, 户外便携",
-            "specs": "100g \u00b7 0添加 \u00b7 天然果酸 \u00b7 高纤低卡",
-            "link": "/products/baobab-pouch"
+            "name_cn": "猴面包树纯果浆",
+            "name_en": "THE POUCH",
+            "name_cn_en": "Pure Baobab Pulp",
+            "name_cn_pt": "Polpa Pura de Múcua",
+            "tagline": "你的百搭调饮基底。\n兑什么像什么，就是更有营养。",
+            "tagline_en": "100g of pure pulp. Mix it into anything.\nYogurt, smoothies, oats — your call.",
+            "tagline_pt": "100g de polpa pura. Mistura com o que quiseres.\nIogurte, smoothies, aveia — tu decides.",
+            "scenarios": "拌酸奶, 兑气泡水, 加入果昔, 拌燕麦",
+            "scenarios_en": "Yogurt topping, Sparkling water mix, Smoothie base, Oatmeal boost",
+            "scenarios_pt": "Topping de iogurte, Mistura com água com gás, Base de smoothie, Boost de aveia",
+            "specs": "469% VC | 42% 膳食纤维 | 100% 纯果浆",
+            "specs_en": "469% VC | 42% Fiber | 100% Pure Pulp",
+            "specs_pt": "469% VC | 42% Fibra | 100% Polpa Pura",
+            "link": "/products/the-baobab-pulp-pouch",
+            "link_text": "了解更多",
+            "link_text_en": "Learn more",
+            "link_text_pt": "Saber mais"
           }
         },
         "product_water": {
           "type": "product",
           "settings": {
-            "name_cn": "猴面包树风味水",
-            "name_en": "Baobab Water",
-            "tagline": "喝水也可以有营养。淡淡果香，0糖轻补给。",
-            "scenarios": "日常补水, 瑜伽搭配, 办公桌常备",
-            "specs": "350ml \u00b7 0糖 \u00b7 低卡 \u00b7 轻维C",
-            "link": "/products/baobab-water"
+            "name_cn": "猴面包树水",
+            "name_en": "THE WATER",
+            "name_cn_en": "Baobab Water",
+            "name_cn_pt": "Água de Múcua",
+            "tagline": "日常补水的干净选项。\n喝水也能喝出态度。",
+            "tagline_en": "Hydration that isn't just water.\nBut barely more than water.",
+            "tagline_pt": "Hidratação que não é só água.\nMas quase tão simples como água.",
+            "scenarios": "通勤, 健身, 办公室, 日常饮水",
+            "scenarios_en": "Commute, Workout, Desk, Anytime",
+            "scenarios_pt": "Viagem, Treino, Secretária, A qualquer hora",
+            "specs": "0糖 | 0脂 | 0钠 | 0卡",
+            "specs_en": "0 Sugar | 0 Fat | 0 Sodium | 0 Cal",
+            "specs_pt": "0 Açúcar | 0 Gordura | 0 Sódio | 0 Cal",
+            "link": "/products/the-baobab-water",
+            "link_text": "了解更多",
+            "link_text_en": "Learn more",
+            "link_text_pt": "Saber mais"
           }
         }
       },
-      "block_order": ["product_shot", "product_pouch", "product_water"],
+      "block_order": [
+        "product_shot",
+        "product_pouch",
+        "product_water"
+      ],
       "settings": {
         "subtitle": "Our Products",
-        "title": "产品一览",
+        "subtitle_en": "Our Products",
+        "subtitle_pt": "Os Nossos Produtos",
+        "title": "三种打开旷野的方式",
+        "title_en": "Three formats. Same tree.",
+        "title_pt": "Três formatos. A mesma árvore.",
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D"
       }
@@ -175,67 +284,114 @@
         "ds_vc": {
           "type": "metric",
           "settings": {
-            "label": "天然维C",
+            "label": "维生素 C",
+            "label_en": "Vitamin C",
+            "label_pt": "Vitamina C",
             "value": "420mg+",
-            "description": "相当于7个柠檬的维C含量",
+            "description": "去黄气的主力。相当于 6 个橙子。",
+            "description_en": "About 6 oranges worth.",
+            "description_pt": "Equivalente a 6 laranjas.",
             "bar_pct": 95
           }
         },
         "ds_k": {
           "type": "metric",
           "settings": {
-            "label": "钾含量",
+            "label": "钾",
+            "label_en": "Potassium",
+            "label_pt": "Potássio",
             "value": "380mg+",
-            "description": "物理消肿的关键电解质",
+            "description": "物理消肿。平衡体内多余的钠。",
+            "description_en": "Sodium holds water. Potassium lets it go.",
+            "description_pt": "O sódio retém líquidos. O potássio liberta-os.",
             "bar_pct": 85
-          }
-        },
-        "ds_na": {
-          "type": "metric",
-          "settings": {
-            "label": "钠含量",
-            "value": "0mg",
-            "description": "真·零钠，不锁水不水肿",
-            "bar_pct": 100
           }
         },
         "ds_fiber": {
           "type": "metric",
           "settings": {
             "label": "膳食纤维",
+            "label_en": "Dietary Fiber",
+            "label_pt": "Fibra Alimentar",
             "value": "10g+",
-            "description": "优质益生元纤维，肠道清道夫",
+            "description": "肠道清道夫。相当于 4 个苹果。",
+            "description_en": "About 4 apples worth.",
+            "description_pt": "Equivalente a 4 maçãs.",
             "bar_pct": 78
+          }
+        },
+        "ds_na": {
+          "type": "metric",
+          "settings": {
+            "label": "钠",
+            "label_en": "Sodium",
+            "label_pt": "Sódio",
+            "value": "0mg",
+            "description": "未检出。真正的 0 锁水阻力。",
+            "description_en": "Not low. Not reduced. Undetected.",
+            "description_pt": "Não é baixo. Não é reduzido. Não detetado.",
+            "bar_pct": 100
+          }
+        },
+        "ds_sugar": {
+          "type": "metric",
+          "settings": {
+            "label": "糖",
+            "label_en": "Sugar",
+            "label_pt": "Açúcar",
+            "value": "< 2.5g",
+            "description": "非游离糖，血糖友好。",
+            "description_en": "Naturally occurring. Not added.",
+            "description_pt": "Naturalmente presente. Não adicionado.",
+            "bar_pct": 10
           }
         },
         "ds_cal": {
           "type": "metric",
           "settings": {
             "label": "热量",
-            "value": "<65kcal",
-            "description": "低于半个苹果的热量",
+            "label_en": "Calories",
+            "label_pt": "Calorias",
+            "value": "~65 kcal",
+            "description": "大约半个苹果。轻松无负担。",
+            "description_en": "About half an apple.",
+            "description_pt": "Cerca de meia maçã.",
             "bar_pct": 30
-          }
-        },
-        "ds_ingredient": {
-          "type": "metric",
-          "settings": {
-            "label": "配料项数",
-            "value": "1",
-            "description": "只有猴面包树果肉原浆，nothing else",
-            "bar_pct": 5
           }
         }
       },
-      "block_order": ["ds_vc", "ds_k", "ds_na", "ds_fiber", "ds_cal", "ds_ingredient"],
+      "block_order": [
+        "ds_vc",
+        "ds_k",
+        "ds_fiber",
+        "ds_na",
+        "ds_sugar",
+        "ds_cal"
+      ],
       "settings": {
         "subtitle": "The Data",
-        "title": "好不好，数据说了算",
+        "subtitle_en": "The Data",
+        "subtitle_pt": "Os Dados",
+        "title": "好不好，看数据就知道。",
+        "title_en": "The numbers. That's it.",
+        "title_pt": "Os números. É tudo.",
         "bg_color": "#4F2C1D",
         "text_color": "#F4E3C9",
-        "source_note": "数据来源：SGS / Eurofins 第三方检测报告",
-        "easter_egg_title": "总多酚：828mg",
-        "easter_egg_text": "多酚是深层抗氧化的关键指标。828mg 总多酚含量，远超蓝莓、石榴等常见抗氧化水果。你的身体值得最有效的抗氧。"
+        "source_note": "数据来源：SGS / Eurofins 实验室检测报告。我们不编数据，数据替我们说话。",
+        "source_note_en": "Source: SGS / Eurofins lab reports. Per 100g pulp.",
+        "source_note_pt": "Fonte: relatórios laboratoriais SGS / Eurofins. Por 100g de polpa.",
+        "easter_egg_title": "总多酚 828mg / 100g",
+        "easter_egg_title_en": "Total Polyphenols 828mg / 100g",
+        "easter_egg_title_pt": "Polifenóis Totais 828mg / 100g",
+        "easter_egg_text": "比 VC 更稳的抗氧化剂。酸涩口感的真正来源——也是深层对抗氧化压力的隐藏王牌。",
+        "easter_egg_text_en": "More stable than Vitamin C as an antioxidant. Where that tart, tangy bite comes from — and a quietly powerful defense against oxidative stress.",
+        "easter_egg_text_pt": "Mais estável que a Vitamina C como antioxidante. De onde vem aquele travo ácido — e uma defesa silenciosa contra o stress oxidativo.",
+        "toggle_open_text": "还有一项你可能不知道",
+        "toggle_open_text_en": "There's one more",
+        "toggle_open_text_pt": "Há mais um",
+        "toggle_close_text": "收起",
+        "toggle_close_text_en": "Collapse",
+        "toggle_close_text_pt": "Recolher"
       }
     },
     "fruttita_comparison": {
@@ -244,62 +400,112 @@
         "comp_na": {
           "type": "metric",
           "settings": {
-            "label": "钠含量",
+            "label": "钠（锁水阻力）",
+            "label_en": "Sodium",
+            "label_pt": "Sódio",
             "comp_value": "105mg",
+            "comp_value_en": "105mg",
+            "comp_value_pt": "105mg",
             "comp_status": "bad",
             "fruttita_value": "0mg",
+            "fruttita_value_en": "0mg",
+            "fruttita_value_pt": "0mg",
             "fruttita_status": "good"
           }
         },
         "comp_k": {
           "type": "metric",
           "settings": {
-            "label": "钾含量",
-            "comp_value": "250mg",
-            "comp_status": "good",
-            "fruttita_value": "380mg+",
+            "label": "钾（消肿动力）",
+            "label_en": "Potassium",
+            "label_pt": "Potássio",
+            "comp_value": "~200mg",
+            "comp_value_en": "~200mg",
+            "comp_value_pt": "~200mg",
+            "comp_status": "bad",
+            "fruttita_value": "311mg",
+            "fruttita_value_en": "311mg",
+            "fruttita_value_pt": "311mg",
             "fruttita_status": "good"
           }
         },
         "comp_vc": {
           "type": "metric",
           "settings": {
-            "label": "天然维C",
-            "comp_value": "2.4mg",
+            "label": "维生素 C",
+            "label_en": "Vitamin C",
+            "label_pt": "Vitamina C",
+            "comp_value": "≈ 0",
+            "comp_value_en": "≈ 0",
+            "comp_value_pt": "≈ 0",
             "comp_status": "bad",
-            "fruttita_value": "420mg+",
+            "fruttita_value": "200% NRV",
+            "fruttita_value_en": "200% NRV",
+            "fruttita_value_pt": "200% NRV",
             "fruttita_status": "good"
           }
         },
-        "comp_fiber": {
+        "comp_sugar": {
           "type": "metric",
           "settings": {
-            "label": "膳食纤维",
-            "comp_value": "0g",
+            "label": "糖",
+            "label_en": "Sugar",
+            "label_pt": "Açúcar",
+            "comp_value": "4.0g",
+            "comp_value_en": "4.0g",
+            "comp_value_pt": "4.0g",
             "comp_status": "bad",
-            "fruttita_value": "10g+",
+            "fruttita_value": "1.7g",
+            "fruttita_value_en": "1.7g",
+            "fruttita_value_pt": "1.7g",
             "fruttita_status": "good"
           }
         },
-        "comp_additive": {
+        "comp_volume": {
           "type": "metric",
           "settings": {
-            "label": "添加剂",
-            "comp_value": "有（风味/酸度调节）",
+            "label": "体积",
+            "label_en": "Serving Size",
+            "label_pt": "Volume",
+            "comp_value": "330ml 灌一肚子",
+            "comp_value_en": "330ml",
+            "comp_value_pt": "330ml — enche a barriga toda",
             "comp_status": "bad",
-            "fruttita_value": "无（纯原浆）",
+            "fruttita_value": "50ml 一口闷",
+            "fruttita_value_en": "50ml",
+            "fruttita_value_pt": "50ml — um gole e está feito",
             "fruttita_status": "good"
           }
         }
       },
-      "block_order": ["comp_na", "comp_k", "comp_vc", "comp_fiber", "comp_additive"],
+      "block_order": [
+        "comp_na",
+        "comp_k",
+        "comp_vc",
+        "comp_sugar",
+        "comp_volume"
+      ],
       "settings": {
         "subtitle": "The Truth",
-        "title": "都说椰子水消肿，但你看过它的钠含量吗？",
+        "subtitle_en": "The Truth",
+        "subtitle_pt": "A Verdade",
+        "title": "都说椰子水消肿，我们比了比钠含量。",
+        "title_en": "Coconut water has sodium. We don't.",
+        "title_pt": "A água de coco tem sódio. Nós não.",
         "bg_color": "#4F2C1D",
         "text_color": "#F4E3C9",
-        "conclusion": "同样是「消肿神器」，一个高钠锁水，一个零钠排水。选哪个，身体会告诉你。",
-        "source_note": "数据来源：SGS / Eurofins 第三方检测报告，主流椰子水取市售Top3品牌均值"
+        "conclusion": "椰子水补钾的同时，也补了 100 多毫克的钠。钠就是盐，盐会锁水。轻不轻盈，钠含量是个关键指标。",
+        "conclusion_en": "Coconut water delivers potassium — with 100+ mg of sodium riding along. If you're trying to de-bloat, that's worth a second look.",
+        "conclusion_pt": "A água de coco fornece potássio — com 100+ mg de sódio a tiracolo. Se queres deshinchar, vale a pena pensar duas vezes.",
+        "source_note": "Fruttita 数据源自 Eurofins/SGS 实验室检测报告。椰子水数据参考市售主流 100% 椰子水品牌平均营养成分。",
+        "source_note_en": "Fruttita data from Eurofins/SGS lab reports. Coconut water data based on average nutrition of leading 100% coconut water brands.",
+        "source_note_pt": "Dados Fruttita de relatórios laboratoriais Eurofins/SGS. Dados da água de coco baseados na média nutricional das principais marcas de 100% água de coco.",
+        "header_label": "指标",
+        "header_label_en": "Metric",
+        "header_label_pt": "Indicador",
+        "comp_name": "主流椰子水",
+        "comp_name_en": "Coconut Water",
+        "comp_name_pt": "Água de Coco"
       }
     },
     "fruttita_quotes": {
@@ -308,23 +514,33 @@
         "quote_1": {
           "type": "quote",
           "settings": {
-            "text": "即使像吃土，也要吃最有营养的那口土。"
+            "text": "即使像吃土，也要吃最有营养的那口土。",
+            "text_en": "Tastes like dirt? Fine. Most nutritious dirt you'll ever have.",
+            "text_pt": "Sabe a terra? Tudo bem. A terra mais nutritiva que vais provar."
           }
         },
         "quote_2": {
           "type": "quote",
           "settings": {
-            "text": "配料表只有一项。只有你要的，没有你不要的。"
+            "text": "翻到配料表，一秒就读完了。",
+            "text_en": "Flip to the ingredients. You're already done reading.",
+            "text_pt": "Vira o rótulo. Já acabaste de ler."
           }
         },
         "quote_3": {
           "type": "quote",
           "settings": {
-            "text": "给身体，一份来自旷野的留白。"
+            "text": "给身体，一份来自旷野的留白。",
+            "text_en": "One ingredient. No asterisks.",
+            "text_pt": "Um ingrediente. Sem asteriscos."
           }
         }
       },
-      "block_order": ["quote_1", "quote_2", "quote_3"],
+      "block_order": [
+        "quote_1",
+        "quote_2",
+        "quote_3"
+      ],
       "settings": {
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D"
@@ -336,32 +552,49 @@
         "ch_tmall": {
           "type": "channel",
           "settings": {
-            "name": "天猫"
+            "name": "天猫旗舰店",
+            "name_en": "Tmall Flagship",
+            "name_pt": "Tmall Flagship"
           }
         },
         "ch_jd": {
           "type": "channel",
           "settings": {
-            "name": "京东"
+            "name": "京东",
+            "name_en": "JD.com",
+            "name_pt": "JD.com"
           }
         },
         "ch_xhs": {
           "type": "channel",
           "settings": {
-            "name": "小红书"
+            "name": "小红书店铺",
+            "name_en": "Xiaohongshu",
+            "name_pt": "Xiaohongshu"
           }
         },
         "ch_douyin": {
           "type": "channel",
           "settings": {
-            "name": "抖音"
+            "name": "抖音",
+            "name_en": "Douyin / TikTok",
+            "name_pt": "Douyin / TikTok"
           }
         }
       },
-      "block_order": ["ch_tmall", "ch_jd", "ch_xhs", "ch_douyin"],
+      "block_order": [
+        "ch_tmall",
+        "ch_jd",
+        "ch_xhs",
+        "ch_douyin"
+      ],
       "settings": {
         "subtitle": "Find Us",
+        "subtitle_en": "Find Us",
+        "subtitle_pt": "Onde Encontrar",
         "title": "想试试？",
+        "title_en": "Want to try?",
+        "title_pt": "Queres experimentar?",
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D"
       }
@@ -370,14 +603,27 @@
       "type": "fruttita-subscribe",
       "settings": {
         "title": "关注我们，偶尔聊点有用的。",
-        "subtitle": "不群发，不刷屏。新品上线、限时活动，第一时间知道。",
+        "title_en": "Stay in the loop.",
+        "title_pt": "Fica a par.",
+        "subtitle": "不群发垃圾邮件。只在有值得说的事情时才打扰你。",
+        "subtitle_en": "No spam. We email when we actually have something to say.",
+        "subtitle_pt": "Sem spam. Só escrevemos quando temos algo para dizer.",
         "bg_color": "#3A2015",
-        "text_color": "#F4E3C9"
+        "text_color": "#F4E3C9",
+        "placeholder_text": "输入你的邮箱",
+        "placeholder_text_en": "Enter your email",
+        "placeholder_text_pt": "Insere o teu email",
+        "btn_text": "订阅",
+        "btn_text_en": "Subscribe",
+        "btn_text_pt": "Subscrever",
+        "success_text": "感谢订阅！我们会偶尔聊点有用的。",
+        "success_text_en": "You're in. We'll keep it worth your time.",
+        "success_text_pt": "Estás dentro. Prometemos valer o teu tempo."
       }
     }
   },
   "order": [
-    "fruttita_marquee",
+    "fruttita_claim_strip",
     "fruttita_prose",
     "fruttita_value_props",
     "fruttita_product_showcase",

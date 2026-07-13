@@ -94,7 +94,14 @@
     var shown = false;
     var toast = document.createElement('div');
     toast.className = 'fruttita-bottom-surprise';
-    toast.textContent = '\u4f60\u770b\u5230\u4e86\u8fd9\u91cc\uff0c\u8bf4\u660e\u4f60\u662f\u8ba4\u771f\u7684\u3002\u6211\u4eec\u4e5f\u662f\u3002';
+    var lang = document.documentElement.lang || 'en';
+    if (lang.indexOf('pt') === 0) {
+      toast.textContent = '\uD83C\uDF3F Chegaste ao fundo. Isso mostra que te importas. N\u00f3s tamb\u00e9m.';
+    } else if (lang.indexOf('zh') === 0) {
+      toast.textContent = '\uD83C\uDF3F \u4f60\u770b\u5230\u4e86\u8fd9\u91cc\uff0c\u8bf4\u660e\u4f60\u662f\u8ba4\u771f\u7684\u3002\u6211\u4eec\u4e5f\u662f\u3002';
+    } else {
+      toast.textContent = '\uD83C\uDF3F You scrolled all the way down. That means you care. So do we.';
+    }
     document.body.appendChild(toast);
 
     window.addEventListener('scroll', function () {
@@ -109,6 +116,32 @@
         }, 5000);
       }
     }, { passive: true });
+  })();
+
+  /* ------------------------------------------
+     5. Hand-drawn Section Dividers
+  ------------------------------------------ */
+  (function initSectionDividers() {
+    var sections = document.querySelectorAll('main .shopify-section');
+    if (sections.length < 2) return;
+
+    var wavePath = 'M0,18 C60,14 120,24 200,16 C280,8 340,22 440,17 C540,12 600,24 720,16 C840,8 920,22 1040,17 C1160,12 1240,24 1340,18 C1400,14 1430,18 1440,17 L1440,30 L0,30 Z';
+
+    for (var i = 0; i < sections.length - 1; i++) {
+      var currentEl = sections[i].querySelector('div[class*="fruttita-"]');
+      var nextEl = sections[i + 1].querySelector('div[class*="fruttita-"]');
+      if (!currentEl || !nextEl) continue;
+
+      var currentBg = getComputedStyle(currentEl).backgroundColor;
+      var nextBg = getComputedStyle(nextEl).backgroundColor;
+      if (currentBg === nextBg) continue;
+
+      var divider = document.createElement('div');
+      divider.className = 'fruttita-section-divider';
+      divider.innerHTML = '<svg viewBox="0 0 1440 30" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<path d="' + wavePath + '" fill="' + nextBg + '"/></svg>';
+      currentEl.appendChild(divider);
+    }
   })();
 
   /* ------------------------------------------
@@ -379,20 +412,89 @@
   })();
 
   /* ------------------------------------------
-     11. Logo Easter Egg (5 clicks in 3 seconds)
+     11. Custom Language Switcher
+  ------------------------------------------ */
+  (function initLangSwitch() {
+    var iconsContainer = document.querySelector('.header__icons');
+    if (!iconsContainer) return;
+
+    var langs = [
+      { code: 'en', path: '', label: 'English' },
+      { code: 'zh', path: 'zh', label: '简体中文' },
+      { code: 'pt', path: 'pt', label: 'Português' }
+    ];
+
+    // Detect current language from URL path
+    var urlPath = window.location.pathname;
+    var currentCode = 'en';
+    langs.forEach(function (l) {
+      if (l.path && (urlPath.indexOf('/' + l.path + '/') === 0 || urlPath === '/' + l.path)) {
+        currentCode = l.code;
+      }
+    });
+    var currentLang = langs.filter(function (l) { return l.code === currentCode; })[0];
+
+    var el = document.createElement('div');
+    el.className = 'fruttita-lang-switch';
+    el.innerHTML =
+      '<div class="fruttita-lang-switch__toggle">' +
+        '<span>' + currentLang.label + '</span>' +
+        '<svg class="fruttita-lang-switch__arrow" viewBox="0 0 10 6" fill="none">' +
+          '<path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '</svg>' +
+      '</div>' +
+      '<div class="fruttita-lang-switch__menu">' +
+        langs.map(function (l) {
+          var href = l.path ? '/' + l.path + '/' : '/';
+          return '<a href="' + href + '" class="fruttita-lang-switch__option' +
+            (l.code === currentCode ? ' is-active' : '') + '">' +
+            '<span>' + l.label + '</span>' +
+            '<span class="fruttita-lang-switch__option-code">' + l.code.toUpperCase() + '</span>' +
+          '</a>';
+        }).join('') +
+      '</div>';
+
+    iconsContainer.appendChild(el);
+
+    el.querySelector('.fruttita-lang-switch__toggle').addEventListener('click', function (e) {
+      e.stopPropagation();
+      el.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!el.contains(e.target)) el.classList.remove('is-open');
+    });
+  })();
+
+  /* ------------------------------------------
+     12. Logo Easter Egg (5 clicks in 3 seconds)
   ------------------------------------------ */
   (function initLogoEgg() {
     // Create overlay
     var overlay = document.createElement('div');
     overlay.className = 'fruttita-logo-egg';
-    overlay.innerHTML =
-      '<div class="fruttita-logo-egg__icon">\uD83C\uDF33</div>' +
-      '<div class="fruttita-logo-egg__text">' +
-        'Fruttita\uff0c\u6765\u81ea\u610f\u5927\u5229\u8bed\u201c\u5c0f\u6c34\u679c\u201d\u3002<br><br>' +
+    var lang = document.documentElement.lang || 'en';
+    var eggText, eggBtn;
+    if (lang.indexOf('pt') === 0) {
+      eggText = 'Fruttita \u2014 do italiano \u201cpequena fruta\u201d.<br><br>' +
+        'Acreditamos que boa comida n\u00e3o precisa de uma lista complicada de ingredientes.<br>' +
+        'Uma \u00e1rvore de m\u00facua, pura e simples, entregue at\u00e9 ti.';
+      eggBtn = 'Entendido';
+    } else if (lang.indexOf('zh') === 0) {
+      eggText = 'Fruttita\uff0c\u6765\u81ea\u610f\u5927\u5229\u8bed\u201c\u5c0f\u6c34\u679c\u201d\u3002<br><br>' +
         '\u6211\u4eec\u76f8\u4fe1\uff0c\u597d\u7684\u98df\u7269\u4e0d\u9700\u8981\u590d\u6742\u7684\u914d\u6599\u8868\u3002<br>' +
-        '\u4e00\u68f5\u732e\u5305\u6811\uff0c\u4e00\u4efd\u7eaf\u7cb9\uff0c\u9001\u5230\u4f60\u624b\u4e0a\u3002' +
-      '</div>' +
-      '<button class="fruttita-logo-egg__close">\u6211\u77e5\u9053\u4e86</button>';
+        '\u4e00\u68f5\u732e\u5305\u6811\uff0c\u4e00\u4efd\u7eaf\u7cb9\uff0c\u9001\u5230\u4f60\u624b\u4e0a\u3002';
+      eggBtn = '\u6211\u77e5\u9053\u4e86';
+    } else {
+      eggText = 'Fruttita \u2014 Italian for \u201clittle fruit.\u201d<br><br>' +
+        'We believe good food doesn\u2019t need a complicated ingredient list.<br>' +
+        'One baobab tree, pure and simple, delivered to you.';
+      eggBtn = 'Got it';
+    }
+    overlay.innerHTML =
+      '<div class="fruttita-logo-egg__icon">\uD83C\uDF33 \uD83E\uDD9C</div>' +
+      '<div class="fruttita-logo-egg__text">' + eggText + '</div>' +
+      '<button class="fruttita-logo-egg__close">' + eggBtn + '</button>';
     document.body.appendChild(overlay);
 
     overlay.querySelector('.fruttita-logo-egg__close').addEventListener('click', function () {

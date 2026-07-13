@@ -21,20 +21,27 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
-        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "image_ratio": "square",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "enable_filtering": true,
-        "enable_sorting": true,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "enable_filtering": false,
+        "enable_sorting": false,
+        "columns_mobile": "1",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "hide-prices": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>.price,.card__information-volume-pricing-note{display:none!important;}</style>"
       }
     }
   },
   "order": [
+    "hide-prices",
     "banner",
     "product-grid"
   ]

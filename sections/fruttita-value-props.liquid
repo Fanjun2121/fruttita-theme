@@ -44,11 +44,11 @@
   }
 
   .vp-title-{{ section.id }} {
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1.3;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
     letter-spacing: 0.02em;
-    max-width: 650px;
+    max-width: 520px;
     margin: 0 auto;
   }
 
@@ -117,7 +117,19 @@
     }
 
     .vp-title-{{ section.id }} {
-      font-size: 1.6rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  :lang(en) .vp-title-{{ section.id }},
+  :lang(pt) .vp-title-{{ section.id }} {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .vp-title-{{ section.id }},
+    :lang(pt) .vp-title-{{ section.id }} {
+      font-size: 1.1rem;
     }
   }
 </style>
@@ -126,9 +138,9 @@
   <div class="vp-inner-{{ section.id }}">
     <div class="vp-header-{{ section.id }}">
       {% if section.settings.subtitle != blank %}
-        <span class="vp-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+        <span class="vp-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
       {% endif %}
-      <h2 class="vp-title-{{ section.id }}">{{ section.settings.title }}</h2>
+      <h2 class="vp-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
     </div>
 
     <div class="vp-grid-{{ section.id }}" id="vpGrid-{{ section.id }}">
@@ -148,8 +160,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             {% endcase %}
           </div>
-          <h3 class="vp-card-title-{{ section.id }}">{{ block.settings.title }}</h3>
-          <p class="vp-card-desc-{{ section.id }}">{{ block.settings.description }}</p>
+          <h3 class="vp-card-title-{{ section.id }}">{% render 'i18n-text', default: block.settings.title, en: block.settings.title_en, pt: block.settings.title_pt %}</h3>
+          <p class="vp-card-desc-{{ section.id }}">{% render 'i18n-text', default: block.settings.description, en: block.settings.description_en, pt: block.settings.description_pt %}</p>
         </div>
       {% endfor %}
     </div>
@@ -182,10 +194,30 @@
       "label": "Subtitle (Pacifico)"
     },
     {
+      "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (English)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (Portuguese)"
+    },
+    {
       "type": "textarea",
       "id": "title",
       "label": "Title",
       "default": "你不需要知道猴面包树是什么。你只需要知道——"
+    },
+    {
+      "type": "textarea",
+      "id": "title_en",
+      "label": "Title (English)"
+    },
+    {
+      "type": "textarea",
+      "id": "title_pt",
+      "label": "Title (Portuguese)"
     },
     {
       "type": "color",
@@ -225,10 +257,30 @@
           "default": "消肿"
         },
         {
+          "type": "text",
+          "id": "title_en",
+          "label": "Card Title (English)"
+        },
+        {
+          "type": "text",
+          "id": "title_pt",
+          "label": "Card Title (Portuguese)"
+        },
+        {
           "type": "textarea",
           "id": "description",
           "label": "Description",
           "default": "0钠+高钾，物理消肿。不锁水，不虚胖。晨起一袋，肿脸拜拜。"
+        },
+        {
+          "type": "textarea",
+          "id": "description_en",
+          "label": "Description (English)"
+        },
+        {
+          "type": "textarea",
+          "id": "description_pt",
+          "label": "Description (Portuguese)"
         }
       ]
     }

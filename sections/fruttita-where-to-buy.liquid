@@ -41,7 +41,7 @@
 
   .wtb-title-{{ section.id }} {
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.3;
     margin-bottom: 3rem;
     letter-spacing: 0.02em;
@@ -100,14 +100,14 @@
   }
 
   .wtb-logo-placeholder-{{ section.id }} {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     opacity: 0.4;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
 
   .wtb-name-{{ section.id }} {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.03em;
     opacity: 0.8;
@@ -131,26 +131,39 @@
       height: 64px;
     }
   }
+
+  :lang(en) .wtb-title-{{ section.id }},
+  :lang(pt) .wtb-title-{{ section.id }} {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .wtb-title-{{ section.id }},
+    :lang(pt) .wtb-title-{{ section.id }} {
+      font-size: 1.4rem;
+    }
+  }
 </style>
 
 <div class="fruttita-where-to-buy-{{ section.id }}">
   <div class="wtb-inner-{{ section.id }}">
     {% if section.settings.subtitle != blank %}
-      <span class="wtb-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+      <span class="wtb-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
     {% endif %}
-    <h2 class="wtb-title-{{ section.id }}">{{ section.settings.title }}</h2>
+    <h2 class="wtb-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
 
     <div class="wtb-grid-{{ section.id }}" id="wtbGrid-{{ section.id }}">
       {% for block in section.blocks %}
         <a href="{{ block.settings.link }}" class="wtb-channel-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 100 }}ms;" target="_blank" rel="noopener">
           <div class="wtb-logo-{{ section.id }}">
             {% if block.settings.logo != blank %}
-              {{ block.settings.logo | image_url: width: 160 | image_tag: loading: 'lazy', alt: block.settings.name }}
+              {% capture channel_name %}{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}{% endcapture %}
+              {{ block.settings.logo | image_url: width: 160 | image_tag: loading: 'lazy', alt: channel_name | strip }}
             {% else %}
               <span class="wtb-logo-placeholder-{{ section.id }}">Logo</span>
             {% endif %}
           </div>
-          <span class="wtb-name-{{ section.id }}">{{ block.settings.name }}</span>
+          <span class="wtb-name-{{ section.id }}">{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}</span>
         </a>
       {% endfor %}
     </div>
@@ -185,9 +198,29 @@
     },
     {
       "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (EN)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (PT)"
+    },
+    {
+      "type": "text",
       "id": "title",
       "label": "Title",
       "default": "想试试？"
+    },
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "Title (EN)"
+    },
+    {
+      "type": "text",
+      "id": "title_pt",
+      "label": "Title (PT)"
     },
     {
       "type": "color",
@@ -212,6 +245,16 @@
           "id": "name",
           "label": "Channel Name",
           "default": "天猫"
+        },
+        {
+          "type": "text",
+          "id": "name_en",
+          "label": "Channel Name (EN)"
+        },
+        {
+          "type": "text",
+          "id": "name_pt",
+          "label": "Channel Name (PT)"
         },
         {
           "type": "image_picker",

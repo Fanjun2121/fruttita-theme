@@ -46,7 +46,7 @@
 
   .ps-title-{{ section.id }} {
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
   }
@@ -73,8 +73,17 @@
   }
 
   .ps-card-{{ section.id }}:hover {
-    transform: translateY(-6px);
     box-shadow: 0 16px 48px rgba(79,44,29,0.12);
+  }
+
+  /* 3D tilt — handled by JS on desktop, CSS fallback */
+  @media (hover: none) {
+    .ps-card-{{ section.id }}:hover {
+      transform: translateY(-6px);
+    }
+  }
+  .ps-card-{{ section.id }} {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
   .ps-card-image-{{ section.id }} {
@@ -102,7 +111,7 @@
     align-items: center;
     justify-content: center;
     color: rgba(79, 44, 29, 0.25);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
@@ -142,7 +151,7 @@
     display: inline-block;
     padding: 0.25rem 0.65rem;
     border-radius: 50px;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.03em;
     background: rgba(79, 44, 29, 0.08);
@@ -150,7 +159,7 @@
   }
 
   .ps-card-specs-{{ section.id }} {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     opacity: 0.6;
     margin-bottom: 1.2rem;
@@ -192,15 +201,27 @@
       font-size: 1.8rem;
     }
   }
+
+  :lang(en) .ps-title-{{ section.id }},
+  :lang(pt) .ps-title-{{ section.id }} {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .ps-title-{{ section.id }},
+    :lang(pt) .ps-title-{{ section.id }} {
+      font-size: 1.4rem;
+    }
+  }
 </style>
 
 <div class="fruttita-product-showcase-{{ section.id }}">
   <div class="ps-inner-{{ section.id }}">
     <div class="ps-header-{{ section.id }}">
       {% if section.settings.subtitle != blank %}
-        <span class="ps-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+        <span class="ps-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
       {% endif %}
-      <h2 class="ps-title-{{ section.id }}">{{ section.settings.title }}</h2>
+      <h2 class="ps-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
     </div>
 
     <div class="ps-grid-{{ section.id }}" id="psGrid-{{ section.id }}">
@@ -214,13 +235,15 @@
             {% endif %}
           </div>
           <div class="ps-card-body-{{ section.id }}">
-            <h3 class="ps-card-name-cn-{{ section.id }}">{{ block.settings.name_cn }}</h3>
+            <h3 class="ps-card-name-cn-{{ section.id }}">{% render 'i18n-text', default: block.settings.name_cn, en: block.settings.name_cn_en, pt: block.settings.name_cn_pt %}</h3>
             <div class="ps-card-name-en-{{ section.id }}">{{ block.settings.name_en }}</div>
-            <p class="ps-card-tagline-{{ section.id }}">{{ block.settings.tagline }}</p>
+            <p class="ps-card-tagline-{{ section.id }}">{% render 'i18n-text', default: block.settings.tagline, en: block.settings.tagline_en, pt: block.settings.tagline_pt %}</p>
 
             {% if block.settings.scenarios != blank %}
               <div class="ps-card-scenarios-{{ section.id }}">
-                {% assign tags = block.settings.scenarios | split: ',' %}
+                {% assign scenario_text = block.settings.scenarios %}
+                {% assign _lang = request.locale.iso_code | slice: 0, 2 %}{% if _lang == 'en' and block.settings.scenarios_en != blank %}{% assign scenario_text = block.settings.scenarios_en %}{% elsif _lang == 'pt' and block.settings.scenarios_pt != blank %}{% assign scenario_text = block.settings.scenarios_pt %}{% endif %}
+                {% assign tags = scenario_text | split: ',' %}
                 {% for tag in tags %}
                   <span class="ps-tag-{{ section.id }}">{{ tag | strip }}</span>
                 {% endfor %}
@@ -228,11 +251,11 @@
             {% endif %}
 
             {% if block.settings.specs != blank %}
-              <div class="ps-card-specs-{{ section.id }}">{{ block.settings.specs }}</div>
+              <div class="ps-card-specs-{{ section.id }}">{% render 'i18n-text', default: block.settings.specs, en: block.settings.specs_en, pt: block.settings.specs_pt %}</div>
             {% endif %}
 
             {% if block.settings.link != blank %}
-              <a href="{{ block.settings.link }}" class="ps-card-link-{{ section.id }}">了解更多</a>
+              <a href="{{ block.settings.link | prepend: routes.root_url | replace: '//', '/' }}" class="ps-card-link-{{ section.id }}">{% render 'i18n-text', default: block.settings.link_text, en: block.settings.link_text_en, pt: block.settings.link_text_pt %}</a>
             {% endif %}
           </div>
         </div>
@@ -254,6 +277,28 @@
       });
     }, { threshold: 0.15 });
     cards.forEach(function(card) { observer.observe(card); });
+
+    /* --- 3D Micro-Tilt (desktop only) --- */
+    var isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (isDesktop && !reducedMotion) {
+      cards.forEach(function(card) {
+        card.style.perspective = '800px';
+        card.addEventListener('mousemove', function(e) {
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+          var cx = rect.width / 2;
+          var cy = rect.height / 2;
+          var rotateX = ((y - cy) / cy) * -5;
+          var rotateY = ((x - cx) / cx) * 5;
+          card.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale(1.02)';
+        }, { passive: true });
+        card.addEventListener('mouseleave', function() {
+          card.style.transform = '';
+        });
+      });
+    }
   })();
 </script>
 
@@ -269,9 +314,29 @@
     },
     {
       "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (EN)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (PT)"
+    },
+    {
+      "type": "text",
       "id": "title",
       "label": "Title",
       "default": "产品一览"
+    },
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "Title (EN)"
+    },
+    {
+      "type": "text",
+      "id": "title_pt",
+      "label": "Title (PT)"
     },
     {
       "type": "color",
@@ -299,6 +364,16 @@
         },
         {
           "type": "text",
+          "id": "name_cn_en",
+          "label": "Chinese Name (EN)"
+        },
+        {
+          "type": "text",
+          "id": "name_cn_pt",
+          "label": "Chinese Name (PT)"
+        },
+        {
+          "type": "text",
           "id": "name_en",
           "label": "English Name",
           "default": "Baobab Shot"
@@ -310,10 +385,30 @@
           "default": "晨起一袋，消肿回血。配料表只有一项。"
         },
         {
+          "type": "textarea",
+          "id": "tagline_en",
+          "label": "One-line persona (EN)"
+        },
+        {
+          "type": "textarea",
+          "id": "tagline_pt",
+          "label": "One-line persona (PT)"
+        },
+        {
           "type": "text",
           "id": "scenarios",
           "label": "Scenario Tags (comma-separated)",
           "default": "晨起消肿, 熬夜急救, 健身补给"
+        },
+        {
+          "type": "text",
+          "id": "scenarios_en",
+          "label": "Scenario Tags EN"
+        },
+        {
+          "type": "text",
+          "id": "scenarios_pt",
+          "label": "Scenario Tags PT"
         },
         {
           "type": "textarea",
@@ -322,9 +417,35 @@
           "default": "30ml · 0钠 · 420mg+维C · 10g+纤维"
         },
         {
+          "type": "textarea",
+          "id": "specs_en",
+          "label": "Key Specs (EN)"
+        },
+        {
+          "type": "textarea",
+          "id": "specs_pt",
+          "label": "Key Specs (PT)"
+        },
+        {
           "type": "image_picker",
           "id": "image",
           "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "了解更多"
+        },
+        {
+          "type": "text",
+          "id": "link_text_en",
+          "label": "Link Text (EN)"
+        },
+        {
+          "type": "text",
+          "id": "link_text_pt",
+          "label": "Link Text (PT)"
         },
         {
           "type": "url",

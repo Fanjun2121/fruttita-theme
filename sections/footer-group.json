@@ -14,43 +14,70 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
-        "footer-2": {
+        "footer_products": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "产品",
+            "heading_en": "Products",
+            "heading_pt": "Produtos",
+            "subtext": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT 原浆饮<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH 纯果浆<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER 猴面包树水<\/a><\/p>",
+            "subtext_en": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT Baobab Pulp<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH Pure Pulp<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER Baobab Water<\/a><\/p>",
+            "subtext_pt": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT Polpa de Múcua<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH Polpa Pura<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER Água de Múcua<\/a><\/p>",
+            "subtext_zh": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT 原浆饮<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH 纯果浆<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER 猴面包树水<\/a><\/p>"
+          }
+        },
+        "footer_brand": {
+          "type": "text",
+          "settings": {
+            "heading": "品牌",
+            "heading_en": "Brand",
+            "heading_pt": "Marca",
+            "subtext": "<p><a href=\"\/pages\/about\">关于我们<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">猴面包树<\/a><\/p>",
+            "subtext_en": "<p><a href=\"\/pages\/about\">About Us<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">Baobab<\/a><\/p>",
+            "subtext_pt": "<p><a href=\"\/pages\/about\">Sobre Nós<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">Imbondeiro<\/a><\/p>",
+            "subtext_zh": "<p><a href=\"\/pages\/about\">关于我们<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">猴面包树<\/a><\/p>"
+          }
+        },
+        "footer_collab": {
+          "type": "text",
+          "settings": {
+            "heading": "合作",
+            "heading_en": "Partnerships",
+            "heading_pt": "Parcerias",
+            "subtext": "<p><a href=\"mailto:hello@fruttita.com\">商务合作<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">媒体联系<\/a><\/p>",
+            "subtext_en": "<p><a href=\"mailto:hello@fruttita.com\">Business Enquiries<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">Media Contact<\/a><\/p>",
+            "subtext_pt": "<p><a href=\"mailto:hello@fruttita.com\">Parcerias Comerciais<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">Contacto de Media<\/a><\/p>",
+            "subtext_zh": "<p><a href=\"mailto:hello@fruttita.com\">商务合作<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">媒体联系<\/a><\/p>"
+          }
+        },
+        "footer_contact": {
+          "type": "text",
+          "settings": {
+            "heading": "联系",
+            "heading_en": "Contact",
+            "heading_pt": "Contacto",
+            "subtext": "<p><a href=\"mailto:hello@fruttita.com\">hello@fruttita.com<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer_products",
+        "footer_brand",
+        "footer_collab",
+        "footer_contact"
       ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "关注我们，偶尔聊点有用的。",
+        "newsletter_heading_en": "Stay in the loop. We only share what matters.",
+        "newsletter_heading_pt": "Fica a par. Só partilhamos o que importa.",
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": false,
-        "margin_top": 48,
+        "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
       }

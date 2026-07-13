@@ -14,8 +14,12 @@
       "settings": {
         "bg_color": "#4F2C1D",
         "overlay_opacity": 30,
-        "subtitle": "Our Story",
-        "title": "给身体，一份来自旷野的留白",
+        "subtitle": "OUR STORY",
+        "subtitle_en": "OUR STORY",
+        "subtitle_pt": "A NOSSA HISTÓRIA",
+        "title": "给身体，一份来自旷野的留白。",
+        "title_en": "From the wild. For everyday.",
+        "title_pt": "Da natureza. Para o dia a dia.",
         "text_color": "#F4E3C9",
         "height": "80vh"
       }
@@ -26,26 +30,85 @@
         "m_p1": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "在非洲大陆的旷野中，猴面包树已经存在了数千年。它不需要灌溉，不需要施肥，果实在枝头自然脱水，保留了最完整的营养。"
+            "text_paragraph": "在非洲热带草原的深处，伫立着一种古老的植物——猴面包树。",
+            "text_paragraph_en": "In the African savanna, there's a tree that's been standing for 3,000 years. The baobab.",
+            "text_paragraph_pt": "Na savana africana, existe uma árvore de pé há 3.000 anos. O embondeiro."
           }
         },
         "m_p2": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "而在都市的另一端，我们每天面对加工食品、营养焦虑、成分表上看不懂的名字。我们需要的不是更多选择，而是一个真正干净的答案。"
+            "text_paragraph": "它们沉默地守望着这片红土地，历经干旱与烈日，却能在体内储存数吨的水源。",
+            "text_paragraph_en": "It survives drought, extreme heat, and centuries of neglect — storing tons of water in its trunk.",
+            "text_paragraph_pt": "Sobrevive à seca, ao calor extremo e a séculos de abandono — armazenando toneladas de água no tronco."
           }
         },
         "m_p3": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "Fruttita 就是这个答案。我们把旷野中最干净的营养，带进你的日常——用最短的配料表，最远的原产地，给你最纯粹的补给。"
+            "text_paragraph": "它们不依赖人工催熟，只是在枝头沐浴着赤道阳光自然风干，锁住了大自然最原本的生命力。",
+            "text_paragraph_en": "Its fruit ripens on the branch. No one picks it early. No one sprays it. It just dries in the sun.",
+            "text_paragraph_pt": "O fruto amadurece no ramo. Ninguém o colhe cedo. Ninguém o pulveriza. Seca ao sol."
+          }
+        },
+        "m_p4": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "这是一种纯粹的野性。",
+            "text_paragraph_en": "That's wildness you can't manufacture.",
+            "text_paragraph_pt": "Isso é uma pureza que não se fabrica."
+          }
+        },
+        "m_p5": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "而身处现代都市的我们，生活被精加工的食物、嘈杂的信息和无形的压力填满。",
+            "text_paragraph_en": "Meanwhile, we fill our days with ultra-processed food, screen fatigue, and stress we barely notice.",
+            "text_paragraph_pt": "Entretanto, enchemos os nossos dias com comida ultraprocessada, fadiga de ecrã e stress que mal notamos."
+          }
+        },
+        "m_p6": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们像上了发条的钟表，追逐效率，却常常忘记了身体最本能的渴望。",
+            "text_paragraph_en": "We optimize everything except what we put in our bodies.",
+            "text_paragraph_pt": "Otimizamos tudo exceto o que pomos no corpo."
+          }
+        },
+        "m_p7": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "我们要的，或许不是更多的添加，而是回归与恢复。",
+            "text_paragraph_en": "Maybe the answer isn't adding more. Maybe it's starting simpler.",
+            "text_paragraph_pt": "Talvez a resposta não seja adicionar mais. Talvez seja começar mais simples."
+          }
+        },
+        "m_p8": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "Fruttita 的诞生，源于一个简单的愿望：把那份来自热带旷野的“干净”和“野”，带进你的日常。",
+            "text_paragraph_en": "That's why Fruttita exists. One fruit. Barely processed. Brought to you.",
+            "text_paragraph_pt": "É por isso que a Fruttita existe. Um fruto. Quase intocado. Até ti."
           }
         }
       },
-      "block_order": ["m_p1", "m_p2", "m_p3"],
+      "block_order": [
+        "m_p1",
+        "m_p2",
+        "m_p3",
+        "m_p4",
+        "m_p5",
+        "m_p6",
+        "m_p7",
+        "m_p8"
+      ],
       "settings": {
         "subtitle": "Brand Manifesto",
+        "subtitle_en": "Brand Manifesto",
+        "subtitle_pt": "Manifesto da Marca",
         "title": "品牌宣言",
+        "title_en": "Our Manifesto",
+        "title_pt": "O Nosso Manifesto",
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D"
       }
@@ -54,8 +117,14 @@
       "type": "fruttita-two-worlds",
       "settings": {
         "left_label": "THE WILDERNESS",
+        "left_label_en": "THE WILDERNESS",
+        "left_label_pt": "A NATUREZA SELVAGEM",
         "right_label": "YOUR DAILY LIFE",
-        "bridge_text": "一边是非洲旷野中千年的猴面包树，一边是你每天醒来的日常。Fruttita 把这两个世界连在一起——用最短的配料表，最远的原产地，给你最干净的补给。"
+        "right_label_en": "YOUR DAILY LIFE",
+        "right_label_pt": "O TEU DIA A DIA",
+        "bridge_text": "Fruttita 是连接两个世界的介质。将热带旷野的“干净”，注入每一个都市个体的日常。",
+        "bridge_text_en": "Fruttita connects two worlds. The purity of the wild, delivered to your daily routine.",
+        "bridge_text_pt": "A Fruttita liga dois mundos. A pureza da natureza, entregue à tua rotina diária."
       }
     },
     "dual_cards": {
@@ -65,8 +134,14 @@
           "type": "card",
           "settings": {
             "title": "干净",
+            "title_en": "Clean",
+            "title_pt": "Limpo",
             "subtitle": "CLEAN",
-            "body": "我们做减法。配料表只有一项，没有水，没有糖，没有稳定剂。你看到的就是你喝到的。",
+            "subtitle_en": "CLEAN",
+            "subtitle_pt": "CLEAN",
+            "body": "0 钠。0 添加。0 脂。\n\n我们不往里面加东西。我们做减法。\n\n配料表极简，因为好原料不需要修饰。\n\n当市面上的“健康饮品“配料表长得像一篇论文的时候，我们选择只留下本质。\n\n少，不是缺少。是刚刚好。",
+            "body_en": "0 sodium. 0 additives. 0 fat.\n\nWe don't add. We subtract.\n\nThe ingredient list is short because the ingredient is good.\n\nOther \"health drinks\" have labels that read like a chemistry textbook. Ours reads like a grocery list — if you only bought one thing.",
+            "body_pt": "0 sódio. 0 aditivos. 0 gordura.\n\nNão adicionamos. Subtraímos.\n\nA lista de ingredientes é curta porque o ingrediente é bom.\n\nOutras \"bebidas saudáveis\" têm rótulos que parecem manuais de química. O nosso parece uma lista de compras — se só comprasses uma coisa.",
             "bg_color": "#4F2C1D",
             "text_color": "#F4E3C9"
           }
@@ -75,14 +150,23 @@
           "type": "card",
           "settings": {
             "title": "野性",
+            "title_en": "Wild",
+            "title_pt": "Selvagem",
             "subtitle": "WILD",
-            "body": "猴面包树在非洲旷野存活数千年，果实自然脱水，不依赖任何人工干预。这种原始的生命力，就是我们想传递的。",
+            "subtitle_en": "WILD",
+            "subtitle_pt": "WILD",
+            "body": "高钾。高 VC。高纤维。\n\n猴面包树在非洲旷野活了三千年，不施肥，不浇水，不依赖任何人。\n\n它的营养密度，不是实验室调配出来的，是大自然自己长出来的。\n\n420mg+ 维生素 C。380mg+ 钾。10g+ 膳食纤维。828mg 总多酚。\n\n这些数字不是我们设计的。是旷野给的。",
+            "body_en": "High potassium. High Vitamin C. High fiber.\n\nThe baobab has survived in the African wild for 3,000 years. No fertilizer. No irrigation. No help from anyone.\n\nIts nutrition wasn't formulated. It evolved.\n\n420mg+ Vitamin C. 380mg+ Potassium. 10g+ Fiber. 828mg Polyphenols.\n\nWe didn't design these numbers. The tree did.",
+            "body_pt": "Rico em potássio. Rico em Vitamina C. Rico em fibra.\n\nO embondeiro sobrevive na natureza africana há 3.000 anos. Sem fertilizantes. Sem irrigação. Sem ajuda de ninguém.\n\nA sua nutrição não foi formulada. Evoluiu.\n\n420mg+ Vitamina C. 380mg+ Potássio. 10g+ Fibra. 828mg Polifenóis.\n\nNão desenhámos estes números. A árvore é que os fez.",
             "bg_color": "#4F2C1D",
             "text_color": "#F4E3C9"
           }
         }
       },
-      "block_order": ["card_clean", "card_wild"],
+      "block_order": [
+        "card_clean",
+        "card_wild"
+      ],
       "settings": {}
     },
     "wellbeing": {
@@ -91,59 +175,51 @@
         "wb_p1": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "我们不贩卖焦虑，不追捧潮流超级食物的概念光环。"
+            "text_paragraph": "Well-being 不是一个标准答案。每天跑5公里是，睡到自然醒也是。精准控糖是，偶尔放纵也是。",
+            "text_paragraph_en": "Well-being doesn't have a single answer. Running 5K counts. Sleeping in counts. Tracking macros counts. So does the occasional pizza.",
+            "text_paragraph_pt": "O bem-estar não tem uma resposta única. Correr 5 km conta. Dormir até tarde conta. Controlar macros conta. Uma pizza ocasional também."
           }
         },
         "wb_p2": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "我们关注的是每一个个体的 Well-being：在过度消耗的都市生活中，提供一种零负担、能快速回血的天然解决方案。"
+            "text_paragraph": "Well-being 是你自己的节奏。是忙碌之后给身体一点喘息，是消耗过度之后的一次温和回血。",
+            "text_paragraph_en": "It's your rhythm. A pause after the grind. A quiet reset when you're running low.",
+            "text_paragraph_pt": "É o teu ritmo. Uma pausa depois da correria. Um reset silencioso quando estás a ficar sem energia."
           }
         },
         "wb_p3": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "好的营养不需要复杂的配方，不需要焦虑的营销，不需要你做出任何牺牲。它只需要足够干净，足够真实。"
+            "text_paragraph": "我们不定义什么是“健康的生活”。我们只是提供一个 0 负担的天然选项——让你在都市的节奏里，找回最舒服的状态。",
+            "text_paragraph_en": "We don't define healthy. We just make something with one ingredient, zero sodium, and no fine print — so the choice is easy when you want it to be.",
+            "text_paragraph_pt": "Não definimos o que é saudável. Fazemos algo com um ingrediente, zero sódio e sem letras pequenas — para que a escolha seja fácil quando quiseres."
+          }
+        },
+        "wb_p4": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "让身体回归纯粹，让能量自然生长。",
+            "text_paragraph_en": "Simple ingredients. Your pace.",
+            "text_paragraph_pt": "Ingredientes simples. O teu ritmo."
           }
         }
       },
-      "block_order": ["wb_p1", "wb_p2", "wb_p3"],
+      "block_order": [
+        "wb_p1",
+        "wb_p2",
+        "wb_p3",
+        "wb_p4"
+      ],
       "settings": {
         "subtitle": "What We Believe",
-        "title": "WELL-BEING",
+        "subtitle_en": "What We Believe",
+        "subtitle_pt": "No Que Acreditamos",
+        "title": "关注每一个个体的 Well-being。",
+        "title_en": "Your well-being. Your definition.",
+        "title_pt": "O teu bem-estar. A tua definição.",
         "bg_color": "#4F2C1D",
         "text_color": "#F4E3C9"
-      }
-    },
-    "personality": {
-      "type": "fruttita-personality-cards",
-      "blocks": {
-        "p_1": {
-          "type": "card",
-          "settings": {
-            "title": "平实克制",
-            "body": "我们不喊口号，不造概念，不用感叹号轰炸。好东西不需要大声说。"
-          }
-        },
-        "p_2": {
-          "type": "card",
-          "settings": {
-            "title": "聪明自嘲",
-            "body": "\u201c即使像吃土，也要吃最有营养的那口土。\u201d我们认真做产品，但不把自己太当回事。"
-          }
-        },
-        "p_3": {
-          "type": "card",
-          "settings": {
-            "title": "人间清醒",
-            "body": "不贩卖焦虑，不夸大功效。配料表只有一项，数据来自第三方检测。说到做到，仅此而已。"
-          }
-        }
-      },
-      "block_order": ["p_1", "p_2", "p_3"],
-      "settings": {
-        "subtitle": "Our Voice",
-        "title": "我们怎么说话"
       }
     },
     "promises": {
@@ -153,8 +229,12 @@
           "type": "card",
           "settings": {
             "icon": "label",
-            "title": "Clean Label",
-            "body": "配料表只有一项。不添加水、糖、防腐剂、香精、色素。"
+            "title": "Clean Label 清洁标签",
+            "title_en": "Clean Label",
+            "title_pt": "Rótulo Limpo",
+            "body": "全线产品配料表极简。不加你不需要的东西。不用你看不懂的成分。",
+            "body_en": "Short ingredient lists on every product. Nothing you don't need. Nothing you can't pronounce.",
+            "body_pt": "Listas de ingredientes curtas em todos os produtos. Nada que não precises. Nada que não consigas pronunciar."
           }
         },
         "pm_2": {
@@ -162,7 +242,11 @@
           "settings": {
             "icon": "chart",
             "title": "数据透明",
-            "body": "所有营养数据来自SGS/Eurofins第三方检测，不自说自话。"
+            "title_en": "Data Transparency",
+            "title_pt": "Transparência de Dados",
+            "body": "所有营养数据来自第三方实验室（SGS / Eurofins）检测。我们公开报告，不编故事。",
+            "body_en": "All nutrition data from third-party labs (SGS / Eurofins). We publish the reports, not stories.",
+            "body_pt": "Todos os dados nutricionais vêm de laboratórios terceiros (SGS / Eurofins). Publicamos relatórios, não histórias."
           }
         },
         "pm_3": {
@@ -170,7 +254,11 @@
           "settings": {
             "icon": "globe",
             "title": "可持续采购",
-            "body": "与非洲当地社区合作采集，支持公平贸易与可持续农业。"
+            "title_en": "Sustainable Sourcing",
+            "title_pt": "Fornecimento Sustentável",
+            "body": "猴面包树果实由非洲当地社区采摘。采果不伐树，果实自然成熟脱落。每一次购买，都在支持产地的可持续生计。",
+            "body_en": "Baobab fruit is hand-harvested by local African communities. We pick the fruit. We never cut the tree.",
+            "body_pt": "A fruta do embondeiro é colhida à mão pelas comunidades locais. Colhemos o fruto. Nunca cortamos a árvore."
           }
         },
         "pm_4": {
@@ -178,13 +266,24 @@
           "settings": {
             "icon": "shield",
             "title": "合规底线",
-            "body": "符合中国及欧盟食品安全标准，具备完整进口资质与检测报告。"
+            "title_en": "Compliance First",
+            "title_pt": "Conformidade Primeiro",
+            "body": "不做医疗宣称。不用违规词汇。不说我们做不到的事。",
+            "body_en": "No medical claims. No misleading language. We never promise what we can't deliver.",
+            "body_pt": "Sem alegações médicas. Sem linguagem enganosa. Nunca prometemos o que não podemos cumprir."
           }
         }
       },
-      "block_order": ["pm_1", "pm_2", "pm_3", "pm_4"],
+      "block_order": [
+        "pm_1",
+        "pm_2",
+        "pm_3",
+        "pm_4"
+      ],
       "settings": {
-        "title": "我们的承诺"
+        "title": "我们的承诺",
+        "title_en": "Our Promises",
+        "title_pt": "As Nossas Promessas"
       }
     },
     "hero_close": {
@@ -193,8 +292,14 @@
         "bg_color": "#4F2C1D",
         "overlay_opacity": 30,
         "subtitle": "Our Mission",
-        "title": "把旷野的干净和野，带进日常",
-        "body": "Fruttita — 来自非洲旷野的纯净能量",
+        "subtitle_en": "Our Mission",
+        "subtitle_pt": "A Nossa Missão",
+        "title": "这不是什么伟大的使命。但值得认真做。",
+        "title_en": "Not a grand mission. Just a good one.",
+        "title_pt": "Não é uma grande missão. Mas é uma boa.",
+        "body": "在过度消耗的都市生活中，提供一种 0 负担、能快速回血的天然解决方案。\n\nFruttita — 来自旷野的纯净能量 · Pure Energy from the Wilderness",
+        "body_en": "One ingredient. Zero nonsense. A natural option for when you want something that doesn't need explaining.\n\nFruttita",
+        "body_pt": "Um ingrediente. Zero complicações. Uma opção natural para quando queres algo que não precisa de explicação.\n\nFruttita",
         "text_color": "#F4E3C9",
         "height": "80vh"
       }
@@ -206,7 +311,6 @@
     "two_worlds",
     "dual_cards",
     "wellbeing",
-    "personality",
     "promises",
     "hero_close"
   ]
