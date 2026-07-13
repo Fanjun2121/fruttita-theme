@@ -76,7 +76,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  <h2 class="footer-block__heading inline-richtext">{%- render 'i18n-text', default: block.settings.heading, en: block.settings.heading_en, pt: block.settings.heading_pt -%}</h2>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -84,7 +84,7 @@
                     {% render block %}
                   {%- when 'text' -%}
                     <div class="footer-block__details-content rte">
-                      {{ block.settings.subtext }}
+                      {% render 'i18n-text', default: block.settings.subtext, en: block.settings.subtext_en, pt: block.settings.subtext_pt, zh: block.settings.subtext_zh %}
                     </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
@@ -168,7 +168,7 @@
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
               {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+                <h2 class="footer-block__heading inline-richtext">{% render 'i18n-text', default: section.settings.newsletter_heading, en: section.settings.newsletter_heading_en, pt: section.settings.newsletter_heading_pt %}</h2>
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
@@ -374,10 +374,35 @@
           "label": "t:sections.footer.blocks.text.settings.heading.label"
         },
         {
+          "type": "inline_richtext",
+          "id": "heading_en",
+          "label": "Heading (EN)"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_pt",
+          "label": "Heading (PT)"
+        },
+        {
           "type": "richtext",
           "id": "subtext",
           "default": "t:sections.footer.blocks.text.settings.subtext.default",
           "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext_en",
+          "label": "Subtext (EN)"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext_pt",
+          "label": "Subtext (PT)"
+        },
+        {
+          "type": "html",
+          "id": "subtext_zh",
+          "label": "Subtext (ZH)"
         }
       ]
     },
@@ -446,6 +471,16 @@
       "id": "newsletter_heading",
       "default": "t:sections.footer.settings.newsletter_heading.default",
       "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "newsletter_heading_en",
+      "label": "Newsletter heading (EN)"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "newsletter_heading_pt",
+      "label": "Newsletter heading (PT)"
     },
     {
       "type": "header",

@@ -45,7 +45,7 @@
 
   .comp-title-{{ section.id }} {
     font-size: var(--fruttita-text-h2);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
   }
@@ -75,7 +75,7 @@
 
   .comp-col-name-{{ section.id }} {
     font-size: var(--fruttita-text-body);
-    font-weight: 800;
+    font-weight: 700;
     text-align: center;
   }
 
@@ -101,6 +101,15 @@
     transform: translateY(0);
   }
 
+  /* Row hover highlight */
+  .comp-row-{{ section.id }} {
+    border-radius: 0.5rem;
+  }
+  .comp-row-{{ section.id }}:hover {
+    background: rgba(244, 227, 201, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(244, 227, 201, 0.08);
+  }
+
   .comp-metric-label-{{ section.id }} {
     font-size: var(--fruttita-text-body);
     font-weight: 600;
@@ -122,7 +131,7 @@
 
   .comp-status-good-{{ section.id }} {
     color: #78AA00;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   .comp-status-icon-{{ section.id }} {
@@ -194,21 +203,26 @@
       font-size: var(--fruttita-text-small);
     }
   }
+
+  :lang(en) .comp-title-{{ section.id }},
+  :lang(pt) .comp-title-{{ section.id }} {
+    font-size: clamp(2.6rem, 2.6vw, 3.4rem);
+  }
 </style>
 
 <div class="fruttita-comparison-{{ section.id }}">
   <div class="comp-inner-{{ section.id }}">
     <div class="comp-header-{{ section.id }}">
       {% if section.settings.subtitle != blank %}
-        <span class="comp-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+        <span class="comp-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
       {% endif %}
-      <h2 class="comp-title-{{ section.id }}">{{ section.settings.title }}</h2>
+      <h2 class="comp-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
     </div>
 
     <!-- Table header -->
     <div class="comp-table-head-{{ section.id }}">
-      <div class="comp-col-label-{{ section.id }}">指标</div>
-      <div class="comp-col-name-{{ section.id }}">主流椰子水</div>
+      <div class="comp-col-label-{{ section.id }}">{% render 'i18n-text', default: section.settings.header_label, en: section.settings.header_label_en, pt: section.settings.header_label_pt %}</div>
+      <div class="comp-col-name-{{ section.id }}">{% render 'i18n-text', default: section.settings.comp_name, en: section.settings.comp_name_en, pt: section.settings.comp_name_pt %}</div>
       <div class="comp-col-name-{{ section.id }} is-winner">Fruttita Shot</div>
     </div>
 
@@ -216,14 +230,14 @@
     <div id="compRows-{{ section.id }}">
       {% for block in section.blocks %}
         <div class="comp-row-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 100 }}ms;">
-          <div class="comp-metric-label-{{ section.id }}">{{ block.settings.label }}</div>
+          <div class="comp-metric-label-{{ section.id }}">{% render 'i18n-text', default: block.settings.label, en: block.settings.label_en, pt: block.settings.label_pt %}</div>
           <div class="comp-cell-{{ section.id }} comp-status-{{ block.settings.comp_status }}-{{ section.id }}">
             {% if block.settings.comp_status == 'bad' %}
               <svg class="comp-status-icon-{{ section.id }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             {% else %}
               <svg class="comp-status-icon-{{ section.id }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
             {% endif %}
-            {{ block.settings.comp_value }}
+            {% render 'i18n-text', default: block.settings.comp_value, en: block.settings.comp_value_en, pt: block.settings.comp_value_pt %}
           </div>
           <div class="comp-cell-{{ section.id }} comp-status-{{ block.settings.fruttita_status }}-{{ section.id }}">
             {% if block.settings.fruttita_status == 'good' %}
@@ -231,7 +245,7 @@
             {% else %}
               <svg class="comp-status-icon-{{ section.id }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             {% endif %}
-            {{ block.settings.fruttita_value }}
+            {% render 'i18n-text', default: block.settings.fruttita_value, en: block.settings.fruttita_value_en, pt: block.settings.fruttita_value_pt %}
           </div>
         </div>
       {% endfor %}
@@ -239,12 +253,12 @@
 
     {% if section.settings.conclusion != blank %}
       <div class="comp-conclusion-{{ section.id }}" id="compConclusion-{{ section.id }}">
-        {{ section.settings.conclusion }}
+        {% render 'i18n-text', default: section.settings.conclusion, en: section.settings.conclusion_en, pt: section.settings.conclusion_pt %}
       </div>
     {% endif %}
 
     {% if section.settings.source_note != blank %}
-      <div class="comp-source-{{ section.id }}">{{ section.settings.source_note }}</div>
+      <div class="comp-source-{{ section.id }}">{% render 'i18n-text', default: section.settings.source_note, en: section.settings.source_note_en, pt: section.settings.source_note_pt %}</div>
     {% endif %}
   </div>
 </div>
@@ -272,15 +286,67 @@
   "settings": [
     {
       "type": "text",
+      "id": "header_label",
+      "label": "Table Header Label",
+      "default": "指标"
+    },
+    {
+      "type": "text",
+      "id": "header_label_en",
+      "label": "Table Header Label (EN)"
+    },
+    {
+      "type": "text",
+      "id": "header_label_pt",
+      "label": "Table Header Label (PT)"
+    },
+    {
+      "type": "text",
+      "id": "comp_name",
+      "label": "Competitor Name",
+      "default": "主流椰子水"
+    },
+    {
+      "type": "text",
+      "id": "comp_name_en",
+      "label": "Competitor Name (EN)"
+    },
+    {
+      "type": "text",
+      "id": "comp_name_pt",
+      "label": "Competitor Name (PT)"
+    },
+    {
+      "type": "text",
       "id": "subtitle",
       "label": "Subtitle (Pacifico)",
       "default": "The Truth"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (EN)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (PT)"
     },
     {
       "type": "textarea",
       "id": "title",
       "label": "Title",
       "default": "都说椰子水消肿，但你看过它的钠含量吗？"
+    },
+    {
+      "type": "textarea",
+      "id": "title_en",
+      "label": "Title (EN)"
+    },
+    {
+      "type": "textarea",
+      "id": "title_pt",
+      "label": "Title (PT)"
     },
     {
       "type": "color",
@@ -301,10 +367,30 @@
       "default": "同样是「消肿神器」，一个高钠锁水，一个零钠排水。选哪个，身体会告诉你。"
     },
     {
+      "type": "textarea",
+      "id": "conclusion_en",
+      "label": "Conclusion (EN)"
+    },
+    {
+      "type": "textarea",
+      "id": "conclusion_pt",
+      "label": "Conclusion (PT)"
+    },
+    {
       "type": "text",
       "id": "source_note",
       "label": "Source Note",
       "default": "数据来源：SGS / Eurofins 第三方检测报告，主流椰子水取市售Top3品牌均值"
+    },
+    {
+      "type": "text",
+      "id": "source_note_en",
+      "label": "Source Note (EN)"
+    },
+    {
+      "type": "text",
+      "id": "source_note_pt",
+      "label": "Source Note (PT)"
     }
   ],
   "blocks": [
@@ -320,9 +406,29 @@
         },
         {
           "type": "text",
+          "id": "label_en",
+          "label": "Metric Label (EN)"
+        },
+        {
+          "type": "text",
+          "id": "label_pt",
+          "label": "Metric Label (PT)"
+        },
+        {
+          "type": "text",
           "id": "comp_value",
           "label": "Competitor Value",
           "default": "105mg"
+        },
+        {
+          "type": "text",
+          "id": "comp_value_en",
+          "label": "Competitor Value (EN)"
+        },
+        {
+          "type": "text",
+          "id": "comp_value_pt",
+          "label": "Competitor Value (PT)"
         },
         {
           "type": "select",
@@ -339,6 +445,16 @@
           "id": "fruttita_value",
           "label": "Fruttita Value",
           "default": "0mg"
+        },
+        {
+          "type": "text",
+          "id": "fruttita_value_en",
+          "label": "Fruttita Value (EN)"
+        },
+        {
+          "type": "text",
+          "id": "fruttita_value_pt",
+          "label": "Fruttita Value (PT)"
         },
         {
           "type": "select",

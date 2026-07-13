@@ -83,7 +83,7 @@
 
   .dc-card-title-{{ section.id }} {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 0.3rem;
     letter-spacing: 0.02em;
   }
@@ -120,6 +120,18 @@
       font-size: 1.6rem;
     }
   }
+
+  :lang(en) .dc-card-title-{{ section.id }},
+  :lang(pt) .dc-card-title-{{ section.id }} {
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .dc-card-title-{{ section.id }},
+    :lang(pt) .dc-card-title-{{ section.id }} {
+      font-size: 1.35rem;
+    }
+  }
 </style>
 
 <div class="fruttita-dual-cards-{{ section.id }}">
@@ -134,11 +146,11 @@
           <div class="dc-card-overlay-{{ section.id }}"></div>
         {% endif %}
         <div class="dc-card-text-{{ section.id }}">
-          <h3 class="dc-card-title-{{ section.id }}">{{ block.settings.title }}</h3>
+          <h3 class="dc-card-title-{{ section.id }}">{% render 'i18n-text', default: block.settings.title, en: block.settings.title_en, pt: block.settings.title_pt %}</h3>
           {% if block.settings.subtitle != blank %}
-            <div class="dc-card-subtitle-{{ section.id }}">{{ block.settings.subtitle }}</div>
+            <div class="dc-card-subtitle-{{ section.id }}">{% render 'i18n-text', default: block.settings.subtitle, en: block.settings.subtitle_en, pt: block.settings.subtitle_pt %}</div>
           {% endif %}
-          <p class="dc-card-body-{{ section.id }}">{{ block.settings.body }}</p>
+          <p class="dc-card-body-{{ section.id }}">{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</p>
         </div>
       </div>
     {% endfor %}
@@ -179,15 +191,45 @@
         },
         {
           "type": "text",
+          "id": "title_en",
+          "label": "Title (EN)"
+        },
+        {
+          "type": "text",
+          "id": "title_pt",
+          "label": "Title (PT)"
+        },
+        {
+          "type": "text",
           "id": "subtitle",
           "label": "Subtitle (Pacifico)",
           "default": "CLEAN"
+        },
+        {
+          "type": "text",
+          "id": "subtitle_en",
+          "label": "Subtitle (EN)"
+        },
+        {
+          "type": "text",
+          "id": "subtitle_pt",
+          "label": "Subtitle (PT)"
         },
         {
           "type": "textarea",
           "id": "body",
           "label": "Body Text",
           "default": "我们做减法。配料表只有一项，没有水，没有糖，没有稳定剂。你看到的就是你喝到的。"
+        },
+        {
+          "type": "textarea",
+          "id": "body_en",
+          "label": "Body Text (EN)"
+        },
+        {
+          "type": "textarea",
+          "id": "body_pt",
+          "label": "Body Text (PT)"
         },
         {
           "type": "image_picker",

@@ -5,8 +5,8 @@
 
 <style>
   .fruttita-promise-{{ section.id }} {
-    background-color: #4F2C1D;
-    color: #F4E3C9;
+    background-color: #F9F1E6;
+    color: #4F2C1D;
     padding: 6rem 1.5rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
@@ -37,7 +37,7 @@
 
   .pm-title-{{ section.id }} {
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
   }
@@ -49,8 +49,8 @@
   }
 
   .pm-card-{{ section.id }} {
-    background: rgba(244, 227, 201, 0.06);
-    border: 1px solid rgba(244, 227, 201, 0.1);
+    background: rgba(79, 44, 29, 0.04);
+    border: 1px solid rgba(79, 44, 29, 0.1);
     border-radius: 1.25rem;
     padding: 2rem 1.5rem;
     text-align: center;
@@ -66,7 +66,7 @@
 
   .pm-card-{{ section.id }}:hover {
     transform: translateY(-4px);
-    background: rgba(244, 227, 201, 0.1);
+    background: rgba(79, 44, 29, 0.08);
   }
 
   .pm-icon-{{ section.id }} {
@@ -113,12 +113,24 @@
       padding: 1.5rem 1rem;
     }
   }
+
+  :lang(en) .pm-title-{{ section.id }},
+  :lang(pt) .pm-title-{{ section.id }} {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .pm-title-{{ section.id }},
+    :lang(pt) .pm-title-{{ section.id }} {
+      font-size: 1.4rem;
+    }
+  }
 </style>
 
 <div class="fruttita-promise-{{ section.id }}">
   <div class="pm-inner-{{ section.id }}">
     <div class="pm-header-{{ section.id }}">
-      <h2 class="pm-title-{{ section.id }}">{{ section.settings.title }}</h2>
+      <h2 class="pm-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
     </div>
 
     <div class="pm-grid-{{ section.id }}" id="pmGrid-{{ section.id }}">
@@ -138,8 +150,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             {% endcase %}
           </div>
-          <h3 class="pm-card-title-{{ section.id }}">{{ block.settings.title }}</h3>
-          <p class="pm-card-body-{{ section.id }}">{{ block.settings.body }}</p>
+          <h3 class="pm-card-title-{{ section.id }}">{% render 'i18n-text', default: block.settings.title, en: block.settings.title_en, pt: block.settings.title_pt %}</h3>
+          <p class="pm-card-body-{{ section.id }}">{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</p>
         </div>
       {% endfor %}
     </div>
@@ -171,6 +183,16 @@
       "id": "title",
       "label": "Title",
       "default": "我们的承诺"
+    },
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "Title (English)"
+    },
+    {
+      "type": "text",
+      "id": "title_pt",
+      "label": "Title (Portuguese)"
     }
   ],
   "blocks": [
@@ -198,10 +220,30 @@
           "default": "Clean Label"
         },
         {
+          "type": "text",
+          "id": "title_en",
+          "label": "Card Title (English)"
+        },
+        {
+          "type": "text",
+          "id": "title_pt",
+          "label": "Card Title (Portuguese)"
+        },
+        {
           "type": "textarea",
           "id": "body",
           "label": "Card Body",
           "default": "配料表只有一项。不添加水、糖、防腐剂、香精、色素。"
+        },
+        {
+          "type": "textarea",
+          "id": "body_en",
+          "label": "Card Body (English)"
+        },
+        {
+          "type": "textarea",
+          "id": "body_pt",
+          "label": "Card Body (Portuguese)"
         }
       ]
     }

@@ -226,3 +226,15 @@ html {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+/* --- EN / PT title adjustments ---
+   - Remove uppercase (makes Latin titles much wider)
+   - Use loaded Switzer Bold (700) instead of synthetic 800 */
+
+:lang(en) h1, :lang(en) h2, :lang(en) .h1, :lang(en) .h2,
+:lang(en) [class*="-title-"], :lang(en) [class*="-title"],
+:lang(pt) h1, :lang(pt) h2, :lang(pt) .h1, :lang(pt) .h2,
+:lang(pt) [class*="-title-"], :lang(pt) [class*="-title"] {
+  text-transform: none !important;
+  font-weight: 700 !important;
+}

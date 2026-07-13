@@ -23,15 +23,22 @@
   .tw-grid-{{ section.id }} {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 70vh;
+    {% if section.settings.left_image != blank or section.settings.right_image != blank %}
+      min-height: 70vh;
+    {% endif %}
   }
 
   .tw-panel-{{ section.id }} {
     position: relative;
     display: flex;
-    align-items: flex-end;
+    {% if section.settings.left_image != blank or section.settings.right_image != blank %}
+      align-items: flex-end;
+      padding: 3rem 2rem;
+    {% else %}
+      align-items: center;
+      padding: 2rem;
+    {% endif %}
     justify-content: center;
-    padding: 3rem 2rem;
     overflow: hidden;
   }
 
@@ -66,7 +73,7 @@
     z-index: 3;
     color: #F4E3C9;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     text-align: center;
@@ -107,9 +114,11 @@
       min-height: auto;
     }
 
+    {% if section.settings.left_image != blank or section.settings.right_image != blank %}
     .tw-panel-{{ section.id }} {
       min-height: 40vh;
     }
+    {% endif %}
 
     .tw-panel-label-{{ section.id }} {
       font-size: 1.2rem;
@@ -131,7 +140,7 @@
         </div>
       {% endif %}
       <div class="tw-panel-overlay-{{ section.id }}"></div>
-      <div class="tw-panel-label-{{ section.id }}">{{ section.settings.left_label }}</div>
+      <div class="tw-panel-label-{{ section.id }}">{% render 'i18n-text', default: section.settings.left_label, en: section.settings.left_label_en, pt: section.settings.left_label_pt %}</div>
     </div>
     <div class="tw-panel-{{ section.id }}">
       {% if section.settings.right_image != blank %}
@@ -140,13 +149,13 @@
         </div>
       {% endif %}
       <div class="tw-panel-overlay-{{ section.id }}"></div>
-      <div class="tw-panel-label-{{ section.id }}">{{ section.settings.right_label }}</div>
+      <div class="tw-panel-label-{{ section.id }}">{% render 'i18n-text', default: section.settings.right_label, en: section.settings.right_label_en, pt: section.settings.right_label_pt %}</div>
     </div>
   </div>
 
   {% if section.settings.bridge_text != blank %}
     <div class="tw-bridge-{{ section.id }}" id="twBridge-{{ section.id }}">
-      {{ section.settings.bridge_text }}
+      {% render 'i18n-text', default: section.settings.bridge_text, en: section.settings.bridge_text_en, pt: section.settings.bridge_text_pt %}
     </div>
   {% endif %}
 </div>
@@ -184,6 +193,16 @@
       "default": "THE WILDERNESS"
     },
     {
+      "type": "text",
+      "id": "left_label_en",
+      "label": "Left Label (English)"
+    },
+    {
+      "type": "text",
+      "id": "left_label_pt",
+      "label": "Left Label (Portuguese)"
+    },
+    {
       "type": "image_picker",
       "id": "right_image",
       "label": "Right Image (Daily Life)"
@@ -195,10 +214,30 @@
       "default": "YOUR DAILY LIFE"
     },
     {
+      "type": "text",
+      "id": "right_label_en",
+      "label": "Right Label (English)"
+    },
+    {
+      "type": "text",
+      "id": "right_label_pt",
+      "label": "Right Label (Portuguese)"
+    },
+    {
       "type": "textarea",
       "id": "bridge_text",
       "label": "Bridge Text",
       "default": "一边是非洲旷野中千年的猴面包树，一边是你每天醒来的日常。Fruttita 把这两个世界连在一起——用最短的配料表，最远的原产地，给你最干净的补给。"
+    },
+    {
+      "type": "textarea",
+      "id": "bridge_text_en",
+      "label": "Bridge Text (English)"
+    },
+    {
+      "type": "textarea",
+      "id": "bridge_text_pt",
+      "label": "Bridge Text (Portuguese)"
     }
   ],
   "presets": [

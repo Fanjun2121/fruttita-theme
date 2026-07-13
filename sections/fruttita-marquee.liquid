@@ -4,8 +4,8 @@
 
 <style>
   .fruttita-marquee-section {
-    background-color: {{ section.settings.bg_color }};
-    color: {{ section.settings.text_color }};
+    background-color: {{ section.settings.bg_color }} !important;
+    color: {{ section.settings.text_color }} !important;
     padding: 1rem 0;
     overflow: hidden;
     white-space: nowrap;
@@ -41,7 +41,7 @@
 <div class="fruttita-marquee-section">
   <div class="marquee-content">
     {% for i in (1..10) %}
-      <span class="marquee-item">{{ section.settings.text }}</span>
+      <span class="marquee-item">{% render 'i18n-text', default: section.settings.text, en: section.settings.text_en, pt: section.settings.text_pt %}</span>
     {% endfor %}
   </div>
 </div>
@@ -55,6 +55,16 @@
       "id": "text",
       "label": "Marquee Text",
       "default": "• No Sodium Bloat • High Vitamin C • Prebiotic Fiber • Morning Recovery"
+    },
+    {
+      "type": "text",
+      "id": "text_en",
+      "label": "Marquee Text (EN)"
+    },
+    {
+      "type": "text",
+      "id": "text_pt",
+      "label": "Marquee Text (PT)"
     },
     {
       "type": "color",

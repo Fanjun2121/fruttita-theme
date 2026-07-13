@@ -45,7 +45,7 @@
 
   .pc-title-{{ section.id }} {
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
   }
@@ -104,22 +104,34 @@
       font-size: 1.8rem;
     }
   }
+
+  :lang(en) .pc-title-{{ section.id }},
+  :lang(pt) .pc-title-{{ section.id }} {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .pc-title-{{ section.id }},
+    :lang(pt) .pc-title-{{ section.id }} {
+      font-size: 1.4rem;
+    }
+  }
 </style>
 
 <div class="fruttita-personality-{{ section.id }}">
   <div class="pc-inner-{{ section.id }}">
     <div class="pc-header-{{ section.id }}">
       {% if section.settings.subtitle != blank %}
-        <span class="pc-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</span>
+        <span class="pc-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
       {% endif %}
-      <h2 class="pc-title-{{ section.id }}">{{ section.settings.title }}</h2>
+      <h2 class="pc-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
     </div>
 
     <div class="pc-grid-{{ section.id }}" id="pcGrid-{{ section.id }}">
       {% for block in section.blocks %}
         <div class="pc-card-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
-          <h3 class="pc-card-title-{{ section.id }}">{{ block.settings.title }}</h3>
-          <p class="pc-card-body-{{ section.id }}">{{ block.settings.body }}</p>
+          <h3 class="pc-card-title-{{ section.id }}">{% render 'i18n-text', default: block.settings.title, en: block.settings.title_en, pt: block.settings.title_pt %}</h3>
+          <p class="pc-card-body-{{ section.id }}">{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</p>
         </div>
       {% endfor %}
     </div>
@@ -154,9 +166,29 @@
     },
     {
       "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle - English"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle - Portuguese"
+    },
+    {
+      "type": "text",
       "id": "title",
       "label": "Title",
       "default": "我们怎么说话"
+    },
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "Title - English"
+    },
+    {
+      "type": "text",
+      "id": "title_pt",
+      "label": "Title - Portuguese"
     }
   ],
   "blocks": [
@@ -171,10 +203,30 @@
           "default": "平实克制"
         },
         {
+          "type": "text",
+          "id": "title_en",
+          "label": "Card Title - English"
+        },
+        {
+          "type": "text",
+          "id": "title_pt",
+          "label": "Card Title - Portuguese"
+        },
+        {
           "type": "textarea",
           "id": "body",
           "label": "Card Body",
           "default": "我们不喊口号，不造概念，不用感叹号轰炸。好东西不需要大声说。"
+        },
+        {
+          "type": "textarea",
+          "id": "body_en",
+          "label": "Card Body - English"
+        },
+        {
+          "type": "textarea",
+          "id": "body_pt",
+          "label": "Card Body - Portuguese"
         }
       ]
     }
