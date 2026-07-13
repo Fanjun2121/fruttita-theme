@@ -1,0 +1,560 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-ingredients": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "配料表",
+            "heading_en": "Ingredients",
+            "heading_pt": "Ingredientes",
+            "icon": "health",
+            "content": "<p>猴面包树果原浆（安哥拉）</p><p>仅此一项。无水、无糖、无防腐剂、无任何添加。</p>",
+            "content_en": "<p>Baobab fruit pulp (Angola)</p><p>That's it. No water, no sugar, no preservatives, no additives whatsoever.</p>",
+            "content_pt": "<p>Polpa de múcua (Angola)</p><p>Só isso. Sem água, sem açúcar, sem conservantes, sem qualquer aditivo.</p>",
+            "page": ""
+          }
+        },
+        "collapsible-specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "规格",
+            "heading_en": "Specifications",
+            "heading_pt": "Especificações",
+            "icon": "ruler",
+            "content": "<p>规格：50ml × 6 瓶 / 盒</p><p>浓度：Brix 8.5</p><p>产地原料：安哥拉</p>",
+            "content_en": "<p>Size: 50ml × 6 bottles / box</p><p>Concentration: Brix 8.5</p><p>Raw material origin: Angola</p>",
+            "content_pt": "<p>Formato: 50ml × 6 garrafas / caixa</p><p>Concentração: Brix 8.5</p><p>Origem da matéria-prima: Angola</p>",
+            "page": ""
+          }
+        },
+        "collapsible-storage": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "保质期 & 储存",
+            "heading_en": "Shelf Life & Storage",
+            "heading_pt": "Validade e Conservação",
+            "icon": "truck",
+            "content": "<p>保质期：9 个月</p><p>未开封：常温阴凉处保存</p><p>开封后：建议尽快饮用</p><p>冷藏后风味更佳</p>",
+            "content_en": "<p>Shelf life: 9 months</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: consume as soon as possible</p><p>Tastes better chilled</p>",
+            "content_pt": "<p>Validade: 9 meses</p><p>Fechado: conservar à temperatura ambiente num local fresco</p><p>Após abrir: consumir o mais rapidamente possível</p><p>Melhor sabor refrigerado</p>",
+            "page": ""
+          }
+        },
+        "collapsible-serving": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "食用建议",
+            "heading_en": "Serving Suggestions",
+            "heading_pt": "Sugestões de Consumo",
+            "icon": "heart",
+            "content": "<p>每日 1 瓶，摇匀后饮用</p><p>建议时间：早起空腹 / 熬夜后 / 大餐后</p><p>建议温度：冷藏后风味更佳</p>",
+            "content_en": "<p>1 bottle daily, shake well before drinking</p><p>Recommended timing: morning on empty stomach / after a late night / after a big meal</p><p>Recommended temperature: tastes better chilled</p>",
+            "content_pt": "<p>1 garrafa por dia, agitar bem antes de beber</p><p>Momento recomendado: de manhã em jejum / depois de uma noite longa / depois de uma grande refeição</p><p>Temperatura recomendada: melhor sabor refrigerado</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "collapsible-ingredients",
+        "collapsible-specs",
+        "collapsible-storage",
+        "collapsible-serving"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "scene-cards": {
+      "type": "fruttita-scene-cards",
+      "blocks": {
+        "card-1": {
+          "type": "card",
+          "settings": {
+            "emoji": "🌙",
+            "title": "熬夜之后",
+            "title_en": "After a Late Night",
+            "title_pt": "Depois de Uma Noite Longa",
+            "description": "昨晚又没忍住？早起脸肿 + 脸黄是标配。这一瓶，补钾排钠 + 高 VC 抗氧化，帮身体快速找回状态。",
+            "description_en": "Puffy face, tired skin. Potassium flushes sodium. Vitamin C does the rest.",
+            "description_pt": "Cara inchada, pele cansada. O potássio elimina o sódio. A Vitamina C faz o resto."
+          }
+        },
+        "card-2": {
+          "type": "card",
+          "settings": {
+            "emoji": "☀️",
+            "title": "重要场合之前",
+            "title_en": "Before Something Important",
+            "title_pt": "Antes de Algo Importante",
+            "description": "见客户、拍证件照、约会前一晚，来一瓶做个“内在急救”。",
+            "description_en": "Meeting, photo day, date night. Think of it as a pre-game.",
+            "description_pt": "Reunião, dia de fotos, encontro. Pensa nisto como preparação."
+          }
+        },
+        "card-3": {
+          "type": "card",
+          "settings": {
+            "emoji": "🍽️",
+            "title": "大餐之后",
+            "title_en": "After a Heavy Meal",
+            "title_pt": "Depois de Uma Refeição Pesada",
+            "description": "火锅、烧烤、高钠重口之后，用 0 钠高钾帮身体减减负。",
+            "description_en": "High-sodium dinner? Zero sodium + high potassium. Let your body recalibrate.",
+            "description_pt": "Jantar rico em sódio? Zero sódio + alto potássio. Deixa o corpo recalibrar."
+          }
+        }
+      },
+      "block_order": [
+        "card-1",
+        "card-2",
+        "card-3"
+      ],
+      "settings": {
+        "subtitle": "For You",
+        "title": "什么时候需要它？",
+        "title_en": "When you'll want one.",
+        "title_pt": "Quando vais querer um.",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D",
+        "columns_desktop": "3"
+      }
+    },
+    "nutrition": {
+      "type": "fruttita-nutrition-table",
+      "blocks": {
+        "row-vc": {
+          "type": "row",
+          "settings": {
+            "label": "维生素 C",
+            "label_en": "Vitamin C",
+            "label_pt": "Vitamina C",
+            "value": "≈148mg",
+            "value_2": "≈297mg",
+            "plain_text": "一瓶 50ml 的维生素 C ≈ 3 个橙子",
+            "plain_text_en": "One bottle ≈ 3 oranges of Vitamin C",
+            "plain_text_pt": "Uma garrafa ≈ 3 laranjas de Vitamina C",
+            "highlight": true
+          }
+        },
+        "row-k": {
+          "type": "row",
+          "settings": {
+            "label": "钾",
+            "label_en": "Potassium",
+            "label_pt": "Potássio",
+            "value": "≈134mg",
+            "value_2": "≈269mg",
+            "plain_text": "钾含量 > 一根香蕉的一半",
+            "plain_text_en": "More potassium than half a banana",
+            "plain_text_pt": "Mais potássio que meia banana",
+            "highlight": true
+          }
+        },
+        "row-fiber": {
+          "type": "row",
+          "settings": {
+            "label": "膳食纤维",
+            "label_en": "Dietary Fiber",
+            "label_pt": "Fibra Alimentar",
+            "value": "≈3.7g",
+            "value_2": "≈7.4g",
+            "plain_text": "",
+            "highlight": false
+          }
+        },
+        "row-polyphenol": {
+          "type": "row",
+          "settings": {
+            "label": "总多酚",
+            "label_en": "Total Polyphenols",
+            "label_pt": "Polifenóis Totais",
+            "value": "≈293mg",
+            "value_2": "≈586mg",
+            "plain_text": "",
+            "highlight": false
+          }
+        },
+        "row-na": {
+          "type": "row",
+          "settings": {
+            "label": "钠",
+            "label_en": "Sodium",
+            "label_pt": "Sódio",
+            "value": "0mg",
+            "value_2": "0mg",
+            "plain_text": "钠 = 0。真的是 0。",
+            "plain_text_en": "Zero. Not low — undetected.",
+            "plain_text_pt": "Zero. Não é baixo — não detetado.",
+            "highlight": true
+          }
+        },
+        "row-sugar": {
+          "type": "row",
+          "settings": {
+            "label": "糖",
+            "label_en": "Sugar",
+            "label_pt": "Açúcar",
+            "value": "≈0.8g",
+            "value_2": "≈1.6g",
+            "plain_text": "",
+            "highlight": false
+          }
+        },
+        "row-cal": {
+          "type": "row",
+          "settings": {
+            "label": "热量",
+            "label_en": "Calories",
+            "label_pt": "Calorias",
+            "value": "≈25kcal",
+            "value_2": "≈50kcal",
+            "plain_text": "热量 ≈ 半杯美式咖啡",
+            "plain_text_en": "About half a cup of black coffee",
+            "plain_text_pt": "Cerca de meia chávena de café preto",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "row-vc",
+        "row-k",
+        "row-fiber",
+        "row-polyphenol",
+        "row-na",
+        "row-sugar",
+        "row-cal"
+      ],
+      "settings": {
+        "subtitle": "The Nutrition",
+        "title": "50ml，浓缩了什么？",
+        "title_en": "What's in 50ml.",
+        "title_pt": "O que há em 50ml.",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9",
+        "layout": "dual",
+        "col1_label": "每瓶 (50ml)",
+        "col1_label_en": "Per Bottle (50ml)",
+        "col1_label_pt": "Por Garrafa (50ml)",
+        "col2_label": "每 100ml",
+        "col2_label_en": "Per 100ml",
+        "col2_label_pt": "Por 100ml",
+        "footnote": "",
+        "source_note": "以上数据为基于原浆浓度换算的估值，具体以包装营养成分表为准。检测机构：SGS / Eurofins 第三方实验室。",
+        "source_note_en": "Estimates based on pulp concentration. See packaging for specifics. Testing: SGS / Eurofins.",
+        "source_note_pt": "Estimativas baseadas na concentração da polpa. Ver embalagem para detalhes. Testes: SGS / Eurofins."
+      }
+    },
+    "comparison": {
+      "type": "fruttita-comparison",
+      "blocks": {
+        "row-na": {
+          "type": "metric",
+          "settings": {
+            "label": "钠（锁水阻力）",
+            "label_en": "Sodium",
+            "label_pt": "Sódio",
+            "comp_value": "≈50-105mg",
+            "comp_status": "bad",
+            "fruttita_value": "0mg",
+            "fruttita_status": "good"
+          }
+        },
+        "row-k": {
+          "type": "metric",
+          "settings": {
+            "label": "钾",
+            "label_en": "Potassium",
+            "label_pt": "Potássio",
+            "comp_value": "≈150-250mg/100ml",
+            "comp_status": "good",
+            "fruttita_value": "≈269mg/100ml",
+            "fruttita_status": "good"
+          }
+        },
+        "row-vc": {
+          "type": "metric",
+          "settings": {
+            "label": "维生素 C",
+            "label_en": "Vitamin C",
+            "label_pt": "Vitamina C",
+            "comp_value": "≈0",
+            "comp_status": "bad",
+            "fruttita_value": "≈148mg/瓶",
+            "fruttita_value_en": "≈148mg/bottle",
+            "fruttita_value_pt": "≈148mg/garrafa",
+            "fruttita_status": "good"
+          }
+        },
+        "row-vol": {
+          "type": "metric",
+          "settings": {
+            "label": "体积",
+            "label_en": "Volume",
+            "label_pt": "Volume",
+            "comp_value": "330ml-1L",
+            "comp_status": "bad",
+            "fruttita_value": "50ml（一口闷）",
+            "fruttita_value_en": "50ml (one gulp)",
+            "fruttita_value_pt": "50ml (de um gole)",
+            "fruttita_status": "good"
+          }
+        }
+      },
+      "block_order": [
+        "row-na",
+        "row-k",
+        "row-vc",
+        "row-vol"
+      ],
+      "settings": {
+        "subtitle": "The Truth",
+        "title": "都说椰子水消肿，我们比了比。",
+        "title_en": "Coconut water has sodium. We don't.",
+        "title_pt": "A água de coco tem sódio. Nós não.",
+        "bg_color": "#3A2015",
+        "text_color": "#F4E3C9",
+        "conclusion": "椰子水的钾含量因品牌差异很大，但有一个数字是确定的：几乎所有椰子水都含钠，通常在 50-105mg 之间。钠是什么？就是盐。盐会锁水。Fruttita 的钠含量是 0。不是“低钠”，是未检出。如果你喝它是为了轻盈，这个区别很重要。",
+        "conclusion_en": "Coconut water delivers potassium — along with 50-105mg of sodium. Sodium is salt. Salt holds water. Fruttita sodium: 0mg. Not \"low\" — undetected.",
+        "conclusion_pt": "A água de coco fornece potássio — com 50-105mg de sódio. Sódio é sal. O sal retém líquidos. Sódio Fruttita: 0mg. Não é \"baixo\" — não detetado.",
+        "source_note": "椰子水数据区间基于 USDA 理论值及中国市售产品公开营养成分表",
+        "source_note_en": "Coconut water data: USDA reference values and publicly available nutrition labels.",
+        "source_note_pt": "Dados água de coco: valores de referência USDA e rótulos nutricionais públicos."
+      }
+    },
+    "prose-taste": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "第一口：酸。不是坏掉的那种酸，是接近 300mg/100ml 天然维生素 C 的那种酸。",
+            "text_paragraph_en": "First sip: tart. That's ~300mg/100ml of natural Vitamin C talking.",
+            "text_paragraph_pt": "Primeiro gole: ácido. São ~300mg/100ml de Vitamina C natural a falar."
+          }
+        },
+        "p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "第二口：有点涩。那是 586mg/100ml 天然多酚。比 VC 更稳定的抗氧化物质。",
+            "text_paragraph_en": "Second sip: a bit astringent. That's 586mg/100ml of polyphenols — a more stable antioxidant than Vitamin C.",
+            "text_paragraph_pt": "Segundo gole: um pouco adstringente. São 586mg/100ml de polifenóis — um antioxidante mais estável que a Vitamina C."
+          }
+        },
+        "p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "瓶底可能有沉淀。那是天然果肉纤维，不是杂质。喝前摇一摇就好。",
+            "text_paragraph_en": "Sediment at the bottom is natural fiber. Shake before drinking.",
+            "text_paragraph_pt": "O sedimento no fundo é fibra natural. Agitar antes de beber."
+          }
+        },
+        "p4": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "加点糖就能好喝，但我们选择不加。",
+            "text_paragraph_en": "We could add sugar. We don't.",
+            "text_paragraph_pt": "Podíamos adicionar açúcar. Não adicionamos."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "subtitle": "Taste Preview",
+        "title": "先说好，它不是果汁。",
+        "title_en": "Fair warning: it's not juice.",
+        "title_pt": "Aviso justo: não é sumo.",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "prose-howto": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "① 摇匀（瓶底有天然沉淀）→ ② 开盖 → ③ 一口闷 → ④ 完事",
+            "text_paragraph_en": "Shake → Open → Drink → Done.",
+            "text_paragraph_pt": "Agitar → Abrir → Beber → Feito."
+          }
+        },
+        "p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "建议时间：早起空腹 / 熬夜后 / 大餐后",
+            "text_paragraph_en": "Best on an empty stomach, after a late night, or after a heavy meal.",
+            "text_paragraph_pt": "Melhor em jejum, depois de uma noite longa, ou depois de uma refeição pesada."
+          }
+        },
+        "p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "建议温度：冷藏后风味更佳 · 每日用量：不超过 1 瓶",
+            "text_paragraph_en": "Better chilled. One bottle per day max.",
+            "text_paragraph_pt": "Melhor refrigerado. Máximo uma garrafa por dia."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "subtitle": "How To",
+        "title": "使用说明（很短）",
+        "title_en": "How to drink it.",
+        "title_pt": "Como beber.",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9"
+      }
+    },
+    "faq": {
+      "type": "fruttita-faq",
+      "blocks": {
+        "faq-1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "为什么这么酸？是坏了吗？",
+            "question_en": "Why is it so sour? Has it gone bad?",
+            "question_pt": "Porque é tão ácido? Estragou-se?",
+            "answer": "不是。这是 100% 原浆，0 添加糖。酸味来自天然维生素 C 和多酚，是活性营养的证据。",
+            "answer_en": "No. It's 100% pulp with zero added sugar. The tartness is natural Vitamin C and polyphenols doing their thing.",
+            "answer_pt": "Não. É 100% polpa com zero açúcar adicionado. A acidez é Vitamina C natural e polifenóis a fazer o seu trabalho."
+          }
+        },
+        "faq-2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "瓶底的沉淀是什么？",
+            "question_en": "What's the sediment at the bottom?",
+            "question_pt": "O que é o sedimento no fundo?",
+            "answer": "天然果肉纤维。我们没有过度过滤，保留了膳食纤维。喝前摇匀就行。",
+            "answer_en": "Natural fruit fiber. We kept it in on purpose. Shake before drinking.",
+            "answer_pt": "Fibra de fruta natural. Mantivemo-la propositadamente. Agitar antes de beber."
+          }
+        },
+        "faq-3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "能兑水喝吗？",
+            "question_en": "Can I dilute it with water?",
+            "question_pt": "Posso diluir com água?",
+            "answer": "可以，但 Shot 的设计就是高浓缩一口闷。如果你喜欢兑水 / 拌酸奶的喝法，建议试试我们的 100g Pouch。",
+            "answer_en": "Sure, but the Shot is designed as a one-gulp concentrate. If you prefer mixing, try the Pouch.",
+            "answer_pt": "Claro, mas o Shot foi concebido como um concentrado de um gole. Se preferes misturar, experimenta o Pouch."
+          }
+        },
+        "faq-4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "孕妇 / 小孩能喝吗？",
+            "question_en": "Can pregnant women / children drink it?",
+            "question_pt": "Grávidas / crianças podem beber?",
+            "answer": "本品为普通食品，非保健品。如有特殊健康状况，建议咨询医生后食用。",
+            "answer_en": "It's a food product, not a supplement. Consult your doctor if you have specific health concerns.",
+            "answer_pt": "É um produto alimentar, não um suplemento. Consulta o teu médico em caso de preocupações de saúde específicas."
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4"
+      ],
+      "settings": {
+        "subtitle": "FAQ",
+        "title": "常见问题",
+        "title_en": "FAQ",
+        "title_pt": "Perguntas Frequentes",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "cross-sell": {
+      "type": "fruttita-cross-sell",
+      "blocks": {
+        "product-1": {
+          "type": "product_link",
+          "settings": {
+            "name_cn": "猴面包树纯果浆",
+            "name_en": "The Pouch",
+            "name_cn_en": "Baobab Pure Pulp",
+            "name_cn_pt": "Polpa Pura de Múcua",
+            "tagline": "想日常搭配着吃？一袋纯果浆，N 种打开方式。",
+            "tagline_en": "Pure pulp, your way. Mix into yogurt, smoothies, oats — anything.",
+            "tagline_pt": "Polpa pura, à tua maneira. Mistura com iogurte, smoothies, aveia — o que quiseres.",
+            "link": "/products/the-baobab-pulp-pouch",
+            "link_text": "了解更多",
+            "link_text_en": "Learn more",
+            "link_text_pt": "Saber mais"
+          }
+        },
+        "product-2": {
+          "type": "product_link",
+          "settings": {
+            "name_cn": "猴面包树水",
+            "name_en": "The Water",
+            "name_cn_en": "Baobab Water",
+            "name_cn_pt": "Água de Múcua",
+            "tagline": "想轻松补水？一瓶水的口感，一整天的天然电解质。",
+            "tagline_en": "Drinks like water. Delivers more than you'd think.",
+            "tagline_pt": "Bebe-se como água. Entrega mais do que pensas.",
+            "link": "/products/the-baobab-water",
+            "link_text": "了解更多",
+            "link_text_en": "Learn more",
+            "link_text_pt": "Saber mais"
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2"
+      ],
+      "settings": {
+        "subtitle": "More to Explore",
+        "title": "不只一种打开方式",
+        "title_en": "Also from the tree.",
+        "title_pt": "Também da árvore.",
+        "bg_color": "#3A2015",
+        "text_color": "#F4E3C9"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "scene-cards",
+    "nutrition",
+    "comparison",
+    "prose-taste",
+    "prose-howto",
+    "faq",
+    "cross-sell"
+  ]
+}

@@ -1,0 +1,22 @@
+{%- comment -%}
+  i18n-text.liquid — Multilingual text selector
+  Usage: {% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}
+  Falls back to `default` (Chinese) when translation is blank.
+{%- endcomment -%}
+
+{%- liquid
+  assign lang = request.locale.iso_code | slice: 0, 2
+  if lang == 'en' and en != blank
+    echo en
+  elsif lang == 'pt' and pt != blank
+    echo pt
+  elsif lang == 'zh'
+    if zh != blank
+      echo zh
+    else
+      echo default
+    endif
+  else
+    echo default
+  endif
+-%}

@@ -1,0 +1,583 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-ingredients": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "配料表",
+            "heading_en": "Ingredients",
+            "heading_pt": "Ingredientes",
+            "icon": "health",
+            "content": "<p>水、猴面包树果浆（安哥拉）</p><p>无糖、无防腐剂、无人工添加。</p>",
+            "content_en": "<p>Water, baobab fruit pulp (Angola)</p><p>No sugar, no preservatives, no artificial additives.</p>",
+            "content_pt": "<p>Água, polpa de múcua (Angola)</p><p>Sem açúcar, sem conservantes, sem aditivos artificiais.</p>",
+            "page": ""
+          }
+        },
+        "collapsible-specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "规格",
+            "heading_en": "Specifications",
+            "heading_pt": "Especificações",
+            "icon": "ruler",
+            "content": "<p>规格：1L / 瓶</p><p>浓度：Brix 1.5</p>",
+            "content_en": "<p>Size: 1L / bottle</p><p>Concentration: Brix 1.5</p>",
+            "content_pt": "<p>Formato: 1L / garrafa</p><p>Concentração: Brix 1.5</p>",
+            "page": ""
+          }
+        },
+        "collapsible-storage": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "保质期 & 储存",
+            "heading_en": "Shelf Life & Storage",
+            "heading_pt": "Validade e Conservação",
+            "icon": "truck",
+            "content": "<p>保质期：待确认</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，24 小时内喝完</p><p>0 防腐剂，开封后请尽快饮用</p>",
+            "content_en": "<p>Shelf life: TBC</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 24 hours</p><p>Zero preservatives — consume promptly after opening</p>",
+            "content_pt": "<p>Validade: a confirmar</p><p>Fechado: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente, consumir em 24 horas</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
+            "page": ""
+          }
+        },
+        "collapsible-serving": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "食用建议",
+            "heading_en": "Serving Suggestions",
+            "heading_pt": "Sugestões de Consumo",
+            "icon": "heart",
+            "content": "<p>直接饮用，冷藏风味更佳</p><p>适合日常补水、运动后补充电解质</p>",
+            "content_en": "<p>Drink directly, tastes better chilled</p><p>Perfect for daily hydration and post-exercise electrolyte replenishment</p>",
+            "content_pt": "<p>Beber diretamente, melhor sabor refrigerado</p><p>Perfeito para hidratação diária e reposição de eletrólitos pós-exercício</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "collapsible-ingredients",
+        "collapsible-specs",
+        "collapsible-storage",
+        "collapsible-serving"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "scene-cards": {
+      "type": "fruttita-scene-cards",
+      "blocks": {
+        "card-1": {
+          "type": "card",
+          "settings": {
+            "emoji": "💧",
+            "title": "日常补水",
+            "title_en": "Daily Hydration",
+            "title_pt": "Hidratação Diária",
+            "description": "不想喝白开水，又不想喝含糖饮料。这瓶 0 卡 0 糖的猴面包树水，是刚刚好的中间选项。",
+            "description_en": "Bored of plain water, allergic to sugar. This is the in-between.",
+            "description_pt": "Farto de água pura, alérgico a açúcar. Isto é o meio-termo."
+          }
+        },
+        "card-2": {
+          "type": "card",
+          "settings": {
+            "emoji": "🏃",
+            "title": "运动之后",
+            "title_en": "Post-Workout",
+            "title_pt": "Pós-Treino",
+            "description": "含天然钾，帮助补充运动流失的电解质。0 钠，不会越喝越肿。",
+            "description_en": "Natural potassium for electrolyte recovery. Zero sodium — no bloating tradeoff.",
+            "description_pt": "Potássio natural para recuperação de eletrólitos. Zero sódio — sem compromissos."
+          }
+        },
+        "card-3": {
+          "type": "card",
+          "settings": {
+            "emoji": "🏢",
+            "title": "办公室常备",
+            "title_en": "Desk Companion",
+            "title_pt": "Companhia de Secretária",
+            "description": "放在工位上随时喝。比白水多一点营养，比果汁少很多负担。",
+            "description_en": "A bit more than water. A lot less than juice. Sip all day.",
+            "description_pt": "Um pouco mais que água. Muito menos que sumo. Bebe o dia todo."
+          }
+        }
+      },
+      "block_order": [
+        "card-1",
+        "card-2",
+        "card-3"
+      ],
+      "settings": {
+        "subtitle": "For You",
+        "title": "什么时候需要它？",
+        "title_en": "When you'll want one.",
+        "title_pt": "Quando vais querer uma.",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D",
+        "columns_desktop": "3"
+      }
+    },
+    "nutrition": {
+      "type": "fruttita-nutrition-table",
+      "blocks": {
+        "row-vc": {
+          "type": "row",
+          "settings": {
+            "label": "维生素 C",
+            "label_en": "Vitamin C",
+            "label_pt": "Vitamina C",
+            "value": "≈52mg",
+            "value_2": "≈525mg（584% NRV）",
+            "plain_text": "喝完一整瓶，你一天的维生素 C 就够了——而且是 5 倍多。",
+            "plain_text_en": "One bottle covers your daily Vitamin C — five times over.",
+            "plain_text_pt": "Uma garrafa cobre a tua Vitamina C diária — cinco vezes.",
+            "highlight": true
+          }
+        },
+        "row-k": {
+          "type": "row",
+          "settings": {
+            "label": "钾",
+            "label_en": "Potassium",
+            "label_pt": "Potássio",
+            "value": "≈47mg",
+            "value_2": "≈475mg",
+            "plain_text": "钾含量 475mg，比两根香蕉还多。",
+            "plain_text_en": "More potassium than two bananas.",
+            "plain_text_pt": "Mais potássio que duas bananas.",
+            "highlight": true
+          }
+        },
+        "row-fiber": {
+          "type": "row",
+          "settings": {
+            "label": "膳食纤维",
+            "label_en": "Dietary Fiber",
+            "label_pt": "Fibra Alimentar",
+            "value": "≈1.3g",
+            "value_2": "≈13g（52% NRV）",
+            "plain_text": "膳食纤维超过每日所需的一半。",
+            "plain_text_en": "Over half your daily fiber.",
+            "plain_text_pt": "Mais de metade da tua fibra diária.",
+            "highlight": true
+          }
+        },
+        "row-polyphenol": {
+          "type": "row",
+          "settings": {
+            "label": "总多酚",
+            "label_en": "Total Polyphenols",
+            "label_pt": "Polifenóis Totais",
+            "value": "≈103mg",
+            "value_2": "≈1035mg",
+            "plain_text": "",
+            "highlight": false
+          }
+        },
+        "row-na": {
+          "type": "row",
+          "settings": {
+            "label": "钠",
+            "label_en": "Sodium",
+            "label_pt": "Sódio",
+            "value": "0mg",
+            "value_2": "0mg",
+            "plain_text": "全程 0 钠。",
+            "plain_text_en": "Zero. All the way through.",
+            "plain_text_pt": "Zero. De princípio a fim.",
+            "highlight": true
+          }
+        },
+        "row-sugar": {
+          "type": "row",
+          "settings": {
+            "label": "糖",
+            "label_en": "Sugar",
+            "label_pt": "Açúcar",
+            "value": "≈0.3g",
+            "value_2": "≈2.9g",
+            "plain_text": "",
+            "highlight": false
+          }
+        },
+        "row-cal": {
+          "type": "row",
+          "settings": {
+            "label": "热量",
+            "label_en": "Calories",
+            "label_pt": "Calorias",
+            "value": "≈4.5kcal",
+            "value_2": "≈45kcal",
+            "plain_text": "热量只有 45 大卡——不到一个苹果。",
+            "plain_text_en": "45 calories total. Less than one apple.",
+            "plain_text_pt": "45 calorias no total. Menos que uma maçã.",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "row-vc",
+        "row-k",
+        "row-fiber",
+        "row-polyphenol",
+        "row-na",
+        "row-sugar",
+        "row-cal"
+      ],
+      "settings": {
+        "subtitle": "The Nutrition",
+        "title": "1L 猴面包树水的营养",
+        "title_en": "What's in 1L.",
+        "title_pt": "O que há em 1L.",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9",
+        "layout": "dual",
+        "col1_label": "每 100ml",
+        "col1_label_en": "Per 100ml",
+        "col1_label_pt": "Por 100ml",
+        "col2_label": "每瓶 (1L)",
+        "col2_label_en": "Per Bottle (1L)",
+        "col2_label_pt": "Por Garrafa (1L)",
+        "footnote": "这不是“有点味道的水”。这是一瓶喝起来像水，营养总量比你想象中高得多的天然补给。",
+        "footnote_en": "Drinks like water. Delivers like it doesn't.",
+        "footnote_pt": "Bebe-se como água. Entrega como se não fosse.",
+        "source_note": "以上数据为基于原浆浓度换算的估值，具体以包装营养成分表为准。基准数据来源：100g Pouch SGS / Eurofins 第三方实验室检测报告。",
+        "source_note_en": "Estimates based on pulp concentration. See packaging for specifics. Base data: SGS / Eurofins lab reports.",
+        "source_note_pt": "Estimativas baseadas na concentração da polpa. Ver embalagem para detalhes. Dados base: relatórios SGS / Eurofins."
+      }
+    },
+    "comparison-multi": {
+      "type": "fruttita-comparison-multi",
+      "blocks": {
+        "row-na": {
+          "type": "row",
+          "settings": {
+            "label": "钠",
+            "label_en": "Sodium",
+            "label_pt": "Sódio",
+            "col1_value": "0mg",
+            "col1_status": "good",
+            "col2_value": "≈50-105mg",
+            "col2_status": "bad",
+            "col3_value": "≈200-400mg",
+            "col3_status": "bad",
+            "col4_value": "0mg",
+            "col4_status": "good"
+          }
+        },
+        "row-k": {
+          "type": "row",
+          "settings": {
+            "label": "钾",
+            "label_en": "Potassium",
+            "label_pt": "Potássio",
+            "col1_value": "0mg",
+            "col1_status": "neutral",
+            "col2_value": "≈150-250mg",
+            "col2_status": "good",
+            "col3_value": "少量或无",
+            "col3_value_en": "Little or none",
+            "col3_value_pt": "Pouco ou nenhum",
+            "col3_status": "neutral",
+            "col4_value": "≈475mg/瓶",
+            "col4_value_en": "≈475mg/bottle",
+            "col4_value_pt": "≈475mg/garrafa",
+            "col4_status": "good"
+          }
+        },
+        "row-vc": {
+          "type": "row",
+          "settings": {
+            "label": "维生素 C",
+            "label_en": "Vitamin C",
+            "label_pt": "Vitamina C",
+            "col1_value": "0mg",
+            "col1_status": "neutral",
+            "col2_value": "≈0",
+            "col2_status": "neutral",
+            "col3_value": "≈0",
+            "col3_status": "neutral",
+            "col4_value": "≈525mg/瓶",
+            "col4_value_en": "≈525mg/bottle",
+            "col4_value_pt": "≈525mg/garrafa",
+            "col4_status": "good"
+          }
+        },
+        "row-sugar": {
+          "type": "row",
+          "settings": {
+            "label": "糖",
+            "label_en": "Sugar",
+            "label_pt": "Açúcar",
+            "col1_value": "0g",
+            "col1_status": "good",
+            "col2_value": "≈3.8-5.3g/100ml",
+            "col2_status": "bad",
+            "col3_value": "0-5g",
+            "col3_status": "neutral",
+            "col4_value": "≈0.3g/100ml",
+            "col4_status": "good"
+          }
+        },
+        "row-cal": {
+          "type": "row",
+          "settings": {
+            "label": "热量",
+            "label_en": "Calories",
+            "label_pt": "Calorias",
+            "col1_value": "0kcal",
+            "col1_status": "good",
+            "col2_value": "≈19-24kcal/100ml",
+            "col2_status": "bad",
+            "col3_value": "0-20kcal",
+            "col3_status": "neutral",
+            "col4_value": "≈4.5kcal/100ml",
+            "col4_status": "good"
+          }
+        },
+        "row-additive": {
+          "type": "row",
+          "settings": {
+            "label": "添加剂",
+            "label_en": "Additives",
+            "label_pt": "Aditivos",
+            "col1_value": "无",
+            "col1_value_en": "None",
+            "col1_value_pt": "Nenhum",
+            "col1_status": "good",
+            "col2_value": "部分含浓缩还原",
+            "col2_value_en": "Some contain concentrate",
+            "col2_value_pt": "Alguns contêm concentrado",
+            "col2_status": "bad",
+            "col3_value": "人工电解质",
+            "col3_value_en": "Artificial electrolytes",
+            "col3_value_pt": "Eletrólitos artificiais",
+            "col3_status": "bad",
+            "col4_value": "无",
+            "col4_value_en": "None",
+            "col4_value_pt": "Nenhum",
+            "col4_status": "good"
+          }
+        }
+      },
+      "block_order": [
+        "row-na",
+        "row-k",
+        "row-vc",
+        "row-sugar",
+        "row-cal",
+        "row-additive"
+      ],
+      "settings": {
+        "subtitle": "The Comparison",
+        "title": "补水的选择很多，区别在哪？",
+        "title_en": "How it stacks up.",
+        "title_pt": "Como se compara.",
+        "bg_color": "#3A2015",
+        "text_color": "#F4E3C9",
+        "col1_name": "白水",
+        "col1_name_en": "Plain Water",
+        "col1_name_pt": "Água Pura",
+        "col2_name": "市售椰子水",
+        "col2_name_en": "Coconut Water",
+        "col2_name_pt": "Água de Coco",
+        "col3_name": "电解质水",
+        "col3_name_en": "Electrolyte Water",
+        "col3_name_pt": "Água de Eletrólitos",
+        "col4_name": "Fruttita Water",
+        "winner_col": "4",
+        "conclusion": "白水够干净，但没有营养。椰子水有钾，但带着 50-105 毫克的钠，而且每 100ml 糖在 4-5g。电解质水有电解质，但通常是人工合成的。Fruttita Water：一瓶喝完，475mg 天然钾 + 525mg 天然 VC，0 钠，糖不到 3g，热量 45 大卡。不是实验室配出来的电解质，是一棵树给的。",
+        "conclusion_en": "Plain water: clean, no nutrition. Coconut water: potassium, plus 50-105mg sodium and 4-5g sugar per 100ml. Electrolyte water: synthetic electrolytes. Fruttita Water: 475mg natural potassium, 525mg natural Vitamin C, zero sodium, under 3g sugar, 45 calories. From a tree, not a lab.",
+        "conclusion_pt": "Água pura: limpa, sem nutrição. Água de coco: potássio, mais 50-105mg de sódio e 4-5g de açúcar por 100ml. Água de eletrólitos: eletrólitos sintéticos. Fruttita Water: 475mg de potássio natural, 525mg de Vitamina C natural, zero sódio, menos de 3g de açúcar, 45 calorias. De uma árvore, não de um laboratório.",
+        "source_note": "椰子水数据区间基于 USDA 理论值及中国市售产品公开营养成分表。不同品牌因工艺和原料差异，实际值可能有较大出入。",
+        "source_note_en": "Coconut water data: USDA reference values and publicly available nutrition labels. Values vary by brand.",
+        "source_note_pt": "Dados água de coco: valores de referência USDA e rótulos nutricionais públicos. Valores variam por marca."
+      }
+    },
+    "prose-taste": {
+      "type": "fruttita-prose",
+      "blocks": {
+        "p1": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "三款产品里最清淡的一瓶。没有 Shot 那种“一口酸到灵魂”的冲击感，也没有 Pouch 那种浓稠果酱质地。",
+            "text_paragraph_en": "The mildest of the three. No intense tartness like the Shot, no jam texture like the Pouch.",
+            "text_paragraph_pt": "O mais suave dos três. Sem a acidez intensa do Shot, sem a textura de compota do Pouch."
+          }
+        },
+        "p2": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "接近水，带一点淡淡的果味和微酸。不需要勇气，直接喝就行。",
+            "text_paragraph_en": "Close to water with a hint of fruit and mild tang. No commitment required.",
+            "text_paragraph_pt": "Próximo de água com um toque de fruta e acidez suave. Sem compromisso."
+          }
+        },
+        "p3": {
+          "type": "text_paragraph",
+          "settings": {
+            "text_paragraph": "如果你是第一次尝试猴面包树，这款最友好。",
+            "text_paragraph_en": "New to baobab? Start here.",
+            "text_paragraph_pt": "Nunca provaste embondeiro? Começa aqui."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "subtitle": "Taste Preview",
+        "title": "喝起来像什么？",
+        "title_en": "What does it taste like?",
+        "title_pt": "Qual é o sabor?",
+        "bg_color": "#F9F1E6",
+        "text_color": "#4F2C1D"
+      }
+    },
+    "faq": {
+      "type": "fruttita-faq",
+      "blocks": {
+        "faq-1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "这个和直接兑水喝 Pouch 有什么区别？",
+            "question_en": "How is this different from diluting the Pouch with water?",
+            "question_pt": "Qual é a diferença entre isto e diluir o Pouch com água?",
+            "answer": "浓度不同。Water 是 Brix 1.5，非常稀，接近水的口感。Pouch 兑水大概在 Brix 3-6 左右，还是能明显感受到果浆味。看你要“有味道的水”还是“稀释版的果浆”。",
+            "answer_en": "Different concentration. Water is Brix 1.5 — basically water texture. Diluted Pouch is Brix 3-6, still noticeably fruity.",
+            "answer_pt": "Concentração diferente. O Water é Brix 1.5 — basicamente textura de água. Pouch diluído é Brix 3-6, ainda notavelmente frutado."
+          }
+        },
+        "faq-2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "可以替代运动饮料吗？",
+            "question_en": "Can it replace sports drinks?",
+            "question_pt": "Pode substituir bebidas desportivas?",
+            "answer": "它含天然钾和 0 钠，适合运动后补充电解质。但它不含人工电解质或咖啡因。如果你需要高强度运动补给，可能需要额外搭配。",
+            "answer_en": "Natural potassium, zero sodium — good for post-workout. But no synthetic electrolytes or caffeine. For intense training, you may want to supplement.",
+            "answer_pt": "Potássio natural, zero sódio — bom para pós-treino. Mas sem eletrólitos sintéticos ou cafeína. Para treino intenso, podes precisar de suplementar."
+          }
+        },
+        "faq-3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "热量真的很低吗？",
+            "question_en": "Is the calorie count really that low?",
+            "question_pt": "As calorias são mesmo tão baixas?",
+            "answer": "一整瓶 1L 只有约 45 大卡，不到一个苹果的热量。每 100ml 约 4.5 大卡，接近白水。",
+            "answer_en": "Yes. One full liter: ~45 calories. Per 100ml: ~4.5 calories. Close to plain water.",
+            "answer_pt": "Sim. Um litro inteiro: ~45 calorias. Por 100ml: ~4.5 calorias. Próximo de água pura."
+          }
+        },
+        "faq-4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "1L 开封后能放多久？",
+            "question_en": "How long does it last once opened?",
+            "question_pt": "Quanto tempo dura depois de aberto?",
+            "answer": "0 防腐剂，开封后务必冷藏，建议 24 小时内喝完。",
+            "answer_en": "Zero preservatives. Refrigerate after opening, finish within 24 hours.",
+            "answer_pt": "Zero conservantes. Refrigerar após abrir, consumir em 24 horas."
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4"
+      ],
+      "settings": {
+        "subtitle": "FAQ",
+        "title": "常见问题",
+        "title_en": "FAQ",
+        "title_pt": "Perguntas Frequentes",
+        "bg_color": "#4F2C1D",
+        "text_color": "#F4E3C9"
+      }
+    },
+    "cross-sell": {
+      "type": "fruttita-cross-sell",
+      "blocks": {
+        "product-1": {
+          "type": "product_link",
+          "settings": {
+            "name_cn": "猴面包树原浆饮",
+            "name_en": "The Shot",
+            "name_cn_en": "Baobab Pulp Shot",
+            "name_cn_pt": "Shot de Polpa de Múcua",
+            "tagline": "想要更浓缩的营养？50ml 一口闷，高浓缩急救装。",
+            "tagline_en": "50ml of pure concentrate. When you need it fast and strong.",
+            "tagline_pt": "50ml de concentrado puro. Quando precisas rápido e forte.",
+            "link": "/products/the-baobab-pulp-shot",
+            "link_text": "了解更多",
+            "link_text_en": "Learn more",
+            "link_text_pt": "Saber mais"
+          }
+        },
+        "product-2": {
+          "type": "product_link",
+          "settings": {
+            "name_cn": "猴面包树纯果浆",
+            "name_en": "The Pouch",
+            "name_cn_en": "Baobab Pure Pulp",
+            "name_cn_pt": "Polpa Pura de Múcua",
+            "tagline": "想 DIY 搭配着吃？一袋纯果浆，N 种打开方式。",
+            "tagline_en": "Pure pulp. Mix into yogurt, smoothies, oats — your call.",
+            "tagline_pt": "Polpa pura. Mistura com iogurte, smoothies, aveia — tu decides.",
+            "link": "/products/the-baobab-pulp-pouch",
+            "link_text": "了解更多",
+            "link_text_en": "Learn more",
+            "link_text_pt": "Saber mais"
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2"
+      ],
+      "settings": {
+        "subtitle": "More to Explore",
+        "title": "找到适合你节奏的那款",
+        "title_en": "Also from the tree.",
+        "title_pt": "Também da árvore.",
+        "bg_color": "#3A2015",
+        "text_color": "#F4E3C9"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "scene-cards",
+    "nutrition",
+    "comparison-multi",
+    "prose-taste",
+    "faq",
+    "cross-sell"
+  ]
+}
