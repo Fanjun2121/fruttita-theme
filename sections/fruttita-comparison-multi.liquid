@@ -1,0 +1,606 @@
+<!--
+  Fruttita Custom Section: Multi-Column Comparison
+  5-column grid (1 label + 4 data columns) for Water product page
+-->
+
+<style>
+  .fruttita-comp-multi-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-comp-multi-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .cm-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .cm-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .cm-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .cm-title-{{ section.id }} {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .cm-table-wrap-{{ section.id }} {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cm-table-{{ section.id }} {
+    min-width: 650px;
+    width: 100%;
+  }
+
+  /* Table header */
+  .cm-table-head-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+    gap: 0.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(244, 227, 201, 0.15);
+    margin-bottom: 0.5rem;
+  }
+
+  .cm-col-label-{{ section.id }} {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    text-align: center;
+  }
+
+  .cm-col-label-{{ section.id }}:first-child {
+    text-align: left;
+  }
+
+  .cm-col-name-{{ section.id }} {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .cm-col-name-{{ section.id }}.is-winner {
+    color: #78AA00;
+  }
+
+  /* Rows */
+  .cm-row-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+    gap: 0.8rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(244, 227, 201, 0.08);
+    align-items: center;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .cm-row-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Row hover highlight */
+  .cm-row-{{ section.id }} {
+    border-radius: 0.5rem;
+  }
+  .cm-row-{{ section.id }}:hover {
+    background: rgba(244, 227, 201, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(244, 227, 201, 0.08);
+  }
+
+  .cm-metric-label-{{ section.id }} {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .cm-cell-{{ section.id }} {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .cm-status-good-{{ section.id }} {
+    color: #78AA00;
+    font-weight: 700;
+  }
+
+  .cm-status-bad-{{ section.id }} {
+    color: #EF4444;
+    opacity: 0.8;
+  }
+
+  .cm-status-neutral-{{ section.id }} {
+    opacity: 0.5;
+  }
+
+  .cm-status-icon-{{ section.id }} {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  /* Conclusion */
+  .cm-conclusion-{{ section.id }} {
+    margin-top: 2.5rem;
+    padding: 1.5rem 2rem;
+    background: rgba(120, 170, 0, 0.1);
+    border: 1px solid rgba(120, 170, 0, 0.2);
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .cm-conclusion-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cm-source-{{ section.id }} {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.35;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-comp-multi-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .cm-title-{{ section.id }} {
+      font-size: 1.6rem;
+    }
+
+    .cm-col-name-{{ section.id }} {
+      font-size: 0.9rem;
+    }
+
+    .cm-cell-{{ section.id }} {
+      font-size: 0.9rem;
+    }
+  }
+
+  :lang(en) .cm-title-{{ section.id }},
+  :lang(pt) .cm-title-{{ section.id }} {
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .cm-title-{{ section.id }},
+    :lang(pt) .cm-title-{{ section.id }} {
+      font-size: 1.35rem;
+    }
+  }
+</style>
+
+<div class="fruttita-comp-multi-{{ section.id }}">
+  <div class="cm-inner-{{ section.id }}">
+    <div class="cm-header-{{ section.id }}">
+      {% if section.settings.subtitle != blank %}
+        <span class="cm-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
+      {% endif %}
+      <h2 class="cm-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
+    </div>
+
+    <div class="cm-table-wrap-{{ section.id }}">
+      <div class="cm-table-{{ section.id }}">
+        <!-- Table header -->
+        <div class="cm-table-head-{{ section.id }}">
+          <div class="cm-col-label-{{ section.id }}">{% render 'i18n-text', default: section.settings.header_label, en: section.settings.header_label_en, pt: section.settings.header_label_pt %}</div>
+          <div class="cm-col-name-{{ section.id }}{% if section.settings.winner_col == '1' %} is-winner{% endif %}">{% render 'i18n-text', default: section.settings.col1_name, en: section.settings.col1_name_en, pt: section.settings.col1_name_pt %}</div>
+          <div class="cm-col-name-{{ section.id }}{% if section.settings.winner_col == '2' %} is-winner{% endif %}">{% render 'i18n-text', default: section.settings.col2_name, en: section.settings.col2_name_en, pt: section.settings.col2_name_pt %}</div>
+          <div class="cm-col-name-{{ section.id }}{% if section.settings.winner_col == '3' %} is-winner{% endif %}">{% render 'i18n-text', default: section.settings.col3_name, en: section.settings.col3_name_en, pt: section.settings.col3_name_pt %}</div>
+          <div class="cm-col-name-{{ section.id }}{% if section.settings.winner_col == '4' %} is-winner{% endif %}">{% render 'i18n-text', default: section.settings.col4_name, en: section.settings.col4_name_en, pt: section.settings.col4_name_pt %}</div>
+        </div>
+
+        <!-- Rows -->
+        <div id="cmRows-{{ section.id }}">
+          {% for block in section.blocks %}
+            <div class="cm-row-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 100 }}ms;">
+              <div class="cm-metric-label-{{ section.id }}">{% render 'i18n-text', default: block.settings.label, en: block.settings.label_en, pt: block.settings.label_pt %}</div>
+              {% for col_num in (1..4) %}
+                {% assign val_key = 'col' | append: col_num | append: '_value' %}
+                {% assign val_key_en = 'col' | append: col_num | append: '_value_en' %}
+                {% assign val_key_pt = 'col' | append: col_num | append: '_value_pt' %}
+                {% assign status_key = 'col' | append: col_num | append: '_status' %}
+                {% assign val = block.settings[val_key] %}
+                {% assign val_en = block.settings[val_key_en] %}
+                {% assign val_pt = block.settings[val_key_pt] %}
+                {% assign status = block.settings[status_key] %}
+                <div class="cm-cell-{{ section.id }} cm-status-{{ status }}-{{ section.id }}">
+                  {% if status == 'good' %}
+                    <svg class="cm-status-icon-{{ section.id }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  {% elsif status == 'bad' %}
+                    <svg class="cm-status-icon-{{ section.id }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                  {% else %}
+                    <svg class="cm-status-icon-{{ section.id }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"></path></svg>
+                  {% endif %}
+                  {% render 'i18n-text', default: val, en: val_en, pt: val_pt %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {% if section.settings.conclusion != blank %}
+      <div class="cm-conclusion-{{ section.id }}" id="cmConclusion-{{ section.id }}">
+        {% render 'i18n-text', default: section.settings.conclusion, en: section.settings.conclusion_en, pt: section.settings.conclusion_pt %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.source_note != blank %}
+      <div class="cm-source-{{ section.id }}">{% render 'i18n-text', default: section.settings.source_note, en: section.settings.source_note_en, pt: section.settings.source_note_pt %}</div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    var rows = document.querySelectorAll('#cmRows-{{ section.id }} .cm-row-{{ section.id }}');
+    var conclusion = document.getElementById('cmConclusion-{{ section.id }}');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    rows.forEach(function(row) { observer.observe(row); });
+    if (conclusion) observer.observe(conclusion);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Multi Comparison",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "The Comparison"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (EN)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (PT)"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "补水的选择很多，区别在哪？"
+    },
+    {
+      "type": "textarea",
+      "id": "title_en",
+      "label": "Title (EN)"
+    },
+    {
+      "type": "textarea",
+      "id": "title_pt",
+      "label": "Title (PT)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#3A2015"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    },
+    {
+      "type": "text",
+      "id": "header_label",
+      "label": "Header Label (first column)",
+      "default": "指标"
+    },
+    {
+      "type": "text",
+      "id": "header_label_en",
+      "label": "Header Label (EN)"
+    },
+    {
+      "type": "text",
+      "id": "header_label_pt",
+      "label": "Header Label (PT)"
+    },
+    {
+      "type": "text",
+      "id": "col1_name",
+      "label": "Column 1 Name",
+      "default": "白水"
+    },
+    {
+      "type": "text",
+      "id": "col1_name_en",
+      "label": "Column 1 Name (EN)"
+    },
+    {
+      "type": "text",
+      "id": "col1_name_pt",
+      "label": "Column 1 Name (PT)"
+    },
+    {
+      "type": "text",
+      "id": "col2_name",
+      "label": "Column 2 Name",
+      "default": "市售椰子水"
+    },
+    {
+      "type": "text",
+      "id": "col2_name_en",
+      "label": "Column 2 Name (EN)"
+    },
+    {
+      "type": "text",
+      "id": "col2_name_pt",
+      "label": "Column 2 Name (PT)"
+    },
+    {
+      "type": "text",
+      "id": "col3_name",
+      "label": "Column 3 Name",
+      "default": "电解质水"
+    },
+    {
+      "type": "text",
+      "id": "col3_name_en",
+      "label": "Column 3 Name (EN)"
+    },
+    {
+      "type": "text",
+      "id": "col3_name_pt",
+      "label": "Column 3 Name (PT)"
+    },
+    {
+      "type": "text",
+      "id": "col4_name",
+      "label": "Column 4 Name",
+      "default": "Fruttita Water"
+    },
+    {
+      "type": "text",
+      "id": "col4_name_en",
+      "label": "Column 4 Name (EN)"
+    },
+    {
+      "type": "text",
+      "id": "col4_name_pt",
+      "label": "Column 4 Name (PT)"
+    },
+    {
+      "type": "select",
+      "id": "winner_col",
+      "label": "Winner Column (green)",
+      "default": "4",
+      "options": [
+        { "value": "1", "label": "Column 1" },
+        { "value": "2", "label": "Column 2" },
+        { "value": "3", "label": "Column 3" },
+        { "value": "4", "label": "Column 4" }
+      ]
+    },
+    {
+      "type": "textarea",
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "type": "textarea",
+      "id": "conclusion_en",
+      "label": "Conclusion (EN)"
+    },
+    {
+      "type": "textarea",
+      "id": "conclusion_pt",
+      "label": "Conclusion (PT)"
+    },
+    {
+      "type": "text",
+      "id": "source_note",
+      "label": "Source Note"
+    },
+    {
+      "type": "text",
+      "id": "source_note_en",
+      "label": "Source Note (EN)"
+    },
+    {
+      "type": "text",
+      "id": "source_note_pt",
+      "label": "Source Note (PT)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Metric Label",
+          "default": "钠"
+        },
+        {
+          "type": "text",
+          "id": "label_en",
+          "label": "Metric Label (EN)"
+        },
+        {
+          "type": "text",
+          "id": "label_pt",
+          "label": "Metric Label (PT)"
+        },
+        {
+          "type": "text",
+          "id": "col1_value",
+          "label": "Column 1 Value",
+          "default": "0mg"
+        },
+        {
+          "type": "text",
+          "id": "col1_value_en",
+          "label": "Column 1 Value (EN)"
+        },
+        {
+          "type": "text",
+          "id": "col1_value_pt",
+          "label": "Column 1 Value (PT)"
+        },
+        {
+          "type": "select",
+          "id": "col1_status",
+          "label": "Column 1 Status",
+          "default": "neutral",
+          "options": [
+            { "value": "good", "label": "Good (green ✓)" },
+            { "value": "bad", "label": "Bad (red ✗)" },
+            { "value": "neutral", "label": "Neutral (— grey)" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "col2_value",
+          "label": "Column 2 Value",
+          "default": "-"
+        },
+        {
+          "type": "text",
+          "id": "col2_value_en",
+          "label": "Column 2 Value (EN)"
+        },
+        {
+          "type": "text",
+          "id": "col2_value_pt",
+          "label": "Column 2 Value (PT)"
+        },
+        {
+          "type": "select",
+          "id": "col2_status",
+          "label": "Column 2 Status",
+          "default": "bad",
+          "options": [
+            { "value": "good", "label": "Good (green ✓)" },
+            { "value": "bad", "label": "Bad (red ✗)" },
+            { "value": "neutral", "label": "Neutral (— grey)" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "col3_value",
+          "label": "Column 3 Value",
+          "default": "-"
+        },
+        {
+          "type": "text",
+          "id": "col3_value_en",
+          "label": "Column 3 Value (EN)"
+        },
+        {
+          "type": "text",
+          "id": "col3_value_pt",
+          "label": "Column 3 Value (PT)"
+        },
+        {
+          "type": "select",
+          "id": "col3_status",
+          "label": "Column 3 Status",
+          "default": "bad",
+          "options": [
+            { "value": "good", "label": "Good (green ✓)" },
+            { "value": "bad", "label": "Bad (red ✗)" },
+            { "value": "neutral", "label": "Neutral (— grey)" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "col4_value",
+          "label": "Column 4 Value",
+          "default": "-"
+        },
+        {
+          "type": "text",
+          "id": "col4_value_en",
+          "label": "Column 4 Value (EN)"
+        },
+        {
+          "type": "text",
+          "id": "col4_value_pt",
+          "label": "Column 4 Value (PT)"
+        },
+        {
+          "type": "select",
+          "id": "col4_status",
+          "label": "Column 4 Status",
+          "default": "good",
+          "options": [
+            { "value": "good", "label": "Good (green ✓)" },
+            { "value": "bad", "label": "Bad (red ✗)" },
+            { "value": "neutral", "label": "Neutral (— grey)" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Multi Comparison"
+    }
+  ]
+}
+{% endschema %}

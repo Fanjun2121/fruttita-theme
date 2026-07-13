@@ -1,0 +1,326 @@
+<!--
+  Fruttita Custom Section: Cross-Sell
+  2 product recommendation cards with image + tagline
+-->
+
+<style>
+  .fruttita-cross-sell-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-cross-sell-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .cs-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cs-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .cs-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .cs-title-{{ section.id }} {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .cs-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .cs-card-{{ section.id }} {
+    background: rgba(244, 227, 201, 0.06);
+    border: 1px solid rgba(244, 227, 201, 0.12);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .cs-card-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cs-card-{{ section.id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  }
+
+  .cs-card-img-{{ section.id }} {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cs-card-body-{{ section.id }} {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .cs-card-name-cn-{{ section.id }} {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+
+  .cs-card-name-en-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    font-size: 0.9rem;
+    color: #C6812B;
+    margin-bottom: 0.8rem;
+  }
+
+  .cs-card-tagline-{{ section.id }} {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.6;
+  }
+
+  .cs-card-link-{{ section.id }} {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #C6812B;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+  }
+
+  .cs-card-link-{{ section.id }}::after {
+    content: ' →';
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-cross-sell-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .cs-title-{{ section.id }} {
+      font-size: 1.6rem;
+    }
+
+    .cs-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  :lang(en) .cs-title-{{ section.id }},
+  :lang(pt) .cs-title-{{ section.id }} {
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .cs-title-{{ section.id }},
+    :lang(pt) .cs-title-{{ section.id }} {
+      font-size: 1.35rem;
+    }
+  }
+</style>
+
+<div class="fruttita-cross-sell-{{ section.id }}">
+  <div class="cs-inner-{{ section.id }}">
+    <div class="cs-header-{{ section.id }}">
+      {% if section.settings.subtitle != blank %}
+        <span class="cs-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
+      {% endif %}
+      <h2 class="cs-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
+    </div>
+
+    <div class="cs-grid-{{ section.id }}" id="csGrid-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="cs-card-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
+          {% if block.settings.image != blank %}
+            <img class="cs-card-img-{{ section.id }}" src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.name_cn }}" loading="lazy">
+          {% endif %}
+          <div class="cs-card-body-{{ section.id }}">
+            <div class="cs-card-name-cn-{{ section.id }}">{% render 'i18n-text', default: block.settings.name_cn, en: block.settings.name_cn_en, pt: block.settings.name_cn_pt %}</div>
+            <div class="cs-card-name-en-{{ section.id }}">{{ block.settings.name_en }}</div>
+            <div class="cs-card-tagline-{{ section.id }}">{% render 'i18n-text', default: block.settings.tagline, en: block.settings.tagline_en, pt: block.settings.tagline_pt %}</div>
+            {% if block.settings.link != blank %}
+              <a href="{{ block.settings.link | prepend: routes.root_url | replace: '//', '/' }}" class="cs-card-link-{{ section.id }}">{% render 'i18n-text', default: block.settings.link_text, en: block.settings.link_text_en, pt: block.settings.link_text_pt %}</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var cards = document.querySelectorAll('#csGrid-{{ section.id }} .cs-card-{{ section.id }}');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(card) { observer.observe(card); });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Cross-Sell",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "More to Explore"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (EN)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (PT)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "不只一种打开方式"
+    },
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "Title (EN)"
+    },
+    {
+      "type": "text",
+      "id": "title_pt",
+      "label": "Title (PT)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#3A2015"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_link",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "name_cn",
+          "label": "Chinese Name",
+          "default": "猴面包树纯果浆"
+        },
+        {
+          "type": "text",
+          "id": "name_cn_en",
+          "label": "Chinese Name (EN)"
+        },
+        {
+          "type": "text",
+          "id": "name_cn_pt",
+          "label": "Chinese Name (PT)"
+        },
+        {
+          "type": "text",
+          "id": "name_en",
+          "label": "English Name (Pacifico)",
+          "default": "The Pouch"
+        },
+        {
+          "type": "textarea",
+          "id": "tagline",
+          "label": "Tagline",
+          "default": "一袋纯果浆，N 种打开方式。"
+        },
+        {
+          "type": "textarea",
+          "id": "tagline_en",
+          "label": "Tagline (EN)"
+        },
+        {
+          "type": "textarea",
+          "id": "tagline_pt",
+          "label": "Tagline (PT)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Product Link"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "了解更多"
+        },
+        {
+          "type": "text",
+          "id": "link_text_en",
+          "label": "Link Text (EN)"
+        },
+        {
+          "type": "text",
+          "id": "link_text_pt",
+          "label": "Link Text (PT)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Cross-Sell"
+    }
+  ]
+}
+{% endschema %}

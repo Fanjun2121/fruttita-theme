@@ -1,0 +1,473 @@
+<!--
+  Fruttita Custom Section: Nutrition Table
+  CSS grid-based nutrition data display with single/dual column modes
+-->
+
+<style>
+  .fruttita-nutrition-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 6rem 1.5rem;
+    font-family: 'Switzer', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruttita-nutrition-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .nt-inner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .nt-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .nt-subtitle-{{ section.id }} {
+    font-family: 'Pacifico', cursive;
+    color: #C6812B;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .nt-title-{{ section.id }} {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  /* Table header */
+  .nt-table-head-{{ section.id }} {
+    display: grid;
+    grid-template-columns: {% if section.settings.layout == 'dual' %}1.2fr 1fr 1fr{% else %}1.2fr 1fr{% endif %};
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(244, 227, 201, 0.15);
+    margin-bottom: 0.5rem;
+  }
+
+  .nt-col-label-{{ section.id }} {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+    text-align: center;
+  }
+
+  .nt-col-label-{{ section.id }}:first-child {
+    text-align: left;
+  }
+
+  /* Rows */
+  .nt-row-{{ section.id }} {
+    display: grid;
+    grid-template-columns: {% if section.settings.layout == 'dual' %}1.2fr 1fr 1fr{% else %}1.2fr 1fr{% endif %};
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(244, 227, 201, 0.08);
+    align-items: center;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .nt-row-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Row hover highlight */
+  .nt-row-{{ section.id }} {
+    border-radius: 0.5rem;
+  }
+  .nt-row-{{ section.id }}:hover {
+    background: rgba(244, 227, 201, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(244, 227, 201, 0.08);
+  }
+
+  .nt-label-{{ section.id }} {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .nt-value-{{ section.id }} {
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .nt-value-{{ section.id }}.is-highlight {
+    color: #78AA00;
+    font-weight: 700;
+  }
+
+  .nt-plain-{{ section.id }} {
+    grid-column: 1 / -1;
+    font-size: 1rem;
+    opacity: 0.6;
+    padding-top: 0.3rem;
+    font-style: italic;
+  }
+
+  /* Footer */
+  .nt-footnote-{{ section.id }} {
+    margin-top: 2.5rem;
+    padding: 1.5rem 2rem;
+    background: rgba(120, 170, 0, 0.1);
+    border: 1px solid rgba(120, 170, 0, 0.2);
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .nt-footnote-{{ section.id }}.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nt-source-{{ section.id }} {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    opacity: 0.45;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 768px) {
+    .fruttita-nutrition-{{ section.id }} {
+      padding: 4rem 1rem;
+    }
+
+    .nt-title-{{ section.id }} {
+      font-size: 1.6rem;
+    }
+
+    .nt-table-head-{{ section.id }},
+    .nt-row-{{ section.id }} {
+      grid-template-columns: {% if section.settings.layout == 'dual' %}1fr 0.8fr 0.8fr{% else %}1fr 0.8fr{% endif %};
+      gap: 0.5rem;
+    }
+
+    .nt-label-{{ section.id }},
+    .nt-value-{{ section.id }} {
+      font-size: 0.95rem;
+    }
+  }
+
+  :lang(en) .nt-title-{{ section.id }},
+  :lang(pt) .nt-title-{{ section.id }} {
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 768px) {
+    :lang(en) .nt-title-{{ section.id }},
+    :lang(pt) .nt-title-{{ section.id }} {
+      font-size: 1.35rem;
+    }
+  }
+</style>
+
+<div class="fruttita-nutrition-{{ section.id }}">
+  <div class="nt-inner-{{ section.id }}">
+    <div class="nt-header-{{ section.id }}">
+      {% if section.settings.subtitle != blank %}
+        <span class="nt-subtitle-{{ section.id }}">{% render 'i18n-text', default: section.settings.subtitle, en: section.settings.subtitle_en, pt: section.settings.subtitle_pt %}</span>
+      {% endif %}
+      <h2 class="nt-title-{{ section.id }}">{% render 'i18n-text', default: section.settings.title, en: section.settings.title_en, pt: section.settings.title_pt %}</h2>
+    </div>
+
+    <!-- Table header -->
+    <div class="nt-table-head-{{ section.id }}">
+      <div class="nt-col-label-{{ section.id }}">{% render 'i18n-text', default: section.settings.header_label, en: section.settings.header_label_en, pt: section.settings.header_label_pt %}</div>
+      <div class="nt-col-label-{{ section.id }}">{% render 'i18n-text', default: section.settings.col1_label, en: section.settings.col1_label_en, pt: section.settings.col1_label_pt %}</div>
+      {% if section.settings.layout == 'dual' %}
+        <div class="nt-col-label-{{ section.id }}">{% render 'i18n-text', default: section.settings.col2_label, en: section.settings.col2_label_en, pt: section.settings.col2_label_pt %}</div>
+      {% endif %}
+    </div>
+
+    <!-- Data rows -->
+    <div id="ntRows-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="nt-row-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 80 }}ms;">
+          <div class="nt-label-{{ section.id }}">{% render 'i18n-text', default: block.settings.label, en: block.settings.label_en, pt: block.settings.label_pt %}</div>
+          <div class="nt-value-{{ section.id }}{% if block.settings.highlight %} is-highlight{% endif %}">{% render 'i18n-text', default: block.settings.value, en: block.settings.value_en, pt: block.settings.value_pt %}</div>
+          {% if section.settings.layout == 'dual' %}
+            <div class="nt-value-{{ section.id }}{% if block.settings.highlight %} is-highlight{% endif %}">{% render 'i18n-text', default: block.settings.value_2, en: block.settings.value_2_en, pt: block.settings.value_2_pt %}</div>
+          {% endif %}
+          {% if block.settings.plain_text != blank %}
+            <div class="nt-plain-{{ section.id }}">{% render 'i18n-text', default: block.settings.plain_text, en: block.settings.plain_text_en, pt: block.settings.plain_text_pt %}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.footnote != blank %}
+      <div class="nt-footnote-{{ section.id }}" id="ntFootnote-{{ section.id }}">
+        {% render 'i18n-text', default: section.settings.footnote, en: section.settings.footnote_en, pt: section.settings.footnote_pt %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.source_note != blank %}
+      <div class="nt-source-{{ section.id }}">{% render 'i18n-text', default: section.settings.source_note, en: section.settings.source_note_en, pt: section.settings.source_note_pt %}</div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    var rows = document.querySelectorAll('#ntRows-{{ section.id }} .nt-row-{{ section.id }}');
+    var footnote = document.getElementById('ntFootnote-{{ section.id }}');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    rows.forEach(function(row) { observer.observe(row); });
+    if (footnote) observer.observe(footnote);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fruttita Nutrition Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (Pacifico)",
+      "default": "The Nutrition"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_en",
+      "label": "Subtitle (EN)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_pt",
+      "label": "Subtitle (PT)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "这一小瓶里有什么？"
+    },
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "Title (EN)"
+    },
+    {
+      "type": "text",
+      "id": "title_pt",
+      "label": "Title (PT)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#4F2C1D"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#F4E3C9"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout Mode",
+      "default": "dual",
+      "options": [
+        { "value": "single", "label": "Single Column" },
+        { "value": "dual", "label": "Dual Column" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "header_label",
+      "label": "Header Label (first column)",
+      "default": "指标"
+    },
+    {
+      "type": "text",
+      "id": "header_label_en",
+      "label": "Header Label (EN)"
+    },
+    {
+      "type": "text",
+      "id": "header_label_pt",
+      "label": "Header Label (PT)"
+    },
+    {
+      "type": "text",
+      "id": "col1_label",
+      "label": "Column 1 Label",
+      "default": "每瓶"
+    },
+    {
+      "type": "text",
+      "id": "col1_label_en",
+      "label": "Column 1 Label (EN)"
+    },
+    {
+      "type": "text",
+      "id": "col1_label_pt",
+      "label": "Column 1 Label (PT)"
+    },
+    {
+      "type": "text",
+      "id": "col2_label",
+      "label": "Column 2 Label (dual mode)",
+      "default": "每100ml"
+    },
+    {
+      "type": "text",
+      "id": "col2_label_en",
+      "label": "Column 2 Label (EN)"
+    },
+    {
+      "type": "text",
+      "id": "col2_label_pt",
+      "label": "Column 2 Label (PT)"
+    },
+    {
+      "type": "textarea",
+      "id": "footnote",
+      "label": "Footnote (highlight box)"
+    },
+    {
+      "type": "textarea",
+      "id": "footnote_en",
+      "label": "Footnote (EN)"
+    },
+    {
+      "type": "textarea",
+      "id": "footnote_pt",
+      "label": "Footnote (PT)"
+    },
+    {
+      "type": "text",
+      "id": "source_note",
+      "label": "Source Note",
+      "default": "数据来源：SGS / Eurofins 第三方实验室检测报告"
+    },
+    {
+      "type": "text",
+      "id": "source_note_en",
+      "label": "Source Note (EN)"
+    },
+    {
+      "type": "text",
+      "id": "source_note_pt",
+      "label": "Source Note (PT)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Nutrition Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Nutrient Label",
+          "default": "维生素 C"
+        },
+        {
+          "type": "text",
+          "id": "label_en",
+          "label": "Nutrient Label (EN)"
+        },
+        {
+          "type": "text",
+          "id": "label_pt",
+          "label": "Nutrient Label (PT)"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value (Column 1)",
+          "default": "420mg+"
+        },
+        {
+          "type": "text",
+          "id": "value_en",
+          "label": "Value (Column 1, EN)"
+        },
+        {
+          "type": "text",
+          "id": "value_pt",
+          "label": "Value (Column 1, PT)"
+        },
+        {
+          "type": "text",
+          "id": "value_2",
+          "label": "Value (Column 2, dual mode)",
+          "default": "-"
+        },
+        {
+          "type": "text",
+          "id": "value_2_en",
+          "label": "Value (Column 2, EN)"
+        },
+        {
+          "type": "text",
+          "id": "value_2_pt",
+          "label": "Value (Column 2, PT)"
+        },
+        {
+          "type": "textarea",
+          "id": "plain_text",
+          "label": "Plain Text Translation (optional)"
+        },
+        {
+          "type": "textarea",
+          "id": "plain_text_en",
+          "label": "Plain Text (EN)"
+        },
+        {
+          "type": "textarea",
+          "id": "plain_text_pt",
+          "label": "Plain Text (PT)"
+        },
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight Value (green)",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fruttita Nutrition Table"
+    }
+  ]
+}
+{% endschema %}
