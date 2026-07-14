@@ -239,6 +239,8 @@
           <div class="ps-card-image-{{ section.id }}">
             {% if block.settings.image != blank %}
               {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', alt: block.settings.name_cn }}
+            {% elsif block.settings.packshot_asset != blank %}
+              <img src="{{ block.settings.packshot_asset | asset_url }}" alt="{{ block.settings.name_en }}" width="600" height="600" loading="lazy">
             {% else %}
               <div class="ps-card-image-placeholder-{{ section.id }}">
                 <img src="{{ 'babu-silhouette.svg' | asset_url }}" alt="" width="120" height="179" loading="lazy">
@@ -441,6 +443,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "packshot_asset",
+          "label": "Packshot Asset Filename (fallback)",
+          "info": "Theme asset filename used when no Product Image is picked, e.g. fruttita-packshot-shot.png"
         },
         {
           "type": "text",

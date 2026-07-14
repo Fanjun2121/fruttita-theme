@@ -215,7 +215,8 @@
             "link": "/products/the-baobab-pulp-shot",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais"
+            "link_text_pt": "Saber mais",
+            "packshot_asset": "fruttita-packshot-shot.png"
           }
         },
         "product_pouch": {
@@ -237,7 +238,8 @@
             "link": "/products/the-baobab-pulp-pouch",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais"
+            "link_text_pt": "Saber mais",
+            "packshot_asset": "fruttita-packshot-pouch.png"
           }
         },
         "product_water": {
@@ -259,7 +261,8 @@
             "link": "/products/the-baobab-water",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais"
+            "link_text_pt": "Saber mais",
+            "packshot_asset": "fruttita-packshot-water.png"
           }
         }
       },
