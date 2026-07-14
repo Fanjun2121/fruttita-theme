@@ -5,6 +5,7 @@
 
 <style>
   .fruttita-comparison-{{ section.id }} {
+    --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' or section.settings.bg_color == '#F4E3C9' or section.settings.bg_color == '#f4e3c9' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
     padding: 6rem 1.5rem;
@@ -60,12 +61,12 @@
     margin-bottom: 0.5rem;
   }
 
-  .comp-col-label-{{ section.id }} {
+  #shopify-section-{{ section.id }} .comp-col-label-{{ section.id }} {
     font-size: var(--fruttita-text-small);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--fruttita-ink-60);
+    color: var(--fruttita-section-secondary) !important;
     text-align: center;
   }
 
@@ -125,8 +126,8 @@
     gap: 0.5rem;
   }
 
-  .comp-status-bad-{{ section.id }} {
-    color: var(--fruttita-ink-60);
+  #shopify-section-{{ section.id }} .comp-status-bad-{{ section.id }} {
+    color: var(--fruttita-section-secondary) !important;
   }
 
   .comp-status-good-{{ section.id }} {
@@ -175,10 +176,10 @@
     transform: translateY(0);
   }
 
-  .comp-source-{{ section.id }} {
+  #shopify-section-{{ section.id }} .comp-source-{{ section.id }} {
     margin-top: 2rem;
     text-align: center;
-    color: var(--fruttita-ink-60);
+    color: var(--fruttita-section-secondary) !important;
     font-size: var(--fruttita-text-small);
     letter-spacing: 0.03em;
   }
@@ -194,6 +195,13 @@
       gap: 0.5rem;
     }
 
+    .comp-col-name-{{ section.id }},
+    .comp-metric-label-{{ section.id }},
+    .comp-cell-{{ section.id }} {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
     .comp-metric-label-{{ section.id }},
     .comp-cell-{{ section.id }} {
       font-size: var(--fruttita-text-small);
@@ -206,7 +214,7 @@
 
   :lang(en) .comp-title-{{ section.id }},
   :lang(pt) .comp-title-{{ section.id }} {
-    font-size: clamp(2.6rem, 2.6vw, 3.4rem);
+    font-size: var(--fruttita-text-h2);
   }
 </style>
 

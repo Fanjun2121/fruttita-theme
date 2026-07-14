@@ -126,7 +126,7 @@
     }
 
     .wtb-title-{{ section.id }} {
-      font-size: 1.8rem;
+      font-size: var(--fruttita-text-h2);
     }
 
     .wtb-grid-{{ section.id }} {
@@ -136,6 +136,11 @@
     .wtb-logo-{{ section.id }} {
       width: 64px;
       height: 64px;
+    }
+
+    .fruttita-where-to-buy-{{ section.id }} .wtb-channel-{{ section.id }} .wtb-logo-{{ section.id }} .wtb-logo-placeholder-{{ section.id }} {
+      width: 48px;
+      height: 48px;
     }
   }
 
@@ -147,7 +152,7 @@
   @media (max-width: 768px) {
     :lang(en) .wtb-title-{{ section.id }},
     :lang(pt) .wtb-title-{{ section.id }} {
-      font-size: 1.4rem;
+      font-size: var(--fruttita-text-h2);
     }
   }
 </style>

@@ -5,6 +5,7 @@
 
 <style>
   .fruttita-comp-multi-{{ section.id }} {
+    --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
     padding: 6rem 1.5rem;
@@ -38,21 +39,23 @@
   .cm-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
     color: #C6812B;
-    font-size: 1.3rem;
+    font-size: var(--fruttita-text-label);
     display: block;
     margin-bottom: 0.5rem;
   }
 
   .cm-title-{{ section.id }} {
-    font-size: 2rem;
+    font-size: var(--fruttita-text-h2);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
   }
 
   .cm-table-wrap-{{ section.id }} {
+    max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
   }
 
   .cm-table-{{ section.id }} {
@@ -70,12 +73,12 @@
     margin-bottom: 0.5rem;
   }
 
-  .cm-col-label-{{ section.id }} {
-    font-size: 0.9rem;
+  #shopify-section-{{ section.id }} .cm-col-label-{{ section.id }} {
+    color: var(--fruttita-section-secondary) !important;
+    font-size: var(--fruttita-text-small);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    opacity: 0.5;
     text-align: center;
   }
 
@@ -84,7 +87,7 @@
   }
 
   .cm-col-name-{{ section.id }} {
-    font-size: 0.9rem;
+    font-size: var(--fruttita-text-small);
     font-weight: 700;
     text-align: center;
   }
@@ -121,13 +124,13 @@
   }
 
   .cm-metric-label-{{ section.id }} {
-    font-size: 0.9rem;
+    font-size: var(--fruttita-text-small);
     font-weight: 600;
   }
 
   .cm-cell-{{ section.id }} {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: var(--fruttita-text-small);
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -142,11 +145,10 @@
 
   .cm-status-bad-{{ section.id }} {
     color: #EF4444;
-    opacity: 0.8;
   }
 
-  .cm-status-neutral-{{ section.id }} {
-    opacity: 0.5;
+  #shopify-section-{{ section.id }} .cm-status-neutral-{{ section.id }} {
+    color: var(--fruttita-section-secondary) !important;
   }
 
   .cm-status-icon-{{ section.id }} {
@@ -163,7 +165,7 @@
     border: 1px solid rgba(120, 170, 0, 0.2);
     border-radius: 1rem;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: var(--fruttita-text-body);
     line-height: 1.7;
     opacity: 0;
     transform: translateY(15px);
@@ -175,11 +177,11 @@
     transform: translateY(0);
   }
 
-  .cm-source-{{ section.id }} {
+  #shopify-section-{{ section.id }} .cm-source-{{ section.id }} {
     margin-top: 2rem;
     text-align: center;
-    font-size: 0.9rem;
-    opacity: 0.35;
+    color: var(--fruttita-section-secondary) !important;
+    font-size: var(--fruttita-text-small);
     letter-spacing: 0.03em;
   }
 
@@ -188,29 +190,6 @@
       padding: 4rem 1rem;
     }
 
-    .cm-title-{{ section.id }} {
-      font-size: 1.6rem;
-    }
-
-    .cm-col-name-{{ section.id }} {
-      font-size: 0.9rem;
-    }
-
-    .cm-cell-{{ section.id }} {
-      font-size: 0.9rem;
-    }
-  }
-
-  :lang(en) .cm-title-{{ section.id }},
-  :lang(pt) .cm-title-{{ section.id }} {
-    font-size: 1.7rem;
-  }
-
-  @media (max-width: 768px) {
-    :lang(en) .cm-title-{{ section.id }},
-    :lang(pt) .cm-title-{{ section.id }} {
-      font-size: 1.35rem;
-    }
   }
 </style>
 

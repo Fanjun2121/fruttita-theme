@@ -5,6 +5,7 @@
 
 <style>
   .fruttita-cross-sell-{{ section.id }} {
+    --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
     padding: 6rem 1.5rem;
@@ -38,13 +39,13 @@
   .cs-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
     color: #C6812B;
-    font-size: 1.3rem;
+    font-size: var(--fruttita-text-label);
     display: block;
     margin-bottom: 0.5rem;
   }
 
   .cs-title-{{ section.id }} {
-    font-size: 2rem;
+    font-size: var(--fruttita-text-h2);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
@@ -92,28 +93,28 @@
   }
 
   .cs-card-name-cn-{{ section.id }} {
-    font-size: 1.1rem;
+    font-size: var(--fruttita-text-h3);
     font-weight: 700;
     margin-bottom: 0.2rem;
   }
 
   .cs-card-name-en-{{ section.id }} {
     font-family: 'Pacifico', cursive;
-    font-size: 0.9rem;
+    font-size: var(--fruttita-text-small);
     color: #C6812B;
     margin-bottom: 0.8rem;
   }
 
-  .cs-card-tagline-{{ section.id }} {
-    font-size: 0.9rem;
-    opacity: 0.7;
+  #shopify-section-{{ section.id }} .cs-card-tagline-{{ section.id }} {
+    color: var(--fruttita-section-secondary) !important;
+    font-size: var(--fruttita-text-body);
     line-height: 1.6;
   }
 
   .cs-card-link-{{ section.id }} {
     display: inline-block;
     margin-top: 1rem;
-    font-size: 0.9rem;
+    font-size: var(--fruttita-text-small);
     font-weight: 700;
     color: #C6812B;
     text-decoration: none;
@@ -129,27 +130,12 @@
       padding: 4rem 1rem;
     }
 
-    .cs-title-{{ section.id }} {
-      font-size: 1.6rem;
-    }
-
     .cs-grid-{{ section.id }} {
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
   }
 
-  :lang(en) .cs-title-{{ section.id }},
-  :lang(pt) .cs-title-{{ section.id }} {
-    font-size: 1.7rem;
-  }
-
-  @media (max-width: 768px) {
-    :lang(en) .cs-title-{{ section.id }},
-    :lang(pt) .cs-title-{{ section.id }} {
-      font-size: 1.35rem;
-    }
-  }
 </style>
 
 <div class="fruttita-cross-sell-{{ section.id }}">
@@ -165,7 +151,7 @@
       {% for block in section.blocks %}
         <div class="cs-card-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
           {% if block.settings.image != blank %}
-            <img class="cs-card-img-{{ section.id }}" src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.name_cn }}" loading="lazy">
+            <img class="cs-card-img-{{ section.id }}" src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.name_cn }}" loading="lazy" width="600" height="{{ 600 | divided_by: block.settings.image.aspect_ratio | ceil }}">
           {% endif %}
           <div class="cs-card-body-{{ section.id }}">
             <div class="cs-card-name-cn-{{ section.id }}">{% render 'i18n-text', default: block.settings.name_cn, en: block.settings.name_cn_en, pt: block.settings.name_cn_pt %}</div>

@@ -5,6 +5,7 @@
 
 <style>
   .fruttita-nutrition-{{ section.id }} {
+    --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
     padding: 6rem 1.5rem;
@@ -38,13 +39,13 @@
   .nt-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
     color: #C6812B;
-    font-size: 1.3rem;
+    font-size: var(--fruttita-text-label);
     display: block;
     margin-bottom: 0.5rem;
   }
 
   .nt-title-{{ section.id }} {
-    font-size: 2rem;
+    font-size: var(--fruttita-text-h2);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
@@ -60,12 +61,12 @@
     margin-bottom: 0.5rem;
   }
 
-  .nt-col-label-{{ section.id }} {
-    font-size: 1rem;
+  #shopify-section-{{ section.id }} .nt-col-label-{{ section.id }} {
+    color: var(--fruttita-section-secondary) !important;
+    font-size: var(--fruttita-text-small);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    opacity: 0.55;
     text-align: center;
   }
 
@@ -101,13 +102,13 @@
   }
 
   .nt-label-{{ section.id }} {
-    font-size: 1.05rem;
+    font-size: var(--fruttita-text-body);
     font-weight: 600;
   }
 
   .nt-value-{{ section.id }} {
     text-align: center;
-    font-size: 1.05rem;
+    font-size: var(--fruttita-text-body);
     font-weight: 600;
   }
 
@@ -116,10 +117,10 @@
     font-weight: 700;
   }
 
-  .nt-plain-{{ section.id }} {
+  #shopify-section-{{ section.id }} .nt-plain-{{ section.id }} {
     grid-column: 1 / -1;
-    font-size: 1rem;
-    opacity: 0.6;
+    color: var(--fruttita-section-secondary) !important;
+    font-size: var(--fruttita-text-body);
     padding-top: 0.3rem;
     font-style: italic;
   }
@@ -132,7 +133,7 @@
     border: 1px solid rgba(120, 170, 0, 0.2);
     border-radius: 1rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: var(--fruttita-text-body);
     line-height: 1.7;
     opacity: 0;
     transform: translateY(15px);
@@ -144,11 +145,11 @@
     transform: translateY(0);
   }
 
-  .nt-source-{{ section.id }} {
+  #shopify-section-{{ section.id }} .nt-source-{{ section.id }} {
     margin-top: 2rem;
     text-align: center;
-    font-size: 0.95rem;
-    opacity: 0.45;
+    color: var(--fruttita-section-secondary) !important;
+    font-size: var(--fruttita-text-small);
     letter-spacing: 0.03em;
   }
 
@@ -157,32 +158,18 @@
       padding: 4rem 1rem;
     }
 
-    .nt-title-{{ section.id }} {
-      font-size: 1.6rem;
-    }
-
     .nt-table-head-{{ section.id }},
     .nt-row-{{ section.id }} {
       grid-template-columns: {% if section.settings.layout == 'dual' %}1fr 0.8fr 0.8fr{% else %}1fr 0.8fr{% endif %};
       gap: 0.5rem;
     }
 
-    .nt-label-{{ section.id }},
-    .nt-value-{{ section.id }} {
-      font-size: 0.95rem;
+    .nt-table-head-{{ section.id }} > *,
+    .nt-row-{{ section.id }} > * {
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
-  }
 
-  :lang(en) .nt-title-{{ section.id }},
-  :lang(pt) .nt-title-{{ section.id }} {
-    font-size: 1.7rem;
-  }
-
-  @media (max-width: 768px) {
-    :lang(en) .nt-title-{{ section.id }},
-    :lang(pt) .nt-title-{{ section.id }} {
-      font-size: 1.35rem;
-    }
   }
 </style>
 

@@ -5,6 +5,7 @@
 
 <style>
   .fruttita-faq-{{ section.id }} {
+    --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
     padding: 6rem 1.5rem;
@@ -38,13 +39,13 @@
   .faq-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
     color: #C6812B;
-    font-size: 1.3rem;
+    font-size: var(--fruttita-text-label);
     display: block;
     margin-bottom: 0.5rem;
   }
 
   .faq-title-{{ section.id }} {
-    font-size: 2rem;
+    font-size: var(--fruttita-text-h2);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.02em;
@@ -68,8 +69,8 @@
     align-items: center;
     padding: 1.5rem 0;
     cursor: pointer;
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-size: var(--fruttita-text-body);
+    font-weight: 600;
     letter-spacing: 0.01em;
     background: none;
     border: none;
@@ -83,9 +84,10 @@
     opacity: 0.8;
   }
 
-  .faq-icon-{{ section.id }} {
+  #shopify-section-{{ section.id }} .faq-icon-{{ section.id }} {
     font-size: 1.5rem;
     font-weight: 300;
+    color: #D38235 !important;
     line-height: 1;
     flex-shrink: 0;
     margin-left: 1rem;
@@ -108,11 +110,11 @@
     opacity: 1;
   }
 
-  .faq-answer-inner-{{ section.id }} {
+  #shopify-section-{{ section.id }} .faq-answer-inner-{{ section.id }} {
     padding-bottom: 1.5rem;
-    font-size: 1.05rem;
+    color: var(--fruttita-section-secondary) !important;
+    font-size: var(--fruttita-text-body);
     line-height: 1.8;
-    opacity: 0.75;
   }
 
   @media (max-width: 768px) {
@@ -120,29 +122,8 @@
       padding: 4rem 1rem;
     }
 
-    .faq-title-{{ section.id }} {
-      font-size: 1.6rem;
-    }
-
     .faq-question-{{ section.id }} {
-      font-size: 0.95rem;
       padding: 1.2rem 0;
-    }
-
-    .faq-answer-inner-{{ section.id }} {
-      font-size: 0.95rem;
-    }
-  }
-
-  :lang(en) .faq-title-{{ section.id }},
-  :lang(pt) .faq-title-{{ section.id }} {
-    font-size: 1.7rem;
-  }
-
-  @media (max-width: 768px) {
-    :lang(en) .faq-title-{{ section.id }},
-    :lang(pt) .faq-title-{{ section.id }} {
-      font-size: 1.35rem;
     }
   }
 </style>
