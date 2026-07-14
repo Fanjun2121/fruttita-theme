@@ -46,7 +46,7 @@
             "icon": "truck",
             "content": "<p>保质期：待确认</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，24 小时内喝完</p><p>0 防腐剂，开封后请尽快饮用</p>",
             "content_en": "<p>Shelf life: TBC</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 24 hours</p><p>Zero preservatives — consume promptly after opening</p>",
-            "content_pt": "<p>Validade: a confirmar</p><p>Fechado: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente, consumir em 24 horas</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
+            "content_pt": "<p>Validade: a confirmar</p><p>Por abrir: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente e consumir em 24 horas</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
             "page": ""
           }
         },
@@ -59,7 +59,7 @@
             "icon": "heart",
             "content": "<p>直接饮用，冷藏风味更佳</p><p>适合日常补水、运动后补充电解质</p>",
             "content_en": "<p>Drink directly, tastes better chilled</p><p>Perfect for daily hydration and post-exercise electrolyte replenishment</p>",
-            "content_pt": "<p>Beber diretamente, melhor sabor refrigerado</p><p>Perfeito para hidratação diária e reposição de eletrólitos pós-exercício</p>",
+            "content_pt": "<p>Beber diretamente; sabe melhor refrigerado</p><p>Perfeito para hidratação diária e reposição de eletrólitos após o exercício</p>",
             "page": ""
           }
         }
@@ -98,7 +98,7 @@
             "title_pt": "Hidratação Diária",
             "description": "不想喝白开水，又不想喝含糖饮料。这瓶 0 卡 0 糖的猴面包树水，是刚刚好的中间选项。",
             "description_en": "Bored of plain water, allergic to sugar. This is the in-between.",
-            "description_pt": "Farto de água pura, alérgico a açúcar. Isto é o meio-termo."
+            "description_pt": "Água pura aborrece-te, açúcar não te interessa. Este é o meio-termo."
           }
         },
         "card-2": {
@@ -119,10 +119,10 @@
             "emoji": "🏢",
             "title": "办公室常备",
             "title_en": "Desk Companion",
-            "title_pt": "Companhia de Secretária",
+            "title_pt": "Companhia para a Secretária",
             "description": "放在工位上随时喝。比白水多一点营养，比果汁少很多负担。",
             "description_en": "A bit more than water. A lot less than juice. Sip all day.",
-            "description_pt": "Um pouco mais que água. Muito menos que sumo. Bebe o dia todo."
+            "description_pt": "Um pouco mais do que água. Muito menos do que sumo. Bebe o dia todo."
           }
         }
       },
@@ -168,7 +168,7 @@
             "value_2": "≈475mg",
             "plain_text": "钾含量 475mg，比两根香蕉还多。",
             "plain_text_en": "More potassium than two bananas.",
-            "plain_text_pt": "Mais potássio que duas bananas.",
+            "plain_text_pt": "Mais potássio do que duas bananas.",
             "highlight": true
           }
         },
@@ -234,7 +234,7 @@
             "value_2": "≈45kcal",
             "plain_text": "热量只有 45 大卡——不到一个苹果。",
             "plain_text_en": "45 calories total. Less than one apple.",
-            "plain_text_pt": "45 calorias no total. Menos que uma maçã.",
+            "plain_text_pt": "45 calorias no total. Menos do que uma maçã.",
             "highlight": false
           }
         }
@@ -264,10 +264,10 @@
         "col2_label_pt": "Por Garrafa (1L)",
         "footnote": "这不是“有点味道的水”。这是一瓶喝起来像水，营养总量比你想象中高得多的天然补给。",
         "footnote_en": "Drinks like water. Delivers like it doesn't.",
-        "footnote_pt": "Bebe-se como água. Entrega como se não fosse.",
+        "footnote_pt": "Bebe-se como água. Nutre como se não fosse.",
         "source_note": "以上数据为基于原浆浓度换算的估值，具体以包装营养成分表为准。基准数据来源：100g Pouch SGS / Eurofins 第三方实验室检测报告。",
         "source_note_en": "Estimates based on pulp concentration. See packaging for specifics. Base data: SGS / Eurofins lab reports.",
-        "source_note_pt": "Estimativas baseadas na concentração da polpa. Ver embalagem para detalhes. Dados base: relatórios SGS / Eurofins."
+        "source_note_pt": "Estimativas baseadas na concentração da polpa. Ver embalagem para detalhes. Dados de base: relatórios SGS / Eurofins."
       }
     },
     "comparison-multi": {
@@ -415,7 +415,7 @@
         "conclusion_pt": "Água pura: limpa, sem nutrição. Água de coco: potássio, mais 50-105mg de sódio e 4-5g de açúcar por 100ml. Água de eletrólitos: eletrólitos sintéticos. Fruttita Water: 475mg de potássio natural, 525mg de Vitamina C natural, zero sódio, menos de 3g de açúcar, 45 calorias. De uma árvore, não de um laboratório.",
         "source_note": "椰子水数据区间基于 USDA 理论值及中国市售产品公开营养成分表。不同品牌因工艺和原料差异，实际值可能有较大出入。",
         "source_note_en": "Coconut water data: USDA reference values and publicly available nutrition labels. Values vary by brand.",
-        "source_note_pt": "Dados água de coco: valores de referência USDA e rótulos nutricionais públicos. Valores variam por marca."
+        "source_note_pt": "Dados da água de coco: valores de referência USDA e rótulos nutricionais públicos. Os valores variam consoante a marca."
       }
     },
     "prose-taste": {
@@ -434,7 +434,7 @@
           "settings": {
             "text_paragraph": "接近水，带一点淡淡的果味和微酸。不需要勇气，直接喝就行。",
             "text_paragraph_en": "Close to water with a hint of fruit and mild tang. No commitment required.",
-            "text_paragraph_pt": "Próximo de água com um toque de fruta e acidez suave. Sem compromisso."
+            "text_paragraph_pt": "Quase água, com um toque de fruta e uma acidez suave. Sem compromisso."
           }
         },
         "p3": {
@@ -442,7 +442,7 @@
           "settings": {
             "text_paragraph": "如果你是第一次尝试猴面包树，这款最友好。",
             "text_paragraph_en": "New to baobab? Start here.",
-            "text_paragraph_pt": "Nunca provaste embondeiro? Começa aqui."
+            "text_paragraph_pt": "Nunca provaste múcua? Começa aqui."
           }
         }
       },
@@ -471,7 +471,7 @@
             "question_pt": "Qual é a diferença entre isto e diluir o Pouch com água?",
             "answer": "浓度不同。Water 是 Brix 1.5，非常稀，接近水的口感。Pouch 兑水大概在 Brix 3-6 左右，还是能明显感受到果浆味。看你要“有味道的水”还是“稀释版的果浆”。",
             "answer_en": "Different concentration. Water is Brix 1.5 — basically water texture. Diluted Pouch is Brix 3-6, still noticeably fruity.",
-            "answer_pt": "Concentração diferente. O Water é Brix 1.5 — basicamente textura de água. Pouch diluído é Brix 3-6, ainda notavelmente frutado."
+            "answer_pt": "A concentração é diferente. O Water tem Brix 1.5 — praticamente a textura da água. O Pouch diluído tem Brix 3-6 e continua claramente frutado."
           }
         },
         "faq-2": {
@@ -482,7 +482,7 @@
             "question_pt": "Pode substituir bebidas desportivas?",
             "answer": "它含天然钾和 0 钠，适合运动后补充电解质。但它不含人工电解质或咖啡因。如果你需要高强度运动补给，可能需要额外搭配。",
             "answer_en": "Natural potassium, zero sodium — good for post-workout. But no synthetic electrolytes or caffeine. For intense training, you may want to supplement.",
-            "answer_pt": "Potássio natural, zero sódio — bom para pós-treino. Mas sem eletrólitos sintéticos ou cafeína. Para treino intenso, podes precisar de suplementar."
+            "answer_pt": "Potássio natural, zero sódio — bom para o pós-treino. Mas sem eletrólitos sintéticos nem cafeína. Para um treino intenso, podes precisar de suplementar."
           }
         },
         "faq-3": {
@@ -493,7 +493,7 @@
             "question_pt": "As calorias são mesmo tão baixas?",
             "answer": "一整瓶 1L 只有约 45 大卡，不到一个苹果的热量。每 100ml 约 4.5 大卡，接近白水。",
             "answer_en": "Yes. One full liter: ~45 calories. Per 100ml: ~4.5 calories. Close to plain water.",
-            "answer_pt": "Sim. Um litro inteiro: ~45 calorias. Por 100ml: ~4.5 calorias. Próximo de água pura."
+            "answer_pt": "Sim. Um litro inteiro: ~45 calorias. Por 100ml: ~4.5 calorias. Quase como água pura."
           }
         },
         "faq-4": {
@@ -534,9 +534,9 @@
             "packshot_asset": "fruttita-packshot-shot.png",
             "name_cn_en": "Baobab Pulp Shot",
             "name_cn_pt": "Shot de Polpa de Múcua",
-            "tagline": "想要更浓缩的营养？50ml 一口闷，高浓缩急救装。",
+            "tagline": "想要更浓缩的营养？50ml 一口闷，高浓缩回神装。",
             "tagline_en": "50ml of pure concentrate. When you need it fast and strong.",
-            "tagline_pt": "50ml de concentrado puro. Quando precisas rápido e forte.",
+            "tagline_pt": "50ml de concentrado puro. Quando precisas de algo rápido e forte.",
             "link": "/products/the-baobab-pulp-shot",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
@@ -553,7 +553,7 @@
             "name_cn_pt": "Polpa Pura de Múcua",
             "tagline": "想 DIY 搭配着吃？一袋纯果浆，N 种打开方式。",
             "tagline_en": "Pure pulp. Mix into yogurt, smoothies, oats — your call.",
-            "tagline_pt": "Polpa pura. Mistura com iogurte, smoothies, aveia — tu decides.",
+            "tagline_pt": "Polpa pura. Mistura com iogurte, batidos ou aveia — tu decides.",
             "link": "/products/the-baobab-pulp-pouch",
             "link_text": "了解更多",
             "link_text_en": "Learn more",

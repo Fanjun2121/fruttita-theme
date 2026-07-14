@@ -13,7 +13,7 @@
         "title_pt": "Conhece a múcua.",
         "body": "非洲人叫它「生命之树」。\n它活了三千年，我们想把它介绍给你。",
         "body_en": "Africans call it the \"Tree of Life.\"\n3,000 years old. Still going.",
-        "body_pt": "Em África chamam-lhe a \"Árvore da Vida.\"\n3.000 anos. Ainda de pé.",
+        "body_pt": "Em África, chamam-lhe a \"Árvore da Vida.\"\n3.000 anos. Ainda de pé.",
         "text_color": "#F4E3C9",
         "height": "80vh"
       }
@@ -34,7 +34,7 @@
           "settings": {
             "text_paragraph": "它的样子有点奇怪——树干比树冠粗得多，像一棵被倒过来种的树。当地传说里，它是被上帝倒插进土里的。",
             "text_paragraph_en": "It looks odd — trunk wider than its canopy, like a tree planted upside down. Legend says that's exactly what happened.",
-            "text_paragraph_pt": "Tem um aspeto estranho — tronco mais largo que a copa, como uma árvore plantada ao contrário. A lenda diz que foi exatamente isso que aconteceu."
+            "text_paragraph_pt": "Tem um aspeto estranho — tronco mais largo do que a copa, como uma árvore plantada ao contrário. A lenda diz que foi exatamente isso que aconteceu."
           }
         },
         "wi_p3": {
@@ -50,7 +50,7 @@
           "settings": {
             "text_paragraph": "非洲当地人称它为「生命之树」。干旱时，人和动物都靠它活下来。",
             "text_paragraph_en": "Locals call it the \"Tree of Life.\" In droughts, people and animals depend on it.",
-            "text_paragraph_pt": "Os locais chamam-lhe a \"Árvore da Vida.\" Em secas, pessoas e animais dependem dela."
+            "text_paragraph_pt": "Os locais chamam-lhe a \"Árvore da Vida.\" Durante as secas, pessoas e animais dependem dela."
           }
         }
       },
@@ -79,7 +79,7 @@
           "settings": {
             "caption": "猴面包树果实",
             "caption_en": "Baobab fruit",
-            "caption_pt": "Fruto do imbondeiro"
+            "caption_pt": "Múcua"
           }
         },
         "bg_2": {
@@ -181,7 +181,7 @@
             "value": "828mg",
             "description": "比 VC 更稳定的天然抗氧化物质",
             "description_en": "A natural antioxidant more stable than Vitamin C",
-            "description_pt": "Antioxidante natural mais estável que a Vitamina C",
+            "description_pt": "Antioxidante natural mais estável do que a Vitamina C",
             "bar_pct": 92
           }
         }
@@ -216,7 +216,7 @@
         "easter_egg_title_pt": "Secagem natural. Zero intervenção humana.",
         "easter_egg_text": "猴面包树果实在枝头自然风干，不靠人工催熟，不靠化学干预。你拿到的，就是大自然原本的样子。",
         "easter_egg_text_en": "The fruit air-dries on the branch. No ripening agents. No chemicals. What you get is exactly what the tree made.",
-        "easter_egg_text_pt": "O fruto seca naturalmente no ramo. Sem agentes de maturação. Sem químicos. O que recebes é exatamente o que a árvore fez."
+        "easter_egg_text_pt": "O fruto seca naturalmente no ramo. Sem agentes de maturação. Sem químicos. O que recebes é exatamente o que a árvore produziu."
       }
     },
     "baobab_quote": {
@@ -227,7 +227,7 @@
           "settings": {
             "text": "越恶劣的环境，越强的营养密度。这不是实验室的配方，是三千年自然选择的结果。",
             "text_en": "Harsher environment, denser nutrition. Not a formula — 3,000 years of natural selection.",
-            "text_pt": "Ambiente mais adverso, nutrição mais densa. Não é uma fórmula — 3.000 anos de seleção natural."
+            "text_pt": "Ambiente mais adverso, maior densidade nutricional. Não é uma fórmula — 3.000 anos de seleção natural."
           }
         },
         "bq_2": {
@@ -235,7 +235,7 @@
           "settings": {
             "text": "它不靠人工催熟，不靠化学干预。只是在赤道阳光下，沉默地生长。",
             "text_en": "No ripening agents. No sprays. It grows under the equatorial sun and figures out the rest.",
-            "text_pt": "Sem agentes de maturação. Sem sprays. Cresce ao sol equatorial e resolve o resto sozinha."
+            "text_pt": "Sem agentes de maturação. Sem pulverizações. Cresce ao sol equatorial e resolve o resto sozinha."
           }
         },
         "bq_3": {
@@ -269,7 +269,7 @@
             "title_pt": "Sem Irrigação",
             "description": "赤道干旱草原，年降水不足 500mm。\n猴面包树靠粗壮的树干储水数吨，\n独自扛过每一个旱季。",
             "description_en": "Equatorial dry savanna. Under 500mm of rain a year. The baobab stores tons of water in its trunk and outlasts every dry season.",
-            "description_pt": "Savana seca equatorial. Menos de 500mm de chuva por ano. O embondeiro armazena toneladas de água no tronco e sobrevive a cada estação seca."
+            "description_pt": "Savana seca equatorial. Menos de 500mm de chuva por ano. O imbondeiro armazena toneladas de água no tronco e sobrevive a cada estação seca."
           }
         },
         "wp_2": {
@@ -293,7 +293,7 @@
             "title_pt": "Sem Pesticidas",
             "description": "三千年的自然选择，\n让它进化出极强的自我防御能力。\n不需要化学保护，依然枝繁果茂。",
             "description_en": "3,000 years of evolution built its own defense system. No pesticides needed.",
-            "description_pt": "3.000 anos de evolução construíram o seu próprio sistema de defesa. Sem necessidade de pesticidas."
+            "description_pt": "3.000 anos de evolução deram-lhe o seu próprio sistema de defesa. Sem necessidade de pesticidas."
           }
         }
       },
@@ -337,7 +337,7 @@
             "title_pt": "02 Colheita Local",
             "description": "由非洲当地社区手工采集。\n采果不伐树。\n每一次采购，都在支持产地的可持续生计。",
             "description_en": "Hand-harvested by local African communities. Fruit picked. Trees untouched.",
-            "description_pt": "Colhida à mão pelas comunidades locais. Fruto apanhado. Árvores intocadas."
+            "description_pt": "Colheita manual pelas comunidades locais. Fruto apanhado. Árvores intocadas."
           }
         },
         "tb_3": {
@@ -349,7 +349,7 @@
             "title_pt": "03 Extração da Polpa",
             "description": "果实去壳后提取原浆，\n全程不添加糖、防腐剂或其他成分。\n你拿到的，就是果实本来的样子。",
             "description_en": "Shelled and extracted. No sugar, preservatives, or additives. What you get is the fruit.",
-            "description_pt": "Descascado e extraído. Sem açúcar, conservantes ou aditivos. O que recebes é o fruto."
+            "description_pt": "Retira-se a casca e extrai-se a polpa. Sem açúcar, conservantes ou aditivos. O que recebes é o fruto."
           }
         },
         "tb_4": {
@@ -361,7 +361,7 @@
             "title_pt": "04 Embalamento Final",
             "description": "Pouch 在安哥拉产地直接灌装，原产成品进口。\nShot 由安哥拉原浆运至越南完成玻璃瓶灌装。\n不同产品，同一棵树，同一份纯粹。",
             "description_en": "THE POUCH: filled at origin in Angola, imported as-is. THE SHOT: Angolan pulp, bottled in glass in Vietnam. Different products. Same tree.",
-            "description_pt": "THE POUCH: embalado na origem em Angola, importado como está. THE SHOT: polpa angolana, engarrafada em vidro no Vietname. Produtos diferentes. A mesma árvore."
+            "description_pt": "THE POUCH: embalado na origem em Angola, importado sem alterações. THE SHOT: polpa angolana, engarrafada em vidro no Vietname. Produtos diferentes. A mesma árvore."
           }
         }
       },

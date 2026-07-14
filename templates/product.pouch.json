@@ -46,7 +46,7 @@
             "icon": "truck",
             "content": "<p>保质期：12 个月（未开封）</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，7 天内食用完毕</p><p>0 防腐剂，开封后请尽快食用</p>",
             "content_en": "<p>Shelf life: 12 months (unopened)</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 7 days</p><p>Zero preservatives — consume promptly after opening</p>",
-            "content_pt": "<p>Validade: 12 meses (fechado)</p><p>Fechado: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente, consumir em 7 dias</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
+            "content_pt": "<p>Validade: 12 meses (por abrir)</p><p>Por abrir: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente e consumir em 7 dias</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
             "page": ""
           }
         },
@@ -59,7 +59,7 @@
             "icon": "heart",
             "content": "<p>搭配酸奶、燕麦、果昔等食用</p><p>每次用量：1-2 勺（约 20-30g）</p><p>挤到勺子或碗里，不建议对嘴吸</p>",
             "content_en": "<p>Pair with yogurt, oats, smoothies, etc.</p><p>Serving size: 1-2 spoonfuls (approx. 20-30g)</p><p>Squeeze onto a spoon or into a bowl — don't suck directly from the pouch</p>",
-            "content_pt": "<p>Combinar com iogurte, aveia, batidos, etc.</p><p>Porção: 1-2 colheres (aprox. 20-30g)</p><p>Espreme para uma colher ou tigela — não chupar diretamente da saqueta</p>",
+            "content_pt": "<p>Combina com iogurte, aveia, batidos, etc.</p><p>Porção: 1-2 colheres (aprox. 20-30g)</p><p>Espreme para uma colher ou tigela — não chupes diretamente da saqueta</p>",
             "page": ""
           }
         }
@@ -110,7 +110,7 @@
             "title_pt": "Bebidas DIY",
             "description": "兑水、兑气泡水、加蜂蜜、打果昔——怎么搭都行，你说了算。",
             "description_en": "Water, sparkling water, honey, smoothies. Your rules.",
-            "description_pt": "Água, água com gás, mel, smoothies. As tuas regras."
+            "description_pt": "Água, água com gás, mel, batidos. As tuas regras."
           }
         },
         "card-3": {
@@ -122,7 +122,7 @@
             "title_pt": "Nutrição Diária",
             "description": "469% VC + 42% 膳食纤维，每天一点点，肠道和气色都有感。",
             "description_en": "469% daily Vitamin C + 42% daily fiber per pouch. Your gut notices.",
-            "description_pt": "469% Vitamina C diária + 42% fibra diária por saqueta. O teu intestino nota."
+            "description_pt": "469% do valor diário de Vitamina C + 42% de fibra por saqueta. O teu intestino nota."
           }
         }
       },
@@ -216,7 +216,7 @@
             "label_pt": "Açúcar",
             "value": "2.3g（非游离糖，血糖友好）",
             "value_en": "2.3g (non-free sugars, blood sugar friendly)",
-            "value_pt": "2.3g (açúcares não livres, amigo da glicemia)",
+            "value_pt": "2.3g (açúcares não livres, compatíveis com a glicemia)",
             "value_2": "",
             "plain_text": "",
             "highlight": false
@@ -246,7 +246,7 @@
             "value_2": "",
             "plain_text": "配料表：猴面包树果浆。就这一项。",
             "plain_text_en": "Ingredients: baobab fruit pulp. That's it.",
-            "plain_text_pt": "Ingredientes: polpa de fruto de embondeiro. É tudo.",
+            "plain_text_pt": "Ingredientes: polpa de múcua. É tudo.",
             "highlight": false
           }
         }
@@ -303,7 +303,7 @@
             "title_pt": "Polpa + Água com Gás + Mel",
             "description": "兑 200ml 气泡水，加一点蜂蜜调味。自制“非洲版康普茶”，清爽开胃。",
             "description_en": "200ml sparkling water + a drizzle of honey. Homemade kombucha vibes.",
-            "description_pt": "200ml de água com gás + um fio de mel. Vibes de kombucha caseira."
+            "description_pt": "200ml de água com gás + um fio de mel. Ares de kombucha caseira."
           }
         },
         "card-3": {
@@ -327,7 +327,7 @@
             "title_pt": "Polpa + Banana + Leite",
             "description": "一袋果浆 + 一根香蕉 + 200ml 牛奶，搅拌机打 30 秒。浓稠、饱腹、好喝。",
             "description_en": "One pouch + one banana + 200ml milk. Blend 30 seconds.",
-            "description_pt": "Uma saqueta + uma banana + 200ml de leite. Bate 30 segundos."
+            "description_pt": "Uma saqueta + uma banana + 200ml de leite. Tritura durante 30 segundos."
           }
         }
       },
@@ -341,7 +341,7 @@
         "subtitle": "Recipes",
         "title": "几种我们喜欢的吃法",
         "title_en": "Ways we like it.",
-        "title_pt": "Formas que gostamos.",
+        "title_pt": "Como gostamos de a comer.",
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D",
         "columns_desktop": "4",
@@ -358,7 +358,7 @@
           "settings": {
             "text_paragraph": "比 Shot 更浓稠——Brix 12，接近果酱的质地。酸度更明显，果肉纤维感更强。",
             "text_paragraph_en": "Thicker than the Shot — Brix 12, almost jam consistency. Tarter, more textured.",
-            "text_paragraph_pt": "Mais espesso que o Shot — Brix 12, quase consistência de compota. Mais ácido, mais textura."
+            "text_paragraph_pt": "Mais espesso do que o Shot — Brix 12, quase com consistência de compota. Mais ácido, mais textura."
           }
         },
         "p2": {
@@ -366,7 +366,7 @@
           "settings": {
             "text_paragraph": "直接吃？可以，但会很酸。我们更建议搭配其他食材一起吃，让酸奶、蜂蜜、水果来帮它“交朋友”。",
             "text_paragraph_en": "You can eat it straight. It'll be tart. We'd pair it with yogurt, honey, or fruit.",
-            "text_paragraph_pt": "Podes comer puro. Será ácido. Nós combinamos com iogurte, mel ou fruta."
+            "text_paragraph_pt": "Podes comê-la pura. Será ácida. Preferimos combiná-la com iogurte, mel ou fruta."
           }
         },
         "p3": {
@@ -400,7 +400,7 @@
           "settings": {
             "text_paragraph": "未开封：常温阴凉处，保质期 12 个月。开封后：务必冷藏，7 天内吃完。",
             "text_paragraph_en": "Unopened: room temperature, 12 months. Opened: refrigerate, finish within 7 days.",
-            "text_paragraph_pt": "Fechado: temperatura ambiente, 12 meses. Aberto: refrigerar, consumir em 7 dias."
+            "text_paragraph_pt": "Por abrir: temperatura ambiente, 12 meses. Depois de aberto: refrigerar e consumir em 7 dias."
           }
         },
         "p2": {
@@ -408,7 +408,7 @@
           "settings": {
             "text_paragraph": "为什么这么严格？因为 0 防腐剂。没有添加任何延长保质期的东西。开封后就是和空气、细菌赛跑。",
             "text_paragraph_en": "Why strict? Zero preservatives. Once it's open, the clock starts.",
-            "text_paragraph_pt": "Porquê rigoroso? Zero conservantes. Assim que abre, o relógio começa."
+            "text_paragraph_pt": "Porquê tanto rigor? Zero conservantes. Assim que se abre, o relógio começa."
           }
         },
         "p3": {
@@ -442,10 +442,10 @@
           "settings": {
             "question": "和 Shot 有什么区别？",
             "question_en": "How is it different from the Shot?",
-            "question_pt": "Qual é a diferença do Shot?",
-            "answer": "浓度更高（Brix 12 vs 8.5），营养密度更高，但不建议直接喝——更适合搭配其他食材。Shot 是“急救”，Pouch 是“日常”。",
+            "question_pt": "Qual é a diferença em relação ao Shot?",
+            "answer": "浓度更高（Brix 12 vs 8.5），营养密度更高，但不建议直接喝——更适合搭配其他食材。Shot 是“回神”，Pouch 是“日常”。",
             "answer_en": "Higher concentration (Brix 12 vs 8.5), more nutrition per gram. The Shot is grab-and-go. The Pouch is mix-and-make.",
-            "answer_pt": "Maior concentração (Brix 12 vs 8.5), mais nutrição por grama. O Shot é pegar e beber. O Pouch é misturar e criar."
+            "answer_pt": "Maior concentração (Brix 12 vs 8.5), mais nutrição por grama. O Shot é para pegar e beber. O Pouch, para misturar e criar."
           }
         },
         "faq-2": {
@@ -456,7 +456,7 @@
             "question_pt": "As crianças podem comer?",
             "answer": "本品为普通食品，但酸度较高。建议兑水或拌酸奶后给孩子食用，观察接受度。",
             "answer_en": "It's food, not a supplement. It is quite tart — try mixing with yogurt for kids first.",
-            "answer_pt": "É comida, não um suplemento. É bastante ácido — experimenta misturar com iogurte para crianças."
+            "answer_pt": "É comida, não um suplemento. É bastante ácida — experimenta misturá-la com iogurte antes de a dar às crianças."
           }
         },
         "faq-3": {
@@ -467,7 +467,7 @@
             "question_pt": "Quantas porções tem uma saqueta de 100g?",
             "answer": "如果每次拌酸奶用 1-2 勺（约 20-30g），一袋大概 3-5 次。打果昔的话，一次可能就用完了。",
             "answer_en": "With yogurt (20-30g per serving): 3-5 times. In a smoothie: probably all at once.",
-            "answer_pt": "Com iogurte (20-30g por porção): 3-5 vezes. Num smoothie: provavelmente tudo de uma vez."
+            "answer_pt": "Com iogurte (20-30g por porção): 3-5 vezes. Num batido: provavelmente tudo de uma vez."
           }
         },
         "faq-4": {
@@ -508,9 +508,9 @@
             "name_cn_pt": "Shot de Polpa de Múcua",
             "name_en": "The Shot",
             "packshot_asset": "fruttita-packshot-shot.png",
-            "tagline": "赶时间？50ml 一口闷，高浓缩急救装。",
+            "tagline": "赶时间？50ml 一口闷，高浓缩回神装。",
             "tagline_en": "50ml, one gulp. When you need it fast.",
-            "tagline_pt": "50ml, um gole. Quando precisas rápido.",
+            "tagline_pt": "50ml, um gole. Quando precisas, sem demora.",
             "link": "/products/the-baobab-pulp-shot",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
@@ -527,7 +527,7 @@
             "packshot_asset": "fruttita-packshot-water.png",
             "tagline": "想轻松补水？一瓶水的口感，一整天的天然电解质。",
             "tagline_en": "Drinks like water. Delivers more than you'd think.",
-            "tagline_pt": "Bebe-se como água. Entrega mais do que pensas.",
+            "tagline_pt": "Bebe-se como água. Dá-te mais do que pensas.",
             "link": "/products/the-baobab-water",
             "link_text": "了解更多",
             "link_text_en": "Learn more",

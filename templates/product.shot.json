@@ -46,7 +46,7 @@
             "icon": "truck",
             "content": "<p>保质期：9 个月</p><p>未开封：常温阴凉处保存</p><p>开封后：建议尽快饮用</p><p>冷藏后风味更佳</p>",
             "content_en": "<p>Shelf life: 9 months</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: consume as soon as possible</p><p>Tastes better chilled</p>",
-            "content_pt": "<p>Validade: 9 meses</p><p>Fechado: conservar à temperatura ambiente num local fresco</p><p>Após abrir: consumir o mais rapidamente possível</p><p>Melhor sabor refrigerado</p>",
+            "content_pt": "<p>Validade: 9 meses</p><p>Por abrir: conservar à temperatura ambiente num local fresco</p><p>Após abrir: consumir o mais rapidamente possível</p><p>Sabe melhor refrigerado</p>",
             "page": ""
           }
         },
@@ -59,7 +59,7 @@
             "icon": "heart",
             "content": "<p>每日 1 瓶，摇匀后饮用</p><p>建议时间：早起空腹 / 熬夜后 / 大餐后</p><p>建议温度：冷藏后风味更佳</p>",
             "content_en": "<p>1 bottle daily, shake well before drinking</p><p>Recommended timing: morning on empty stomach / after a late night / after a big meal</p><p>Recommended temperature: tastes better chilled</p>",
-            "content_pt": "<p>1 garrafa por dia, agitar bem antes de beber</p><p>Momento recomendado: de manhã em jejum / depois de uma noite longa / depois de uma grande refeição</p><p>Temperatura recomendada: melhor sabor refrigerado</p>",
+            "content_pt": "<p>1 garrafa por dia, agitar bem antes de beber</p><p>Momento recomendado: de manhã em jejum / depois de uma noite longa / depois de uma grande refeição</p><p>Temperatura recomendada: sabe melhor refrigerado</p>",
             "page": ""
           }
         }
@@ -96,7 +96,7 @@
             "title": "熬夜之后",
             "title_en": "After a Late Night",
             "title_pt": "Depois de Uma Noite Longa",
-            "description": "昨晚又没忍住？早起脸肿 + 脸黄是标配。这一瓶，补钾排钠 + 高 VC 抗氧化，帮身体快速找回状态。",
+            "description": "昨晚的事不追究了。让钾和 VC 收拾残局。",
             "description_en": "Puffy face, tired skin. Potassium flushes sodium. Vitamin C does the rest.",
             "description_pt": "Cara inchada, pele cansada. O potássio elimina o sódio. A Vitamina C faz o resto."
           }
@@ -108,7 +108,7 @@
             "title": "重要场合之前",
             "title_en": "Before Something Important",
             "title_pt": "Antes de Algo Importante",
-            "description": "见客户、拍证件照、约会前一晚，来一瓶做个“内在急救”。",
+            "description": "见客户、拍照、约会之前，提前给状态打个底。",
             "description_en": "Meeting, photo day, date night. Think of it as a pre-game.",
             "description_pt": "Reunião, dia de fotos, encontro. Pensa nisto como preparação."
           }
@@ -120,7 +120,7 @@
             "title": "大餐之后",
             "title_en": "After a Heavy Meal",
             "title_pt": "Depois de Uma Refeição Pesada",
-            "description": "火锅、烧烤、高钠重口之后，用 0 钠高钾帮身体减减负。",
+            "description": "火锅烧烤之后，让身体轻一点。",
             "description_en": "High-sodium dinner? Zero sodium + high potassium. Let your body recalibrate.",
             "description_pt": "Jantar rico em sódio? Zero sódio + alto potássio. Deixa o corpo recalibrar."
           }
@@ -168,7 +168,7 @@
             "value_2": "≈269mg",
             "plain_text": "钾含量 > 一根香蕉的一半",
             "plain_text_en": "More potassium than half a banana",
-            "plain_text_pt": "Mais potássio que meia banana",
+            "plain_text_pt": "Mais potássio do que meia banana",
             "highlight": true
           }
         },
@@ -330,7 +330,7 @@
       ],
       "settings": {
         "subtitle": "The Truth",
-        "title": "都说椰子水消肿，我们比了比。",
+        "title": "椰子水有钠。我们没有。",
         "title_en": "Coconut water has sodium. We don't.",
         "title_pt": "A água de coco tem sódio. Nós não.",
         "bg_color": "#3A2015",
@@ -340,7 +340,7 @@
         "conclusion_pt": "A água de coco fornece potássio — com 50-105mg de sódio. Sódio é sal. O sal retém líquidos. Sódio Fruttita: 0mg. Não é \"baixo\" — não detetado.",
         "source_note": "椰子水数据区间基于 USDA 理论值及中国市售产品公开营养成分表",
         "source_note_en": "Coconut water data: USDA reference values and publicly available nutrition labels.",
-        "source_note_pt": "Dados água de coco: valores de referência USDA e rótulos nutricionais públicos."
+        "source_note_pt": "Dados da água de coco: valores de referência USDA e rótulos nutricionais públicos."
       }
     },
     "prose-taste": {
@@ -359,7 +359,7 @@
           "settings": {
             "text_paragraph": "第二口：有点涩。那是 586mg/100ml 天然多酚。比 VC 更稳定的抗氧化物质。",
             "text_paragraph_en": "Second sip: a bit astringent. That's 586mg/100ml of polyphenols — a more stable antioxidant than Vitamin C.",
-            "text_paragraph_pt": "Segundo gole: um pouco adstringente. São 586mg/100ml de polifenóis — um antioxidante mais estável que a Vitamina C."
+            "text_paragraph_pt": "Segundo gole: um pouco adstringente. São 586mg/100ml de polifenóis — um antioxidante mais estável do que a Vitamina C."
           }
         },
         "p3": {
@@ -418,7 +418,7 @@
           "settings": {
             "text_paragraph": "建议温度：冷藏后风味更佳 · 每日用量：不超过 1 瓶",
             "text_paragraph_en": "Better chilled. One bottle per day max.",
-            "text_paragraph_pt": "Melhor refrigerado. Máximo uma garrafa por dia."
+            "text_paragraph_pt": "Melhor refrigerado. No máximo, uma garrafa por dia."
           }
         }
       },
@@ -447,7 +447,7 @@
             "question_pt": "Porque é tão ácido? Estragou-se?",
             "answer": "不是。这是 100% 原浆，0 添加糖。酸味来自天然维生素 C 和多酚，是活性营养的证据。",
             "answer_en": "No. It's 100% pulp with zero added sugar. The tartness is natural Vitamin C and polyphenols doing their thing.",
-            "answer_pt": "Não. É 100% polpa com zero açúcar adicionado. A acidez é Vitamina C natural e polifenóis a fazer o seu trabalho."
+            "answer_pt": "Não. É 100% polpa sem açúcar adicionado. A acidez vem da Vitamina C natural e dos polifenóis."
           }
         },
         "faq-2": {
@@ -512,7 +512,7 @@
             "name_cn_pt": "Polpa Pura de Múcua",
             "tagline": "想日常搭配着吃？一袋纯果浆，N 种打开方式。",
             "tagline_en": "Pure pulp, your way. Mix into yogurt, smoothies, oats — anything.",
-            "tagline_pt": "Polpa pura, à tua maneira. Mistura com iogurte, smoothies, aveia — o que quiseres.",
+            "tagline_pt": "Polpa pura, à tua maneira. Mistura com iogurte, batidos ou aveia — com o que quiseres.",
             "link": "/products/the-baobab-pulp-pouch",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
@@ -529,7 +529,7 @@
             "name_cn_pt": "Água de Múcua",
             "tagline": "想轻松补水？一瓶水的口感，一整天的天然电解质。",
             "tagline_en": "Drinks like water. Delivers more than you'd think.",
-            "tagline_pt": "Bebe-se como água. Entrega mais do que pensas.",
+            "tagline_pt": "Bebe-se como água. Dá-te mais do que pensas.",
             "link": "/products/the-baobab-water",
             "link_text": "了解更多",
             "link_text_en": "Learn more",

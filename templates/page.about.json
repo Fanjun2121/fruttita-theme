@@ -18,8 +18,8 @@
         "subtitle_en": "OUR STORY",
         "subtitle_pt": "A NOSSA HISTÓRIA",
         "title": "给身体，一份来自旷野的留白。",
-        "title_en": "From the wild. For everyday.",
-        "title_pt": "Da natureza. Para o dia a dia.",
+        "title_en": "Room to breathe. From the wild.",
+        "title_pt": "Espaço para respirar. Vindo da natureza.",
         "text_color": "#F4E3C9",
         "height": "80vh"
       }
@@ -32,7 +32,7 @@
           "settings": {
             "text_paragraph": "在非洲热带草原的深处，伫立着一种古老的植物——猴面包树。",
             "text_paragraph_en": "In the African savanna, there's a tree that's been standing for 3,000 years. The baobab.",
-            "text_paragraph_pt": "Na savana africana, existe uma árvore de pé há 3.000 anos. O embondeiro."
+            "text_paragraph_pt": "Na savana africana, existe uma árvore de pé há 3.000 anos. O imbondeiro."
           }
         },
         "m_p2": {
@@ -64,15 +64,15 @@
           "settings": {
             "text_paragraph": "而身处现代都市的我们，生活被精加工的食物、嘈杂的信息和无形的压力填满。",
             "text_paragraph_en": "Meanwhile, we fill our days with ultra-processed food, screen fatigue, and stress we barely notice.",
-            "text_paragraph_pt": "Entretanto, enchemos os nossos dias com comida ultraprocessada, fadiga de ecrã e stress que mal notamos."
+            "text_paragraph_pt": "Entretanto, enchemos os nossos dias com alimentos ultraprocessados, fadiga de ecrã e stress que mal notamos."
           }
         },
         "m_p6": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "我们像上了发条的钟表，追逐效率，却常常忘记了身体最本能的渴望。",
+            "text_paragraph": "我们什么都在优化，唯独忘了吃进身体的东西。",
             "text_paragraph_en": "We optimize everything except what we put in our bodies.",
-            "text_paragraph_pt": "Otimizamos tudo exceto o que pomos no corpo."
+            "text_paragraph_pt": "Otimizamos tudo, menos o que pomos no corpo."
           }
         },
         "m_p7": {
@@ -106,9 +106,9 @@
         "subtitle": "Brand Manifesto",
         "subtitle_en": "Brand Manifesto",
         "subtitle_pt": "Manifesto da Marca",
-        "title": "品牌宣言",
-        "title_en": "Our Manifesto",
-        "title_pt": "O Nosso Manifesto",
+        "title": "我们为什么做这件事",
+        "title_en": "Why we bother",
+        "title_pt": "Porquê tudo isto",
         "bg_color": "#F9F1E6",
         "text_color": "#4F2C1D"
       }
@@ -157,7 +157,7 @@
             "subtitle_pt": "WILD",
             "body": "高钾。高 VC。高纤维。\n\n猴面包树在非洲旷野活了三千年，不施肥，不浇水，不依赖任何人。\n\n它的营养密度，不是实验室调配出来的，是大自然自己长出来的。\n\n420mg+ 维生素 C。380mg+ 钾。10g+ 膳食纤维。828mg 总多酚。\n\n这些数字不是我们设计的。是旷野给的。",
             "body_en": "High potassium. High Vitamin C. High fiber.\n\nThe baobab has survived in the African wild for 3,000 years. No fertilizer. No irrigation. No help from anyone.\n\nIts nutrition wasn't formulated. It evolved.\n\n420mg+ Vitamin C. 380mg+ Potassium. 10g+ Fiber. 828mg Polyphenols.\n\nWe didn't design these numbers. The tree did.",
-            "body_pt": "Rico em potássio. Rico em Vitamina C. Rico em fibra.\n\nO embondeiro sobrevive na natureza africana há 3.000 anos. Sem fertilizantes. Sem irrigação. Sem ajuda de ninguém.\n\nA sua nutrição não foi formulada. Evoluiu.\n\n420mg+ Vitamina C. 380mg+ Potássio. 10g+ Fibra. 828mg Polifenóis.\n\nNão desenhámos estes números. A árvore é que os fez.",
+            "body_pt": "Rico em potássio. Rico em Vitamina C. Rico em fibra.\n\nO imbondeiro sobrevive na natureza africana há 3.000 anos. Sem fertilizantes. Sem irrigação. Sem ajuda de ninguém.\n\nA sua composição nutricional não foi formulada. Evoluiu.\n\n420mg+ Vitamina C. 380mg+ Potássio. 10g+ Fibra. 828mg Polifenóis.\n\nNão definimos estes números. Foi a árvore.",
             "bg_color": "#4F2C1D",
             "text_color": "#F4E3C9"
           }
@@ -185,7 +185,7 @@
           "settings": {
             "text_paragraph": "Well-being 是你自己的节奏。是忙碌之后给身体一点喘息，是消耗过度之后的一次温和回血。",
             "text_paragraph_en": "It's your rhythm. A pause after the grind. A quiet reset when you're running low.",
-            "text_paragraph_pt": "É o teu ritmo. Uma pausa depois da correria. Um reset silencioso quando estás a ficar sem energia."
+            "text_paragraph_pt": "É o teu ritmo. Uma pausa depois da correria. Um recomeço tranquilo quando estás a ficar sem energia."
           }
         },
         "wb_p3": {
@@ -246,7 +246,7 @@
             "title_pt": "Transparência de Dados",
             "body": "所有营养数据来自第三方实验室（SGS / Eurofins）检测。我们公开报告，不编故事。",
             "body_en": "All nutrition data from third-party labs (SGS / Eurofins). We publish the reports, not stories.",
-            "body_pt": "Todos os dados nutricionais vêm de laboratórios terceiros (SGS / Eurofins). Publicamos relatórios, não histórias."
+            "body_pt": "Todos os dados nutricionais vêm de laboratórios independentes (SGS / Eurofins). Publicamos relatórios, não histórias."
           }
         },
         "pm_3": {
@@ -258,7 +258,7 @@
             "title_pt": "Fornecimento Sustentável",
             "body": "猴面包树果实由非洲当地社区采摘。采果不伐树，果实自然成熟脱落。每一次购买，都在支持产地的可持续生计。",
             "body_en": "Baobab fruit is hand-harvested by local African communities. We pick the fruit. We never cut the tree.",
-            "body_pt": "A fruta do embondeiro é colhida à mão pelas comunidades locais. Colhemos o fruto. Nunca cortamos a árvore."
+            "body_pt": "A múcua é colhida à mão pelas comunidades locais. Colhemos o fruto. Nunca cortamos a árvore."
           }
         },
         "pm_4": {
@@ -267,7 +267,7 @@
             "icon": "shield",
             "title": "合规底线",
             "title_en": "Compliance First",
-            "title_pt": "Conformidade Primeiro",
+            "title_pt": "Conformidade em Primeiro Lugar",
             "body": "不做医疗宣称。不用违规词汇。不说我们做不到的事。",
             "body_en": "No medical claims. No misleading language. We never promise what we can't deliver.",
             "body_pt": "Sem alegações médicas. Sem linguagem enganosa. Nunca prometemos o que não podemos cumprir."

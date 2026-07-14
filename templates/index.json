@@ -149,9 +149,9 @@
             "title": "熬夜后，不想肿成馒头",
             "title_en": "Late night. No puffiness.",
             "title_pt": "Noite longa. Sem inchaço.",
-            "description": "0 钠 + 380mg 高钾。\n钠会锁水，钾帮排水。\n这不是玄学，是电解质平衡。\n\n市面上 99% 的补水饮品都含钠，\n我们是那个例外。",
-            "description_en": "0 sodium + 380mg potassium per 100g.\nSodium holds water. Potassium doesn't.\n\n99% of hydration drinks have sodium. This one has none.",
-            "description_pt": "0 sódio + 380mg de potássio por 100g.\nO sódio retém líquidos. O potássio não.\n\n99% das bebidas de hidratação têm sódio. Esta não tem."
+            "description": "0 钠，380mg 钾。\n99% 的补水饮品都含钠——\n我们是那个例外。",
+            "description_en": "0 sodium, 380mg potassium.\n99% of hydration drinks have sodium.\nThis one has none.",
+            "description_pt": "0 sódio, 380mg de potássio.\n99% das bebidas de hidratação têm sódio.\nEsta não tem nenhum."
           }
         },
         "vp_2": {
@@ -161,9 +161,9 @@
             "title": "熬完夜，也想有个好气色",
             "title_en": "Bad sleep. Still glowing.",
             "title_pt": "Dormiste mal. Continuas a brilhar.",
-            "description": "200% NRV 天然维生素 C。\n对抗氧化压力，改善暗沉。\n\n脸色这件事，VC 说了算。\n好气色，从内到外。",
-            "description_en": "200% daily value of natural Vitamin C.\nThe kind your skin actually uses.\n\nNot synthetic. Not from a tablet. From a fruit.",
-            "description_pt": "200% do valor diário de Vitamina C natural.\nO tipo que a tua pele realmente usa.\n\nNão é sintética. Não é de um comprimido. É de um fruto."
+            "description": "200% NRV 天然维生素 C。\n改善暗沉，好气色从内到外。",
+            "description_en": "200% daily value of natural Vitamin C.\nThe kind your skin actually uses.",
+            "description_pt": "200% do valor diário de Vitamina C natural.\nO tipo que a tua pele realmente usa."
           }
         },
         "vp_3": {
@@ -173,9 +173,9 @@
             "title": "只想喝点干净的东西",
             "title_en": "Read the whole label. Done.",
             "title_pt": "Lê o rótulo inteiro. Já está.",
-            "description": "配料表一眼就能读完：\n猴面包树果浆。\n\n没有你不认识的字。\n没有你不需要的添加。\n只有你要的，没有你不要的。",
-            "description_en": "Ingredients: baobab fruit pulp.\n\nThat's the entire list. We'd add more, but there isn't more.",
-            "description_pt": "Ingredientes: polpa de fruto de embondeiro.\n\nÉ a lista completa. Adicionaríamos mais, mas não há mais."
+            "description": "配料表只有一项：猴面包树果浆。\n只有你要的，没有你不要的。",
+            "description_en": "Ingredients: baobab fruit pulp.\nThat's the entire list.",
+            "description_pt": "Ingredientes: polpa de múcua.\nÉ a lista completa."
           }
         }
       },
@@ -185,9 +185,9 @@
         "vp_3"
       ],
       "settings": {
-        "title": "猴面包树是什么，一会儿再说。先聊聊你更在意的——",
-        "title_en": "Before we explain the tree — here's what it does for you.",
-        "title_pt": "Antes de explicar a árvore — eis o que ela faz por ti.",
+        "title": "先不聊树，聊聊你自己。",
+        "title_en": "The tree can wait. You first.",
+        "title_pt": "A árvore pode esperar. Primeiro tu.",
         "bg_color": "#4F2C1D",
         "text_color": "#F4E3C9",
         "card_bg": "#F4E3C9"
@@ -203,15 +203,15 @@
             "name_en": "THE SHOT",
             "name_cn_en": "Baobab Pulp Shot",
             "name_cn_pt": "Shot de Polpa de Múcua",
-            "tagline": "一口闷的急救搭档。\n酸到清醒，有效到服气。",
+            "tagline": "一口闷的回神搭档。\n酸到清醒，有效到服气。",
             "tagline_en": "50ml of pure pulp.\nTart. Potent. Over before you blink.",
             "tagline_pt": "50ml de polpa pura.\nÁcido. Potente. Acaba antes de pestanejar.",
-            "scenarios": "熬夜后, 早起急救, 加班续命, 宿醉第二天",
+            "scenarios": "熬夜后, 早起回神, 加班续命, 宿醉第二天",
             "scenarios_en": "Post-late night, Morning reset, Overtime fuel, Hangover protocol",
-            "scenarios_pt": "Pós-noitada, Reset matinal, Combustível extra, Protocolo ressaca",
+            "scenarios_pt": "Pós-noitada, Recomeço matinal, Combustível para horas extra, Protocolo pós-ressaca",
             "specs": "0钠 | 200% VC | 高钾 311mg",
-            "specs_en": "0 Sodium | 200% VC | Potassium 311mg",
-            "specs_pt": "0 Sódio | 200% VC | Potássio 311mg",
+            "specs_en": "0 Sodium | 200% Vitamin C | Potassium 311mg",
+            "specs_pt": "0 Sódio | 200% Vitamina C | Potássio 311mg",
             "link": "/products/the-baobab-pulp-shot",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
@@ -228,13 +228,13 @@
             "name_cn_pt": "Polpa Pura de Múcua",
             "tagline": "你的百搭调饮基底。\n兑什么像什么，就是更有营养。",
             "tagline_en": "100g of pure pulp. Mix it into anything.\nYogurt, smoothies, oats — your call.",
-            "tagline_pt": "100g de polpa pura. Mistura com o que quiseres.\nIogurte, smoothies, aveia — tu decides.",
+            "tagline_pt": "100g de polpa pura. Mistura com o que quiseres.\nIogurte, batidos, aveia — tu decides.",
             "scenarios": "拌酸奶, 兑气泡水, 加入果昔, 拌燕麦",
             "scenarios_en": "Yogurt topping, Sparkling water mix, Smoothie base, Oatmeal boost",
-            "scenarios_pt": "Topping de iogurte, Mistura com água com gás, Base de smoothie, Boost de aveia",
+            "scenarios_pt": "Iogurte, Mistura com água com gás, Base para batidos, Reforço de aveia",
             "specs": "469% VC | 42% 膳食纤维 | 100% 纯果浆",
-            "specs_en": "469% VC | 42% Fiber | 100% Pure Pulp",
-            "specs_pt": "469% VC | 42% Fibra | 100% Polpa Pura",
+            "specs_en": "469% Vitamin C | 42% Fiber | 100% Pure Pulp",
+            "specs_pt": "469% Vitamina C | 42% Fibra | 100% Polpa Pura",
             "link": "/products/the-baobab-pulp-pouch",
             "link_text": "了解更多",
             "link_text_en": "Learn more",
@@ -254,7 +254,7 @@
             "tagline_pt": "Hidratação que não é só água.\nMas quase tão simples como água.",
             "scenarios": "通勤, 健身, 办公室, 日常饮水",
             "scenarios_en": "Commute, Workout, Desk, Anytime",
-            "scenarios_pt": "Viagem, Treino, Secretária, A qualquer hora",
+            "scenarios_pt": "Deslocações, Treino, À secretária, A qualquer hora",
             "specs": "0糖 | 0脂 | 0钠 | 0卡",
             "specs_en": "0 Sugar | 0 Fat | 0 Sodium | 0 Cal",
             "specs_pt": "0 Açúcar | 0 Gordura | 0 Sódio | 0 Cal",
@@ -292,7 +292,7 @@
             "label_en": "Vitamin C",
             "label_pt": "Vitamina C",
             "value": "420mg+",
-            "description": "去黄气的主力。相当于 6 个橙子。",
+            "description": "提亮气色的主力。相当于 6 个橙子。",
             "description_en": "About 6 oranges worth.",
             "description_pt": "Equivalente a 6 laranjas.",
             "bar_pct": 95
@@ -305,7 +305,7 @@
             "label_en": "Potassium",
             "label_pt": "Potássio",
             "value": "380mg+",
-            "description": "物理消肿。平衡体内多余的钠。",
+            "description": "帮身体放掉多余的钠。",
             "description_en": "Sodium holds water. Potassium lets it go.",
             "description_pt": "O sódio retém líquidos. O potássio liberta-os.",
             "bar_pct": 85
@@ -318,7 +318,7 @@
             "label_en": "Dietary Fiber",
             "label_pt": "Fibra Alimentar",
             "value": "10g+",
-            "description": "肠道清道夫。相当于 4 个苹果。",
+            "description": "相当于 4 个苹果。",
             "description_en": "About 4 apples worth.",
             "description_pt": "Equivalente a 4 maçãs.",
             "bar_pct": 78
@@ -389,10 +389,10 @@
         "easter_egg_title_pt": "Polifenóis Totais 828mg / 100g",
         "easter_egg_text": "比 VC 更稳的抗氧化剂。酸涩口感的真正来源——也是深层对抗氧化压力的隐藏王牌。",
         "easter_egg_text_en": "More stable than Vitamin C as an antioxidant. Where that tart, tangy bite comes from — and a quietly powerful defense against oxidative stress.",
-        "easter_egg_text_pt": "Mais estável que a Vitamina C como antioxidante. De onde vem aquele travo ácido — e uma defesa silenciosa contra o stress oxidativo.",
+        "easter_egg_text_pt": "Mais estável do que a Vitamina C como antioxidante. De onde vem aquele travo ácido — e uma defesa silenciosa contra o stress oxidativo.",
         "toggle_open_text": "还有一项你可能不知道",
         "toggle_open_text_en": "There's one more",
-        "toggle_open_text_pt": "Há mais um",
+        "toggle_open_text_pt": "Há mais uma coisa",
         "toggle_close_text": "收起",
         "toggle_close_text_en": "Collapse",
         "toggle_close_text_pt": "Recolher"
@@ -420,7 +420,7 @@
         "comp_k": {
           "type": "metric",
           "settings": {
-            "label": "钾（消肿动力）",
+            "label": "钾（轻盈动力）",
             "label_en": "Potassium",
             "label_pt": "Potássio",
             "comp_value": "~200mg",
@@ -493,17 +493,17 @@
         "subtitle": "The Truth",
         "subtitle_en": "The Truth",
         "subtitle_pt": "A Verdade",
-        "title": "都说椰子水消肿，我们比了比钠含量。",
+        "title": "椰子水有钠。我们没有。",
         "title_en": "Coconut water has sodium. We don't.",
         "title_pt": "A água de coco tem sódio. Nós não.",
         "bg_color": "#F4E3C9",
         "text_color": "#4F2C1D",
         "conclusion": "椰子水补钾的同时，也补了 100 多毫克的钠。钠就是盐，盐会锁水。轻不轻盈，钠含量是个关键指标。",
         "conclusion_en": "Coconut water delivers potassium — with 100+ mg of sodium riding along. If you're trying to de-bloat, that's worth a second look.",
-        "conclusion_pt": "A água de coco fornece potássio — com 100+ mg de sódio a tiracolo. Se queres deshinchar, vale a pena pensar duas vezes.",
+        "conclusion_pt": "A água de coco fornece potássio — com mais de 100 mg de sódio a tiracolo. Se queres desinchar, vale a pena pensar duas vezes.",
         "source_note": "Fruttita 数据源自 Eurofins/SGS 实验室检测报告。椰子水数据参考市售主流 100% 椰子水品牌平均营养成分。",
         "source_note_en": "Fruttita data from Eurofins/SGS lab reports. Coconut water data based on average nutrition of leading 100% coconut water brands.",
-        "source_note_pt": "Dados Fruttita de relatórios laboratoriais Eurofins/SGS. Dados da água de coco baseados na média nutricional das principais marcas de 100% água de coco.",
+        "source_note_pt": "Dados da Fruttita provenientes de relatórios laboratoriais Eurofins/SGS. Dados da água de coco baseados na média nutricional das principais marcas de água de coco 100% pura.",
         "header_label": "指标",
         "header_label_en": "Metric",
         "header_label_pt": "Indicador",
@@ -607,8 +607,8 @@
       "type": "fruttita-subscribe",
       "settings": {
         "title": "关注我们，偶尔聊点有用的。",
-        "title_en": "Stay in the loop.",
-        "title_pt": "Fica a par.",
+        "title_en": "Occasionally useful emails.",
+        "title_pt": "Emails ocasionalmente úteis.",
         "subtitle": "不群发垃圾邮件。只在有值得说的事情时才打扰你。",
         "subtitle_en": "No spam. We email when we actually have something to say.",
         "subtitle_pt": "Sem spam. Só escrevemos quando temos algo para dizer.",
@@ -622,7 +622,7 @@
         "btn_text_pt": "Subscrever",
         "success_text": "感谢订阅！我们会偶尔聊点有用的。",
         "success_text_en": "You're in. We'll keep it worth your time.",
-        "success_text_pt": "Estás dentro. Prometemos valer o teu tempo."
+        "success_text_pt": "Estás dentro. Prometemos não te fazer perder tempo."
       }
     }
   },
