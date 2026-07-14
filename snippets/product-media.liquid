@@ -5,6 +5,7 @@
   - media: {Object} Product Media object
   - loop: {Boolean} Enable video looping (optional)
   - variant_image: {Boolean} Whether or not media is associated with a variant
+  - fruttita_packshot_url: {String} Asset URL that replaces this image media (optional)
 
   Usage:
   {% render 'product-media',
@@ -15,27 +16,42 @@
 {% endcomment %}
 
 {%- if media.media_type == 'image' -%}
-  <img
-    class="global-media-settings global-media-settings--no-shadow{% if variant_image %} product__media-item--variant{% endif %}"
-    srcset="
-      {%- if media.preview_image.width >= 550 -%}{{ media.preview_image | image_url: width: 550 }} 550w,{%- endif -%}
-      {%- if media.preview_image.width >= 1100 -%}{{ media.preview_image | image_url: width: 1100 }} 1100w,{%- endif -%}
-      {%- if media.preview_image.width >= 1445 -%}{{ media.preview_image | image_url: width: 1445 }} 1445w,{%- endif -%}
-      {%- if media.preview_image.width >= 1680 -%}{{ media.preview_image | image_url: width: 1680 }} 1680w,{%- endif -%}
-      {%- if media.preview_image.width >= 2048 -%}{{ media.preview_image | image_url: width: 2048 }} 2048w,{%- endif -%}
-      {%- if media.preview_image.width >= 2200 -%}{{ media.preview_image | image_url: width: 2200 }} 2200w,{%- endif -%}
-      {%- if media.preview_image.width >= 2890 -%}{{ media.preview_image | image_url: width: 2890 }} 2890w,{%- endif -%}
-      {%- if media.preview_image.width >= 4096 -%}{{ media.preview_image | image_url: width: 4096 }} 4096w,{%- endif -%}
-      {{ media.preview_image | image_url }} {{ media.preview_image.width }}w
-    "
-    sizes="(min-width: 750px) calc(100vw - 22rem), 1100px"
-    src="{{ media.preview_image | image_url: width: 1445 }}"
-    alt="{{ media.alt | escape }}"
-    loading="lazy"
-    width="1100"
-    height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-    data-media-id="{{ media.id }}"
-  >
+  {%- if fruttita_packshot_url != blank -%}
+    {% comment %}theme-check-disable RemoteAsset{% endcomment %}
+    <img
+      class="global-media-settings global-media-settings--no-shadow{% if variant_image %} product__media-item--variant{% endif %}"
+      src="{{ fruttita_packshot_url }}"
+      alt="{{ media.alt | default: product.title | escape }}"
+      loading="lazy"
+      width="1200"
+      height="1200"
+      data-media-id="{{ media.id }}"
+      style="object-fit: cover;"
+    >
+    {% comment %}theme-check-enable RemoteAsset{% endcomment %}
+  {%- else -%}
+    <img
+      class="global-media-settings global-media-settings--no-shadow{% if variant_image %} product__media-item--variant{% endif %}"
+      srcset="
+        {%- if media.preview_image.width >= 550 -%}{{ media.preview_image | image_url: width: 550 }} 550w,{%- endif -%}
+        {%- if media.preview_image.width >= 1100 -%}{{ media.preview_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+        {%- if media.preview_image.width >= 1445 -%}{{ media.preview_image | image_url: width: 1445 }} 1445w,{%- endif -%}
+        {%- if media.preview_image.width >= 1680 -%}{{ media.preview_image | image_url: width: 1680 }} 1680w,{%- endif -%}
+        {%- if media.preview_image.width >= 2048 -%}{{ media.preview_image | image_url: width: 2048 }} 2048w,{%- endif -%}
+        {%- if media.preview_image.width >= 2200 -%}{{ media.preview_image | image_url: width: 2200 }} 2200w,{%- endif -%}
+        {%- if media.preview_image.width >= 2890 -%}{{ media.preview_image | image_url: width: 2890 }} 2890w,{%- endif -%}
+        {%- if media.preview_image.width >= 4096 -%}{{ media.preview_image | image_url: width: 4096 }} 4096w,{%- endif -%}
+        {{ media.preview_image | image_url }} {{ media.preview_image.width }}w
+      "
+      sizes="(min-width: 750px) calc(100vw - 22rem), 1100px"
+      src="{{ media.preview_image | image_url: width: 1445 }}"
+      alt="{{ media.alt | escape }}"
+      loading="lazy"
+      width="1100"
+      height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+      data-media-id="{{ media.id }}"
+    >
+  {%- endif -%}
 {%- else -%}
   {%- if media.media_type == 'model' -%}
     <div class="product-media-modal__model" data-media-id="{{ media.id }}">

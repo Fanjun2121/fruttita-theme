@@ -158,6 +158,8 @@
         <div class="cs-card-{{ section.id }}" {{ block.shopify_attributes }} style="transition-delay: {{ forloop.index0 | times: 150 }}ms;">
           {% if block.settings.image != blank %}
             <img class="cs-card-img-{{ section.id }}" src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.name_cn }}" loading="lazy" width="600" height="{{ 600 | divided_by: block.settings.image.aspect_ratio | ceil }}">
+          {% elsif block.settings.packshot_asset != blank %}
+            <img class="cs-card-img-{{ section.id }}" src="{{ block.settings.packshot_asset | asset_url }}" alt="{{ block.settings.name_cn }}" loading="lazy" width="600" height="600">
           {% endif %}
           <div class="cs-card-body-{{ section.id }}">
             <div class="cs-card-name-cn-{{ section.id }}">{% render 'i18n-text', default: block.settings.name_cn, en: block.settings.name_cn_en, pt: block.settings.name_cn_pt %}</div>
@@ -246,6 +248,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "packshot_asset",
+          "label": "Packshot Asset Filename (fallback)",
+          "info": "Theme asset filename used when no Product Image is picked, e.g. fruttita-packshot-shot.png"
         },
         {
           "type": "text",

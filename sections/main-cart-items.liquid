@@ -79,6 +79,10 @@
 
               <tbody>
                 {%- for item in cart.items -%}
+                  {%- capture fruttita_packshot_url -%}
+                    {%- render 'fruttita-packshot', handle: item.product.handle -%}
+                  {%- endcapture -%}
+                  {%- assign fruttita_packshot_url = fruttita_packshot_url | strip -%}
                   <tr
                     class="cart-item {% if item.parent_relationship.parent != null %}cart-item__nested-line{% endif %}"
                     id="CartItem-{{ item.index | plus: 1 }}"
@@ -87,18 +91,23 @@
                     {% endif %}
                   >
                     <td class="cart-item__media">
-                      {% if item.image %}
+                      {% if item.image or fruttita_packshot_url != blank %}
                         {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                         <a href="{{ item.url }}" class="cart-item__link" aria-hidden="true" tabindex="-1"> </a>
                         <div class="cart-item__image-container gradient {% if item.parent_relationship.parent == null %}global-media-settings{% endif %}">
+                          {% comment %}theme-check-disable RemoteAsset{% endcomment %}
                           <img
-                            src="{{ item.image | image_url: width: 300 }}"
+                            src="{% if fruttita_packshot_url != blank %}{{ fruttita_packshot_url }}{% else %}{{ item.image | image_url: width: 300 }}{% endif %}"
                             class="cart-item__image {% if item.parent_relationship.parent != null %}global-media-settings{% endif %}"
-                            alt="{{ item.image.alt | escape }}"
+                            alt="{{ item.image.alt | default: item.product.title | escape }}"
                             loading="lazy"
                             width="150"
-                            height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
+                            height="{% if fruttita_packshot_url != blank %}150{% else %}{{ 150 | divided_by: item.image.aspect_ratio | ceil }}{% endif %}"
+                            {% if fruttita_packshot_url != blank %}
+                              style="aspect-ratio: 1 / 1; object-fit: cover;"
+                            {% endif %}
                           >
+                          {% comment %}theme-check-enable RemoteAsset{% endcomment %}
                         </div>
                       {% endif %}
                     </td>

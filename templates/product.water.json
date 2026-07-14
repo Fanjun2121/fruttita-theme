@@ -531,6 +531,7 @@
           "settings": {
             "name_cn": "猴面包树原浆饮",
             "name_en": "The Shot",
+            "packshot_asset": "fruttita-packshot-shot.png",
             "name_cn_en": "Baobab Pulp Shot",
             "name_cn_pt": "Shot de Polpa de Múcua",
             "tagline": "想要更浓缩的营养？50ml 一口闷，高浓缩急救装。",
@@ -547,6 +548,7 @@
           "settings": {
             "name_cn": "猴面包树纯果浆",
             "name_en": "The Pouch",
+            "packshot_asset": "fruttita-packshot-pouch.png",
             "name_cn_en": "Baobab Pure Pulp",
             "name_cn_pt": "Polpa Pura de Múcua",
             "tagline": "想 DIY 搭配着吃？一袋纯果浆，N 种打开方式。",

@@ -507,6 +507,7 @@
           "settings": {
             "name_cn": "猴面包树纯果浆",
             "name_en": "The Pouch",
+            "packshot_asset": "fruttita-packshot-pouch.png",
             "name_cn_en": "Baobab Pure Pulp",
             "name_cn_pt": "Polpa Pura de Múcua",
             "tagline": "想日常搭配着吃？一袋纯果浆，N 种打开方式。",
@@ -523,6 +524,7 @@
           "settings": {
             "name_cn": "猴面包树水",
             "name_en": "The Water",
+            "packshot_asset": "fruttita-packshot-water.png",
             "name_cn_en": "Baobab Water",
             "name_cn_pt": "Água de Múcua",
             "tagline": "想轻松补水？一瓶水的口感，一整天的天然电解质。",

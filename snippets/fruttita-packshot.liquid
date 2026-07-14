@@ -1,0 +1,16 @@
+{% comment %}
+  Renders the mapped Fruttita packshot asset URL for a product handle, or nothing when unmapped.
+
+  Usage:
+  {% capture packshot_url %}{% render 'fruttita-packshot', handle: product.handle %}{% endcapture %}
+{% endcomment %}
+{%- liquid
+  case handle
+    when 'the-baobab-pulp-shot'
+      echo 'fruttita-packshot-shot.png' | asset_url
+    when 'the-baobab-pulp-pouch'
+      echo 'fruttita-packshot-pouch.png' | asset_url
+    when 'the-baobab-water'
+      echo 'fruttita-packshot-water.png' | asset_url
+  endcase
+-%}

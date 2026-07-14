@@ -6,6 +6,7 @@
   - product: {Object} Product liquid object
   - variant_images: {Array} Product images associated with a variant
   - limit: {Number} (optional) When passed, limits the number of media items to render
+  - fruttita_packshot_url: {String} Asset URL that replaces the primary product media image (optional)
 
   Usage:
   {% render 'product-media-gallery' %}
@@ -81,7 +82,8 @@
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
-            lazy_load: false
+            lazy_load: false,
+            fruttita_packshot_url: fruttita_packshot_url
           %}
         </li>
       {%- endif -%}
@@ -103,8 +105,12 @@
             {%- liquid
               assign media_position = media_position | default: 0 | plus: 1
               assign lazy_load = false
+              assign media_packshot_url = blank
               if media_position > 1
                 assign lazy_load = true
+              endif
+              if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1
+                assign media_packshot_url = fruttita_packshot_url
               endif
             -%}
             {% render 'product-thumbnail',
@@ -119,7 +125,8 @@
               media_width: media_width,
               media_fit: section.settings.media_fit,
               constrain_to_viewport: section.settings.constrain_to_viewport,
-              lazy_load: lazy_load
+              lazy_load: lazy_load,
+              fruttita_packshot_url: media_packshot_url
             %}
           </li>
         {%- endunless -%}
@@ -237,17 +244,31 @@
               aria-controls="GalleryViewer-{{ section.id }}"
               aria-describedby="{{ thumbnail_id }}"
             >
-              {{
-                featured_media.preview_image
-                | image_url: width: 416
-                | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: '54, 74, 104, 162, 208, 324, 416',
-                  id: thumbnail_id,
-                  alt: featured_media.alt
-                | escape
-              }}
+              {%- if fruttita_packshot_url != blank -%}
+                {% comment %}theme-check-disable RemoteAsset{% endcomment %}
+                <img
+                  src="{{ fruttita_packshot_url }}"
+                  alt="{{ featured_media.alt | default: product.title | escape }}"
+                  id="{{ thumbnail_id }}"
+                  loading="lazy"
+                  width="416"
+                  height="416"
+                  style="object-fit: cover;"
+                >
+                {% comment %}theme-check-enable RemoteAsset{% endcomment %}
+              {%- else -%}
+                {{
+                  featured_media.preview_image
+                  | image_url: width: 416
+                  | image_tag:
+                    loading: 'lazy',
+                    sizes: sizes,
+                    widths: '54, 74, 104, 162, 208, 324, 416',
+                    id: thumbnail_id,
+                    alt: featured_media.alt
+                  | escape
+                }}
+              {%- endif -%}
             </button>
           </li>
         {%- endif -%}
@@ -299,17 +320,34 @@
                 aria-controls="GalleryViewer-{{ section.id }}"
                 aria-describedby="{{ thumbnail_id }}"
               >
-                {{
-                  media.preview_image
-                  | image_url: width: 416
-                  | image_tag:
-                    loading: 'lazy',
-                    sizes: sizes,
-                    widths: '54, 74, 104, 162, 208, 324, 416',
-                    id: thumbnail_id,
-                    alt: media.alt
-                  | escape
-                }}
+                {%- if fruttita_packshot_url != blank
+                  and product.selected_or_first_available_variant.featured_media == null
+                  and forloop.index == 1
+                -%}
+                  {% comment %}theme-check-disable RemoteAsset{% endcomment %}
+                  <img
+                    src="{{ fruttita_packshot_url }}"
+                    alt="{{ media.alt | default: product.title | escape }}"
+                    id="{{ thumbnail_id }}"
+                    loading="lazy"
+                    width="416"
+                    height="416"
+                    style="object-fit: cover;"
+                  >
+                  {% comment %}theme-check-enable RemoteAsset{% endcomment %}
+                {%- else -%}
+                  {{
+                    media.preview_image
+                    | image_url: width: 416
+                    | image_tag:
+                      loading: 'lazy',
+                      sizes: sizes,
+                      widths: '54, 74, 104, 162, 208, 324, 416',
+                      id: thumbnail_id,
+                      alt: media.alt
+                    | escape
+                  }}
+                {%- endif -%}
               </button>
             </li>
           {%- endunless -%}

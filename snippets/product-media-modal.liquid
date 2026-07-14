@@ -4,6 +4,7 @@
   Accepts:
   - product: {Object} Product liquid object
   - variant_images: {Array} Product images associated with a variant
+  - fruttita_packshot_url: {String} Asset URL that replaces the primary product media image (optional)
 
   Usage:
   {% render 'product-media-modal' %}
@@ -35,7 +36,7 @@
       {%- liquid
         if product.selected_or_first_available_variant.featured_media != null
           assign media = product.selected_or_first_available_variant.featured_media
-          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
+          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants, fruttita_packshot_url: fruttita_packshot_url
         endif
       -%}
 
@@ -48,7 +49,12 @@
           endif
 
           unless media.id == product.selected_or_first_available_variant.featured_media.id
-            render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+            if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1
+              assign media_packshot_url = fruttita_packshot_url
+            else
+              assign media_packshot_url = blank
+            endif
+            render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image, fruttita_packshot_url: media_packshot_url
           endunless
         -%}
       {%- endfor -%}
