@@ -26,6 +26,8 @@
     grid-template-columns: 1fr 1fr;
     {% if section.settings.left_image != blank or section.settings.right_image != blank %}
       min-height: 70vh;
+    {% else %}
+      min-height: 48rem;
     {% endif %}
   }
 
@@ -38,9 +40,15 @@
     {% else %}
       align-items: center;
       padding: 2rem;
+      min-height: 24rem;
     {% endif %}
     justify-content: center;
     overflow: hidden;
+    background: #4F2C1D;
+  }
+
+  .tw-panel-{{ section.id }}:nth-child(2) {
+    background: linear-gradient(135deg, #4F2C1D 0%, #7A5332 58%, #C9975B 140%);
   }
 
   .tw-panel-bg-{{ section.id }} {
