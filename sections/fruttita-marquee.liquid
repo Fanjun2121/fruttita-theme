@@ -9,8 +9,8 @@
     padding: 1rem 0;
     overflow: hidden;
     white-space: nowrap;
-    border-top: 1px solid rgba(244, 227, 201, 0.2);
-    border-bottom: 1px solid rgba(244, 227, 201, 0.2);
+    border-top: 1px solid rgba(244, 227, 201, 0.12);
+    border-bottom: 1px solid rgba(244, 227, 201, 0.12);
   }
 
   .marquee-content {
@@ -18,14 +18,15 @@
     animation: marquee {{ section.settings.speed }}s linear infinite;
     font-family: 'Switzer', sans-serif;
     font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 0.04em;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+    opacity: 0.65;
   }
 
   .marquee-item {
     display: inline-block;
-    padding: 0 2rem;
+    padding: 0 1.6rem;
   }
 
   @keyframes marquee {

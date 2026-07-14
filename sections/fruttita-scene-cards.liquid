@@ -8,7 +8,7 @@
     --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 9rem 2rem;
+    padding: 12rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -33,7 +33,7 @@
 
   .sc-header-{{ section.id }} {
     text-align: center;
-    margin-bottom: 4.8rem;
+    margin-bottom: 5.6rem;
   }
 
   .sc-subtitle-{{ section.id }} {
@@ -57,14 +57,14 @@
   .sc-grid-{{ section.id }} {
     display: grid;
     grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
-    gap: 1.5rem;
+    gap: 2.8rem;
   }
 
   .sc-card-{{ section.id }} {
     background: rgba({% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}79, 44, 29{% else %}244, 227, 201{% endif %}, 0.08);
     border: 1px solid rgba({% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}79, 44, 29{% else %}244, 227, 201{% endif %}, 0.12);
     border-radius: 1.2rem;
-    padding: 2rem 1.5rem;
+    padding: 3.6rem 3rem;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -110,21 +110,22 @@
 
   #shopify-section-{{ section.id }} .sc-card-desc-{{ section.id }} {
     color: var(--fruttita-section-secondary) !important;
-    font-size: 1.5rem;
-    line-height: 1.65;
+    font-size: 1.4rem;
+    line-height: 1.7;
   }
 
   #shopify-section-{{ section.id }} .sc-footer-{{ section.id }} {
     text-align: center;
     margin-top: 2rem;
     color: var(--fruttita-section-secondary) !important;
-    font-size: var(--fruttita-text-small);
+    font-size: 1.2rem;
+    opacity: 0.6;
     font-style: italic;
   }
 
   @media (max-width: 768px) {
     .fruttita-scene-cards-{{ section.id }} {
-      padding: 5.6rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
 
     .sc-grid-{{ section.id }} {

@@ -72,10 +72,27 @@
     #MainProduct-{{ section.id }} .product__description {
       color: #4F2C1D;
       font-size: var(--fruttita-text-body);
+      line-height: 1.75;
+    }
+
+    #MainProduct-{{ section.id }} .price--large .price-item {
+      font-size: 1.8rem;
+    }
+
+    #MainProduct-{{ section.id }} .product__text,
+    #MainProduct-{{ section.id }} .product__inventory,
+    #MainProduct-{{ section.id }} .product__sku,
+    #MainProduct-{{ section.id }} .product__tax,
+    #MainProduct-{{ section.id }} .installment,
+    #MainProduct-{{ section.id }} .quantity__rules,
+    #MainProduct-{{ section.id }} .quantity__label {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.65;
     }
 
     #MainProduct-{{ section.id }} .product__accordion {
-      border-color: rgba(79, 44, 29, 0.25);
+      border-color: rgba(79, 44, 29, 0.12);
     }
 
     #MainProduct-{{ section.id }} .product__accordion .accordion__title {

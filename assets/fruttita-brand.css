@@ -56,15 +56,17 @@
   --fruttita-gold-deep: #C6812B;
   --fruttita-green-soft: #EAF0DB;
   --fruttita-ink-60: rgba(79,44,29,0.6);
-  --fruttita-paper-80: rgba(244,227,201,0.85);
+  --fruttita-paper-80: rgba(244,227,201,0.8);
 
   /* Fluid type scale */
   --fruttita-text-hero: clamp(4rem, 4.5vw, 5.6rem);   /* 40–56px, was 44–68 */
   --fruttita-text-h2: clamp(2.6rem, 2.6vw, 3.4rem);   /* 26–34px, was 32–44 */
   --fruttita-text-h3: clamp(1.8rem, 1.6vw, 2rem);     /* 18–20px, was 20–24 */
-  --fruttita-text-body: 1.6rem;                        /* 16px, was 17 */
-  --fruttita-text-small: 1.3rem;                       /* 13px, was 14 */
-  --fruttita-text-label: 1.8rem;                       /* 18px Pacifico, was 24 */
+  --fruttita-text-body: 1.5rem;                        /* 15px reading text */
+  --fruttita-text-card: 1.4rem;                        /* 14px card copy */
+  --fruttita-text-small: 1.2rem;                       /* 12px supporting text */
+  --fruttita-text-meta: 1.1rem;                        /* 11px labels / fine print */
+  --fruttita-text-label: 1.6rem;                       /* 16px Pacifico eyebrow */
 
   /* Unified shadow system */
   --fruttita-shadow-sm: 0 2px 8px rgba(79,44,29,0.06);
@@ -131,8 +133,10 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid var(--fruttita-brown);
   border-radius: 50px;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  padding: 1.1rem 2.6rem;
   box-shadow: none;
   transition: all 0.3s ease;
 }
@@ -231,8 +235,123 @@ html {
 /* --- Featured collection section spacing --- */
 
 .shopify-section .featured-collection {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+}
+
+/* --- Footer hierarchy --- */
+
+.footer {
+  padding-top: 7.2rem !important;
+  padding-bottom: 4.8rem !important;
+}
+
+.footer-block__heading {
+  font-size: 1.2rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.footer-block__details-content .list-menu__item--link,
+.footer-block__details-content > p,
+.footer__copyright {
+  font-size: 1.3rem !important;
+}
+
+/* --- Custom-liquid hierarchy: homepage, collection, contact --- */
+
+.fruttita-origin-section .origin-text {
+  font-size: 1.5rem !important;
+  line-height: 1.75 !important;
+  opacity: 0.8;
+}
+
+.fruttita-origin-section .origin-btn {
+  padding: 1.1rem 2.6rem;
+  border-width: 1px;
+  font-size: 1.2rem;
+}
+
+.fruttita-origin-section .origin-actions a.origin-secondary {
+  font-size: 1.2rem !important;
+  opacity: 0.65;
+}
+
+.fruttita-origin-section .origin-badge-inner {
+  border-width: 1px;
+}
+
+.fruttita-origin-section .origin-badge span,
+.fruttita-origin-section .origin-scroll-indicator {
+  font-size: 1.1rem;
+}
+
+.collection-hero {
+  padding: 6.4rem 0 !important;
+}
+
+.collection-hero__description {
+  max-width: 56ch;
+  font-size: 1.5rem !important;
+  line-height: 1.75;
+}
+
+.product-grid-container {
+  padding-top: 6.4rem !important;
+}
+
+.product-grid-container .product-grid .card__heading a {
+  font-size: 1.4rem !important;
+}
+
+.product-grid .price .money {
+  font-size: 1.3rem !important;
+}
+
+.product-grid-container .product-grid .badge {
+  padding: 0.3rem 0.8rem !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase;
+}
+
+body .fruttita-contact {
+  padding: 12rem 2rem;
+}
+
+body .fruttita-contact .fc-inner {
+  margin-bottom: 5.6rem;
+}
+
+body .fruttita-contact .fc-cards {
+  gap: 2.8rem;
+}
+
+body .fruttita-contact .fc-card {
+  padding: 3.6rem 3rem;
+}
+
+body .fruttita-contact .fc-card-label {
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+body .fruttita-contact .fc-card-value a {
+  font-size: 1.4rem;
+}
+
+body .fruttita-contact .fc-hours-inner {
+  font-size: 1.1rem;
+}
+
+body #MainContent [class*="vp-card-desc-"] {
+  color: rgba(79, 44, 29, 0.6) !important;
+}
+
+@media (max-width: 768px) {
+  body .fruttita-contact {
+    padding: 6.4rem 1.6rem;
+  }
 }
 
 /* --- EN / PT title adjustments ---

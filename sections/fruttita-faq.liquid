@@ -8,7 +8,7 @@
     --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 9rem 2rem;
+    padding: 12rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -33,7 +33,7 @@
 
   .faq-header-{{ section.id }} {
     text-align: center;
-    margin-bottom: 4.8rem;
+    margin-bottom: 5.6rem;
   }
 
   .faq-subtitle-{{ section.id }} {
@@ -116,13 +116,14 @@
   #shopify-section-{{ section.id }} .faq-answer-inner-{{ section.id }} {
     padding-bottom: 1.5rem;
     color: var(--fruttita-section-secondary) !important;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.7;
+    opacity: 0.8;
   }
 
   @media (max-width: 768px) {
     .fruttita-faq-{{ section.id }} {
-      padding: 5.6rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
 
     .faq-question-{{ section.id }} {

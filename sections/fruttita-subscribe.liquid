@@ -7,7 +7,7 @@
   .fruttita-subscribe-{{ section.id }} {
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 9rem 2rem;
+    padding: 12rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -32,17 +32,17 @@
   }
 
   .sub-title-{{ section.id }} {
-    font-size: 2rem;
+    font-size: var(--fruttita-text-h2);
     font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     letter-spacing: 0.02em;
   }
 
   .sub-subtitle-{{ section.id }} {
-    font-size: 1rem;
+    font-size: 1.2rem;
     opacity: 0.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5.6rem;
     line-height: 1.6;
   }
 
@@ -59,10 +59,10 @@
     flex: 1;
     padding: 0.9rem 1.2rem;
     border-radius: 50px;
-    border: 1.5px solid rgba(244, 227, 201, 0.2);
+    border: 1px solid rgba(244, 227, 201, 0.2);
     background: rgba(244, 227, 201, 0.06);
     color: {{ section.settings.text_color }};
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     font-family: 'Switzer', sans-serif;
     outline: none;
     transition: border-color 0.3s ease;
@@ -77,16 +77,17 @@
   }
 
   .sub-btn-{{ section.id }} {
-    padding: 0.9rem 1.8rem;
+    padding: 1.1rem 2.6rem;
     border-radius: 50px;
     background: #F4E3C9;
     color: #4F2C1D;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     border: none;
     cursor: pointer;
     font-family: 'Switzer', sans-serif;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     transition: all 0.3s ease;
     white-space: nowrap;
   }
@@ -99,7 +100,7 @@
 
   .sub-success-{{ section.id }} {
     display: none;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: #78AA00;
     margin-bottom: 2rem;
   }
@@ -119,7 +120,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1.5px solid rgba(244, 227, 201, 0.15);
+    border: 1px solid rgba(244, 227, 201, 0.15);
     color: {{ section.settings.text_color }};
     transition: all 0.3s ease;
     text-decoration: none;
@@ -138,11 +139,11 @@
 
   @media (max-width: 768px) {
     .fruttita-subscribe-{{ section.id }} {
-      padding: 5.6rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
 
     .sub-title-{{ section.id }} {
-      font-size: 1.6rem;
+      font-size: var(--fruttita-text-h2);
     }
 
     .sub-form-{{ section.id }} {
@@ -156,13 +157,13 @@
 
   :lang(en) .sub-title-{{ section.id }},
   :lang(pt) .sub-title-{{ section.id }} {
-    font-size: 1.7rem;
+    font-size: var(--fruttita-text-h2);
   }
 
   @media (max-width: 768px) {
     :lang(en) .sub-title-{{ section.id }},
     :lang(pt) .sub-title-{{ section.id }} {
-      font-size: 1.35rem;
+      font-size: var(--fruttita-text-h2);
     }
   }
 </style>

@@ -7,7 +7,7 @@
   .fruttita-prose-{{ section.id }} {
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 9rem 2rem;
+    padding: 12rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -41,7 +41,7 @@
   .prose-inner-{{ section.id }} {
     position: relative;
     z-index: 1;
-    max-width: 720px;
+    max-width: 56ch;
     margin: 0 auto;
     text-align: center;
   }
@@ -62,7 +62,7 @@
     font-size: var(--fruttita-text-h2);
     font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5.6rem;
     letter-spacing: 0.02em;
     opacity: 0;
     transform: translateY(20px);
@@ -96,7 +96,7 @@
   }
 
   .prose-paragraph-{{ section.id }} {
-    max-width: 62ch;
+    max-width: 56ch;
     margin: 0 auto 1.25em;
     text-align: left;
     font-size: var(--fruttita-text-body);
@@ -110,15 +110,15 @@
     display: inline-block;
     background: #4F2C1D;
     color: #F4E3C9;
-    padding: 1.2rem 2.8rem;
+    padding: 1.1rem 2.6rem;
     border-radius: 50px;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    border: 2px solid #4F2C1D;
+    border: 1px solid rgba(79, 44, 29, 0.5);
     transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 1.5rem;
     opacity: 0;
     transform: translateY(15px);
@@ -146,7 +146,7 @@
 
   @media (max-width: 768px) {
     .fruttita-prose-{{ section.id }} {
-      padding: 5.6rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
 
   }

@@ -87,27 +87,27 @@
   }
 
   .hero-body-{{ section.id }} {
-    font-size: var(--fruttita-text-body);
+    font-size: 1.5rem;
     line-height: 1.75;
     margin-bottom: 2.5rem;
     opacity: 0;
     transform: translateY(20px);
-    animation: heroBannerFadeIn-{{ section.id }} 0.8s ease forwards 0.9s;
+    animation: heroBannerBodyFadeIn-{{ section.id }} 0.8s ease forwards 0.9s;
   }
 
   .hero-btn-{{ section.id }} {
     display: inline-block;
     background-color: {{ section.settings.text_color }};
     color: {{ section.settings.bg_color }};
-    padding: 1.2rem 2.8rem;
+    padding: 1.1rem 2.6rem;
     border-radius: 50px;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    font-size: 1.3rem;
-    border: 1.5px solid {{ section.settings.text_color }};
+    font-size: 1.2rem;
+    border: 1px solid {{ section.settings.text_color }};
     opacity: 0;
     transform: translateY(20px);
     animation: heroBannerFadeIn-{{ section.id }} 0.8s ease forwards 1.2s;
@@ -121,6 +121,10 @@
 
   @keyframes heroBannerFadeIn-{{ section.id }} {
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes heroBannerBodyFadeIn-{{ section.id }} {
+    to { opacity: 0.8; transform: translateY(0); }
   }
 
   @keyframes heroBannerLabelFadeIn-{{ section.id }} {

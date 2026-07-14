@@ -8,7 +8,7 @@
     --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' or section.settings.bg_color == '#F4E3C9' or section.settings.bg_color == '#f4e3c9' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 9rem 2rem;
+    padding: 12rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -27,13 +27,13 @@
   .comp-inner-{{ section.id }} {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 680px;
     margin: 0 auto;
   }
 
   .comp-header-{{ section.id }} {
     text-align: center;
-    margin-bottom: 4.8rem;
+    margin-bottom: 5.6rem;
   }
 
   .comp-subtitle-{{ section.id }} {
@@ -59,12 +59,12 @@
     grid-template-columns: 1.2fr 1fr 1fr;
     gap: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid rgba(79, 44, 29, 0.15);
+    border-bottom: 1px solid rgba(79, 44, 29, 0.12);
     margin-bottom: 0.5rem;
   }
 
   #shopify-section-{{ section.id }} .comp-col-label-{{ section.id }} {
-    font-size: var(--fruttita-text-small);
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -77,7 +77,7 @@
   }
 
   .comp-col-name-{{ section.id }} {
-    font-size: var(--fruttita-text-body);
+    font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
   }
@@ -114,13 +114,13 @@
   }
 
   .comp-metric-label-{{ section.id }} {
-    font-size: var(--fruttita-text-body);
+    font-size: 1.3rem;
     font-weight: 600;
   }
 
   .comp-cell-{{ section.id }} {
     text-align: center;
-    font-size: var(--fruttita-text-body);
+    font-size: 1.3rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -162,11 +162,11 @@
     padding: 1.5rem 2rem;
     background: #FFFDF8;
     border: 0;
-    border-left: 4px solid #78AA00;
+    border-left: 1px solid rgba(120, 170, 0, 0.5);
     border-radius: 1rem;
     text-align: center;
     color: #4F2C1D;
-    font-size: var(--fruttita-text-body);
+    font-size: 1.3rem;
     line-height: 1.7;
     opacity: 0;
     transform: translateY(15px);
@@ -182,13 +182,14 @@
     margin-top: 2rem;
     text-align: center;
     color: var(--fruttita-section-secondary) !important;
-    font-size: var(--fruttita-text-small);
+    font-size: 1.1rem;
+    opacity: 0.5;
     letter-spacing: 0.03em;
   }
 
   @media (max-width: 768px) {
     .fruttita-comparison-{{ section.id }} {
-      padding: 5.6rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
 
     .comp-table-head-{{ section.id }},
@@ -206,11 +207,11 @@
 
     .comp-metric-label-{{ section.id }},
     .comp-cell-{{ section.id }} {
-      font-size: var(--fruttita-text-small);
+      font-size: 1.3rem;
     }
 
     .comp-col-name-{{ section.id }} {
-      font-size: var(--fruttita-text-small);
+      font-size: 1.3rem;
     }
   }
 
