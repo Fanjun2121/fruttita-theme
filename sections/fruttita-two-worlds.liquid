@@ -8,6 +8,7 @@
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
+    padding: 9rem 2rem;
   }
 
   .fruttita-two-worlds-{{ section.id }}::before {
@@ -72,7 +73,7 @@
     position: relative;
     z-index: 3;
     color: #F4E3C9;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -92,8 +93,8 @@
     color: #4F2C1D;
     text-align: center;
     padding: 3rem 2rem;
-    font-size: 1.15rem;
-    line-height: 1.9;
+    font-size: 1.5rem;
+    line-height: 1.65;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
@@ -109,6 +110,10 @@
   }
 
   @media (max-width: 768px) {
+    .fruttita-two-worlds-{{ section.id }} {
+      padding: 5.6rem 1.6rem;
+    }
+
     .tw-grid-{{ section.id }} {
       grid-template-columns: 1fr;
       min-height: auto;
@@ -120,14 +125,13 @@
     }
     {% endif %}
 
-    .tw-panel-label-{{ section.id }} {
-      font-size: 1.2rem;
-    }
-
     .tw-bridge-{{ section.id }} {
-      font-size: 1rem;
       padding: 2.5rem 1.5rem;
     }
+  }
+
+  #shopify-section-{{ section.id }} .tw-panel-label-{{ section.id }} {
+    color: #F4E3C9 !important;
   }
 </style>
 

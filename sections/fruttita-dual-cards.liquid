@@ -5,7 +5,7 @@
 
 <style>
   .fruttita-dual-cards-{{ section.id }} {
-    padding: 6rem 1.5rem;
+    padding: 9rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -82,7 +82,7 @@
   }
 
   .dc-card-title-{{ section.id }} {
-    font-size: 2rem;
+    font-size: var(--fruttita-text-h3);
     font-weight: 700;
     margin-bottom: 0.3rem;
     letter-spacing: 0.02em;
@@ -90,21 +90,23 @@
 
   .dc-card-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
-    font-size: 1rem;
+    font-size: var(--fruttita-text-label);
     color: #C6812B;
     margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    opacity: 0.9;
   }
 
   .dc-card-body-{{ section.id }} {
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 1.5rem;
+    line-height: 1.65;
     opacity: 0.85;
     max-width: 400px;
   }
 
   @media (max-width: 768px) {
     .fruttita-dual-cards-{{ section.id }} {
-      padding: 4rem 1rem;
+      padding: 5.6rem 1.6rem;
     }
 
     .dc-grid-{{ section.id }} {
@@ -116,21 +118,15 @@
       min-height: 350px;
     }
 
-    .dc-card-title-{{ section.id }} {
-      font-size: 1.6rem;
-    }
   }
 
   :lang(en) .dc-card-title-{{ section.id }},
   :lang(pt) .dc-card-title-{{ section.id }} {
-    font-size: 1.7rem;
+    font-size: var(--fruttita-text-h3);
   }
 
-  @media (max-width: 768px) {
-    :lang(en) .dc-card-title-{{ section.id }},
-    :lang(pt) .dc-card-title-{{ section.id }} {
-      font-size: 1.35rem;
-    }
+  #shopify-section-{{ section.id }} .dc-card-subtitle-{{ section.id }} {
+    color: #C6812B !important;
   }
 </style>
 
