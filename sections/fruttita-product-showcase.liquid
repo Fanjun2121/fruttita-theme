@@ -8,7 +8,7 @@
   .fruttita-product-showcase-{{ section.id }} {
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 6rem 1.5rem;
+    padding: 9rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -33,15 +33,17 @@
 
   .ps-header-{{ section.id }} {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.8rem;
   }
 
   .ps-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
     color: #C6812B;
-    font-size: min(var(--fruttita-text-label), 1.6rem);
+    font-size: var(--fruttita-text-label);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    opacity: 0.9;
   }
 
   .ps-title-{{ section.id }} {
@@ -90,14 +92,13 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background: #F4E3C9;
   }
 
   .ps-card-image-{{ section.id }} img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: 12%;
+    object-fit: cover;
+    display: block;
     transition: transform 0.6s ease;
   }
 
@@ -132,7 +133,7 @@
 
   .fruttita-product-showcase-{{ section.id }} .ps-card-{{ section.id }} .ps-card-body-{{ section.id }} .ps-card-name-en-{{ section.id }} {
     font-family: 'Pacifico', cursive;
-    font-size: min(var(--fruttita-text-label), 1.6rem);
+    font-size: var(--fruttita-text-label);
     color: #C6812B !important;
     margin-bottom: 0.8rem;
   }
@@ -155,9 +156,10 @@
     display: inline-block;
     padding: 0.25rem 0.65rem;
     border-radius: 50px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     background: var(--fruttita-green-soft);
     color: #4F2C1D !important;
     border: 0;
@@ -196,7 +198,7 @@
 
   @media (max-width: 768px) {
     .fruttita-product-showcase-{{ section.id }} {
-      padding: 4rem 1rem;
+      padding: 5.6rem 1.6rem;
     }
 
     .ps-grid-{{ section.id }} {

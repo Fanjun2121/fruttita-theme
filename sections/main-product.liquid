@@ -41,19 +41,17 @@
     #MainProduct-{{ section.id }} .product__media-wrapper {
       min-width: 0;
       overflow: hidden;
-      background: #F4E3C9;
+      background: transparent;
     }
 
     #MainProduct-{{ section.id }} .product-media-container,
     #MainProduct-{{ section.id }} .product-media-container.gradient,
     #MainProduct-{{ section.id }} .product__media {
-      background: #F4E3C9 !important;
+      background: transparent !important;
     }
 
     #MainProduct-{{ section.id }} .product__media-wrapper img {
-      box-sizing: border-box;
-      object-fit: contain !important;
-      padding: clamp(1.5rem, 4vw, 4rem);
+      object-fit: cover !important;
     }
 
     #MainProduct-{{ section.id }} .product__info-wrapper {

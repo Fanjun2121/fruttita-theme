@@ -8,7 +8,7 @@
     --fruttita-section-secondary: {% if section.settings.bg_color == '#F9F1E6' or section.settings.bg_color == '#f9f1e6' or section.settings.bg_color == '#F4E3C9' or section.settings.bg_color == '#f4e3c9' %}var(--fruttita-ink-60){% else %}var(--fruttita-paper-80){% endif %};
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 6rem 1.5rem;
+    padding: 9rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -33,7 +33,7 @@
 
   .comp-header-{{ section.id }} {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.8rem;
   }
 
   .comp-subtitle-{{ section.id }} {
@@ -41,7 +41,9 @@
     color: #C6812B;
     font-size: var(--fruttita-text-label);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    opacity: 0.9;
   }
 
   .comp-title-{{ section.id }} {
@@ -186,7 +188,7 @@
 
   @media (max-width: 768px) {
     .fruttita-comparison-{{ section.id }} {
-      padding: 4rem 1rem;
+      padding: 5.6rem 1.6rem;
     }
 
     .comp-table-head-{{ section.id }},

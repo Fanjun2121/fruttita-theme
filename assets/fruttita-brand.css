@@ -59,12 +59,12 @@
   --fruttita-paper-80: rgba(244,227,201,0.85);
 
   /* Fluid type scale */
-  --fruttita-text-hero: clamp(4.4rem, 5vw, 6.8rem);   /* 44–68px */
-  --fruttita-text-h2: clamp(3.2rem, 3.2vw, 4.4rem);   /* 32–44px */
-  --fruttita-text-h3: clamp(2rem, 1.8vw, 2.4rem);     /* 20–24px */
-  --fruttita-text-body: 1.7rem;                        /* 17px */
-  --fruttita-text-small: 1.4rem;                       /* 14px */
-  --fruttita-text-label: 2.4rem;                       /* 24px */
+  --fruttita-text-hero: clamp(4rem, 4.5vw, 5.6rem);   /* 40–56px, was 44–68 */
+  --fruttita-text-h2: clamp(2.6rem, 2.6vw, 3.4rem);   /* 26–34px, was 32–44 */
+  --fruttita-text-h3: clamp(1.8rem, 1.6vw, 2rem);     /* 18–20px, was 20–24 */
+  --fruttita-text-body: 1.6rem;                        /* 16px, was 17 */
+  --fruttita-text-small: 1.3rem;                       /* 13px, was 14 */
+  --fruttita-text-label: 1.8rem;                       /* 18px Pacifico, was 24 */
 
   /* Unified shadow system */
   --fruttita-shadow-sm: 0 2px 8px rgba(79,44,29,0.06);
@@ -93,6 +93,14 @@ h1, h2, h3, h4, h5, h6,
 .h0, .h1, .h2, .h3, .h4, .h5 {
   font-family: var(--font-heading-family);
   color: var(--fruttita-brown);
+}
+
+/* Premium heading treatment */
+[class*="fruttita-"] h2 {
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 /* Accent / decorative font utility */

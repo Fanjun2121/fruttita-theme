@@ -7,7 +7,7 @@
   .fruttita-prose-{{ section.id }} {
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 4.5rem 1.5rem;
+    padding: 9rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -51,7 +51,8 @@
     color: #C6812B;
     font-size: var(--fruttita-text-label);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -99,7 +100,7 @@
     margin: 0 auto 1.25em;
     text-align: left;
     font-size: var(--fruttita-text-body);
-    line-height: 1.7;
+    line-height: 1.75;
     opacity: 0;
     transform: translateY(15px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -109,14 +110,15 @@
     display: inline-block;
     background: #4F2C1D;
     color: #F4E3C9;
-    padding: 0.9rem 2.2rem;
+    padding: 1.2rem 2.8rem;
     border-radius: 50px;
     font-weight: 700;
     text-decoration: none;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     border: 2px solid #4F2C1D;
     transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    font-size: var(--fruttita-text-small);
+    font-size: 1.3rem;
     margin-top: 1.5rem;
     opacity: 0;
     transform: translateY(15px);
@@ -138,9 +140,13 @@
     transform: translateY(0);
   }
 
+  .fruttita-prose-{{ section.id }}.is-visible .prose-subtitle-{{ section.id }} {
+    opacity: 0.9;
+  }
+
   @media (max-width: 768px) {
     .fruttita-prose-{{ section.id }} {
-      padding: 3rem 1.5rem;
+      padding: 5.6rem 1.6rem;
     }
 
   }

@@ -7,7 +7,7 @@
   .fruttita-data-science-{{ section.id }} {
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 6rem 1.5rem;
+    padding: 9rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -32,7 +32,7 @@
 
   .ds-header-{{ section.id }} {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.8rem;
   }
 
   .ds-subtitle-{{ section.id }} {
@@ -40,7 +40,9 @@
     color: #C6812B;
     font-size: var(--fruttita-text-label);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    opacity: 0.9;
   }
 
   .ds-title-{{ section.id }} {
@@ -76,7 +78,7 @@
   }
 
   .ds-metric-value-{{ section.id }} {
-    font-size: clamp(2.8rem, 2.5vw, 3.6rem);
+    font-size: clamp(2.4rem, 2vw, 3rem);
     font-weight: 700;
     color: #D38235;
     text-align: right;
@@ -118,13 +120,14 @@
     background: #F4E3C9;
     border: 1px solid #F4E3C9;
     color: #4F2C1D;
-    padding: 0.7rem 1.5rem;
+    padding: 1.2rem 2.8rem;
     border-radius: 50px;
     font-weight: 600;
-    font-size: var(--fruttita-text-small);
+    font-size: 1.3rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     font-family: 'Switzer', sans-serif;
   }
 
@@ -175,7 +178,7 @@
 
   @media (max-width: 768px) {
     .fruttita-data-science-{{ section.id }} {
-      padding: 4rem 1rem;
+      padding: 5.6rem 1.6rem;
     }
 
   }

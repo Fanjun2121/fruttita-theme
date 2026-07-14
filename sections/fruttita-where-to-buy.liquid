@@ -7,7 +7,7 @@
   .fruttita-where-to-buy-{{ section.id }} {
     background-color: {{ section.settings.bg_color }};
     color: {{ section.settings.text_color }};
-    padding: 5rem 1.5rem;
+    padding: 9rem 2rem;
     font-family: 'Switzer', sans-serif;
     position: relative;
     overflow: hidden;
@@ -34,9 +34,11 @@
   .wtb-subtitle-{{ section.id }} {
     font-family: 'Pacifico', cursive;
     color: #C6812B;
-    font-size: 1.6rem;
+    font-size: var(--fruttita-text-label);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    opacity: 0.9;
   }
 
   .wtb-title-{{ section.id }} {
@@ -122,7 +124,7 @@
 
   @media (max-width: 768px) {
     .fruttita-where-to-buy-{{ section.id }} {
-      padding: 4rem 1rem;
+      padding: 5.6rem 1.6rem;
     }
 
     .wtb-title-{{ section.id }} {
