@@ -141,37 +141,8 @@
   .ps-card-tagline-{{ section.id }} {
     font-size: 1.4rem;
     line-height: 1.7;
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
     opacity: 0.65;
-  }
-
-  .ps-card-scenarios-{{ section.id }} {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .fruttita-product-showcase-{{ section.id }} .ps-card-{{ section.id }} .ps-card-scenarios-{{ section.id }} .ps-tag-{{ section.id }} {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background: var(--fruttita-green-soft);
-    color: #4F2C1D !important;
-    border: 0;
-  }
-
-  .ps-card-specs-{{ section.id }} {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    opacity: 0.6;
-    margin-bottom: 1.2rem;
-    border-top: 1px solid rgba(79, 44, 29, 0.08);
-    padding-top: 0.8rem;
   }
 
   .ps-card-link-{{ section.id }} {
@@ -253,21 +224,6 @@
             <h3 class="ps-card-name-cn-{{ section.id }}">{% render 'i18n-text', default: block.settings.name_cn, en: block.settings.name_cn_en, pt: block.settings.name_cn_pt %}</h3>
             <div class="ps-card-name-en-{{ section.id }}">{{ block.settings.name_en }}</div>
             <p class="ps-card-tagline-{{ section.id }}">{% render 'i18n-text', default: block.settings.tagline, en: block.settings.tagline_en, pt: block.settings.tagline_pt %}</p>
-
-            {% if block.settings.scenarios != blank %}
-              <div class="ps-card-scenarios-{{ section.id }}">
-                {% assign scenario_text = block.settings.scenarios %}
-                {% assign _lang = request.locale.iso_code | slice: 0, 2 %}{% if _lang == 'en' and block.settings.scenarios_en != blank %}{% assign scenario_text = block.settings.scenarios_en %}{% elsif _lang == 'pt' and block.settings.scenarios_pt != blank %}{% assign scenario_text = block.settings.scenarios_pt %}{% endif %}
-                {% assign tags = scenario_text | split: ',' %}
-                {% for tag in tags %}
-                  <span class="ps-tag-{{ section.id }}">{{ tag | strip }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-
-            {% if block.settings.specs != blank %}
-              <div class="ps-card-specs-{{ section.id }}">{% render 'i18n-text', default: block.settings.specs, en: block.settings.specs_en, pt: block.settings.specs_pt %}</div>
-            {% endif %}
 
             {% if block.settings.link != blank %}
               <a href="{{ block.settings.link | prepend: routes.root_url | replace: '//', '/' }}" class="ps-card-link-{{ section.id }}">{% render 'i18n-text', default: block.settings.link_text, en: block.settings.link_text_en, pt: block.settings.link_text_pt %}</a>
