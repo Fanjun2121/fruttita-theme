@@ -7,7 +7,7 @@
       "type": "sp-pdp-hero",
       "settings": {
         "image_scale": 100,
-        "placeholder_note": "Placeholder → 素材 ① / ⑥ 单瓶 + 六支盒",
+        "placeholder_note": "",
         "title": "猴面包树原浆饮",
         "title_en": "Baobab Pulp Shot",
         "title_pt": "Dose de Polpa de Múcua",
@@ -188,7 +188,7 @@
         "empty_big": "第一口：酸。",
         "empty_big_en": "First sip: tart.",
         "empty_big_pt": "Primeiro gole: ácido.",
-        "placeholder_note": "Placeholder → 素材 ⑤ 倒入水杯 / 摇瓶",
+        "placeholder_note": "",
         "eyebrow": "口感说明",
         "eyebrow_en": "Tasting note",
         "eyebrow_pt": "Nota de prova",
@@ -411,7 +411,7 @@
       "settings": {
         "tag": "us-notify",
         "placeholder": "you@email.com",
-        "box_text": "6-PACK BOX · Placeholder → 素材 ⑥",
+        "box_text": "",
         "eyebrow": "购买渠道",
         "eyebrow_en": "Where to buy",
         "eyebrow_pt": "Onde comprar",
@@ -429,7 +429,8 @@
         "ok_pt": "Anotado. Foi esse o email.",
         "china": "中国大陆：天猫国际、抖音全球购有售。",
         "china_en": "Also available in China on Tmall Global and Douyin.",
-        "china_pt": "Também disponível na China, na Tmall Global e Douyin."
+        "china_pt": "Também disponível na China, na Tmall Global e Douyin.",
+        "box_asset": "fruttita-packshot-shot.png"
       }
     }
   },

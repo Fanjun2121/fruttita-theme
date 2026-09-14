@@ -21,13 +21,13 @@
         "btn2_pt": "Conhecer o imbondeiro",
         "btn2_link": "/pages/baobab",
         "image_scale": 78,
-        "callout_label": "图 1 · 沉淀线",
-        "callout_label_en": "Fig. 1 — sediment line",
-        "callout_label_pt": "Fig. 1 — linha de sedimento",
-        "callout": "纤维会沉底。摇一摇。",
-        "callout_en": "Fiber. It settles. Shake it.",
-        "callout_pt": "Fibra. Assenta. Agite.",
-        "placeholder_note": "Placeholder → 素材 ① 瓶身特写（沉淀线）"
+        "callout_label": "",
+        "callout_label_en": "",
+        "callout_label_pt": "",
+        "callout": "",
+        "callout_en": "",
+        "callout_pt": "",
+        "placeholder_note": ""
       },
       "blocks": {
         "sp_hero_b0": {
@@ -398,7 +398,7 @@
         "empty_big": "摇 → 开 → 喝。",
         "empty_big_en": "Shake → open → drink.",
         "empty_big_pt": "Agitar → abrir → beber.",
-        "placeholder_note": "Placeholder → 素材 ④ / ⑤ 手摇瓶 · 倒入水杯的一瞬（只露手）",
+        "placeholder_note": "",
         "eyebrow": "口感说明",
         "eyebrow_en": "Tasting note",
         "eyebrow_pt": "Nota de prova",
@@ -607,7 +607,8 @@
         "china": "中国大陆：天猫国际、抖音全球购有售。",
         "china_en": "Also available in China on Tmall Global and Douyin.",
         "china_pt": "Também disponível na China, na Tmall Global e Douyin.",
-        "box_text": "6-PACK BOX · Placeholder → 素材 ⑥"
+        "box_text": "",
+        "box_asset": "fruttita-packshot-shot.png"
       }
     }
   },

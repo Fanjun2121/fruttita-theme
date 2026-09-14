@@ -14,7 +14,7 @@
     {%- if s.china_en != blank -%}<div class="china">{% render 'i18n-text', default: s.china, en: s.china_en, pt: s.china_pt %}</div>{%- endif -%}
   </div>
   <div class="box">
-    {%- if s.image != blank -%}{{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<span>{{ s.box_text }}</span>{%- endif -%}
+    {%- if s.image != blank -%}{{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- elsif s.box_asset != blank -%}<img src="{{ s.box_asset | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- else -%}<span>{{ s.box_text }}</span>{%- endif -%}
   </div>
 </div></div></section>
 {% schema %}
@@ -30,7 +30,8 @@
     {"type":"text","id":"ok","label":"成功提示 zh","default":"收到。"},{"type":"text","id":"ok_en","label":"Success en","default":"Noted. That's the one email."},{"type":"text","id":"ok_pt","label":"pt","default":"Anotado."},
     {"type":"text","id":"china","label":"中国渠道句 zh"},{"type":"text","id":"china_en","label":"China line en"},{"type":"text","id":"china_pt","label":"pt"},
     {"type":"image_picker","id":"image","label":"Right image (6-pack box)"},
-    {"type":"text","id":"box_text","label":"Box placeholder text (internal)","default":"6-PACK BOX"}
+    {"type":"text","id":"box_asset","label":"Right image theme asset (fallback)","default":"fruttita-packshot-shot.png"},
+    {"type":"text","id":"box_text","label":"Box placeholder text (internal)","default":""}
   ],
   "presets": [{"name":"SP · Where to buy"}]
 }
