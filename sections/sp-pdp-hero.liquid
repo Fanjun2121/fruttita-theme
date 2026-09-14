@@ -13,8 +13,8 @@
     <p class="sub">{% render 'i18n-text', default: s.sub, en: s.sub_en, pt: s.sub_pt %}</p>
     <div class="facts">{%- for block in section.blocks -%}{%- if block.type == 'fact' -%}<div {{ block.shopify_attributes }}><b>{{ block.settings.value }}</b><span>{% render 'i18n-text', default: block.settings.label, en: block.settings.label_en, pt: block.settings.label_pt %}</span></div>{%- endif -%}{%- endfor -%}</div>
     <div class="cta">
-      {%- if s.btn1_link != blank -%}<a class="sp-btn solid" href="{{ s.btn1_link }}">{% render 'i18n-text', default: s.btn1, en: s.btn1_en, pt: s.btn1_pt %}</a>{%- endif -%}
-      {%- if s.btn2_link != blank -%}<a class="sp-btn" href="{{ s.btn2_link }}">{% render 'i18n-text', default: s.btn2, en: s.btn2_en, pt: s.btn2_pt %}</a>{%- endif -%}
+      {%- if s.btn1_link != blank -%}<a class="sp-btn solid" href="{% render 'sp-url', url: s.btn1_link %}">{% render 'i18n-text', default: s.btn1, en: s.btn1_en, pt: s.btn1_pt %}</a>{%- endif -%}
+      {%- if s.btn2_link != blank -%}<a class="sp-btn" href="{% render 'sp-url', url: s.btn2_link %}">{% render 'i18n-text', default: s.btn2, en: s.btn2_en, pt: s.btn2_pt %}</a>{%- endif -%}
     </div>
     <div class="made">{% render 'i18n-text', default: s.made, en: s.made_en, pt: s.made_pt %}</div>
   </div>

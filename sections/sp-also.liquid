@@ -4,7 +4,7 @@
   <div class="sp-lab dim">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div>
   <div class="item">
     <div class="im">{%- if s.image != blank -%}{{ s.image | image_url: width: 400 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ 'fruttita-packshot-pouch.png' | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- endif -%}</div>
-    <div><span class="sp-lab">{% render 'i18n-text', default: s.tag, en: s.tag_en, pt: s.tag_pt %}</span><b>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</b><p>{% render 'i18n-text', default: s.text, en: s.text_en, pt: s.text_pt %}</p>{%- if s.link != blank -%}<a href="{{ s.link }}" class="sp-lab" style="color:var(--sp-liquid)">{% render 'i18n-text', default: s.go, en: s.go_en, pt: s.go_pt %}</a>{%- endif -%}</div>
+    <div><span class="sp-lab">{% render 'i18n-text', default: s.tag, en: s.tag_en, pt: s.tag_pt %}</span><b>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</b><p>{% render 'i18n-text', default: s.text, en: s.text_en, pt: s.text_pt %}</p>{%- if s.link != blank -%}<a href="{% render 'sp-url', url: s.link %}" class="sp-lab" style="color:var(--sp-liquid)">{% render 'i18n-text', default: s.go, en: s.go_en, pt: s.go_pt %}</a>{%- endif -%}</div>
   </div>
 </div></div></section>
 {% schema %}

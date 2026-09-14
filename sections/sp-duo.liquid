@@ -1,7 +1,7 @@
 {%- comment -%} Fruttita Specimen · 06 Two brand cards: Origin (photo) + Quality (list) {%- endcomment -%}
 {%- assign s = section.settings -%}
 <section class="sp"><div class="sp-wrap"><div class="sp-duo">
-  <a class="sp-card" href="{{ s.a_link | default: '#' }}">
+  <a class="sp-card" href="{% render 'sp-url', url: s.a_link %}">
     {%- if s.a_image != blank -%}{{ s.a_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ s.a_asset | default: 'sp-placeholder-tree.jpg' | asset_url }}" alt="" loading="lazy" width="1200" height="800">{%- endif -%}
     <div class="sh"></div>
     {%- if s.a_placeholder != blank -%}<div class="sp-ph">{{ s.a_placeholder }}</div>{%- endif -%}
@@ -10,7 +10,7 @@
     <p>{% render 'i18n-text', default: s.a_text, en: s.a_text_en, pt: s.a_text_pt %}</p>
     <span class="go">{% render 'i18n-text', default: s.a_go, en: s.a_go_en, pt: s.a_go_pt %}</span>
   </a>
-  <a class="sp-card q" href="{{ s.b_link | default: '#' }}">
+  <a class="sp-card q" href="{% render 'sp-url', url: s.b_link %}">
     <div class="sp-lab">{% render 'i18n-text', default: s.b_eyebrow, en: s.b_eyebrow_en, pt: s.b_eyebrow_pt %}</div>
     <h3>{% render 'i18n-text', default: s.b_title, en: s.b_title_en, pt: s.b_title_pt %}</h3>
     <p>{% render 'i18n-text', default: s.b_text, en: s.b_text_en, pt: s.b_text_pt %}</p>
