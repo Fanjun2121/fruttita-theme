@@ -1,0 +1,28 @@
+{%- comment -%} Fruttita Specimen · Steps in a row (tree to bottle / supply chain) {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-steps{% if s.dark %} dark{% endif %}"><div class="sp-wrap">
+  <div class="sp-rec-head"><div class="sp-lab dim">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div><div><h2>{% render 'i18n-text', default: s.head, en: s.head_en, pt: s.head_pt %}</h2></div></div>
+  <ol class="sp-steplist">
+    {%- for block in section.blocks -%}
+    <li {{ block.shopify_attributes }}><span class="sp-lab">{{ forloop.index | prepend: '0' }}{% if block.settings.where_en != blank %} · {% render 'i18n-text', default: block.settings.where, en: block.settings.where_en, pt: block.settings.where_pt %}{% endif %}</span><b>{% render 'i18n-text', default: block.settings.title, en: block.settings.title_en, pt: block.settings.title_pt %}</b><p>{% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}</p></li>
+    {%- endfor -%}
+  </ol>
+  {%- if s.note_en != blank -%}<p class="sp-fn" style="margin-top:22px">{% render 'i18n-text', default: s.note, en: s.note_en, pt: s.note_pt %}</p>{%- endif -%}
+</div></section>
+{% schema %}
+{
+  "name": "SP · Steps",
+  "settings": [
+    {"type":"checkbox","id":"dark","label":"Dark background","default":false},
+    {"type":"text","id":"eyebrow","label":"眉题 zh"},{"type":"text","id":"eyebrow_en","label":"Eyebrow en"},{"type":"text","id":"eyebrow_pt","label":"pt"},
+    {"type":"text","id":"head","label":"标题 zh"},{"type":"text","id":"head_en","label":"Heading en"},{"type":"text","id":"head_pt","label":"pt"},
+    {"type":"textarea","id":"note","label":"脚注 zh"},{"type":"textarea","id":"note_en","label":"Note en"},{"type":"textarea","id":"note_pt","label":"pt"}
+  ],
+  "blocks": [{"type":"step","name":"Step","settings":[
+    {"type":"text","id":"where","label":"地点 zh"},{"type":"text","id":"where_en","label":"Where en"},{"type":"text","id":"where_pt","label":"pt"},
+    {"type":"text","id":"title","label":"标题 zh"},{"type":"text","id":"title_en","label":"Title en"},{"type":"text","id":"title_pt","label":"pt"},
+    {"type":"textarea","id":"text","label":"正文 zh"},{"type":"textarea","id":"text_en","label":"Text en"},{"type":"textarea","id":"text_pt","label":"pt"}
+  ]}],
+  "presets": [{"name":"SP · Steps"}]
+}
+{% endschema %}

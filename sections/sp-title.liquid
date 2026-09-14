@@ -1,0 +1,20 @@
+{%- comment -%} Fruttita Specimen · Page opener (dark): eyebrow + big title + one line {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-title{% if s.light %} light{% endif %}"><div class="sp-wrap">
+  <div class="sp-lab">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div>
+  {%- capture h1 %}{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}{% endcapture -%}
+  <h1>{{ h1 | strip | newline_to_br }}</h1>
+  {%- if s.sub_en != blank -%}<p class="sub">{% render 'i18n-text', default: s.sub, en: s.sub_en, pt: s.sub_pt %}</p>{%- endif -%}
+</div></section>
+{% schema %}
+{
+  "name": "SP · Page title",
+  "settings": [
+    {"type":"checkbox","id":"light","label":"Light background","default":false},
+    {"type":"text","id":"eyebrow","label":"眉题 zh"},{"type":"text","id":"eyebrow_en","label":"Eyebrow en"},{"type":"text","id":"eyebrow_pt","label":"pt"},
+    {"type":"text","id":"title","label":"标题 zh"},{"type":"text","id":"title_en","label":"Title en"},{"type":"text","id":"title_pt","label":"pt"},
+    {"type":"textarea","id":"sub","label":"一句 zh"},{"type":"textarea","id":"sub_en","label":"Sub en"},{"type":"textarea","id":"sub_pt","label":"pt"}
+  ],
+  "presets": [{"name":"SP · Page title"}]
+}
+{% endschema %}

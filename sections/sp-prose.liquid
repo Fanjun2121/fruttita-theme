@@ -1,0 +1,34 @@
+{%- comment -%} Fruttita Specimen · Record rows of prose (label left, text right, optional kv list / image). Blocks = rows. {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-record{% if s.last %} last{% endif %}" style="padding-top:{{ s.pad_top }}px"><div class="sp-wrap">
+  {%- if s.head_en != blank -%}<div class="sp-rec-head"><div class="sp-lab dim">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div><div><h2>{% render 'i18n-text', default: s.head, en: s.head_en, pt: s.head_pt %}</h2></div></div>{%- endif -%}
+  {%- for block in section.blocks -%}
+  <div class="sp-row" {{ block.shopify_attributes }}>
+    <div class="k"><span class="sp-lab">{% render 'i18n-text', default: block.settings.k, en: block.settings.k_en, pt: block.settings.k_pt %}</span>{%- if block.settings.kv != blank -%}<b>{{ block.settings.kv }}</b>{%- endif -%}</div>
+    <div class="v{% if block.settings.image == blank and block.settings.aside_en == blank %} single{% endif %}">
+      <div>{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>
+      {%- if block.settings.image != blank -%}<div class="sp-rowimg">{{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
+      {%- elsif block.settings.ph != blank -%}<div class="sp-rowimg empty"><div class="sp-ph">{{ block.settings.ph }}</div></div>
+      {%- elsif block.settings.aside_en != blank -%}<div class="sp-aside">{% render 'i18n-text', default: block.settings.aside, en: block.settings.aside_en, pt: block.settings.aside_pt %}</div>{%- endif -%}
+    </div>
+  </div>
+  {%- endfor -%}
+</div></section>
+{% schema %}
+{
+  "name": "SP · Record rows",
+  "settings": [
+    {"type":"range","id":"pad_top","label":"Top padding","min":0,"max":120,"step":8,"default":88},
+    {"type":"checkbox","id":"last","label":"Close with bottom border","default":false},
+    {"type":"text","id":"eyebrow","label":"眉题 zh"},{"type":"text","id":"eyebrow_en","label":"Eyebrow en"},{"type":"text","id":"eyebrow_pt","label":"pt"},
+    {"type":"text","id":"head","label":"大标题 zh"},{"type":"text","id":"head_en","label":"Heading en"},{"type":"text","id":"head_pt","label":"pt"}
+  ],
+  "blocks": [{"type":"row","name":"Row","settings":[
+    {"type":"text","id":"k","label":"行标签 zh"},{"type":"text","id":"k_en","label":"Row label en"},{"type":"text","id":"k_pt","label":"pt"},{"type":"text","id":"kv","label":"Row value (mono, optional)"},
+    {"type":"richtext","id":"body","label":"正文 zh"},{"type":"richtext","id":"body_en","label":"Body en"},{"type":"richtext","id":"body_pt","label":"pt"},
+    {"type":"richtext","id":"aside","label":"右栏 zh (optional)"},{"type":"richtext","id":"aside_en","label":"Aside en"},{"type":"richtext","id":"aside_pt","label":"pt"},
+    {"type":"image_picker","id":"image","label":"Right image (optional)"},{"type":"text","id":"ph","label":"Placeholder note (internal)"}
+  ]}],
+  "presets": [{"name":"SP · Record rows"}]
+}
+{% endschema %}

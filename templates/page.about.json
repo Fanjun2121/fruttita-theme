@@ -1,317 +1,200 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
+ * Fruttita US site · Our Origin · 2026-09-14
  */
 {
   "sections": {
-    "hero_open": {
-      "type": "fruttita-hero-banner",
+    "title": {
+      "type": "sp-title",
       "settings": {
-        "bg_color": "#4F2C1D",
-        "overlay_opacity": 30,
-        "subtitle": "OUR STORY",
-        "subtitle_en": "OUR STORY",
-        "subtitle_pt": "A NOSSA HISTÓRIA",
-        "title": "给身体，一份来自旷野的留白。",
-        "title_en": "Room to breathe. From the wild.",
-        "title_pt": "Espaço para respirar. Vindo da natureza.",
-        "text_color": "#F4E3C9",
-        "height": "80vh"
+        "eyebrow": "品牌出身",
+        "eyebrow_en": "Our origin",
+        "eyebrow_pt": "A nossa origem",
+        "title": "生在树长的地方。",
+        "title_en": "Born where the tree grows.",
+        "title_pt": "Nascida onde a árvore cresce.",
+        "sub": "Fruttita 不是从会议室开始的。它开始于一棵 imbondeiro 下面。",
+        "sub_en": "Fruttita didn't start in a boardroom. It started under an imbondeiro.",
+        "sub_pt": "A Fruttita não começou numa sala de reuniões. Começou debaixo de um imbondeiro."
       }
     },
-    "brand_manifesto": {
-      "type": "fruttita-prose",
+    "photo": {
+      "type": "sp-fullbleed",
+      "settings": {
+        "title": "先有果实和采果的人，然后才有牌子。",
+        "title_en": "The fruit and the people who collect it came first. The brand came after.",
+        "title_pt": "Primeiro o fruto e quem o colhe. A marca veio depois.",
+        "label": "Fazenda27 · 安哥拉高原",
+        "label_en": "Fazenda27 · Angolan highlands",
+        "label_pt": "Fazenda27 · planalto angolano",
+        "placeholder_note": "Placeholder → 素材 ⑦c 采集 / ⑦d Fazenda27 加工（Jorge）"
+      }
+    },
+    "rows": {
+      "type": "sp-prose",
+      "settings": {
+        "pad_top": 88,
+        "last": false,
+        "eyebrow": "记录",
+        "eyebrow_en": "Record",
+        "eyebrow_pt": "Registo",
+        "head": "这个牌子从哪来",
+        "head_en": "Where this brand comes from",
+        "head_pt": "De onde vem esta marca"
+      },
       "blocks": {
-        "m_p1": {
-          "type": "text_paragraph",
+        "rows_b0": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "在非洲热带草原的深处，伫立着一种古老的植物——猴面包树。",
-            "text_paragraph_en": "In the African savanna, there's a tree that's been standing for 3,000 years. The baobab.",
-            "text_paragraph_pt": "Na savana africana, existe uma árvore de pé há 3.000 anos. O imbondeiro."
+            "k": "哪里",
+            "k_en": "Where",
+            "k_pt": "Onde",
+            "kv": "Waku-Kungo, Angola",
+            "body": "<p>果浆来自 Fazenda27，一家在安哥拉高原瓦库昆戈的家族食品公司。多年来，他们一直向当地食品业供应 múcua。每一支瓶子都从那里开始。</p>",
+            "body_en": "<p>The pulp comes from Fazenda27, a family food company in Waku-Kungo, in the highlands of Angola, that has supplied múcua to the local food industry for years. Every bottle starts there.</p>",
+            "body_pt": "<p>A polpa vem da Fazenda27, uma empresa alimentar familiar no Waku-Kungo, no planalto de Angola, que há anos fornece múcua à indústria alimentar local. Cada garrafa começa ali.</p>",
+            "ph": "Placeholder → 素材 ⑦e 旱季地貌 / 场地"
           }
         },
-        "m_p2": {
-          "type": "text_paragraph",
+        "rows_b1": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "它们沉默地守望着这片红土地，历经干旱与烈日，却能在体内储存数吨的水源。",
-            "text_paragraph_en": "It survives drought, extreme heat, and centuries of neglect — storing tons of water in its trunk.",
-            "text_paragraph_pt": "Sobrevive à seca, ao calor extremo e a séculos de abandono — armazenando toneladas de água no tronco."
+            "k": "谁",
+            "k_en": "Who",
+            "k_pt": "Quem",
+            "kv": "",
+            "body": "<p>Fruttita 是 Fazenda27 的主人和一位合伙人一起建的牌子，为了把这颗果实带出安哥拉。运营它的公司设在香港，果实始终来自同一个地方。</p>",
+            "body_en": "<p>Fruttita is the brand Fazenda27's owner and a partner built to take that fruit beyond Angola. The company that runs it is registered in Hong Kong. The fruit never stops coming from the same place.</p>",
+            "body_pt": "<p>A Fruttita é a marca que o dono da Fazenda27 e um sócio criaram para levar esse fruto para além de Angola. A empresa que a gere está registada em Hong Kong. O fruto nunca deixa de vir do mesmo lugar.</p>"
           }
         },
-        "m_p3": {
-          "type": "text_paragraph",
+        "rows_b2": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "它们不依赖人工催熟，只是在枝头沐浴着赤道阳光自然风干，锁住了大自然最原本的生命力。",
-            "text_paragraph_en": "Its fruit ripens on the branch. No one picks it early. No one sprays it. It just dries in the sun.",
-            "text_paragraph_pt": "O fruto amadurece no ramo. Ninguém o colhe cedo. Ninguém o pulveriza. Seca ao sol."
+            "k": "为什么在越南灌装",
+            "k_en": "Why it is bottled in Vietnam",
+            "k_pt": "Porquê engarrafado no Vietname",
+            "kv": "",
+            "body": "<p>安哥拉目前没有达到出口标准的灌装线。在有之前，Shot 在越南一家持有 BRCGS A+ 与 FSSC 22000 认证的工厂灌装。我们宁愿在这里说清楚，也不想让你从标签上自己发现。</p>",
+            "body_en": "<p>Angola does not yet have export-grade bottling. Until it does, the Shot is filled at a facility in Vietnam that holds BRCGS Grade A+ and FSSC 22000 certification. We would rather say that here than have you find it on the label.</p>",
+            "body_pt": "<p>Angola ainda não tem engarrafamento de nível de exportação. Até ter, a dose é engarrafada numa fábrica no Vietname com certificação BRCGS Grau A+ e FSSC 22000. Preferimos dizê-lo aqui a deixar que o descubra no rótulo.</p>"
           }
         },
-        "m_p4": {
-          "type": "text_paragraph",
+        "rows_b3": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "这是一种纯粹的野性。",
-            "text_paragraph_en": "That's wildness you can't manufacture.",
-            "text_paragraph_pt": "Isso é uma pureza que não se fabrica."
-          }
-        },
-        "m_p5": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "而身处现代都市的我们，生活被精加工的食物、嘈杂的信息和无形的压力填满。",
-            "text_paragraph_en": "Meanwhile, we fill our days with ultra-processed food, screen fatigue, and stress we barely notice.",
-            "text_paragraph_pt": "Entretanto, enchemos os nossos dias com alimentos ultraprocessados, fadiga de ecrã e stress que mal notamos."
-          }
-        },
-        "m_p6": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "我们什么都在优化，唯独忘了吃进身体的东西。",
-            "text_paragraph_en": "We optimize everything except what we put in our bodies.",
-            "text_paragraph_pt": "Otimizamos tudo, menos o que pomos no corpo."
-          }
-        },
-        "m_p7": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "我们要的，或许不是更多的添加，而是回归与恢复。",
-            "text_paragraph_en": "Maybe the answer isn't adding more. Maybe it's starting simpler.",
-            "text_paragraph_pt": "Talvez a resposta não seja adicionar mais. Talvez seja começar mais simples."
-          }
-        },
-        "m_p8": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "Fruttita 的诞生，源于一个简单的愿望：把那份来自热带旷野的“干净”和“野”，带进你的日常。",
-            "text_paragraph_en": "That's why Fruttita exists. One fruit. Barely processed. Brought to you.",
-            "text_paragraph_pt": "É por isso que a Fruttita existe. Um fruto. Quase intocado. Até ti."
+            "k": "我们相信什么",
+            "k_en": "What we believe",
+            "k_pt": "No que acreditamos",
+            "kv": "",
+            "body": "<p>数字，不是形容词。一种果实加水，不是配方。沉淀留着，因为那是果实。我们不定义什么叫健康，只做一样东西，简单到不需要解释。</p>",
+            "body_en": "<p>Numbers, not adjectives. One fruit and water, not a formula. The sediment stays, because it is the fruit. We don't define healthy. We make one thing simple enough not to need explaining.</p>",
+            "body_pt": "<p>Números, não adjetivos. Um fruto e água, não uma fórmula. O sedimento fica, porque é o fruto. Não definimos o que é saudável. Fazemos uma coisa simples o suficiente para não precisar de explicação.</p>"
           }
         }
       },
       "block_order": [
-        "m_p1",
-        "m_p2",
-        "m_p3",
-        "m_p4",
-        "m_p5",
-        "m_p6",
-        "m_p7",
-        "m_p8"
-      ],
-      "settings": {
-        "subtitle": "Brand Manifesto",
-        "subtitle_en": "Brand Manifesto",
-        "subtitle_pt": "Manifesto da Marca",
-        "title": "我们为什么做这件事",
-        "title_en": "Why we bother",
-        "title_pt": "Porquê tudo isto",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
-      }
+        "rows_b0",
+        "rows_b1",
+        "rows_b2",
+        "rows_b3"
+      ]
     },
-    "two_worlds": {
-      "type": "fruttita-two-worlds",
+    "duo": {
+      "type": "sp-duo",
       "settings": {
-        "left_label": "THE WILDERNESS",
-        "left_label_en": "THE WILDERNESS",
-        "left_label_pt": "A NATUREZA SELVAGEM",
-        "right_label": "YOUR DAILY LIFE",
-        "right_label_en": "YOUR DAILY LIFE",
-        "right_label_pt": "O TEU DIA A DIA",
-        "bridge_text": "Fruttita 是连接两个世界的介质。将热带旷野的“干净”，注入每一个都市个体的日常。",
-        "bridge_text_en": "Fruttita connects two worlds. The purity of the wild, delivered to your daily routine.",
-        "bridge_text_pt": "A Fruttita liga dois mundos. A pureza da natureza, entregue à tua rotina diária."
-      }
-    },
-    "dual_cards": {
-      "type": "fruttita-dual-cards",
+        "a_link": "/pages/baobab",
+        "a_placeholder": "Placeholder → 素材 ⑦a 整棵树",
+        "a_eyebrow": "这棵树",
+        "a_eyebrow_en": "The tree",
+        "a_eyebrow_pt": "A árvore",
+        "a_title": "认识 imbondeiro。",
+        "a_title_en": "Meet the imbondeiro.",
+        "a_title_pt": "Conheça o imbondeiro.",
+        "a_text": "一棵树，三个名字，和一颗自己变干的果实。",
+        "a_text_en": "One tree, three names, and a fruit that dries itself.",
+        "a_text_pt": "Uma árvore, três nomes, e um fruto que seca sozinho.",
+        "a_go": "去看树 →",
+        "a_go_en": "Go to the tree →",
+        "a_go_pt": "Ir à árvore →",
+        "b_link": "/pages/quality",
+        "b_eyebrow": "品质",
+        "b_eyebrow_en": "Quality",
+        "b_eyebrow_pt": "Qualidade",
+        "b_title": "数字，不是形容词。",
+        "b_title_en": "Numbers, not adjectives.",
+        "b_title_pt": "Números, não adjetivos.",
+        "b_text": "每批成品检测，两张 GFSI 认证，文件可索取。",
+        "b_text_en": "Every batch tested as a finished product, two GFSI certifications, documents on request.",
+        "b_text_pt": "Cada lote testado como produto acabado, duas certificações GFSI, documentos a pedido.",
+        "b_go": "看证书 →",
+        "b_go_en": "See the certificates →",
+        "b_go_pt": "Ver os certificados →"
+      },
       "blocks": {
-        "card_clean": {
-          "type": "card",
+        "duo_b0": {
+          "type": "cert",
           "settings": {
-            "title": "干净",
-            "title_en": "Clean",
-            "title_pt": "Limpo",
-            "subtitle": "CLEAN",
-            "subtitle_en": "CLEAN",
-            "subtitle_pt": "CLEAN",
-            "body": "",
-            "body_en": "",
-            "body_pt": "0 sódio. 0 aditivos. 0 gordura.\n\nNão adicionamos. Subtraímos.\n\nA lista de ingredientes é curta porque o ingrediente é bom.\n\nOutras \"bebidas saudáveis\" têm rótulos que parecem manuais de química. O nosso parece uma lista de compras — se só comprasses uma coisa.",
-            "bg_color": "#4F2C1D",
-            "text_color": "#F4E3C9"
+            "name": "BRCGS A+"
           }
         },
-        "card_wild": {
-          "type": "card",
+        "duo_b1": {
+          "type": "cert",
           "settings": {
-            "title": "野性",
-            "title_en": "Wild",
-            "title_pt": "Selvagem",
-            "subtitle": "WILD",
-            "subtitle_en": "WILD",
-            "subtitle_pt": "WILD",
-            "body": "",
-            "body_en": "",
-            "body_pt": "",
-            "bg_color": "#4F2C1D",
-            "text_color": "#F4E3C9"
+            "name": "FSSC 22000"
+          }
+        },
+        "duo_b2": {
+          "type": "cert",
+          "settings": {
+            "name": "FDA-registered"
+          }
+        },
+        "duo_b3": {
+          "type": "cert",
+          "settings": {
+            "name": "Eurofins tested"
           }
         }
       },
       "block_order": [
-        "card_clean",
-        "card_wild"
-      ],
-      "settings": {}
+        "duo_b0",
+        "duo_b1",
+        "duo_b2",
+        "duo_b3"
+      ]
     },
-    "wellbeing": {
-      "type": "fruttita-prose",
-      "blocks": {
-        "wb_p1": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "Well-being 不是一个标准答案。每天跑5公里是，睡到自然醒也是。精准控糖是，偶尔放纵也是。",
-            "text_paragraph_en": "Well-being doesn't have a single answer. Running 5K counts. Sleeping in counts. Tracking macros counts. So does the occasional pizza.",
-            "text_paragraph_pt": "O bem-estar não tem uma resposta única. Correr 5 km conta. Dormir até tarde conta. Controlar macros conta. Uma pizza ocasional também."
-          }
-        },
-        "wb_p2": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "Well-being 是你自己的节奏。是忙碌之后给身体一点喘息，是消耗过度之后的一次温和回血。",
-            "text_paragraph_en": "It's your rhythm. A pause after the grind. A quiet reset when you're running low.",
-            "text_paragraph_pt": "É o teu ritmo. Uma pausa depois da correria. Um recomeço tranquilo quando estás a ficar sem energia."
-          }
-        },
-        "wb_p3": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "我们不定义什么是“健康的生活”。我们只是提供一个 0 负担的天然选项——让你在都市的节奏里，找回最舒服的状态。",
-            "text_paragraph_en": "We don't define healthy. We just make something with one ingredient, zero sodium, and no fine print — so the choice is easy when you want it to be.",
-            "text_paragraph_pt": "Não definimos o que é saudável. Fazemos algo com um ingrediente, zero sódio e sem letras pequenas — para que a escolha seja fácil quando quiseres."
-          }
-        },
-        "wb_p4": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "让身体回归纯粹，让能量自然生长。",
-            "text_paragraph_en": "Simple ingredients. Your pace.",
-            "text_paragraph_pt": "Ingredientes simples. O teu ritmo."
-          }
-        }
-      },
-      "block_order": [
-        "wb_p1",
-        "wb_p2",
-        "wb_p3",
-        "wb_p4"
-      ],
+    "buy": {
+      "type": "sp-buy",
       "settings": {
-        "subtitle": "What We Believe",
-        "subtitle_en": "What We Believe",
-        "subtitle_pt": "No Que Acreditamos",
-        "title": "关注每一个个体的 Well-being。",
-        "title_en": "Your well-being. Your definition.",
-        "title_pt": "O teu bem-estar. A tua definição.",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9"
-      }
-    },
-    "promises": {
-      "type": "fruttita-promise-cards",
-      "blocks": {
-        "pm_1": {
-          "type": "card",
-          "settings": {
-            "icon": "label",
-            "title": "Clean Label 清洁标签",
-            "title_en": "Clean Label",
-            "title_pt": "Rótulo Limpo",
-            "body": "全线产品配料表极简。不加你不需要的东西。不用你看不懂的成分。",
-            "body_en": "Short ingredient lists on every product. Nothing you don't need. Nothing you can't pronounce.",
-            "body_pt": "Listas de ingredientes curtas em todos os produtos. Nada que não precises. Nada que não consigas pronunciar."
-          }
-        },
-        "pm_2": {
-          "type": "card",
-          "settings": {
-            "icon": "chart",
-            "title": "数据透明",
-            "title_en": "Data Transparency",
-            "title_pt": "Transparência de Dados",
-            "body": "所有营养数据来自第三方实验室（SGS / Eurofins）检测。我们公开报告，不编故事。",
-            "body_en": "All nutrition data from third-party labs (SGS / Eurofins). We publish the reports, not stories.",
-            "body_pt": "Todos os dados nutricionais vêm de laboratórios independentes (SGS / Eurofins). Publicamos relatórios, não histórias."
-          }
-        },
-        "pm_3": {
-          "type": "card",
-          "settings": {
-            "icon": "globe",
-            "title": "可持续采购",
-            "title_en": "Sustainable Sourcing",
-            "title_pt": "Fornecimento Sustentável",
-            "body": "猴面包树果实由非洲当地社区采摘。采果不伐树，果实自然成熟脱落。每一次购买，都在支持产地的可持续生计。",
-            "body_en": "Baobab fruit is hand-harvested by local African communities. We pick the fruit. We never cut the tree.",
-            "body_pt": "A múcua é colhida à mão pelas comunidades locais. Colhemos o fruto. Nunca cortamos a árvore."
-          }
-        },
-        "pm_4": {
-          "type": "card",
-          "settings": {
-            "icon": "shield",
-            "title": "合规底线",
-            "title_en": "Compliance First",
-            "title_pt": "Conformidade em Primeiro Lugar",
-            "body": "不做医疗宣称。不用违规词汇。不说我们做不到的事。",
-            "body_en": "No medical claims. No misleading language. We never promise what we can't deliver.",
-            "body_pt": "Sem alegações médicas. Sem linguagem enganosa. Nunca prometemos o que não podemos cumprir."
-          }
-        }
-      },
-      "block_order": [
-        "pm_1",
-        "pm_2",
-        "pm_3",
-        "pm_4"
-      ],
-      "settings": {
-        "title": "我们的承诺",
-        "title_en": "Our Promises",
-        "title_pt": "As Nossas Promessas"
-      }
-    },
-    "hero_close": {
-      "type": "fruttita-hero-banner",
-      "settings": {
-        "bg_color": "#4F2C1D",
-        "overlay_opacity": 30,
-        "subtitle": "Our Mission",
-        "subtitle_en": "Our Mission",
-        "subtitle_pt": "A Nossa Missão",
-        "title": "这不是什么伟大的使命。但值得认真做。",
-        "title_en": "Not a grand mission. Just a good one.",
-        "title_pt": "Não é uma grande missão. Mas é uma boa.",
-        "body": "在过度消耗的都市生活中，提供一种 0 负担、能快速回血的天然解决方案。\n\nFruttita — 来自旷野的纯净能量 · Pure Energy from the Wilderness",
-        "body_en": "One ingredient. Zero nonsense. A natural option for when you want something that doesn't need explaining.\n\nFruttita",
-        "body_pt": "Um ingrediente. Zero complicações. Uma opção natural para quando queres algo que não precisa de explicação.\n\nFruttita",
-        "text_color": "#F4E3C9",
-        "height": "80vh"
+        "tag": "us-notify",
+        "placeholder": "you@email.com",
+        "box_text": "6-PACK BOX · Placeholder → 素材 ⑥",
+        "eyebrow": "购买渠道",
+        "eyebrow_en": "Where to buy",
+        "eyebrow_pt": "Onde comprar",
+        "title": "即将登陆美国。",
+        "title_en": "Coming to the US.",
+        "title_pt": "A chegar aos EUA.",
+        "text": "Shot 六支装正在进入美国零售渠道。留下邮箱，上架当天告诉你在哪买。只发一封，不发周报。",
+        "text_en": "The Shot 6-pack is on its way to US retail. Leave your email and we'll tell you the day it's live, and where. We'll email you once. Not weekly.",
+        "text_pt": "O pack de 6 doses está a caminho do retalho americano. Deixe o email e dizemos-lhe o dia em que estiver disponível, e onde. Um email só. Não é semanal.",
+        "btn": "通知我",
+        "btn_en": "Notify me",
+        "btn_pt": "Avisem-me",
+        "ok": "收到。就这一封。",
+        "ok_en": "Noted. That's the one email.",
+        "ok_pt": "Anotado. Foi esse o email.",
+        "china": "中国大陆：天猫国际、抖音全球购有售。",
+        "china_en": "Also available in China on Tmall Global and Douyin.",
+        "china_pt": "Também disponível na China, na Tmall Global e Douyin."
       }
     }
   },
   "order": [
-    "hero_open",
-    "brand_manifesto",
-    "two_worlds",
-    "dual_cards",
-    "wellbeing",
-    "promises",
-    "hero_close"
+    "title",
+    "photo",
+    "rows",
+    "duo",
+    "buy"
   ]
 }

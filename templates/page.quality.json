@@ -1,0 +1,232 @@
+/*
+ * Fruttita US site · Quality · 2026-09-14 (assign to page handle: quality)
+ */
+{
+  "sections": {
+    "title": {
+      "type": "sp-title",
+      "settings": {
+        "light": true,
+        "eyebrow": "品质",
+        "eyebrow_en": "Quality",
+        "eyebrow_pt": "Qualidade",
+        "title": "数字，不是形容词。",
+        "title_en": "Numbers, not adjectives.",
+        "title_pt": "Números, não adjetivos.",
+        "sub": "这一页写给要核对的人：采购员、进口商、想看报告的消费者。这里没有故事，只有证书、检测和供应链。",
+        "sub_en": "This page is for people who check: buyers, importers, and customers who want to see the report. No story here, just certificates, testing and the supply chain.",
+        "sub_pt": "Esta página é para quem verifica: compradores, importadores e clientes que querem ver o relatório. Aqui não há história, só certificados, análises e cadeia de abastecimento."
+      }
+    },
+    "certs": {
+      "type": "sp-certs",
+      "settings": {
+        "k_label": "认证",
+        "k_label_en": "Certification",
+        "k_label_pt": "Certificação",
+        "k_value": "灌装合作方",
+        "k_value_en": "Bottling partner",
+        "k_value_pt": "Parceiro de engarrafamento",
+        "note": "证书、COA 与检测报告可向贸易伙伴提供：business@fruttita.com",
+        "note_en": "Certificates, certificates of analysis and lab reports are available to trade partners on request: business@fruttita.com",
+        "note_pt": "Certificados, COA e relatórios laboratoriais disponíveis para parceiros comerciais a pedido: business@fruttita.com"
+      },
+      "blocks": {
+        "certs_b0": {
+          "type": "cert",
+          "settings": {
+            "name": "BRCGS Food Safety, Issue 9",
+            "meta": "Grade A+ · SGS"
+          }
+        },
+        "certs_b1": {
+          "type": "cert",
+          "settings": {
+            "name": "FSSC 22000 v6",
+            "meta": "GFSI-recognized · SGS"
+          }
+        },
+        "certs_b2": {
+          "type": "cert",
+          "settings": {
+            "name": "HACCP (Codex) · GMP",
+            "meta": "SGS"
+          }
+        },
+        "certs_b3": {
+          "type": "cert",
+          "settings": {
+            "name": "ISO 22000:2018 · ISO 9001:2015",
+            "meta": ""
+          }
+        },
+        "certs_b4": {
+          "type": "cert",
+          "settings": {
+            "name": "FDA-registered food facility",
+            "meta": ""
+          }
+        },
+        "certs_b5": {
+          "type": "cert",
+          "settings": {
+            "name": "Finished-product testing",
+            "meta": "Eurofins"
+          }
+        }
+      },
+      "block_order": [
+        "certs_b0",
+        "certs_b1",
+        "certs_b2",
+        "certs_b3",
+        "certs_b4",
+        "certs_b5"
+      ]
+    },
+    "rows": {
+      "type": "sp-prose",
+      "settings": {
+        "pad_top": 0,
+        "last": true,
+        "eyebrow": "",
+        "eyebrow_en": "",
+        "eyebrow_pt": "",
+        "head": "",
+        "head_en": "",
+        "head_pt": ""
+      },
+      "blocks": {
+        "rows_b0": {
+          "type": "row",
+          "settings": {
+            "k": "检测",
+            "k_en": "Testing",
+            "k_pt": "Análises",
+            "kv": "Eurofins",
+            "body": "<p>每一批 Shot 都以成品送检，不是原料。检测项目：营养成分（能量、碳水、纤维、糖、钾、钠、钙）、微生物，自 2026 年起加重金属四项。网站上的每一个数字都来自这些报告，报告编号 AR-26-SU-102857-04。</p>",
+            "body_en": "<p>Every batch of the Shot is analyzed as a finished product, not as raw material. What is tested: nutrition (energy, carbohydrate, fiber, sugars, potassium, sodium, calcium), microbiology, and from 2026 four heavy metals. Every number on this site comes from those reports. Report reference: AR-26-SU-102857-04.</p>",
+            "body_pt": "<p>Cada lote da dose é analisado como produto acabado, não como matéria-prima. O que se analisa: nutrição (energia, hidratos, fibra, açúcares, potássio, sódio, cálcio), microbiologia e, a partir de 2026, quatro metais pesados. Todos os números deste site vêm desses relatórios. Referência: AR-26-SU-102857-04.</p>",
+            "aside": "<p>我们印的数字比实测的保守：纤维实测 3.14 g，标 3 g；钾实测 161 mg，标 160 mg。</p>",
+            "aside_en": "<p>The numbers we print are rounded against ourselves: fiber measured 3.14 g, printed 3 g; potassium measured 161 mg, printed 160 mg.</p>",
+            "aside_pt": "<p>Os números que imprimimos são arredondados contra nós: fibra medida 3,14 g, impressa 3 g; potássio medido 161 mg, impresso 160 mg.</p>"
+          }
+        },
+        "rows_b1": {
+          "type": "row",
+          "settings": {
+            "k": "标签",
+            "k_en": "The label",
+            "k_pt": "O rótulo",
+            "kv": "US · 21 CFR 101",
+            "body": "<p>美国标签按 21 CFR 101 编制：Nutrition Facts 面板、按 240 mL 基准计算的声称（高膳食纤维、钾的良好来源、无钠）、果汁含量声明。全文在产品页的「The label」里。</p>",
+            "body_en": "<p>The US label follows 21 CFR 101: the Nutrition Facts panel, claims worked out per 240 mL reference amount (excellent source of fiber, good source of potassium, sodium free), and the juice content statement. The full text is under “The label” on the product page.</p>",
+            "body_pt": "<p>O rótulo americano segue o 21 CFR 101: tabela Nutrition Facts, alegações calculadas por 240 mL de referência (alto teor de fibra, fonte de potássio, sem sódio) e declaração de teor de sumo. O texto completo está em “O rótulo” na página do produto.</p>"
+          }
+        },
+        "rows_b2": {
+          "type": "row",
+          "settings": {
+            "k": "索取文件",
+            "k_en": "Documents",
+            "k_pt": "Documentos",
+            "kv": "",
+            "body": "<p>贸易伙伴可索取：证书原件、每批 COA、欧陆报告、规格书、GTIN 与箱规。写信到 business@fruttita.com，通常两个工作日内回复。</p>",
+            "body_en": "<p>Available to trade partners: certificates, per-batch COAs, Eurofins reports, product specification, GTINs and case configuration. Write to business@fruttita.com; we usually reply within two working days.</p>",
+            "body_pt": "<p>Disponível para parceiros comerciais: certificados, COA por lote, relatórios Eurofins, ficha técnica, GTIN e configuração de caixa. Escreva para business@fruttita.com; respondemos normalmente em dois dias úteis.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rows_b0",
+        "rows_b1",
+        "rows_b2"
+      ]
+    },
+    "chain": {
+      "type": "sp-steps",
+      "settings": {
+        "dark": true,
+        "eyebrow": "供应链 · 给贸易伙伴",
+        "eyebrow_en": "Supply chain · for trade partners",
+        "eyebrow_pt": "Cadeia de abastecimento · para parceiros",
+        "head": "从安哥拉到货架，四站。",
+        "head_en": "From Angola to the shelf, four stops.",
+        "head_pt": "De Angola à prateleira, quatro paragens.",
+        "note": "消费者面我们只写「非洲」；这一页写给核对产地的人，所以写全。",
+        "note_en": "On consumer pages we say Africa. This page is for people checking origin, so it says where.",
+        "note_pt": "Nas páginas de consumo dizemos África. Esta página é para quem verifica a origem, por isso diz onde."
+      },
+      "blocks": {
+        "chain_b0": {
+          "type": "step",
+          "settings": {
+            "where": "安哥拉",
+            "where_en": "Angola",
+            "where_pt": "Angola",
+            "title": "野生采集",
+            "title_en": "Wild harvest",
+            "title_pt": "Colheita selvagem",
+            "text": "旱季由当地社区从野生 imbondeiro 采集 múcua。",
+            "text_en": "Múcua collected in the dry season by local communities from wild imbondeiro trees.",
+            "text_pt": "Múcua colhida na estação seca por comunidades locais em imbondeiros selvagens."
+          }
+        },
+        "chain_b1": {
+          "type": "step",
+          "settings": {
+            "where": "Fazenda27 · 瓦库昆戈",
+            "where_en": "Fazenda27 · Waku-Kungo",
+            "where_pt": "Fazenda27 · Waku-Kungo",
+            "title": "果肉处理",
+            "title_en": "Pulp processing",
+            "title_pt": "Processamento da polpa",
+            "text": "去壳去籽，果肉保持整果。以干果肉出口。",
+            "text_en": "Shell and seed removed, pulp kept whole. Exported as dry pulp.",
+            "text_pt": "Casca e sementes removidas, polpa inteira. Exportada como polpa seca."
+          }
+        },
+        "chain_b2": {
+          "type": "step",
+          "settings": {
+            "where": "越南 · 胡志明市",
+            "where_en": "Vietnam · Ho Chi Minh City",
+            "where_pt": "Vietname · Cidade de Ho Chi Minh",
+            "title": "灌装",
+            "title_en": "Bottling",
+            "title_pt": "Engarrafamento",
+            "text": "加水复原，巴氏杀菌，玻璃瓶灌装。BRCGS A+ / FSSC 22000 / FDA 注册工厂。",
+            "text_en": "Water added back, pasteurized, filled in glass. BRCGS A+ / FSSC 22000 / FDA-registered facility.",
+            "text_pt": "Água devolvida, pasteurizada, engarrafada em vidro. Fábrica BRCGS A+ / FSSC 22000 / registada na FDA."
+          }
+        },
+        "chain_b3": {
+          "type": "step",
+          "settings": {
+            "where": "美国",
+            "where_en": "United States",
+            "where_pt": "Estados Unidos",
+            "title": "零售分销",
+            "title_en": "Retail distribution",
+            "title_pt": "Distribuição no retalho",
+            "text": "18 个月保质期，30 支/箱（5 × 6 支盒），GTIN 已登记。",
+            "text_en": "18-month shelf life, 30 bottles per case (5 × 6-pack), GTINs registered.",
+            "text_pt": "Validade de 18 meses, 30 garrafas por caixa (5 × pack de 6), GTIN registados."
+          }
+        }
+      },
+      "block_order": [
+        "chain_b0",
+        "chain_b1",
+        "chain_b2",
+        "chain_b3"
+      ]
+    }
+  },
+  "order": [
+    "title",
+    "certs",
+    "rows",
+    "chain"
+  ]
+}

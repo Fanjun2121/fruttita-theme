@@ -1,415 +1,244 @@
+/*
+ * Fruttita US site · Why baobab / Imbondeiro · 2026-09-14
+ */
 {
   "sections": {
-    "hero_open": {
-      "type": "fruttita-hero-banner",
+    "title": {
+      "type": "sp-title",
       "settings": {
-        "bg_color": "#4F2C1D",
-        "overlay_opacity": 30,
-        "subtitle": "THE BAOBAB",
-        "subtitle_en": "THE BAOBAB",
-        "subtitle_pt": "A MÚCUA",
-        "title": "认识一下猴面包树。",
-        "title_en": "Meet the baobab.",
-        "title_pt": "Conhece a múcua.",
-        "body": "非洲人叫它「生命之树」。\n它活了三千年，我们想把它介绍给你。",
-        "body_en": "Africans call it the \"Tree of Life.\"\n3,000 years old. Still going.",
-        "body_pt": "Em África, chamam-lhe a \"Árvore da Vida.\"\n3.000 anos. Ainda de pé.",
-        "text_color": "#F4E3C9",
-        "height": "80vh"
+        "eyebrow": "为什么是猴面包树 · Adansonia digitata",
+        "eyebrow_en": "Why baobab · Adansonia digitata",
+        "eyebrow_pt": "Porquê a múcua · Adansonia digitata",
+        "title": "认识 imbondeiro。",
+        "title_en": "Meet the imbondeiro.",
+        "title_pt": "Conheça o imbondeiro.",
+        "sub": "在我们的果实生长的地方，没有人叫它 baobab。这棵树叫 imbondeiro，它的果实叫 múcua。这是它做到的、果园里的水果都做不到的事。",
+        "sub_en": "Where our fruit comes from, nobody calls it a baobab. The tree is the imbondeiro. The fruit is múcua. Here is what it does that no orchard fruit can.",
+        "sub_pt": "Onde nasce o nosso fruto, ninguém lhe chama baobab. A árvore é o imbondeiro. O fruto é a múcua. Eis o que ele faz e que nenhum fruto de pomar consegue."
       }
     },
-    "what_is_it": {
-      "type": "fruttita-prose",
+    "tree": {
+      "type": "sp-fullbleed",
+      "settings": {
+        "title": "它站上几个世纪，把水存进树干，果实掉下来时已经是干的。",
+        "title_en": "It stands for centuries, stores water in its trunk, and drops its fruit already dry.",
+        "title_pt": "Vive séculos, guarda água no tronco e deixa cair o fruto já seco.",
+        "label": "Imbondeiro · 旱季",
+        "label_en": "Imbondeiro · dry season",
+        "label_pt": "Imbondeiro · estação seca",
+        "placeholder_note": "Placeholder → 素材 ⑦a 整棵树带果实（旱季，Jorge）"
+      }
+    },
+    "rows": {
+      "type": "sp-prose",
+      "settings": {
+        "pad_top": 88,
+        "last": false,
+        "eyebrow": "记录",
+        "eyebrow_en": "Record",
+        "eyebrow_pt": "Registo",
+        "head": "一棵树，三个名字",
+        "head_en": "One tree, three names",
+        "head_pt": "Uma árvore, três nomes"
+      },
       "blocks": {
-        "wi_p1": {
-          "type": "text_paragraph",
+        "rows_b0": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "猴面包树（Baobab），生长在非洲热带草原。",
-            "text_paragraph_en": "The baobab grows across the African tropical savanna.",
-            "text_paragraph_pt": "O imbondeiro cresce na savana tropical africana."
+            "k": "名字",
+            "k_en": "The name",
+            "k_pt": "O nome",
+            "kv": "Imbondeiro · Múcua",
+            "body": "<p><strong>Imbondeiro</strong> 是这棵树在我们产地的葡语名字，来自当地语言金邦杜语的 mbondo。果实叫 <strong>múcua</strong>。英语世界叫它 baobab，植物学叫它 <em>Adansonia digitata</em>。</p><p>我们在包装上用 baobab，因为你认识这个词。但在树下，它一直是 imbondeiro。</p>",
+            "body_en": "<p><strong>Imbondeiro</strong> is what the tree is called in the Portuguese spoken where our fruit grows, from the Kimbundu word <em>mbondo</em>. The fruit is <strong>múcua</strong>. English calls it baobab; botany calls it <em>Adansonia digitata</em>.</p><p>We print baobab on the label because that is the word you know. Under the tree, it has always been imbondeiro.</p>",
+            "body_pt": "<p><strong>Imbondeiro</strong> é o nome da árvore no português falado onde nasce o nosso fruto, da palavra quimbundo <em>mbondo</em>. O fruto é a <strong>múcua</strong>. Em inglês chama-se baobab; em botânica, <em>Adansonia digitata</em>.</p><p>Escrevemos baobab no rótulo porque é a palavra que conhece. Debaixo da árvore, sempre foi imbondeiro.</p>",
+            "aside": "<p>三个名字，同一棵树。我们的语言切换器也是这么写的：EN baobab · 中文 猴面包树 · PT múcua。</p>",
+            "aside_en": "<p>Three names, one tree. Our language switcher says the same thing: EN baobab · 中文 猴面包树 · PT múcua.</p>",
+            "aside_pt": "<p>Três nomes, uma árvore. O nosso seletor de idioma diz o mesmo: EN baobab · 中文 猴面包树 · PT múcua.</p>"
           }
         },
-        "wi_p2": {
-          "type": "text_paragraph",
+        "rows_b1": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "它的样子有点奇怪——树干比树冠粗得多，像一棵被倒过来种的树。当地传说里，它是被上帝倒插进土里的。",
-            "text_paragraph_en": "It looks odd — trunk wider than its canopy, like a tree planted upside down. Legend says that's exactly what happened.",
-            "text_paragraph_pt": "Tem um aspeto estranho — tronco mais largo do que a copa, como uma árvore plantada ao contrário. A lenda diz que foi exatamente isso que aconteceu."
+            "k": "树",
+            "k_en": "The tree",
+            "k_pt": "A árvore",
+            "kv": "",
+            "body": "<p>它长在非洲南部的干旱稀树草原上，一年里有大半年不下雨。它靠树干里存的水活过旱季，能活上几百年。没有人给它浇水、施肥、打药，也没有人种它。我们的果实全部来自野生的树。</p><p>我们摘果，树留下。</p>",
+            "body_en": "<p>It grows on the dry savanna of southern Africa, where most of the year it does not rain. It lives through the dry season on the water stored in its trunk, and it lives for centuries. Nobody waters it, feeds it, or sprays it, and nobody plants it. All of our fruit comes from wild trees.</p><p>We pick the fruit. The tree stays.</p>",
+            "body_pt": "<p>Cresce na savana seca do sul de África, onde na maior parte do ano não chove. Sobrevive à estação seca com a água guardada no tronco, e vive séculos. Ninguém a rega, aduba ou pulveriza, e ninguém a planta. Todo o nosso fruto vem de árvores selvagens.</p><p>Colhemos o fruto. A árvore fica.</p>",
+            "ph": "Placeholder → 素材 ⑦b 树干 / 树皮特写"
           }
         },
-        "wi_p3": {
-          "type": "text_paragraph",
+        "rows_b2": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "但正是这种「反常」的结构，让它能在树干里储存数吨的水，在最干旱的环境里活上千年。",
-            "text_paragraph_en": "That unusual shape lets it store tons of water, surviving millennia through the worst droughts.",
-            "text_paragraph_pt": "Essa forma invulgar permite-lhe armazenar toneladas de água, sobrevivendo milénios nas piores secas."
+            "k": "果实",
+            "k_en": "The fruit",
+            "k_pt": "O fruto",
+            "kv": "",
+            "body": "<p>果实挂在枝头上自己变干，掉下来的时候壳是硬的，里面是白垩质的、酸的、粉状的果肉，含水只有约 11%。这就是为什么它不加任何东西也能放很多年，也是为什么我们能把水加回去，而不是把水抽出来。</p>",
+            "body_en": "<p>The fruit dries while it still hangs on the branch. By the time it falls, the shell is hard and the inside is a chalky, tart, powdery pulp with about 11% water left. That is why it keeps for years with nothing added, and why we can add the water back instead of taking it out.</p>",
+            "body_pt": "<p>O fruto seca ainda pendurado no ramo. Quando cai, a casca está dura e o interior é uma polpa calcária, ácida e farinhenta com cerca de 11% de água. Por isso se conserva anos sem nada adicionado, e por isso podemos devolver a água em vez de a retirar.</p>",
+            "ph": "Placeholder → 素材 ② 果壳掰开 + ③ 果肉质感"
           }
         },
-        "wi_p4": {
-          "type": "text_paragraph",
+        "rows_b3": {
+          "type": "row",
           "settings": {
-            "text_paragraph": "非洲当地人称它为「生命之树」。干旱时，人和动物都靠它活下来。",
-            "text_paragraph_en": "Locals call it the \"Tree of Life.\" In droughts, people and animals depend on it.",
-            "text_paragraph_pt": "Os locais chamam-lhe a \"Árvore da Vida.\" Durante as secas, pessoas e animais dependem dela."
+            "k": "里面有什么",
+            "k_en": "What is in it",
+            "k_pt": "O que tem",
+            "kv": "Per 100 g pulp",
+            "body": "<p>每 100 g 果肉：膳食纤维约 10.5 g，总多酚约 350 mg，钠未检出。这些是欧陆对整果果肉的实测。Shot 是果肉加水稀释后的，它自己的数字在标签上。</p>",
+            "body_en": "<p>Per 100 g of pulp: about 10.5 g of dietary fiber, about 350 mg of total polyphenols, sodium not detected. These are Eurofins measurements on the whole pulp. The Shot is that pulp diluted with water; its own numbers are on its label.</p>",
+            "body_pt": "<p>Por 100 g de polpa: cerca de 10,5 g de fibra, cerca de 350 mg de polifenóis totais, sódio não detetado. São medições da Eurofins na polpa inteira. A dose é essa polpa diluída em água; os seus próprios números estão no rótulo.</p>",
+            "aside": "<p>钾也有，而且不少，但它在批次之间波动得比我们愿意印出来的大。等复检锁定再放数字。</p>",
+            "aside_en": "<p>There is potassium too, a good amount, but it varies between harvests more than we are willing to print. We'll add the number when the retest locks it.</p>",
+            "aside_pt": "<p>Também há potássio, e bastante, mas varia entre colheitas mais do que estamos dispostos a imprimir. Publicamos o número quando a reanálise o fixar.</p>"
           }
         }
       },
       "block_order": [
-        "wi_p1",
-        "wi_p2",
-        "wi_p3",
-        "wi_p4"
-      ],
-      "settings": {
-        "subtitle": "What is it",
-        "subtitle_en": "What is it",
-        "subtitle_pt": "O que é",
-        "title": "一棵活了三千年的树",
-        "title_en": "3,000 years old. Still standing.",
-        "title_pt": "3.000 anos. Ainda de pé.",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
-      }
+        "rows_b0",
+        "rows_b1",
+        "rows_b2",
+        "rows_b3"
+      ]
     },
-    "baobab_gallery": {
-      "type": "fruttita-image-gallery",
+    "steps": {
+      "type": "sp-steps",
+      "settings": {
+        "dark": false,
+        "eyebrow": "从树到瓶",
+        "eyebrow_en": "From tree to bottle",
+        "eyebrow_pt": "Da árvore à garrafa",
+        "head": "四步。没有第五步。",
+        "head_en": "Four steps. There is no fifth.",
+        "head_pt": "Quatro passos. Não há quinto.",
+        "note": "",
+        "note_en": "",
+        "note_pt": ""
+      },
       "blocks": {
-        "bg_1": {
-          "type": "image",
+        "steps_b0": {
+          "type": "step",
           "settings": {
-            "caption": "猴面包树果实",
-            "caption_en": "Baobab fruit",
-            "caption_pt": "Múcua"
+            "where": "树上",
+            "where_en": "On the tree",
+            "where_pt": "Na árvore",
+            "title": "自己变干",
+            "title_en": "Dries on its own",
+            "title_pt": "Seca sozinho",
+            "text": "果实在枝头上风干，自己掉下来。不催熟，不喷洒，按树的时间表。",
+            "text_en": "The fruit air-dries on the branch and drops when it is ready. No forcing, no spraying, on the tree's schedule.",
+            "text_pt": "O fruto seca no ramo e cai quando está pronto. Sem forçar, sem pulverizar, ao ritmo da árvore."
           }
         },
-        "bg_2": {
-          "type": "image",
+        "steps_b1": {
+          "type": "step",
           "settings": {
-            "caption": "天然果浆",
-            "caption_en": "Natural pulp",
-            "caption_pt": "Polpa natural"
+            "where": "旱季",
+            "where_en": "Dry season",
+            "where_pt": "Estação seca",
+            "title": "人工采集",
+            "title_en": "Collected by hand",
+            "title_pt": "Colhido à mão",
+            "text": "当地社区从野生树下采集。果实带走，树留下。",
+            "text_en": "Collected by local communities from wild trees. Fruit taken, tree untouched.",
+            "text_pt": "Colhido por comunidades locais em árvores selvagens. Leva-se o fruto, a árvore fica."
           }
         },
-        "bg_3": {
-          "type": "image",
+        "steps_b2": {
+          "type": "step",
           "settings": {
-            "caption": "非洲热带草原上的猴面包树",
-            "caption_en": "Baobab on the African savanna",
-            "caption_pt": "Imbondeiro na savana africana"
+            "where": "产地",
+            "where_en": "At origin",
+            "where_pt": "Na origem",
+            "title": "去壳去籽",
+            "title_en": "Shell and seed removed",
+            "title_pt": "Casca e sementes removidas",
+            "text": "敲开果壳，取出果肉，筛掉籽。果肉保持整果，不提取、不浓缩。",
+            "text_en": "Shell cracked, pulp taken out, seeds sifted away. The pulp stays whole: nothing extracted, nothing concentrated.",
+            "text_pt": "Quebra-se a casca, retira-se a polpa, peneiram-se as sementes. A polpa fica inteira: nada extraído, nada concentrado."
+          }
+        },
+        "steps_b3": {
+          "type": "step",
+          "settings": {
+            "where": "灌装",
+            "where_en": "Bottling",
+            "where_pt": "Engarrafamento",
+            "title": "加水回去",
+            "title_en": "Water added back",
+            "title_pt": "Água devolvida",
+            "text": "果肉加水复原，巴氏杀菌，玻璃瓶灌装。配料表就这两行。",
+            "text_en": "Pulp and water, pasteurized, filled in glass. That is the entire ingredient list.",
+            "text_pt": "Polpa e água, pasteurizada, engarrafada em vidro. É toda a lista de ingredientes."
           }
         }
       },
       "block_order": [
-        "bg_1",
-        "bg_2",
-        "bg_3"
-      ],
+        "steps_b0",
+        "steps_b1",
+        "steps_b2",
+        "steps_b3"
+      ]
+    },
+    "also": {
+      "type": "sp-also",
       "settings": {
-        "subtitle": "The Fruit",
-        "subtitle_en": "The Fruit",
-        "subtitle_pt": "O Fruto",
-        "title": "果实与果浆",
-        "title_en": "The fruit & the pulp",
-        "title_pt": "O fruto e a polpa",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9",
-        "columns_desktop": "3",
-        "aspect_ratio": "4 / 3"
+        "link": "/products/the-baobab-pulp-shot",
+        "eyebrow": "试试看",
+        "eyebrow_en": "Try it",
+        "eyebrow_pt": "Prove",
+        "tag": "唯一的即饮版本",
+        "tag_en": "The only ready-to-drink version",
+        "tag_pt": "A única versão pronta a beber",
+        "title": "The Shot · 猴面包树原浆饮，50 mL",
+        "title_en": "The Shot · Baobab Pulp Shot, 50 mL",
+        "title_pt": "The Shot · Dose de Polpa de Múcua, 50 mL",
+        "text": "Múcua 加水，没有别的。酸，微涩，一口喝完。",
+        "text_en": "Múcua and water, nothing else. Tart, a little astringent, gone in one go.",
+        "text_pt": "Múcua e água, mais nada. Ácida, ligeiramente adstringente, bebida de uma vez.",
+        "go": "看产品 →",
+        "go_en": "See the Shot →",
+        "go_pt": "Ver a dose →"
       }
     },
-    "nutrition_data": {
-      "type": "fruttita-data-science",
-      "blocks": {
-        "nd_vc": {
-          "type": "metric",
-          "settings": {
-            "label": "",
-            "label_en": "",
-            "label_pt": "",
-            "value": "420mg+",
-            "description": "",
-            "description_en": "",
-            "description_pt": "",
-            "bar_pct": 95
-          }
-        },
-        "nd_k": {
-          "type": "metric",
-          "settings": {
-            "label": "钾",
-            "label_en": "Potassium",
-            "label_pt": "Potássio",
-            "value": "380mg+",
-            "description": "天然电解质，帮助身体排出多余的钠",
-            "description_en": "",
-            "description_pt": "Eletrólito natural. Contrabalança o sódio.",
-            "bar_pct": 85
-          }
-        },
-        "nd_fiber": {
-          "type": "metric",
-          "settings": {
-            "label": "膳食纤维",
-            "label_en": "Dietary Fiber",
-            "label_pt": "Fibra Alimentar",
-            "value": "10g+",
-            "description": "相当于 4 个苹果",
-            "description_en": "About 4 apples worth",
-            "description_pt": "Equivalente a 4 maçãs",
-            "bar_pct": 78
-          }
-        },
-        "nd_na": {
-          "type": "metric",
-          "settings": {
-            "label": "钠",
-            "label_en": "Sodium",
-            "label_pt": "Sódio",
-            "value": "0mg",
-            "description": "未检出",
-            "description_en": "Not detected",
-            "description_pt": "Não detetado",
-            "bar_pct": 100
-          }
-        },
-        "nd_polyphenol": {
-          "type": "metric",
-          "settings": {
-            "label": "总多酚",
-            "label_en": "Total Polyphenols",
-            "label_pt": "Polifenóis Totais",
-            "value": "828mg",
-            "description": "",
-            "description_en": "",
-            "description_pt": "",
-            "bar_pct": 92
-          }
-        }
-      },
-      "block_order": [
-        "nd_vc",
-        "nd_k",
-        "nd_fiber",
-        "nd_na",
-        "nd_polyphenol"
-      ],
+    "buy": {
+      "type": "sp-buy",
       "settings": {
-        "subtitle": "Nutrition",
-        "subtitle_en": "Nutrition",
-        "subtitle_pt": "Nutrição",
-        "title": "一颗果实的营养密度",
-        "title_en": "What one fruit packs.",
-        "title_pt": "O que um fruto contém.",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9",
-        "source_note": "数据来源：SGS / Eurofins 第三方实验室检测报告（每 100g 原浆）",
-        "source_note_en": "Source: SGS / Eurofins third-party lab reports (per 100g pulp)",
-        "source_note_pt": "Fonte: relatórios laboratoriais SGS / Eurofins (por 100g de polpa)",
-        "toggle_open_text": "还有一项你可能不知道",
-        "toggle_open_text_en": "One more thing",
-        "toggle_open_text_pt": "Mais uma coisa",
-        "toggle_close_text": "收起",
-        "toggle_close_text_en": "Collapse",
-        "toggle_close_text_pt": "Recolher",
-        "easter_egg_title": "自然风干，零人工干预",
-        "easter_egg_title_en": "Air-dried naturally. Zero human intervention.",
-        "easter_egg_title_pt": "Secagem natural. Zero intervenção humana.",
-        "easter_egg_text": "猴面包树果实在枝头自然风干，不靠人工催熟，不靠化学干预。你拿到的，就是大自然原本的样子。",
-        "easter_egg_text_en": "The fruit air-dries on the branch. No ripening agents. No chemicals. What you get is exactly what the tree made.",
-        "easter_egg_text_pt": "O fruto seca naturalmente no ramo. Sem agentes de maturação. Sem químicos. O que recebes é exatamente o que a árvore produziu."
-      }
-    },
-    "baobab_quote": {
-      "type": "fruttita-quotes",
-      "blocks": {
-        "bq_1": {
-          "type": "quote",
-          "settings": {
-            "text": "越恶劣的环境，越强的营养密度。这不是实验室的配方，是三千年自然选择的结果。",
-            "text_en": "Harsher environment, denser nutrition. Not a formula — 3,000 years of natural selection.",
-            "text_pt": "Ambiente mais adverso, maior densidade nutricional. Não é uma fórmula — 3.000 anos de seleção natural."
-          }
-        },
-        "bq_2": {
-          "type": "quote",
-          "settings": {
-            "text": "它不靠人工催熟，不靠化学干预。只是在赤道阳光下，沉默地生长。",
-            "text_en": "No ripening agents. No sprays. It grows under the equatorial sun and figures out the rest.",
-            "text_pt": "Sem agentes de maturação. Sem pulverizações. Cresce ao sol equatorial e resolve o resto sozinha."
-          }
-        },
-        "bq_3": {
-          "type": "quote",
-          "settings": {
-            "text": "采果不伐树。每一次采购，都在支持产地的可持续生计。",
-            "text_en": "We pick the fruit. Never cut the tree.",
-            "text_pt": "Colhemos o fruto. Nunca cortamos a árvore."
-          }
-        }
-      },
-      "block_order": [
-        "bq_1",
-        "bq_2",
-        "bq_3"
-      ],
-      "settings": {
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
-      }
-    },
-    "why_powerful": {
-      "type": "fruttita-value-props",
-      "blocks": {
-        "wp_1": {
-          "type": "card",
-          "settings": {
-            "icon": "droplet",
-            "title": "没有灌溉",
-            "title_en": "No Irrigation",
-            "title_pt": "Sem Irrigação",
-            "description": "赤道干旱草原，年降水不足 500mm。\n猴面包树靠粗壮的树干储水数吨，\n独自扛过每一个旱季。",
-            "description_en": "Equatorial dry savanna. Under 500mm of rain a year. The baobab stores tons of water in its trunk and outlasts every dry season.",
-            "description_pt": "Savana seca equatorial. Menos de 500mm de chuva por ano. O imbondeiro armazena toneladas de água no tronco e sobrevive a cada estação seca."
-          }
-        },
-        "wp_2": {
-          "type": "card",
-          "settings": {
-            "icon": "leaf",
-            "title": "没有施肥",
-            "title_en": "No Fertilizer",
-            "title_pt": "Sem Fertilizantes",
-            "description": "没有人工养分输入，\n所有营养来自亿万年沉积的非洲红土。\n果实里的高密度矿物质，是大地本身的馈赠。",
-            "description_en": "No synthetic nutrients. Everything comes from ancient African red soil — billions of years of mineral deposits in every fruit.",
-            "description_pt": "Sem nutrientes sintéticos. Tudo vem da terra vermelha africana — milhares de milhões de anos de depósitos minerais em cada fruto."
-          }
-        },
-        "wp_3": {
-          "type": "card",
-          "settings": {
-            "icon": "shield",
-            "title": "没有农药",
-            "title_en": "No Pesticides",
-            "title_pt": "Sem Pesticidas",
-            "description": "三千年的自然选择，\n让它进化出极强的自我防御能力。\n不需要化学保护，依然枝繁果茂。",
-            "description_en": "3,000 years of evolution built its own defense system. No pesticides needed.",
-            "description_pt": "3.000 anos de evolução deram-lhe o seu próprio sistema de defesa. Sem necessidade de pesticidas."
-          }
-        }
-      },
-      "block_order": [
-        "wp_1",
-        "wp_2",
-        "wp_3"
-      ],
-      "settings": {
-        "subtitle": "Why So Powerful",
-        "subtitle_en": "Why So Powerful",
-        "subtitle_pt": "Porquê Tão Poderosa",
-        "title": "三千年的自然选择",
-        "title_en": "3,000 years of natural selection",
-        "title_pt": "3.000 anos de seleção natural",
-        "bg_color": "#3A2015",
-        "text_color": "#F4E3C9"
-      }
-    },
-    "tree_to_bottle": {
-      "type": "fruttita-value-props",
-      "blocks": {
-        "tb_1": {
-          "type": "card",
-          "settings": {
-            "icon": "sun",
-            "title": "01 自然成熟",
-            "title_en": "01 Natural Ripening",
-            "title_pt": "01 Maturação Natural",
-            "description": "果实在枝头自然风干脱落。\n不催熟，不打药，不干预。\n大自然说了算。",
-            "description_en": "The fruit air-dries and drops from the branch on its own. No forcing. No spraying. Nature's timeline.",
-            "description_pt": "O fruto seca e cai do ramo sozinho. Sem forçar. Sem pulverizar. No tempo da natureza."
-          }
-        },
-        "tb_2": {
-          "type": "card",
-          "settings": {
-            "icon": "leaf",
-            "title": "02 当地采摘",
-            "title_en": "02 Local Harvest",
-            "title_pt": "02 Colheita Local",
-            "description": "由非洲当地社区手工采集。\n采果不伐树。\n每一次采购，都在支持产地的可持续生计。",
-            "description_en": "Hand-harvested by local African communities. Fruit picked. Trees untouched.",
-            "description_pt": "Colheita manual pelas comunidades locais. Fruto apanhado. Árvores intocadas."
-          }
-        },
-        "tb_3": {
-          "type": "card",
-          "settings": {
-            "icon": "droplet",
-            "title": "03 原浆提取",
-            "title_en": "03 Pulp Extraction",
-            "title_pt": "03 Extração da Polpa",
-            "description": "果实去壳后取出果肉。\n你拿到的，就是果实本来的样子。",
-            "description_en": "",
-            "description_pt": "Retira-se a casca e extrai-se a polpa. Sem açúcar, conservantes ou aditivos. O que recebes é o fruto."
-          }
-        },
-        "tb_4": {
-          "type": "card",
-          "settings": {
-            "icon": "check",
-            "title": "04 灌装成品",
-            "title_en": "04 Bottled & Packed",
-            "title_pt": "04 Embalamento Final",
-            "description": "Pouch 在非洲产地直接灌装，原产成品进口。\nShot 由非洲原浆运至越南完成玻璃瓶灌装。\n不同产品，同一棵树，同一份纯粹。",
-            "description_en": "THE POUCH: filled at origin in Africa, imported as-is. THE SHOT: African pulp, bottled in glass in Vietnam. Different products. Same tree.",
-            "description_pt": "THE POUCH: embalado na origem em Africa, importado sem alterações. THE SHOT: polpa africana, engarrafada em vidro no Vietname. Produtos diferentes. A mesma árvore."
-          }
-        }
-      },
-      "block_order": [
-        "tb_1",
-        "tb_2",
-        "tb_3",
-        "tb_4"
-      ],
-      "settings": {
-        "subtitle": "From Tree to Bottle",
-        "subtitle_en": "From Tree to Bottle",
-        "subtitle_pt": "Da Árvore à Garrafa",
-        "title": "从非洲旷野到你手里",
-        "title_en": "From African wild to your hands.",
-        "title_pt": "Da natureza africana às tuas mãos.",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
-      }
-    },
-    "hero_close": {
-      "type": "fruttita-hero-banner",
-      "settings": {
-        "bg_color": "#4F2C1D",
-        "overlay_opacity": 30,
-        "subtitle": "Try It",
-        "subtitle_en": "Try It",
-        "subtitle_pt": "Experimenta",
-        "title": "这棵树的能量，现在可以喝到了。",
-        "title_en": "3,000 years of energy. Now in a bottle.",
-        "title_pt": "3.000 anos de energia. Agora numa garrafa.",
-        "btn_text": "浏览产品",
-        "btn_text_en": "Browse Products",
-        "btn_text_pt": "Ver Produtos",
-        "btn_link": "/collections/all",
-        "text_color": "#F4E3C9",
-        "height": "80vh"
+        "tag": "us-notify",
+        "placeholder": "you@email.com",
+        "box_text": "6-PACK BOX · Placeholder → 素材 ⑥",
+        "eyebrow": "购买渠道",
+        "eyebrow_en": "Where to buy",
+        "eyebrow_pt": "Onde comprar",
+        "title": "即将登陆美国。",
+        "title_en": "Coming to the US.",
+        "title_pt": "A chegar aos EUA.",
+        "text": "Shot 六支装正在进入美国零售渠道。留下邮箱，上架当天告诉你在哪买。只发一封，不发周报。",
+        "text_en": "The Shot 6-pack is on its way to US retail. Leave your email and we'll tell you the day it's live, and where. We'll email you once. Not weekly.",
+        "text_pt": "O pack de 6 doses está a caminho do retalho americano. Deixe o email e dizemos-lhe o dia em que estiver disponível, e onde. Um email só. Não é semanal.",
+        "btn": "通知我",
+        "btn_en": "Notify me",
+        "btn_pt": "Avisem-me",
+        "ok": "收到。就这一封。",
+        "ok_en": "Noted. That's the one email.",
+        "ok_pt": "Anotado. Foi esse o email.",
+        "china": "中国大陆：天猫国际、抖音全球购有售。",
+        "china_en": "Also available in China on Tmall Global and Douyin.",
+        "china_pt": "Também disponível na China, na Tmall Global e Douyin."
       }
     }
   },
   "order": [
-    "hero_open",
-    "what_is_it",
-    "baobab_gallery",
-    "nutrition_data",
-    "baobab_quote",
-    "why_powerful",
-    "tree_to_bottle",
-    "hero_close"
+    "title",
+    "tree",
+    "rows",
+    "steps",
+    "also",
+    "buy"
   ]
 }
