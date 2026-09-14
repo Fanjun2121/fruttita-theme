@@ -56,16 +56,6 @@
         "padding_bottom": 8
       }
     },
-    "custom_liquid_MFHHYm": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "{% comment %} 2026-09-14: legacy homepage origin hero removed (replaced by sp-hero section in index.json). {% endcomment %}",
-        "color_scheme": "scheme-a0d5e2d5-fa4c-4e80-be88-15d4811d0aa8",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_WNrgBg": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -80,7 +70,6 @@
   "order": [
     "announcement-bar",
     "header",
-    "custom_liquid_MFHHYm",
     "custom_liquid_WNrgBg"
   ]
 }
