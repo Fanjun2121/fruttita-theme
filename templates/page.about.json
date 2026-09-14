@@ -56,7 +56,8 @@
             "body_pt": "<p>A polpa vem da Fazenda27, uma empresa alimentar familiar no Waku-Kungo, no planalto de Angola, que há anos fornece múcua à indústria alimentar local. Cada garrafa começa ali.</p>",
             "ph": "",
             "asset": "sp-photo-fazenda27-plant.jpg",
-            "alt": "Fazenda27's plant on the red earth outside Waku-Kungo, Angola"
+            "alt": "Fazenda27's plant on the red earth outside Waku-Kungo, Angola",
+            "overlay": true
           }
         },
         "rows_b1": {
@@ -84,7 +85,8 @@
             "body_en": "<p>Fazenda27's own plant processes the pulp, but it does not yet run a 50 mL glass-bottle line. So the Shot is filled by a partner in Vietnam: a GFSI-certified facility (BRCGS Grade A+, FSSC 22000) that specialises in glass, sits between our Asian and North American markets, and lets us supply each of them from one place, flexibly and at a sensible cost. We would rather explain that here than have you find it on the label.</p>",
             "body_pt": "<p>A fábrica da própria Fazenda27 processa a polpa, mas ainda não tem uma linha de engarrafamento em vidro de 50 mL. Por isso a dose é engarrafada por um parceiro no Vietname: uma fábrica certificada GFSI (BRCGS Grau A+, FSSC 22000), especializada em vidro, situada entre os nossos mercados asiáticos e norte-americanos, que nos permite abastecer cada um deles a partir de um só lugar, com flexibilidade e a um custo sensato. Preferimos explicá-lo aqui a deixar que o descubra no rótulo.</p>",
             "asset": "sp-photo-f27-line-wide.jpg",
-            "alt": "Inside Fazenda27's plant: the processing line"
+            "alt": "Inside Fazenda27's plant: the processing line",
+            "overlay": true
           }
         },
         "rows_b3": {

@@ -5,6 +5,15 @@
   {%- for block in section.blocks -%}
   <div class="sp-row" {{ block.shopify_attributes }}>
     <div class="k"><span class="sp-lab">{% render 'i18n-text', default: block.settings.k, en: block.settings.k_en, pt: block.settings.k_pt %}</span>{%- if block.settings.kv != blank -%}<b>{{ block.settings.kv }}</b>{%- endif -%}</div>
+    {%- assign has_img = false -%}{%- if block.settings.image != blank or block.settings.asset != blank -%}{%- assign has_img = true -%}{%- endif -%}
+    {%- if has_img and block.settings.overlay -%}
+    <div class="v plate">
+      <div class="sp-plate">
+        {%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 2000 | image_tag: loading: 'lazy', alt: block.settings.alt | escape }}{%- else -%}<img src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy" width="2000" height="1400">{%- endif -%}
+        <div class="plate-text">{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>
+      </div>
+    </div>
+    {%- else -%}
     <div class="v{% if block.settings.image == blank and block.settings.aside_en == blank %} single{% endif %}">
       <div>{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>
       {%- if block.settings.image != blank -%}<div class="sp-rowimg">{{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
@@ -12,6 +21,7 @@
       {%- elsif block.settings.ph != blank -%}<div class="sp-rowimg empty"><div class="sp-ph">{{ block.settings.ph }}</div></div>
       {%- elsif block.settings.aside_en != blank -%}<div class="sp-aside">{% render 'i18n-text', default: block.settings.aside, en: block.settings.aside_en, pt: block.settings.aside_pt %}</div>{%- endif -%}
     </div>
+    {%- endif -%}
   </div>
   {%- endfor -%}
 </div></section>
@@ -28,7 +38,7 @@
     {"type":"text","id":"k","label":"行标签 zh"},{"type":"text","id":"k_en","label":"Row label en"},{"type":"text","id":"k_pt","label":"pt"},{"type":"text","id":"kv","label":"Row value (mono, optional)"},
     {"type":"richtext","id":"body","label":"正文 zh"},{"type":"richtext","id":"body_en","label":"Body en"},{"type":"richtext","id":"body_pt","label":"pt"},
     {"type":"richtext","id":"aside","label":"右栏 zh (optional)"},{"type":"richtext","id":"aside_en","label":"Aside en"},{"type":"richtext","id":"aside_pt","label":"pt"},
-    {"type":"image_picker","id":"image","label":"Right image (optional)"},{"type":"text","id":"asset","label":"Theme asset filename (fallback image)"},{"type":"text","id":"alt","label":"Alt text"},{"type":"text","id":"ph","label":"Placeholder note (internal)"}
+    {"type":"checkbox","id":"overlay","label":"Set text on top of the image (plate layout)","default":false},{"type":"image_picker","id":"image","label":"Right image (optional)"},{"type":"text","id":"asset","label":"Theme asset filename (fallback image)"},{"type":"text","id":"alt","label":"Alt text"},{"type":"text","id":"ph","label":"Placeholder note (internal)"}
   ]}],
   "presets": [{"name":"SP · Record rows"}]
 }
