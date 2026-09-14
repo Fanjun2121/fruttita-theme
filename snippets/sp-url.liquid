@@ -1,11 +1,23 @@
-{%- comment -%} sp-url: make a store-relative link keep the current locale (/zh/, /pt/). Usage: {% render 'sp-url', url: '/pages/baobab' %} {%- endcomment -%}
+{%- comment -%} sp-url: make a store-relative link keep the current locale. routes.root_url is "/" or "/zh" (no trailing slash). Idempotent. {%- endcomment -%}
 {%- liquid
   assign u = url | default: '#'
+  assign root = routes.root_url | append: '/' | replace: '//', '/'
+  assign prefix = root | remove_last: '/'
   assign first = u | slice: 0, 1
   assign two = u | slice: 0, 2
-  if first == '/' and two != '//'
+  assign done = false
+  if prefix != blank
+    assign p1 = prefix | append: '/'
+    assign p2 = prefix | append: '#'
+    if u == prefix or u contains p1 or u contains p2
+      assign done = true
+    endif
+  endif
+  if done
+    echo u
+  elsif first == '/' and two != '//'
     assign rest = u | remove_first: '/'
-    echo routes.root_url | append: rest | replace: '//', '/'
+    echo root | append: rest | replace: '//', '/'
   else
     echo u
   endif
