@@ -1,6 +1,6 @@
 {%- comment -%} Fruttita Specimen · 01 Hero {%- endcomment -%}
 {%- assign s = section.settings -%}
-<section class="sp sp-hero" style="--sp-hero-scale:{{ s.image_scale | default: 78 | divided_by: 100.0 }}">
+<section class="sp sp-hero" style="--sp-hero-scale:{{ s.image_scale | default: 78 | divided_by: 100.0 }};--sp-photo-bg:{{ s.photo_bg | default: '#E1D6CC' }}">
   <div class="txt">
     <div class="spec sp-lab">
       {%- for block in section.blocks -%}{%- if block.type == 'eyebrow' -%}<span {{ block.shopify_attributes }}>{% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}</span>{%- endif -%}{%- endfor -%}
@@ -35,6 +35,7 @@
     {"type":"text","id":"btn1","label":"按钮1 (zh)"},{"type":"text","id":"btn1_en","label":"Button 1 (en)"},{"type":"text","id":"btn1_pt","label":"Botão 1 (pt)"},{"type":"url","id":"btn1_link","label":"Button 1 link"},
     {"type":"text","id":"btn2","label":"按钮2 (zh)"},{"type":"text","id":"btn2_en","label":"Button 2 (en)"},{"type":"text","id":"btn2_pt","label":"Botão 2 (pt)"},{"type":"url","id":"btn2_link","label":"Button 2 link"},
     {"type":"image_picker","id":"image","label":"Bottle image (fallback: theme packshot)"},
+    {"type":"color","id":"photo_bg","label":"Photo panel background (match the photo's own background)","default":"#E1D6CC"},
     {"type":"range","id":"image_scale","label":"Image scale %","min":50,"max":130,"step":2,"default":78},
     {"type":"text","id":"callout_label","label":"引线标签 (zh)"},{"type":"text","id":"callout_label_en","label":"Callout label (en)"},{"type":"text","id":"callout_label_pt","label":"Callout label (pt)"},
     {"type":"text","id":"callout","label":"引线文字 (zh)"},{"type":"text","id":"callout_en","label":"Callout (en)"},{"type":"text","id":"callout_pt","label":"Callout (pt)"},

@@ -1,6 +1,6 @@
 {%- comment -%} Fruttita Specimen · PDP hero (product page). Uses product media unless overridden. {%- endcomment -%}
 {%- assign s = section.settings -%}
-<section class="sp sp-pdp-hero" style="--sp-pdp-scale:{{ s.image_scale | default: 100 | divided_by: 100.0 }}">
+<section class="sp sp-pdp-hero" style="--sp-pdp-scale:{{ s.image_scale | default: 100 | divided_by: 100.0 }};--sp-photo-bg:{{ s.photo_bg | default: '#E1D6CC' }}">
   <div class="pic">
     {%- if s.image != blank -%}{{ s.image | image_url: width: 1600 | image_tag: loading: 'eager', alt: product.title }}
     {%- elsif product.featured_image != blank -%}{{ product.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', alt: product.title }}
@@ -24,6 +24,7 @@
   "name": "SP · Product hero",
   "settings": [
     {"type":"image_picker","id":"image","label":"Override image (else product featured image)"},
+    {"type":"color","id":"photo_bg","label":"Photo panel background (match the photo's own background)","default":"#E1D6CC"},
     {"type":"range","id":"image_scale","label":"Image scale %","min":50,"max":140,"step":2,"default":100},
     {"type":"text","id":"placeholder_note","label":"Placeholder note (internal)"},
     {"type":"text","id":"title","label":"标题 zh"},{"type":"text","id":"title_en","label":"Title en (blank = product title)"},{"type":"text","id":"title_pt","label":"pt"},

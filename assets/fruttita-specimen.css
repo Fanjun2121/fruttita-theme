@@ -41,8 +41,8 @@
 .sp-hero .facts span{font-family:var(--sp-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#C9A06E}
 .sp-hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
 .sp-hero .cta .sp-btn{color:#F6EBDA}
-.sp-hero .pic{position:relative;background:#E8E1D6;overflow:hidden;min-height:520px}
-.sp-hero .pic img{width:100%;height:100%;object-fit:cover;object-position:center 50%;transform:scale(var(--sp-hero-scale,.78));transform-origin:center 52%}
+.sp-hero .pic{position:relative;background:var(--sp-photo-bg,#E1D6CC);overflow:hidden;min-height:520px;display:flex;align-items:center;justify-content:center}
+.sp-hero .pic img{width:100%;height:100%;object-fit:cover;object-position:center 50%;transform:scale(var(--sp-hero-scale,.78));transform-origin:center 52%;-webkit-mask-image:radial-gradient(ellipse 62% 62% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 62% 62% at 50% 50%,#000 55%,transparent 100%)}
 .sp-hero .callout{position:absolute;right:10%;top:60%;color:var(--sp-ink);font-family:var(--sp-mono);font-size:12px;line-height:1.5;letter-spacing:.02em;max-width:190px}
 .sp-hero .callout:before{content:"";display:block;width:110px;height:1px;background:var(--sp-ink);margin:0 0 8px -120px;transform:translateY(8px)}
 .sp-hero .callout i{font-style:normal;display:block;color:var(--sp-liquid)}
@@ -180,8 +180,8 @@
 
 /* pdp */
 .sp-pdp-hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--sp-line);background:var(--sp-cream)}
-.sp-pdp-hero .pic{position:relative;background:#E8E1D6;min-height:620px;overflow:hidden}
-.sp-pdp-hero .pic img{width:100%;height:100%;object-fit:cover;transform:scale(var(--sp-pdp-scale,1));transform-origin:center 55%}
+.sp-pdp-hero .pic{position:relative;background:var(--sp-photo-bg,#E1D6CC);min-height:620px;overflow:hidden}
+.sp-pdp-hero .pic img{width:100%;height:100%;object-fit:cover;transform:scale(var(--sp-pdp-scale,1));transform-origin:center 55%;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,#000 60%,transparent 100%)}
 .sp-pdp-hero .txt{padding:64px 56px;display:flex;flex-direction:column;gap:22px;justify-content:center}
 .sp-pdp-hero h1{font-size:clamp(38px,4.6vw,60px);line-height:1;letter-spacing:-.03em;color:var(--sp-ink)}
 .sp-pdp-hero .sub{font-size:17px;color:var(--sp-ink-2);max-width:42ch;margin:0}
