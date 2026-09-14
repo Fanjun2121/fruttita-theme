@@ -14,7 +14,7 @@
       <div class="sp-ph-line">
         {%- for block in section.blocks -%}{%- if block.type == 'ph' -%}<i {{ block.shopify_attributes }}{% if block.settings.us %} class="us"{% endif %} style="left:{{ block.settings.pos }}%{% if block.settings.us %};width:{{ block.settings.width }}%{% endif %}"><b>{{ block.settings.value }}</b><span>{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}</span></i>{%- endif -%}{%- endfor -%}
       </div>
-      <div class="sp-lab dim" style="margin-top:34px">{% render 'i18n-text', default: s.ph_note, en: s.ph_note_en, pt: s.ph_note_pt %}</div>
+      <div class="sp-lab dim" style="margin-top:56px">{% render 'i18n-text', default: s.ph_note, en: s.ph_note_en, pt: s.ph_note_pt %}</div>
     </div>
     {%- endif -%}
     <div class="sp-trip">

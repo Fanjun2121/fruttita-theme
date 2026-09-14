@@ -212,7 +212,7 @@
             "width": 16,
             "name": "柠檬汁",
             "name_en": "Lemon juice",
-            "name_pt": "Sumo de limão"
+            "name_pt": "Limão"
           }
         },
         "sp_taste_b1": {
@@ -222,9 +222,9 @@
             "pos": 22,
             "us": true,
             "width": 16,
-            "name": "猴面包树 Shot",
+            "name": "猴面包树",
             "name_en": "Baobab shot",
-            "name_pt": "Dose de múcua"
+            "name_pt": "Múcua"
           }
         },
         "sp_taste_b2": {
@@ -236,7 +236,7 @@
             "width": 16,
             "name": "橙汁",
             "name_en": "Orange juice",
-            "name_pt": "Sumo de laranja"
+            "name_pt": "Laranja"
           }
         },
         "sp_taste_b3": {
@@ -247,7 +247,7 @@
             "us": false,
             "width": 16,
             "name": "黑咖啡",
-            "name_en": "Black coffee",
+            "name_en": "Coffee",
             "name_pt": "Café"
           }
         },
