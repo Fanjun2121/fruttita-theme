@@ -1,0 +1,37 @@
+{%- comment -%} Fruttita Specimen · 07 Where to buy: Notify me (Shopify customer form, tagged) {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-buy" id="where-to-buy"><div class="sp-wrap"><div class="g">
+  <div>
+    <div class="sp-lab">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div>
+    <h2>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</h2>
+    <p>{% render 'i18n-text', default: s.text, en: s.text_en, pt: s.text_pt %}</p>
+    {%- form 'customer', id: 'sp-notify', class: 'sp-notify' -%}
+      <input type="hidden" name="contact[tags]" value="{{ s.tag | default: 'us-notify' }}">
+      <input type="email" name="contact[email]" placeholder="{{ s.placeholder | default: 'you@email.com' }}" aria-label="Email address" required autocomplete="email">
+      <button type="submit">{% render 'i18n-text', default: s.btn, en: s.btn_en, pt: s.btn_pt %}</button>
+    {%- endform -%}
+    {%- form 'customer' -%}{%- if form.posted_successfully? -%}<div class="ok">{% render 'i18n-text', default: s.ok, en: s.ok_en, pt: s.ok_pt %}</div>{%- endif -%}{%- endform -%}
+    {%- if s.china_en != blank -%}<div class="china">{% render 'i18n-text', default: s.china, en: s.china_en, pt: s.china_pt %}</div>{%- endif -%}
+  </div>
+  <div class="box">
+    {%- if s.image != blank -%}{{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<span>{{ s.box_text }}</span>{%- endif -%}
+  </div>
+</div></div></section>
+{% schema %}
+{
+  "name": "SP · Where to buy",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"眉题 zh","default":"购买渠道"},{"type":"text","id":"eyebrow_en","label":"Eyebrow en","default":"Where to buy"},{"type":"text","id":"eyebrow_pt","label":"pt","default":"Onde comprar"},
+    {"type":"text","id":"title","label":"标题 zh"},{"type":"text","id":"title_en","label":"Title en"},{"type":"text","id":"title_pt","label":"pt"},
+    {"type":"textarea","id":"text","label":"正文 zh"},{"type":"textarea","id":"text_en","label":"Text en"},{"type":"textarea","id":"text_pt","label":"pt"},
+    {"type":"text","id":"tag","label":"Customer tag","default":"us-notify"},
+    {"type":"text","id":"placeholder","label":"Email placeholder","default":"you@email.com"},
+    {"type":"text","id":"btn","label":"按钮 zh","default":"通知我"},{"type":"text","id":"btn_en","label":"Button en","default":"Notify me"},{"type":"text","id":"btn_pt","label":"pt","default":"Avisem-me"},
+    {"type":"text","id":"ok","label":"成功提示 zh","default":"收到。"},{"type":"text","id":"ok_en","label":"Success en","default":"Noted. That's the one email."},{"type":"text","id":"ok_pt","label":"pt","default":"Anotado."},
+    {"type":"text","id":"china","label":"中国渠道句 zh"},{"type":"text","id":"china_en","label":"China line en"},{"type":"text","id":"china_pt","label":"pt"},
+    {"type":"image_picker","id":"image","label":"Right image (6-pack box)"},
+    {"type":"text","id":"box_text","label":"Box placeholder text (internal)","default":"6-PACK BOX"}
+  ],
+  "presets": [{"name":"SP · Where to buy"}]
+}
+{% endschema %}

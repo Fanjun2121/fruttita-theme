@@ -18,9 +18,9 @@
             "heading_en": "Ingredients",
             "heading_pt": "Ingredientes",
             "icon": "health",
-            "content": "<p>水、猴面包树果浆（安哥拉）</p><p>无糖、无防腐剂、无人工添加。</p>",
-            "content_en": "<p>Water, baobab fruit pulp (Angola)</p><p>No sugar, no preservatives, no artificial additives.</p>",
-            "content_pt": "<p>Água, polpa de múcua (Angola)</p><p>Sem açúcar, sem conservantes, sem aditivos artificiais.</p>",
+            "content": "<p>水、猴面包树果浆</p>",
+            "content_en": "<p>Water, baobab fruit pulp </p>",
+            "content_pt": "<p>Água, polpa de múcua </p>",
             "page": ""
           }
         },
@@ -44,8 +44,8 @@
             "heading_en": "Shelf Life & Storage",
             "heading_pt": "Validade e Conservação",
             "icon": "truck",
-            "content": "<p>保质期：待确认</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，24 小时内喝完</p><p>0 防腐剂，开封后请尽快饮用</p>",
-            "content_en": "<p>Shelf life: TBC</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 24 hours</p><p>Zero preservatives — consume promptly after opening</p>",
+            "content": "<p>保质期：待确认</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，24 小时内喝完</p>",
+            "content_en": "<p>Shelf life: TBC</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 24 hours</p>",
             "content_pt": "<p>Validade: a confirmar</p><p>Por abrir: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente e consumir em 24 horas</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
             "page": ""
           }
@@ -58,7 +58,7 @@
             "heading_pt": "Sugestões de Consumo",
             "icon": "heart",
             "content": "<p>直接饮用，冷藏风味更佳</p><p>适合日常补水、运动后补充电解质</p>",
-            "content_en": "<p>Drink directly, tastes better chilled</p><p>Perfect for daily hydration and post-exercise electrolyte replenishment</p>",
+            "content_en": "<p>Drink directly, tastes better chilled</p>",
             "content_pt": "<p>Beber diretamente; sabe melhor refrigerado</p><p>Perfeito para hidratação diária e reposição de eletrólitos após o exercício</p>",
             "page": ""
           }
@@ -109,7 +109,7 @@
             "title_en": "Post-Workout",
             "title_pt": "Pós-Treino",
             "description": "含天然钾，帮助补充运动流失的电解质。0 钠，不会越喝越肿。",
-            "description_en": "Natural potassium for electrolyte recovery. Zero sodium — no bloating tradeoff.",
+            "description_en": "",
             "description_pt": "Potássio natural para recuperação de eletrólitos. Zero sódio — sem compromissos."
           }
         },
@@ -144,20 +144,6 @@
     "nutrition": {
       "type": "fruttita-nutrition-table",
       "blocks": {
-        "row-vc": {
-          "type": "row",
-          "settings": {
-            "label": "维生素 C",
-            "label_en": "Vitamin C",
-            "label_pt": "Vitamina C",
-            "value": "≈52mg",
-            "value_2": "≈525mg（584% NRV）",
-            "plain_text": "喝完一整瓶，你一天的维生素 C 就够了——而且是 5 倍多。",
-            "plain_text_en": "One bottle covers your daily Vitamin C — five times over.",
-            "plain_text_pt": "Uma garrafa cobre a tua Vitamina C diária — cinco vezes.",
-            "highlight": true
-          }
-        },
         "row-k": {
           "type": "row",
           "settings": {
@@ -240,7 +226,6 @@
         }
       },
       "block_order": [
-        "row-vc",
         "row-k",
         "row-fiber",
         "row-polyphenol",
@@ -268,154 +253,6 @@
         "source_note": "以上数据为基于原浆浓度换算的估值，具体以包装营养成分表为准。基准数据来源：100g Pouch SGS / Eurofins 第三方实验室检测报告。",
         "source_note_en": "Estimates based on pulp concentration. See packaging for specifics. Base data: SGS / Eurofins lab reports.",
         "source_note_pt": "Estimativas baseadas na concentração da polpa. Ver embalagem para detalhes. Dados de base: relatórios SGS / Eurofins."
-      }
-    },
-    "comparison-multi": {
-      "type": "fruttita-comparison-multi",
-      "blocks": {
-        "row-na": {
-          "type": "row",
-          "settings": {
-            "label": "钠",
-            "label_en": "Sodium",
-            "label_pt": "Sódio",
-            "col1_value": "0mg",
-            "col1_status": "good",
-            "col2_value": "≈50-105mg",
-            "col2_status": "bad",
-            "col3_value": "≈200-400mg",
-            "col3_status": "bad",
-            "col4_value": "0mg",
-            "col4_status": "good"
-          }
-        },
-        "row-k": {
-          "type": "row",
-          "settings": {
-            "label": "钾",
-            "label_en": "Potassium",
-            "label_pt": "Potássio",
-            "col1_value": "0mg",
-            "col1_status": "neutral",
-            "col2_value": "≈150-250mg",
-            "col2_status": "good",
-            "col3_value": "少量或无",
-            "col3_value_en": "Little or none",
-            "col3_value_pt": "Pouco ou nenhum",
-            "col3_status": "neutral",
-            "col4_value": "≈475mg/瓶",
-            "col4_value_en": "≈475mg/bottle",
-            "col4_value_pt": "≈475mg/garrafa",
-            "col4_status": "good"
-          }
-        },
-        "row-vc": {
-          "type": "row",
-          "settings": {
-            "label": "维生素 C",
-            "label_en": "Vitamin C",
-            "label_pt": "Vitamina C",
-            "col1_value": "0mg",
-            "col1_status": "neutral",
-            "col2_value": "≈0",
-            "col2_status": "neutral",
-            "col3_value": "≈0",
-            "col3_status": "neutral",
-            "col4_value": "≈525mg/瓶",
-            "col4_value_en": "≈525mg/bottle",
-            "col4_value_pt": "≈525mg/garrafa",
-            "col4_status": "good"
-          }
-        },
-        "row-sugar": {
-          "type": "row",
-          "settings": {
-            "label": "糖",
-            "label_en": "Sugar",
-            "label_pt": "Açúcar",
-            "col1_value": "0g",
-            "col1_status": "good",
-            "col2_value": "≈3.8-5.3g/100ml",
-            "col2_status": "bad",
-            "col3_value": "0-5g",
-            "col3_status": "neutral",
-            "col4_value": "≈0.3g/100ml",
-            "col4_status": "good"
-          }
-        },
-        "row-cal": {
-          "type": "row",
-          "settings": {
-            "label": "热量",
-            "label_en": "Calories",
-            "label_pt": "Calorias",
-            "col1_value": "0kcal",
-            "col1_status": "good",
-            "col2_value": "≈19-24kcal/100ml",
-            "col2_status": "bad",
-            "col3_value": "0-20kcal",
-            "col3_status": "neutral",
-            "col4_value": "≈4.5kcal/100ml",
-            "col4_status": "good"
-          }
-        },
-        "row-additive": {
-          "type": "row",
-          "settings": {
-            "label": "添加剂",
-            "label_en": "Additives",
-            "label_pt": "Aditivos",
-            "col1_value": "无",
-            "col1_value_en": "None",
-            "col1_value_pt": "Nenhum",
-            "col1_status": "good",
-            "col2_value": "部分含浓缩还原",
-            "col2_value_en": "Some contain concentrate",
-            "col2_value_pt": "Alguns contêm concentrado",
-            "col2_status": "bad",
-            "col3_value": "人工电解质",
-            "col3_value_en": "Artificial electrolytes",
-            "col3_value_pt": "Eletrólitos artificiais",
-            "col3_status": "bad",
-            "col4_value": "无",
-            "col4_value_en": "None",
-            "col4_value_pt": "Nenhum",
-            "col4_status": "good"
-          }
-        }
-      },
-      "block_order": [
-        "row-na",
-        "row-k",
-        "row-vc",
-        "row-sugar",
-        "row-cal",
-        "row-additive"
-      ],
-      "settings": {
-        "subtitle": "The Comparison",
-        "title": "补水的选择很多，区别在哪？",
-        "title_en": "How it stacks up.",
-        "title_pt": "Como se compara.",
-        "bg_color": "#3A2015",
-        "text_color": "#F4E3C9",
-        "col1_name": "白水",
-        "col1_name_en": "Plain Water",
-        "col1_name_pt": "Água Pura",
-        "col2_name": "市售椰子水",
-        "col2_name_en": "Coconut Water",
-        "col2_name_pt": "Água de Coco",
-        "col3_name": "电解质水",
-        "col3_name_en": "Electrolyte Water",
-        "col3_name_pt": "Água de Eletrólitos",
-        "col4_name": "Fruttita Water",
-        "winner_col": "4",
-        "conclusion": "白水够干净，但没有营养。椰子水有钾，但带着 50-105 毫克的钠，而且每 100ml 糖在 4-5g。电解质水有电解质，但通常是人工合成的。Fruttita Water：一瓶喝完，475mg 天然钾 + 525mg 天然 VC，0 钠，糖不到 3g，热量 45 大卡。不是实验室配出来的电解质，是一棵树给的。",
-        "conclusion_en": "Plain water: clean, no nutrition. Coconut water: potassium, plus 50-105mg sodium and 4-5g sugar per 100ml. Electrolyte water: synthetic electrolytes. Fruttita Water: 475mg natural potassium, 525mg natural Vitamin C, zero sodium, under 3g sugar, 45 calories. From a tree, not a lab.",
-        "conclusion_pt": "Água pura: limpa, sem nutrição. Água de coco: potássio, mais 50-105mg de sódio e 4-5g de açúcar por 100ml. Água de eletrólitos: eletrólitos sintéticos. Fruttita Water: 475mg de potássio natural, 525mg de Vitamina C natural, zero sódio, menos de 3g de açúcar, 45 calorias. De uma árvore, não de um laboratório.",
-        "source_note": "椰子水数据区间基于 USDA 理论值及中国市售产品公开营养成分表。不同品牌因工艺和原料差异，实际值可能有较大出入。",
-        "source_note_en": "Coconut water data: USDA reference values and publicly available nutrition labels. Values vary by brand.",
-        "source_note_pt": "Dados da água de coco: valores de referência USDA e rótulos nutricionais públicos. Os valores variam consoante a marca."
       }
     },
     "prose-taste": {
@@ -481,7 +318,7 @@
             "question_en": "Can it replace sports drinks?",
             "question_pt": "Pode substituir bebidas desportivas?",
             "answer": "它含天然钾和 0 钠，适合运动后补充电解质。但它不含人工电解质或咖啡因。如果你需要高强度运动补给，可能需要额外搭配。",
-            "answer_en": "Natural potassium, zero sodium — good for post-workout. But no synthetic electrolytes or caffeine. For intense training, you may want to supplement.",
+            "answer_en": "",
             "answer_pt": "Potássio natural, zero sódio — bom para o pós-treino. Mas sem eletrólitos sintéticos nem cafeína. Para um treino intenso, podes precisar de suplementar."
           }
         },
@@ -502,8 +339,8 @@
             "question": "1L 开封后能放多久？",
             "question_en": "How long does it last once opened?",
             "question_pt": "Quanto tempo dura depois de aberto?",
-            "answer": "0 防腐剂，开封后务必冷藏，建议 24 小时内喝完。",
-            "answer_en": "Zero preservatives. Refrigerate after opening, finish within 24 hours.",
+            "answer": "开封后务必冷藏，建议 24 小时内喝完。",
+            "answer_en": "",
             "answer_pt": "Zero conservantes. Refrigerar após abrir, consumir em 24 horas."
           }
         }
@@ -579,7 +416,6 @@
     "main",
     "scene-cards",
     "nutrition",
-    "comparison-multi",
     "prose-taste",
     "faq",
     "cross-sell"

@@ -1,0 +1,25 @@
+{%- comment -%} Fruttita Specimen · 04c Certification row {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-record last"><div class="sp-wrap">
+  <div class="sp-row">
+    <div class="k"><span class="sp-lab">{% render 'i18n-text', default: s.k_label, en: s.k_label_en, pt: s.k_label_pt %}</span><b>{% render 'i18n-text', default: s.k_value, en: s.k_value_en, pt: s.k_value_pt %}</b></div>
+    <div class="v">
+      <ul class="sp-certs one">
+        {%- for block in section.blocks -%}<li {{ block.shopify_attributes }}><b>{{ block.settings.name }}</b>{% if block.settings.meta != blank %} <span>· {{ block.settings.meta }}</span>{% endif %}</li>{%- endfor -%}
+      </ul>
+      <p class="sp-fn one" style="margin-top:8px">{% render 'i18n-text', default: s.note, en: s.note_en, pt: s.note_pt %}</p>
+    </div>
+  </div>
+</div></section>
+{% schema %}
+{
+  "name": "SP · Record: Certs",
+  "settings": [
+    {"type":"text","id":"k_label","label":"行标签 (zh)","default":"认证"},{"type":"text","id":"k_label_en","label":"Row label (en)","default":"Certification"},{"type":"text","id":"k_label_pt","label":"(pt)","default":"Certificação"},
+    {"type":"text","id":"k_value","label":"行值 (zh)","default":"灌装合作方"},{"type":"text","id":"k_value_en","label":"Row value (en)","default":"Bottling partner"},{"type":"text","id":"k_value_pt","label":"(pt)","default":"Parceiro de engarrafamento"},
+    {"type":"textarea","id":"note","label":"脚注 (zh)"},{"type":"textarea","id":"note_en","label":"Note (en)"},{"type":"textarea","id":"note_pt","label":"(pt)"}
+  ],
+  "blocks": [{"type":"cert","name":"Certificate","settings":[{"type":"text","id":"name","label":"Name"},{"type":"text","id":"meta","label":"Meta (grade · body)"}]}],
+  "presets": [{"name":"SP · Record: Certification"}]
+}
+{% endschema %}

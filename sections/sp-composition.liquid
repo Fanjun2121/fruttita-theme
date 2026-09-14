@@ -1,0 +1,40 @@
+{%- comment -%} Fruttita Specimen · 04b Composition row: Nutrition Facts + claims + Fig. 1 {%- endcomment -%}
+{%- assign s = section.settings -%}
+{%- assign lab = s.fig_label_en -%}
+<section class="sp sp-record"><div class="sp-wrap">
+  <div class="sp-row">
+    <div class="k"><span class="sp-lab">{% render 'i18n-text', default: s.k_label, en: s.k_label_en, pt: s.k_label_pt %}</span><b>{% render 'i18n-text', default: s.k_value, en: s.k_value_en, pt: s.k_value_pt %}</b></div>
+    <div class="v">
+      <div class="sp-nf-wrap">
+        {% render 'sp-nutrition-facts', tips: true %}
+        <div class="sp-nfhint">{% render 'i18n-text', default: s.hint, en: s.hint_en, pt: s.hint_pt %}</div>
+        <p class="sp-fn">{% render 'i18n-text', default: s.poly, en: s.poly_en, pt: s.poly_pt %}</p>
+      </div>
+      <div>
+        {% render 'i18n-text', default: s.claims, en: s.claims_en, pt: s.claims_pt %}
+        <p class="sp-fn">{% render 'i18n-text', default: s.fn, en: s.fn_en, pt: s.fn_pt %}</p>
+        {%- capture figlabel %}{% render 'i18n-text', default: s.fig_label, en: s.fig_label_en, pt: s.fig_label_pt %}{% endcapture -%}
+        {%- capture figcap %}{% render 'i18n-text', default: s.fig_cap, en: s.fig_cap_en, pt: s.fig_cap_pt %}{% endcapture -%}
+        {%- capture figbtn %}{% render 'i18n-text', default: s.fig_btn, en: s.fig_btn_en, pt: s.fig_btn_pt %}{% endcapture -%}
+        {% render 'sp-fig-sediment', uid: section.id, label: figlabel, caption: figcap, button: figbtn %}
+      </div>
+    </div>
+  </div>
+</div></section>
+{% schema %}
+{
+  "name": "SP · Record: Composition",
+  "settings": [
+    {"type":"text","id":"k_label","label":"行标签 (zh)","default":"成分"},{"type":"text","id":"k_label_en","label":"Row label (en)","default":"Composition"},{"type":"text","id":"k_label_pt","label":"(pt)","default":"Composição"},
+    {"type":"text","id":"k_value","label":"行值 (zh)","default":"每支 50 mL"},{"type":"text","id":"k_value_en","label":"Row value (en)","default":"Per 50 mL shot"},{"type":"text","id":"k_value_pt","label":"(pt)","default":"Por dose de 50 mL"},
+    {"type":"text","id":"hint","label":"面板提示 (zh)"},{"type":"text","id":"hint_en","label":"Hint (en)","default":"Hover the dotted numbers."},{"type":"text","id":"hint_pt","label":"(pt)"},
+    {"type":"textarea","id":"poly","label":"多酚脚注 (zh)"},{"type":"textarea","id":"poly_en","label":"Polyphenol note (en)"},{"type":"textarea","id":"poly_pt","label":"(pt)"},
+    {"type":"richtext","id":"claims","label":"声称段 (zh)"},{"type":"richtext","id":"claims_en","label":"Claims paragraph (en)"},{"type":"richtext","id":"claims_pt","label":"(pt)"},
+    {"type":"textarea","id":"fn","label":"脚注 (zh)"},{"type":"textarea","id":"fn_en","label":"Footnotes (en)"},{"type":"textarea","id":"fn_pt","label":"(pt)"},
+    {"type":"text","id":"fig_label","label":"Fig 标签 (zh)","default":"图 1 · 沉淀"},{"type":"text","id":"fig_label_en","label":"Fig label (en)","default":"Fig. 1 · Sediment"},{"type":"text","id":"fig_label_pt","label":"(pt)","default":"Fig. 1 · Sedimento"},
+    {"type":"textarea","id":"fig_cap","label":"Fig 说明 (zh)"},{"type":"textarea","id":"fig_cap_en","label":"Fig caption (en)"},{"type":"textarea","id":"fig_cap_pt","label":"(pt)"},
+    {"type":"text","id":"fig_btn","label":"按钮 (zh)","default":"摇匀"},{"type":"text","id":"fig_btn_en","label":"Button (en)","default":"Shake well"},{"type":"text","id":"fig_btn_pt","label":"(pt)","default":"Agitar bem"}
+  ],
+  "presets": [{"name":"SP · Record: Composition"}]
+}
+{% endschema %}

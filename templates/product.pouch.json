@@ -18,9 +18,9 @@
             "heading_en": "Ingredients",
             "heading_pt": "Ingredientes",
             "icon": "health",
-            "content": "<p>猴面包树果浆（安哥拉）</p><p>仅此一项。无水、无糖、无防腐剂、无任何添加。</p>",
-            "content_en": "<p>Baobab fruit pulp (Angola)</p><p>That's it. No water, no sugar, no preservatives, no additives whatsoever.</p>",
-            "content_pt": "<p>Polpa de múcua (Angola)</p><p>Só isso. Sem água, sem açúcar, sem conservantes, sem qualquer aditivo.</p>",
+            "content": "<p>猴面包树果浆</p>",
+            "content_en": "<p>Baobab fruit pulp</p>",
+            "content_pt": "<p>Polpa de múcua</p>",
             "page": ""
           }
         },
@@ -31,9 +31,9 @@
             "heading_en": "Specifications",
             "heading_pt": "Especificações",
             "icon": "ruler",
-            "content": "<p>规格：100g / 袋</p><p>浓度：Brix 12</p><p>产地：安哥拉（原产成品进口）</p>",
-            "content_en": "<p>Size: 100g / pouch</p><p>Concentration: Brix 12</p><p>Origin: Angola (imported as finished product)</p>",
-            "content_pt": "<p>Formato: 100g / saqueta</p><p>Concentração: Brix 12</p><p>Origem: Angola (importado como produto acabado)</p>",
+            "content": "<p>规格：100g / 袋</p><p>浓度：Brix 12</p><p>产地：非洲（原产成品进口）</p>",
+            "content_en": "<p>Size: 100g / pouch</p><p>Concentration: Brix 12</p><p>Origin: Africa (imported as finished product)</p>",
+            "content_pt": "<p>Formato: 100g / saqueta</p><p>Concentração: Brix 12</p><p>Origem: Africa (importado como produto acabado)</p>",
             "page": ""
           }
         },
@@ -44,8 +44,8 @@
             "heading_en": "Shelf Life & Storage",
             "heading_pt": "Validade e Conservação",
             "icon": "truck",
-            "content": "<p>保质期：12 个月（未开封）</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，7 天内食用完毕</p><p>0 防腐剂，开封后请尽快食用</p>",
-            "content_en": "<p>Shelf life: 12 months (unopened)</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 7 days</p><p>Zero preservatives — consume promptly after opening</p>",
+            "content": "<p>保质期：12 个月（未开封）</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，7 天内食用完毕</p>",
+            "content_en": "<p>Shelf life: 12 months (unopened)</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 7 days</p>",
             "content_pt": "<p>Validade: 12 meses (por abrir)</p><p>Por abrir: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente e consumir em 7 dias</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
             "page": ""
           }
@@ -120,9 +120,9 @@
             "title": "日常补给",
             "title_en": "Daily Nutrition",
             "title_pt": "Nutrição Diária",
-            "description": "469% VC + 42% 膳食纤维，每天一点点，肠道和气色都有感。",
-            "description_en": "469% daily Vitamin C + 42% daily fiber per pouch. Your gut notices.",
-            "description_pt": "469% do valor diário de Vitamina C + 42% de fibra por saqueta. O teu intestino nota."
+            "description": "",
+            "description_en": "",
+            "description_pt": ""
           }
         }
       },
@@ -144,20 +144,6 @@
     "nutrition": {
       "type": "fruttita-nutrition-table",
       "blocks": {
-        "row-vc": {
-          "type": "row",
-          "settings": {
-            "label": "维生素 C",
-            "label_en": "Vitamin C",
-            "label_pt": "Vitamina C",
-            "value": "420mg+（469% NRV）",
-            "value_2": "",
-            "plain_text": "一袋的维生素 C ≈ 6 个橙子",
-            "plain_text_en": "One pouch ≈ 6 oranges of Vitamin C",
-            "plain_text_pt": "Uma saqueta ≈ 6 laranjas de Vitamina C",
-            "highlight": true
-          }
-        },
         "row-k": {
           "type": "row",
           "settings": {
@@ -214,8 +200,8 @@
             "label": "糖",
             "label_en": "Sugar",
             "label_pt": "Açúcar",
-            "value": "2.3g（非游离糖，血糖友好）",
-            "value_en": "2.3g (non-free sugars, blood sugar friendly)",
+            "value": "",
+            "value_en": "",
             "value_pt": "2.3g (açúcares não livres, compatíveis com a glicemia)",
             "value_2": "",
             "plain_text": "",
@@ -252,7 +238,6 @@
         }
       },
       "block_order": [
-        "row-vc",
         "row-k",
         "row-fiber",
         "row-polyphenol",
@@ -406,8 +391,8 @@
         "p2": {
           "type": "text_paragraph",
           "settings": {
-            "text_paragraph": "为什么这么严格？因为 0 防腐剂。没有添加任何延长保质期的东西。开封后就是和空气、细菌赛跑。",
-            "text_paragraph_en": "Why strict? Zero preservatives. Once it's open, the clock starts.",
+            "text_paragraph": "为什么这么严格？因为配料表只有果浆一项。开封后就是和空气、细菌赛跑。",
+            "text_paragraph_en": "",
             "text_paragraph_pt": "Porquê tanto rigor? Zero conservantes. Assim que se abre, o relógio começa."
           }
         },
@@ -473,12 +458,12 @@
         "faq-4": {
           "type": "faq_item",
           "settings": {
-            "question": "为什么是安哥拉原产进口？",
-            "question_en": "Why is it imported directly from Angola?",
-            "question_pt": "Porque é importado diretamente de Angola?",
-            "answer": "这款是在安哥拉产地直接灌装的成品，不经过二次加工，最大程度保留原浆的完整性。",
-            "answer_en": "Filled and sealed at origin in Angola. No secondary processing. Maximum pulp integrity.",
-            "answer_pt": "Embalado e selado na origem em Angola. Sem processamento secundário. Máxima integridade da polpa."
+            "question": "为什么是非洲原产进口？",
+            "question_en": "Why is it imported directly from Africa?",
+            "question_pt": "Porque é importado diretamente de Africa?",
+            "answer": "这款是在非洲产地直接灌装的成品，不经过二次加工，最大程度保留原浆的完整性。",
+            "answer_en": "Filled and sealed at origin in Africa. No secondary processing. Maximum pulp integrity.",
+            "answer_pt": "Embalado e selado na origem em Africa. Sem processamento secundário. Máxima integridade da polpa."
           }
         }
       },

@@ -1,0 +1,31 @@
+{%- comment -%} Fruttita Specimen · Accordion (label / FAQ). Block type "nutrition" renders the Nutrition Facts panel. {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-acc-sec" id="{{ s.anchor | default: section.id }}"><div class="sp-wrap"><div class="g">
+  <div class="sp-lab dim">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div>
+  <div class="sp-acc">
+    {%- for block in section.blocks -%}
+      <details {{ block.shopify_attributes }}{% if block.settings.open %} open{% endif %}>
+        <summary>{% render 'i18n-text', default: block.settings.heading, en: block.settings.heading_en, pt: block.settings.heading_pt %}</summary>
+        <div class="body">
+          {%- if block.type == 'nutrition' -%}{% render 'sp-nutrition-facts', tips: false %}{%- endif -%}
+          {% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}
+          {%- if block.settings.fn_en != blank -%}<p class="sp-fn" style="margin-top:12px">{% render 'i18n-text', default: block.settings.fn, en: block.settings.fn_en, pt: block.settings.fn_pt %}</p>{%- endif -%}
+        </div>
+      </details>
+    {%- endfor -%}
+  </div>
+</div></div></section>
+{% schema %}
+{
+  "name": "SP · Accordion",
+  "settings": [
+    {"type":"text","id":"anchor","label":"HTML id (anchor)"},
+    {"type":"text","id":"eyebrow","label":"眉题 zh"},{"type":"text","id":"eyebrow_en","label":"Eyebrow en"},{"type":"text","id":"eyebrow_pt","label":"pt"}
+  ],
+  "blocks": [
+    {"type":"item","name":"Item","settings":[{"type":"checkbox","id":"open","label":"Open by default","default":false},{"type":"text","id":"heading","label":"标题 zh"},{"type":"text","id":"heading_en","label":"Heading en"},{"type":"text","id":"heading_pt","label":"pt"},{"type":"richtext","id":"body","label":"正文 zh"},{"type":"richtext","id":"body_en","label":"Body en"},{"type":"richtext","id":"body_pt","label":"pt"},{"type":"textarea","id":"fn","label":"脚注 zh"},{"type":"textarea","id":"fn_en","label":"Footnote en"},{"type":"textarea","id":"fn_pt","label":"pt"}]},
+    {"type":"nutrition","name":"Nutrition Facts panel","settings":[{"type":"checkbox","id":"open","label":"Open by default","default":false},{"type":"text","id":"heading","label":"标题 zh","default":"营养成分（美国标签）"},{"type":"text","id":"heading_en","label":"Heading en","default":"Nutrition Facts"},{"type":"text","id":"heading_pt","label":"pt","default":"Informação nutricional (rótulo EUA)"},{"type":"richtext","id":"body","label":"正文 zh"},{"type":"richtext","id":"body_en","label":"Body en"},{"type":"richtext","id":"body_pt","label":"pt"},{"type":"textarea","id":"fn","label":"脚注 zh"},{"type":"textarea","id":"fn_en","label":"Footnote en"},{"type":"textarea","id":"fn_pt","label":"pt"}]}
+  ],
+  "presets": [{"name":"SP · Accordion"}]
+}
+{% endschema %}

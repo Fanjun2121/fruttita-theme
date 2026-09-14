@@ -269,6 +269,12 @@
     {% comment %} Fruttita Brand VI: main brand stylesheet {% endcomment %}
     {{ 'fruttita-brand.css' | asset_url | stylesheet_tag }}
 
+    {% comment %} Fruttita Specimen Sheet (US site, 2026-09) {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+    {{ 'fruttita-specimen.css' | asset_url | stylesheet_tag }}
+
     {% comment %} Fruttita micro-interactions {% endcomment %}
     {{ 'fruttita-micro.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'fruttita-micro.js' | asset_url }}" defer="defer"></script>

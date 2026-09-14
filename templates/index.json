@@ -1,640 +1,622 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
+ * Fruttita US site · Specimen Sheet homepage · 2026-09-14
  */
 {
   "sections": {
-    "fruttita_claim_strip": {
-      "type": "fruttita-claim-strip",
-      "blocks": {
-        "c1": {
-          "type": "claim",
-          "settings": {
-            "text": "0 钠",
-            "text_en": "0 Sodium",
-            "text_pt": "0 Sódio"
-          }
-        },
-        "c2": {
-          "type": "claim",
-          "settings": {
-            "text": "0 添加",
-            "text_en": "0 Additives",
-            "text_pt": "0 Aditivos"
-          }
-        },
-        "c3": {
-          "type": "claim",
-          "settings": {
-            "text": "0 脂",
-            "text_en": "0 Fat",
-            "text_pt": "0 Gordura"
-          }
-        },
-        "c4": {
-          "type": "claim",
-          "settings": {
-            "text": "高钾",
-            "text_en": "High Potassium",
-            "text_pt": "Rico em Potássio"
-          }
-        },
-        "c5": {
-          "type": "claim",
-          "settings": {
-            "text": "高 VC",
-            "text_en": "High Vitamin C",
-            "text_pt": "Rico em Vitamina C"
-          }
-        },
-        "c6": {
-          "type": "claim",
-          "settings": {
-            "text": "高纤维",
-            "text_en": "High Fiber",
-            "text_pt": "Rico em Fibra"
-          }
-        }
-      },
-      "block_order": [
-        "c1",
-        "c2",
-        "c3",
-        "c4",
-        "c5",
-        "c6"
-      ],
+    "sp_hero": {
+      "type": "sp-hero",
       "settings": {
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D",
-        "accent_color": "#C6812B"
-      }
-    },
-    "fruttita_prose": {
-      "type": "fruttita-prose",
-      "blocks": {
-        "prose_p1": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "Fruttita，把热带旷野里的那份干净和野，带进日常。",
-            "text_paragraph_en": "Fruttita is tropical fruit, barely touched. The wild kind.",
-            "text_paragraph_pt": "Fruttita é fruta tropical, quase intocada. Do tipo selvagem."
-          }
-        },
-        "prose_p2": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "在非洲，有一种活了三千年的树。当地人叫它“生命之树”。",
-            "text_paragraph_en": "In Africa, there's a tree that's been around for 3,000 years. They call it the \"Tree of Life.\"",
-            "text_paragraph_pt": "Em África, há uma árvore que existe há 3.000 anos. Chamam-lhe a \"Árvore da Vida.\""
-          }
-        },
-        "prose_p3": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "它不靠人工催熟，不靠化学干预。只是在赤道阳光下，沉默地生长，把旷野最纯粹的能量，锁进果实里。",
-            "text_paragraph_en": "No one ripens it. No one sprays it. It just grows under the equatorial sun and dries on the branch.",
-            "text_paragraph_pt": "Ninguém a amadurece. Ninguém a pulveriza. Cresce ao sol equatorial e seca no ramo."
-          }
-        },
-        "prose_p4": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "我们做的事很简单——把这份能量，变成你随时可以喝的东西。",
-            "text_paragraph_en": "We turn that into something you can drink.",
-            "text_paragraph_pt": "Nós transformamos isso em algo que podes beber."
-          }
-        },
-        "prose_p5": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "不加糖，不加添加剂，不加任何你不需要的。",
-            "text_paragraph_en": "No added sugar. No additives. That's it.",
-            "text_paragraph_pt": "Sem açúcar adicionado. Sem aditivos. É isso."
-          }
-        }
+        "title": "猴面包树，开盖即饮。\n两种配料。",
+        "title_en": "Baobab, ready to drink.\nTwo ingredients.",
+        "title_pt": "Múcua, pronta a beber.\nDois ingredientes.",
+        "sub": "野生采集的非洲猴面包树果浆，加水。没有别的。一支 50 mL，来自一种在枝头上自然风干的果实。",
+        "sub_en": "Wild-harvested African baobab pulp and water. Nothing else. A 50 mL shot of a fruit that dries on the branch.",
+        "sub_pt": "Polpa de múcua africana colhida na natureza e água. Mais nada. Uma dose de 50 mL de um fruto que seca no ramo.",
+        "btn1": "购买渠道",
+        "btn1_en": "Where to buy",
+        "btn1_pt": "Onde comprar",
+        "btn1_link": "/#where-to-buy",
+        "btn2": "认识这颗果实",
+        "btn2_en": "Meet the fruit",
+        "btn2_pt": "Conhecer o fruto",
+        "btn2_link": "/#record",
+        "image_scale": 78,
+        "callout_label": "图 1 · 沉淀线",
+        "callout_label_en": "Fig. 1 — sediment line",
+        "callout_label_pt": "Fig. 1 — linha de sedimento",
+        "callout": "纤维会沉底。摇一摇。",
+        "callout_en": "Fiber. It settles. Shake it.",
+        "callout_pt": "Fibra. Assenta. Agite.",
+        "placeholder_note": "Placeholder → 素材 ① 瓶身特写（沉淀线）"
       },
-      "block_order": [
-        "prose_p1",
-        "prose_p2",
-        "prose_p3",
-        "prose_p4",
-        "prose_p5"
-      ],
-      "settings": {
-        "subtitle": "About Fruttita",
-        "subtitle_en": "About Fruttita",
-        "subtitle_pt": "Sobre a Fruttita",
-        "title": "",
-        "bg_color": "#F4E3C9",
-        "text_color": "#4F2C1D",
-        "btn_text": "了解我们的故事 →",
-        "btn_text_en": "Our story →",
-        "btn_text_pt": "A nossa história →",
-        "btn_link": "/pages/about"
-      }
-    },
-    "fruttita_value_props": {
-      "type": "fruttita-value-props",
       "blocks": {
-        "vp_1": {
-          "type": "card",
+        "sp_hero_b0": {
+          "type": "eyebrow",
           "settings": {
-            "icon": "droplet",
-            "title": "熬夜后，不想肿成馒头",
-            "title_en": "Late night. No puffiness.",
-            "title_pt": "Noite longa. Sem inchaço.",
-            "description": "0 钠，380mg 钾。\n99% 的补水饮品都含钠——\n我们是那个例外。",
-            "description_en": "0 sodium, 380mg potassium.\n99% of hydration drinks have sodium.\nThis one has none.",
-            "description_pt": "0 sódio, 380mg de potássio.\n99% das bebidas de hidratação têm sódio.\nEsta não tem nenhum."
+            "text": "标本 01",
+            "text_en": "Specimen 01",
+            "text_pt": "Espécime 01"
           }
         },
-        "vp_2": {
-          "type": "card",
+        "sp_hero_b1": {
+          "type": "eyebrow",
           "settings": {
-            "icon": "sun",
-            "title": "熬完夜，也想有个好气色",
-            "title_en": "Bad sleep. Still glowing.",
-            "title_pt": "Dormiste mal. Continuas a brilhar.",
-            "description": "200% NRV 天然维生素 C。\n改善暗沉，好气色从内到外。",
-            "description_en": "200% daily value of natural Vitamin C.\nThe kind your skin actually uses.",
-            "description_pt": "200% do valor diário de Vitamina C natural.\nO tipo que a tua pele realmente usa."
+            "text": "Adansonia digitata",
+            "text_en": "Adansonia digitata",
+            "text_pt": "Adansonia digitata"
           }
         },
-        "vp_3": {
-          "type": "card",
+        "sp_hero_b2": {
+          "type": "eyebrow",
           "settings": {
-            "icon": "leaf",
-            "title": "只想喝点干净的东西",
-            "title_en": "Read the whole label. Done.",
-            "title_pt": "Lê o rótulo inteiro. Já está.",
-            "description": "配料表只有一项：猴面包树果浆。\n只有你要的，没有你不要的。",
-            "description_en": "Ingredients: baobab fruit pulp.\nThat's the entire list.",
-            "description_pt": "Ingredientes: polpa de múcua.\nÉ a lista completa."
-          }
-        }
-      },
-      "block_order": [
-        "vp_1",
-        "vp_2",
-        "vp_3"
-      ],
-      "settings": {
-        "title": "先不聊树，聊聊你自己。",
-        "title_en": "The tree can wait. You first.",
-        "title_pt": "A árvore pode esperar. Primeiro tu.",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9",
-        "card_bg": "#F4E3C9"
-      }
-    },
-    "fruttita_product_showcase": {
-      "type": "fruttita-product-showcase",
-      "blocks": {
-        "product_shot": {
-          "type": "product",
-          "settings": {
-            "name_cn": "猴面包树原浆饮",
-            "name_en": "THE SHOT",
-            "name_cn_en": "Baobab Pulp Shot",
-            "name_cn_pt": "Shot de Polpa de Múcua",
-            "tagline": "一口闷的回神搭档。\n酸到清醒，有效到服气。",
-            "tagline_en": "50ml of pure pulp.\nTart. Potent. Over before you blink.",
-            "tagline_pt": "50ml de polpa pura.\nÁcido. Potente. Acaba antes de pestanejar.",
-            "scenarios": "熬夜后, 早起回神, 加班续命, 宿醉第二天",
-            "scenarios_en": "Post-late night, Morning reset, Overtime fuel, Hangover protocol",
-            "scenarios_pt": "Pós-noitada, Recomeço matinal, Combustível para horas extra, Protocolo pós-ressaca",
-            "specs": "0钠 | 200% VC | 高钾 311mg",
-            "specs_en": "0 Sodium | 200% Vitamin C | Potassium 311mg",
-            "specs_pt": "0 Sódio | 200% Vitamina C | Potássio 311mg",
-            "link": "/products/the-baobab-pulp-shot",
-            "link_text": "了解更多",
-            "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais",
-            "packshot_asset": "fruttita-packshot-shot.png"
+            "text": "野生采集 · 非洲",
+            "text_en": "Wild harvest · Africa",
+            "text_pt": "Colheita selvagem · África"
           }
         },
-        "product_pouch": {
-          "type": "product",
+        "sp_hero_b3": {
+          "type": "fact",
           "settings": {
-            "name_cn": "猴面包树纯果浆",
-            "name_en": "THE POUCH",
-            "name_cn_en": "Pure Baobab Pulp",
-            "name_cn_pt": "Polpa Pura de Múcua",
-            "tagline": "你的百搭调饮基底。\n兑什么像什么，就是更有营养。",
-            "tagline_en": "100g of pure pulp. Mix it into anything.\nYogurt, smoothies, oats — your call.",
-            "tagline_pt": "100g de polpa pura. Mistura com o que quiseres.\nIogurte, batidos, aveia — tu decides.",
-            "scenarios": "拌酸奶, 兑气泡水, 加入果昔, 拌燕麦",
-            "scenarios_en": "Yogurt topping, Sparkling water mix, Smoothie base, Oatmeal boost",
-            "scenarios_pt": "Iogurte, Mistura com água com gás, Base para batidos, Reforço de aveia",
-            "specs": "469% VC | 42% 膳食纤维 | 100% 纯果浆",
-            "specs_en": "469% Vitamin C | 42% Fiber | 100% Pure Pulp",
-            "specs_pt": "469% Vitamina C | 42% Fibra | 100% Polpa Pura",
-            "link": "/products/the-baobab-pulp-pouch",
-            "link_text": "了解更多",
-            "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais",
-            "packshot_asset": "fruttita-packshot-pouch.png"
+            "value": "3 g",
+            "label": "膳食纤维 / 支",
+            "label_en": "Fiber / shot",
+            "label_pt": "Fibra / dose"
           }
         },
-        "product_water": {
-          "type": "product",
+        "sp_hero_b4": {
+          "type": "fact",
           "settings": {
-            "name_cn": "猴面包树水",
-            "name_en": "THE WATER",
-            "name_cn_en": "Baobab Water",
-            "name_cn_pt": "Água de Múcua",
-            "tagline": "日常补水的干净选项。\n喝水也能喝出态度。",
-            "tagline_en": "Hydration that isn't just water.\nBut barely more than water.",
-            "tagline_pt": "Hidratação que não é só água.\nMas quase tão simples como água.",
-            "scenarios": "通勤, 健身, 办公室, 日常饮水",
-            "scenarios_en": "Commute, Workout, Desk, Anytime",
-            "scenarios_pt": "Deslocações, Treino, À secretária, A qualquer hora",
-            "specs": "0糖 | 0脂 | 0钠 | 0卡",
-            "specs_en": "0 Sugar | 0 Fat | 0 Sodium | 0 Cal",
-            "specs_pt": "0 Açúcar | 0 Gordura | 0 Sódio | 0 Cal",
-            "link": "/products/the-baobab-water",
-            "link_text": "了解更多",
-            "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais",
-            "packshot_asset": "fruttita-packshot-water.png"
-          }
-        }
-      },
-      "block_order": [
-        "product_shot",
-        "product_pouch",
-        "product_water"
-      ],
-      "settings": {
-        "subtitle": "Our Products",
-        "subtitle_en": "Our Products",
-        "subtitle_pt": "Os Nossos Produtos",
-        "title": "三种打开旷野的方式",
-        "title_en": "Three formats. Same tree.",
-        "title_pt": "Três formatos. A mesma árvore.",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
-      }
-    },
-    "fruttita_data_science": {
-      "type": "fruttita-data-science",
-      "blocks": {
-        "ds_vc": {
-          "type": "metric",
-          "settings": {
-            "label": "维生素 C",
-            "label_en": "Vitamin C",
-            "label_pt": "Vitamina C",
-            "value": "420mg+",
-            "description": "提亮气色的主力。相当于 6 个橙子。",
-            "description_en": "About 6 oranges worth.",
-            "description_pt": "Equivalente a 6 laranjas.",
-            "bar_pct": 95
+            "value": "160 mg",
+            "label": "钾 / 支",
+            "label_en": "Potassium / shot",
+            "label_pt": "Potássio / dose"
           }
         },
-        "ds_k": {
-          "type": "metric",
+        "sp_hero_b5": {
+          "type": "fact",
           "settings": {
-            "label": "钾",
-            "label_en": "Potassium",
-            "label_pt": "Potássio",
-            "value": "380mg+",
-            "description": "帮身体放掉多余的钠。",
-            "description_en": "Sodium holds water. Potassium lets it go.",
-            "description_pt": "O sódio retém líquidos. O potássio liberta-os.",
-            "bar_pct": 85
-          }
-        },
-        "ds_fiber": {
-          "type": "metric",
-          "settings": {
-            "label": "膳食纤维",
-            "label_en": "Dietary Fiber",
-            "label_pt": "Fibra Alimentar",
-            "value": "10g+",
-            "description": "相当于 4 个苹果。",
-            "description_en": "About 4 apples worth.",
-            "description_pt": "Equivalente a 4 maçãs.",
-            "bar_pct": 78
-          }
-        },
-        "ds_na": {
-          "type": "metric",
-          "settings": {
-            "label": "钠",
-            "label_en": "Sodium",
-            "label_pt": "Sódio",
-            "value": "0mg",
-            "description": "未检出。真正的 0 锁水阻力。",
-            "description_en": "Not low. Not reduced. Undetected.",
-            "description_pt": "Não é baixo. Não é reduzido. Não detetado.",
-            "bar_pct": 100
-          }
-        },
-        "ds_sugar": {
-          "type": "metric",
-          "settings": {
-            "label": "糖",
-            "label_en": "Sugar",
-            "label_pt": "Açúcar",
-            "value": "< 2.5g",
-            "description": "非游离糖，血糖友好。",
-            "description_en": "Naturally occurring. Not added.",
-            "description_pt": "Naturalmente presente. Não adicionado.",
-            "bar_pct": 10
-          }
-        },
-        "ds_cal": {
-          "type": "metric",
-          "settings": {
-            "label": "热量",
+            "value": "10",
+            "label": "千卡 / 支",
             "label_en": "Calories",
-            "label_pt": "Calorias",
-            "value": "~65 kcal",
-            "description": "大约半个苹果。轻松无负担。",
-            "description_en": "About half an apple.",
-            "description_pt": "Cerca de meia maçã.",
-            "bar_pct": 30
+            "label_pt": "kcal"
           }
         }
       },
       "block_order": [
-        "ds_vc",
-        "ds_k",
-        "ds_fiber",
-        "ds_na",
-        "ds_sugar",
-        "ds_cal"
-      ],
-      "settings": {
-        "subtitle": "The Data",
-        "subtitle_en": "The Data",
-        "subtitle_pt": "Os Dados",
-        "title": "好不好，看数据就知道。",
-        "title_en": "The numbers. That's it.",
-        "title_pt": "Os números. É tudo.",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9",
-        "source_note": "数据来源：SGS / Eurofins 实验室检测报告。我们不编数据，数据替我们说话。",
-        "source_note_en": "Source: SGS / Eurofins lab reports. Per 100g pulp.",
-        "source_note_pt": "Fonte: relatórios laboratoriais SGS / Eurofins. Por 100g de polpa.",
-        "easter_egg_title": "总多酚 828mg / 100g",
-        "easter_egg_title_en": "Total Polyphenols 828mg / 100g",
-        "easter_egg_title_pt": "Polifenóis Totais 828mg / 100g",
-        "easter_egg_text": "比 VC 更稳的抗氧化剂。酸涩口感的真正来源——也是深层对抗氧化压力的隐藏王牌。",
-        "easter_egg_text_en": "More stable than Vitamin C as an antioxidant. Where that tart, tangy bite comes from — and a quietly powerful defense against oxidative stress.",
-        "easter_egg_text_pt": "Mais estável do que a Vitamina C como antioxidante. De onde vem aquele travo ácido — e uma defesa silenciosa contra o stress oxidativo.",
-        "toggle_open_text": "还有一项你可能不知道",
-        "toggle_open_text_en": "There's one more",
-        "toggle_open_text_pt": "Há mais uma coisa",
-        "toggle_close_text": "收起",
-        "toggle_close_text_en": "Collapse",
-        "toggle_close_text_pt": "Recolher"
-      }
+        "sp_hero_b0",
+        "sp_hero_b1",
+        "sp_hero_b2",
+        "sp_hero_b3",
+        "sp_hero_b4",
+        "sp_hero_b5"
+      ]
     },
-    "fruttita_comparison": {
-      "type": "fruttita-comparison",
+    "sp_ticker": {
+      "type": "sp-ticker",
+      "settings": {},
       "blocks": {
-        "comp_na": {
-          "type": "metric",
+        "sp_ticker_b0": {
+          "type": "item",
           "settings": {
-            "label": "钠（锁水阻力）",
-            "label_en": "Sodium",
-            "label_pt": "Sódio",
-            "comp_value": "105mg",
-            "comp_value_en": "105mg",
-            "comp_value_pt": "105mg",
-            "comp_status": "bad",
-            "fruttita_value": "0mg",
-            "fruttita_value_en": "0mg",
-            "fruttita_value_pt": "0mg",
-            "fruttita_status": "good"
+            "text": "约 <b>10</b> 千卡 / 支",
+            "text_en": "<b>10</b> calories per shot",
+            "text_pt": "<b>10</b> kcal por dose"
           }
         },
-        "comp_k": {
-          "type": "metric",
+        "sp_ticker_b1": {
+          "type": "item",
           "settings": {
-            "label": "钾（轻盈动力）",
-            "label_en": "Potassium",
-            "label_pt": "Potássio",
-            "comp_value": "~200mg",
-            "comp_value_en": "~200mg",
-            "comp_value_pt": "~200mg",
-            "comp_status": "bad",
-            "fruttita_value": "311mg",
-            "fruttita_value_en": "311mg",
-            "fruttita_value_pt": "311mg",
-            "fruttita_status": "good"
+            "text": "<b>3 g</b> 膳食纤维",
+            "text_en": "<b>3 g</b> dietary fiber",
+            "text_pt": "<b>3 g</b> de fibra"
           }
         },
-        "comp_vc": {
-          "type": "metric",
+        "sp_ticker_b2": {
+          "type": "item",
           "settings": {
-            "label": "维生素 C",
-            "label_en": "Vitamin C",
-            "label_pt": "Vitamina C",
-            "comp_value": "≈ 0",
-            "comp_value_en": "≈ 0",
-            "comp_value_pt": "≈ 0",
-            "comp_status": "bad",
-            "fruttita_value": "200% NRV",
-            "fruttita_value_en": "200% NRV",
-            "fruttita_value_pt": "200% NRV",
-            "fruttita_status": "good"
+            "text": "<b>160 mg</b> 钾",
+            "text_en": "<b>160 mg</b> potassium",
+            "text_pt": "<b>160 mg</b> de potássio"
           }
         },
-        "comp_sugar": {
-          "type": "metric",
+        "sp_ticker_b3": {
+          "type": "item",
           "settings": {
-            "label": "糖",
-            "label_en": "Sugar",
-            "label_pt": "Açúcar",
-            "comp_value": "4.0g",
-            "comp_value_en": "4.0g",
-            "comp_value_pt": "4.0g",
-            "comp_status": "bad",
-            "fruttita_value": "1.7g",
-            "fruttita_value_en": "1.7g",
-            "fruttita_value_pt": "1.7g",
-            "fruttita_status": "good"
+            "text": "无钠",
+            "text_en": "Sodium free",
+            "text_pt": "Sem sódio"
           }
         },
-        "comp_volume": {
-          "type": "metric",
+        "sp_ticker_b4": {
+          "type": "item",
           "settings": {
-            "label": "体积",
-            "label_en": "Serving Size",
-            "label_pt": "Volume",
-            "comp_value": "330ml 灌一肚子",
-            "comp_value_en": "330ml",
-            "comp_value_pt": "330ml — enche a barriga toda",
-            "comp_status": "bad",
-            "fruttita_value": "50ml 一口闷",
-            "fruttita_value_en": "50ml",
-            "fruttita_value_pt": "50ml — um gole e está feito",
-            "fruttita_status": "good"
+            "text": "配料：水、猴面包树果浆",
+            "text_en": "<b>0 g</b> added sugars*",
+            "text_pt": "Sem açúcares adicionados"
+          }
+        },
+        "sp_ticker_b5": {
+          "type": "item",
+          "settings": {
+            "text": "高膳食纤维 · 高钾",
+            "text_en": "Ingredients: water, baobab fruit pulp",
+            "text_pt": "Ingredientes: água, polpa de múcua"
+          }
+        },
+        "sp_ticker_b6": {
+          "type": "item",
+          "settings": {
+            "text": "欧陆报告 <b>AR-26-SU-102857-04</b>",
+            "text_en": "Excellent source of fiber†",
+            "text_pt": "Alto teor de fibra"
+          }
+        },
+        "sp_ticker_b7": {
+          "type": "item",
+          "settings": {
+            "text": "第三方检测 · Eurofins",
+            "text_en": "Eurofins report <b>AR-26-SU-102857-04</b>",
+            "text_pt": "Relatório Eurofins <b>AR-26-SU-102857-04</b>"
           }
         }
       },
       "block_order": [
-        "comp_na",
-        "comp_k",
-        "comp_vc",
-        "comp_sugar",
-        "comp_volume"
-      ],
+        "sp_ticker_b0",
+        "sp_ticker_b1",
+        "sp_ticker_b2",
+        "sp_ticker_b3",
+        "sp_ticker_b4",
+        "sp_ticker_b5",
+        "sp_ticker_b6",
+        "sp_ticker_b7"
+      ]
+    },
+    "sp_fruit": {
+      "type": "sp-fullbleed",
       "settings": {
-        "subtitle": "The Truth",
-        "subtitle_en": "The Truth",
-        "subtitle_pt": "A Verdade",
-        "title": "椰子水有钠。我们没有。",
-        "title_en": "Coconut water has sodium. We don't.",
-        "title_pt": "A água de coco tem sódio. Nós não.",
-        "bg_color": "#F4E3C9",
-        "text_color": "#4F2C1D",
-        "conclusion": "椰子水补钾的同时，也补了 100 多毫克的钠。钠就是盐，盐会锁水。轻不轻盈，钠含量是个关键指标。",
-        "conclusion_en": "Coconut water delivers potassium — with 100+ mg of sodium riding along. If you're trying to de-bloat, that's worth a second look.",
-        "conclusion_pt": "A água de coco fornece potássio — com mais de 100 mg de sódio a tiracolo. Se queres desinchar, vale a pena pensar duas vezes.",
-        "source_note": "Fruttita 数据源自 Eurofins/SGS 实验室检测报告。椰子水数据参考市售主流 100% 椰子水品牌平均营养成分。",
-        "source_note_en": "Fruttita data from Eurofins/SGS lab reports. Coconut water data based on average nutrition of leading 100% coconut water brands.",
-        "source_note_pt": "Dados da Fruttita provenientes de relatórios laboratoriais Eurofins/SGS. Dados da água de coco baseados na média nutricional das principais marcas de água de coco 100% pura.",
-        "header_label": "指标",
-        "header_label_en": "Metric",
-        "header_label_pt": "Indicador",
-        "comp_name": "主流椰子水",
-        "comp_name_en": "Coconut Water",
-        "comp_name_pt": "Água de Coco"
+        "title": "它在枝头上自己风干。我们只是把水加回去。",
+        "title_en": "It dries on the branch. We add the water back.",
+        "title_pt": "Seca no ramo. Nós só devolvemos a água.",
+        "label": "果实 · Adansonia digitata",
+        "label_en": "The fruit · Adansonia digitata",
+        "label_pt": "O fruto · Adansonia digitata",
+        "placeholder_note": "Placeholder → 素材 ② 果壳 + 果肉（现图为 AI 生成）"
       }
     },
-    "fruttita_quotes": {
-      "type": "fruttita-quotes",
+    "sp_specimen": {
+      "type": "sp-specimen",
+      "settings": {
+        "eyebrow": "记录",
+        "eyebrow_en": "Record",
+        "eyebrow_pt": "Registo",
+        "head": "瓶子里是什么",
+        "head_en": "What is in the bottle",
+        "head_pt": "O que está na garrafa",
+        "k_label": "标本",
+        "k_label_en": "Specimen",
+        "k_label_pt": "Espécime",
+        "k_value": "Adansonia digitata",
+        "prose": "<p>猴面包树是地球上少数会在枝头上自然风干的果实之一。不青摘，不催熟，不喷洒。掉下来的时候，已经是一团脱了水的、白垩质的酸果肉。</p><p>树不是种的。果实在旱季由人工从非洲南部的野生树上采集。我们摘果，树留下。</p>",
+        "prose_en": "<p>Baobab is one of the only fruits on Earth that dries naturally on the branch. No picking green, no ripening rooms, no spraying. What falls is already a chalky, tart pulp with the water gone.</p><p>The trees are not farmed. Fruit is hand-collected from wild stands in southern Africa in the dry season. We pick the fruit; the tree stays.</p>",
+        "prose_pt": "<p>A múcua é um dos poucos frutos do mundo que seca naturalmente no ramo. Não se colhe verde, não há câmaras de maturação, não se pulveriza. O que cai já é uma polpa seca, calcária e ácida.</p><p>As árvores não são cultivadas. O fruto é colhido à mão em árvores selvagens do sul de África, na estação seca. Colhemos o fruto; a árvore fica.</p>",
+        "show_bars": true,
+        "bars_title": "果实落地时的含水量",
+        "bars_title_en": "Water content when the fruit falls",
+        "bars_title_pt": "Teor de água quando o fruto cai",
+        "bars_note": "风干是树做的。所以果肉不加任何东西也能放很多年，所以我们能把水加回去，而不是把水抽出来。",
+        "bars_note_en": "The tree does the drying. That is why the pulp keeps for years without anything added, and why we can add the water back instead of taking it out.",
+        "bars_note_pt": "É a árvore que seca o fruto. Por isso a polpa conserva-se anos sem nada adicionado, e por isso podemos devolver a água em vez de a retirar."
+      },
       "blocks": {
-        "quote_1": {
-          "type": "quote",
+        "sp_specimen_b0": {
+          "type": "kv",
           "settings": {
-            "text": "即使像吃土，也要吃最有营养的那口土。",
-            "text_en": "Tastes like dirt? Fine. Most nutritious dirt you'll ever have.",
-            "text_pt": "Sabe a terra? Tudo bem. A terra mais nutritiva que vais provar."
+            "k": "产地",
+            "k_en": "Origin",
+            "k_pt": "Origem",
+            "v": "野生采集，非洲",
+            "v_en": "Wild harvest, Africa",
+            "v_pt": "Colheita selvagem, África"
           }
         },
-        "quote_2": {
-          "type": "quote",
+        "sp_specimen_b1": {
+          "type": "kv",
           "settings": {
-            "text": "翻到配料表，一秒就读完了。",
-            "text_en": "Flip to the ingredients. You're already done reading.",
-            "text_pt": "Vira o rótulo. Já acabaste de ler."
+            "k": "使用部位",
+            "k_en": "Part used",
+            "k_pt": "Parte usada",
+            "v": "整果果肉",
+            "v_en": "Fruit pulp, whole",
+            "v_pt": "Polpa do fruto, inteira"
           }
         },
-        "quote_3": {
-          "type": "quote",
+        "sp_specimen_b2": {
+          "type": "kv",
           "settings": {
-            "text": "给身体，一份来自旷野的留白。",
-            "text_en": "One ingredient. No asterisks.",
-            "text_pt": "Um ingrediente. Sem asteriscos."
+            "k": "工艺",
+            "k_en": "Process",
+            "k_pt": "Processo",
+            "v": "果肉与果壳、果籽分离，加水复原，巴氏杀菌，玻璃瓶灌装",
+            "v_en": "Pulp separated from shell and seed, water added back, pasteurized, bottled in glass",
+            "v_pt": "Polpa separada da casca e das sementes, água devolvida, pasteurizada, engarrafada em vidro"
+          }
+        },
+        "sp_specimen_b3": {
+          "type": "kv",
+          "settings": {
+            "k": "灌装地",
+            "k_en": "Bottled in",
+            "k_pt": "Engarrafado em",
+            "v": "越南，GFSI 认证工厂",
+            "v_en": "Vietnam, GFSI-certified facility",
+            "v_pt": "Vietname, instalação certificada GFSI"
+          }
+        },
+        "sp_specimen_b4": {
+          "type": "kv",
+          "settings": {
+            "k": "保质期",
+            "k_en": "Shelf life",
+            "k_pt": "Validade",
+            "v": "未开封 18 个月",
+            "v_en": "18 months unopened",
+            "v_pt": "18 meses por abrir"
+          }
+        },
+        "sp_specimen_b5": {
+          "type": "bar",
+          "settings": {
+            "pct": 11,
+            "name": "猴面包树果肉",
+            "name_en": "Baobab pulp",
+            "name_pt": "Polpa de múcua"
+          }
+        },
+        "sp_specimen_b6": {
+          "type": "bar",
+          "settings": {
+            "pct": 87,
+            "name": "一个橙子",
+            "name_en": "An orange",
+            "name_pt": "Uma laranja"
           }
         }
       },
       "block_order": [
-        "quote_1",
-        "quote_2",
-        "quote_3"
-      ],
+        "sp_specimen_b0",
+        "sp_specimen_b1",
+        "sp_specimen_b2",
+        "sp_specimen_b3",
+        "sp_specimen_b4",
+        "sp_specimen_b5",
+        "sp_specimen_b6"
+      ]
+    },
+    "sp_composition": {
+      "type": "sp-composition",
       "settings": {
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
+        "k_label": "成分",
+        "k_label_en": "Composition",
+        "k_label_pt": "Composição",
+        "k_value": "每支 50 mL",
+        "k_value_en": "Per 50 mL shot",
+        "k_value_pt": "Por dose de 50 mL",
+        "hint": "悬停虚线数字看换算。",
+        "hint_en": "Hover the dotted numbers.",
+        "hint_pt": "Passe o rato pelos números ponteados.",
+        "poly": "瓶子里还有：每支约 140 mg 总多酚，欧陆对成品实测。多酚没有每日参考值，所以不进营养成分表。",
+        "poly_en": "Also in the bottle: about 140 mg total polyphenols per shot, measured by Eurofins on the finished product. No Daily Value exists for polyphenols, so it stays out of the panel.",
+        "poly_pt": "Também na garrafa: cerca de 140 mg de polifenóis totais por dose, medidos pela Eurofins no produto acabado. Não existe valor de referência para polifenóis, por isso ficam fora da tabela.",
+        "claims": "<p><strong>高膳食纤维。高钾。无钠。</strong>这三个词按 GB 28050 的口径说，数字按每支报：约 10 千卡、3 g 膳食纤维、160 mg 钾、钠未检出。左边是美国标签的营养成分表原样，一个数不改。</p>",
+        "claims_en": "<p><strong>Excellent source of fiber. Good source of potassium.</strong><sup>†</sup> Those are the FDA's words, not ours, and they are worked out per 240 mL reference amount, the way the rule says. Per shot, the panel shows 11% and 4%. Both numbers are on the label. Both are true.</p>",
+        "claims_pt": "<p><strong>Alto teor de fibra. Fonte de potássio. Sem sódio.</strong> Por dose: cerca de 10 kcal, 3 g de fibra, 160 mg de potássio. À esquerda, a tabela nutricional do rótulo americano, sem alterar um número.</p>",
+        "fn": "以上数字来自欧陆成品实测报告 AR-26-SU-102857-04（2026-07）。",
+        "fn_en": "† Per 240 mL reference amount customarily consumed (21 CFR 101.12).\n* Not a low calorie food. See nutrition information for sugar and calorie content.",
+        "fn_pt": "Valores da análise Eurofins ao produto acabado, AR-26-SU-102857-04 (2026-07).",
+        "fig_label": "图 1 · 沉淀",
+        "fig_label_en": "Fig. 1 · Sediment",
+        "fig_label_pt": "Fig. 1 · Sedimento",
+        "fig_cap": "纤维不溶于水，比水重。静置一会儿，它会在瓶底沉成一层浅色。你正在看它发生。那一层就是那 3 克。",
+        "fig_cap_en": "The fiber is insoluble and heavier than water. Left alone it settles into a pale layer at the bottom. You're watching that happen. That layer is the 3 grams.",
+        "fig_cap_pt": "A fibra é insolúvel e mais pesada que a água. Em repouso, assenta numa camada clara no fundo. Está a ver acontecer. Essa camada são os 3 gramas.",
+        "fig_btn": "摇匀",
+        "fig_btn_en": "Shake well",
+        "fig_btn_pt": "Agitar bem"
       }
     },
-    "fruttita_where_to_buy": {
-      "type": "fruttita-where-to-buy",
+    "sp_certs": {
+      "type": "sp-certs",
+      "settings": {
+        "k_label": "认证",
+        "k_label_en": "Certification",
+        "k_label_pt": "Certificação",
+        "k_value": "灌装合作方",
+        "k_value_en": "Bottling partner",
+        "k_value_pt": "Parceiro de engarrafamento",
+        "note": "证书、COA 与检测报告可向贸易伙伴提供：business@fruttita.com",
+        "note_en": "Certificates, certificates of analysis and lab reports are available to trade partners on request: business@fruttita.com",
+        "note_pt": "Certificados, COA e relatórios laboratoriais disponíveis para parceiros comerciais a pedido: business@fruttita.com"
+      },
       "blocks": {
-        "ch_tmall": {
-          "type": "channel",
+        "sp_certs_b0": {
+          "type": "cert",
           "settings": {
-            "name": "天猫旗舰店",
-            "name_en": "Tmall Flagship",
-            "name_pt": "Tmall Flagship"
+            "name": "BRCGS Food Safety, Issue 9",
+            "meta": "Grade A+ · SGS"
           }
         },
-        "ch_jd": {
-          "type": "channel",
+        "sp_certs_b1": {
+          "type": "cert",
           "settings": {
-            "name": "京东",
-            "name_en": "JD.com",
-            "name_pt": "JD.com"
+            "name": "FSSC 22000 v6",
+            "meta": "GFSI-recognized · SGS"
           }
         },
-        "ch_xhs": {
-          "type": "channel",
+        "sp_certs_b2": {
+          "type": "cert",
           "settings": {
-            "name": "小红书店铺",
-            "name_en": "Xiaohongshu",
-            "name_pt": "Xiaohongshu"
+            "name": "HACCP (Codex) · GMP",
+            "meta": "SGS"
           }
         },
-        "ch_douyin": {
-          "type": "channel",
+        "sp_certs_b3": {
+          "type": "cert",
           "settings": {
-            "name": "抖音",
-            "name_en": "Douyin / TikTok",
-            "name_pt": "Douyin / TikTok"
+            "name": "ISO 22000:2018 · ISO 9001:2015",
+            "meta": ""
+          }
+        },
+        "sp_certs_b4": {
+          "type": "cert",
+          "settings": {
+            "name": "FDA-registered food facility",
+            "meta": ""
+          }
+        },
+        "sp_certs_b5": {
+          "type": "cert",
+          "settings": {
+            "name": "Finished-product testing",
+            "meta": "Eurofins"
           }
         }
       },
       "block_order": [
-        "ch_tmall",
-        "ch_jd",
-        "ch_xhs",
-        "ch_douyin"
-      ],
-      "settings": {
-        "subtitle": "Find Us",
-        "subtitle_en": "Find Us",
-        "subtitle_pt": "Onde Encontrar",
-        "title": "想试试？",
-        "title_en": "Want to try?",
-        "title_pt": "Queres experimentar?",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
-      }
+        "sp_certs_b0",
+        "sp_certs_b1",
+        "sp_certs_b2",
+        "sp_certs_b3",
+        "sp_certs_b4",
+        "sp_certs_b5"
+      ]
     },
-    "fruttita_subscribe": {
-      "type": "fruttita-subscribe",
+    "sp_taste": {
+      "type": "sp-taste",
       "settings": {
-        "title": "关注我们，偶尔聊点有用的。",
-        "title_en": "Occasionally useful emails.",
-        "title_pt": "Emails ocasionalmente úteis.",
-        "subtitle": "不群发垃圾邮件。只在有值得说的事情时才打扰你。",
-        "subtitle_en": "No spam. We email when we actually have something to say.",
-        "subtitle_pt": "Sem spam. Só escrevemos quando temos algo para dizer.",
-        "bg_color": "#3A2015",
-        "text_color": "#F4E3C9",
-        "placeholder_text": "输入你的邮箱",
-        "placeholder_text_en": "Enter your email",
-        "placeholder_text_pt": "Insere o teu email",
-        "btn_text": "订阅",
-        "btn_text_en": "Subscribe",
-        "btn_text_pt": "Subscrever",
-        "success_text": "感谢订阅！我们会偶尔聊点有用的。",
-        "success_text_en": "You're in. We'll keep it worth your time.",
-        "success_text_pt": "Estás dentro. Prometemos não te fazer perder tempo."
+        "empty_big": "摇 → 开 → 喝。",
+        "empty_big_en": "Shake → open → drink.",
+        "empty_big_pt": "Agitar → abrir → beber.",
+        "placeholder_note": "Placeholder → 素材 ④ / ⑤ 手摇瓶 · 倒入水杯的一瞬（只露手）",
+        "eyebrow": "口感说明",
+        "eyebrow_en": "Tasting note",
+        "eyebrow_pt": "Nota de prova",
+        "title": "先说好：它是酸的。",
+        "title_en": "Fair warning: it's tart.",
+        "title_pt": "Aviso: é ácida.",
+        "text": "猴面包树果浆的 pH 在 3 左右，接近柠檬汁。我们不加糖去盖它，所以第一口是尖的，第二口有点涩。然后就没了。",
+        "text_en": "Baobab pulp sits around pH 3, close to lemon juice. We don't add sugar to hide it, so the first sip is sharp and the second is a little dry. Then it's gone.",
+        "text_pt": "A polpa de múcua anda perto de pH 3, como sumo de limão. Não adicionamos açúcar para o disfarçar: o primeiro gole é vivo, o segundo um pouco adstringente. E acabou.",
+        "show_ph": true,
+        "ph_note": "pH · 典型值，越低越酸",
+        "ph_note_en": "pH · typical values, lower is more acidic",
+        "ph_note_pt": "pH · valores típicos, quanto mais baixo mais ácido"
+      },
+      "blocks": {
+        "sp_taste_b0": {
+          "type": "ph",
+          "settings": {
+            "value": "2.3",
+            "pos": 8,
+            "us": false,
+            "width": 16,
+            "name": "柠檬汁",
+            "name_en": "Lemon juice",
+            "name_pt": "Sumo de limão"
+          }
+        },
+        "sp_taste_b1": {
+          "type": "ph",
+          "settings": {
+            "value": "3–4",
+            "pos": 22,
+            "us": true,
+            "width": 16,
+            "name": "猴面包树 Shot",
+            "name_en": "Baobab shot",
+            "name_pt": "Dose de múcua"
+          }
+        },
+        "sp_taste_b2": {
+          "type": "ph",
+          "settings": {
+            "value": "3.8",
+            "pos": 52,
+            "us": false,
+            "width": 16,
+            "name": "橙汁",
+            "name_en": "Orange juice",
+            "name_pt": "Sumo de laranja"
+          }
+        },
+        "sp_taste_b3": {
+          "type": "ph",
+          "settings": {
+            "value": "5.0",
+            "pos": 72,
+            "us": false,
+            "width": 16,
+            "name": "黑咖啡",
+            "name_en": "Black coffee",
+            "name_pt": "Café"
+          }
+        },
+        "sp_taste_b4": {
+          "type": "ph",
+          "settings": {
+            "value": "7.0",
+            "pos": 93,
+            "us": false,
+            "width": 16,
+            "name": "水",
+            "name_en": "Water",
+            "name_pt": "Água"
+          }
+        },
+        "sp_taste_b5": {
+          "type": "note",
+          "settings": {
+            "title": "酸",
+            "title_en": "Tart",
+            "title_pt": "Ácida",
+            "text": "天然酸性水果。不加糖，也不需要加糖才能喝。",
+            "text_en": "Naturally acidic fruit. No sugar added, none needed to make it drinkable.",
+            "text_pt": "Fruto naturalmente ácido. Sem açúcar adicionado, e sem precisar dele."
+          }
+        },
+        "sp_taste_b6": {
+          "type": "note",
+          "settings": {
+            "title": "涩",
+            "title_en": "Astringent",
+            "title_pt": "Adstringente",
+            "text": "那种收敛感，是每支约 140 mg 多酚在做多酚该做的事。",
+            "text_en": "That drying feel is ~140 mg of polyphenols per shot doing what polyphenols do.",
+            "text_pt": "Essa secura são ~140 mg de polifenóis por dose a fazer o que os polifenóis fazem."
+          }
+        },
+        "sp_taste_b7": {
+          "type": "note",
+          "settings": {
+            "title": "沉淀",
+            "title_en": "Sediment",
+            "title_pt": "Sedimento",
+            "text": "纤维会沉底。开盖前摇一摇。要是什么都不沉，才该起疑。",
+            "text_en": "Fiber settles. Shake before opening. If nothing settles, be suspicious.",
+            "text_pt": "A fibra assenta. Agite antes de abrir. Se nada assentar, desconfie."
+          }
+        }
+      },
+      "block_order": [
+        "sp_taste_b0",
+        "sp_taste_b1",
+        "sp_taste_b2",
+        "sp_taste_b3",
+        "sp_taste_b4",
+        "sp_taste_b5",
+        "sp_taste_b6",
+        "sp_taste_b7"
+      ]
+    },
+    "sp_duo": {
+      "type": "sp-duo",
+      "settings": {
+        "a_link": "/pages/about",
+        "a_placeholder": "Placeholder → 素材 ⑦ Fazenda27 实景（Jorge）",
+        "a_eyebrow": "品牌出身",
+        "a_eyebrow_en": "Our origin",
+        "a_eyebrow_pt": "A nossa origem",
+        "a_title": "从非洲的一座农场，到香港的一家公司。",
+        "a_title_en": "From a farm in Africa to a company in Hong Kong.",
+        "a_title_pt": "De uma quinta em África a uma empresa em Hong Kong.",
+        "a_text": "Fruttita 起初是安哥拉一家食品公司的猴面包树产品线，后来成了由香港公司运营的国际品牌。这里是完整的故事，包括我们还在修的部分。",
+        "a_text_en": "Fruttita began as the baobab line of a food company in Angola and became an international brand run from Hong Kong. Here's the whole story, including the parts we're still fixing.",
+        "a_text_pt": "A Fruttita começou como a linha de múcua de uma empresa alimentar em Angola e tornou-se uma marca internacional gerida a partir de Hong Kong. Aqui está a história toda, incluindo as partes que ainda estamos a corrigir.",
+        "a_go": "读出身 →",
+        "a_go_en": "Read the origin →",
+        "a_go_pt": "Ler a origem →",
+        "b_link": "/pages/baobab",
+        "b_eyebrow": "品质",
+        "b_eyebrow_en": "Quality",
+        "b_eyebrow_pt": "Qualidade",
+        "b_title": "数字，不是形容词。",
+        "b_title_en": "Numbers, not adjectives.",
+        "b_title_pt": "Números, não adjetivos.",
+        "b_text": "每一批 Shot 都以成品做检测。灌装工厂持有两张 GFSI 认证。这些文件很无聊，是故意的。",
+        "b_text_en": "Every batch of the Shot is analyzed as a finished product. The bottling facility holds two GFSI certifications. The paperwork is boring on purpose.",
+        "b_text_pt": "Cada lote da dose é analisado como produto acabado. A fábrica de engarrafamento tem duas certificações GFSI. A papelada é aborrecida de propósito.",
+        "b_go": "看证书 →",
+        "b_go_en": "See the certificates →",
+        "b_go_pt": "Ver os certificados →"
+      },
+      "blocks": {
+        "sp_duo_b0": {
+          "type": "cert",
+          "settings": {
+            "name": "BRCGS A+"
+          }
+        },
+        "sp_duo_b1": {
+          "type": "cert",
+          "settings": {
+            "name": "FSSC 22000"
+          }
+        },
+        "sp_duo_b2": {
+          "type": "cert",
+          "settings": {
+            "name": "FDA-registered"
+          }
+        },
+        "sp_duo_b3": {
+          "type": "cert",
+          "settings": {
+            "name": "Eurofins tested"
+          }
+        }
+      },
+      "block_order": [
+        "sp_duo_b0",
+        "sp_duo_b1",
+        "sp_duo_b2",
+        "sp_duo_b3"
+      ]
+    },
+    "sp_buy": {
+      "type": "sp-buy",
+      "settings": {
+        "eyebrow": "购买渠道",
+        "eyebrow_en": "Where to buy",
+        "eyebrow_pt": "Onde comprar",
+        "title": "即将登陆美国。",
+        "title_en": "Coming to the US.",
+        "title_pt": "A chegar aos EUA.",
+        "text": "Shot 六支装正在进入美国零售渠道。留下邮箱，上架当天告诉你在哪买。只发一封，不发周报。",
+        "text_en": "The Shot 6-pack is on its way to US retail. Leave your email and we'll tell you the day it's live, and where. We'll email you once. Not weekly.",
+        "text_pt": "O pack de 6 doses está a caminho do retalho americano. Deixe o email e dizemos-lhe o dia em que estiver disponível, e onde. Um email só. Não é semanal.",
+        "tag": "us-notify",
+        "placeholder": "you@email.com",
+        "btn": "通知我",
+        "btn_en": "Notify me",
+        "btn_pt": "Avisem-me",
+        "ok": "收到。就这一封。",
+        "ok_en": "Noted. That's the one email.",
+        "ok_pt": "Anotado. Foi esse o email.",
+        "china": "中国大陆：天猫国际、抖音全球购有售。",
+        "china_en": "Also available in China on Tmall Global and Douyin.",
+        "china_pt": "Também disponível na China, na Tmall Global e Douyin.",
+        "box_text": "6-PACK BOX · Placeholder → 素材 ⑥"
       }
     }
   },
   "order": [
-    "fruttita_claim_strip",
-    "fruttita_prose",
-    "fruttita_value_props",
-    "fruttita_product_showcase",
-    "fruttita_data_science",
-    "fruttita_comparison",
-    "fruttita_quotes",
-    "fruttita_where_to_buy",
-    "fruttita_subscribe"
+    "sp_hero",
+    "sp_ticker",
+    "sp_fruit",
+    "sp_specimen",
+    "sp_composition",
+    "sp_certs",
+    "sp_taste",
+    "sp_duo",
+    "sp_buy"
   ]
 }

@@ -1,0 +1,49 @@
+{%- comment -%} Fruttita Specimen · 01 Hero {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-hero" style="--sp-hero-scale:{{ s.image_scale | default: 78 | divided_by: 100.0 }}">
+  <div class="txt">
+    <div class="spec sp-lab">
+      {%- for block in section.blocks -%}{%- if block.type == 'eyebrow' -%}<span {{ block.shopify_attributes }}>{% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}</span>{%- endif -%}{%- endfor -%}
+    </div>
+    <h1>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</h1>
+    <p class="sub">{% render 'i18n-text', default: s.sub, en: s.sub_en, pt: s.sub_pt %}</p>
+    <div class="facts">
+      {%- for block in section.blocks -%}{%- if block.type == 'fact' -%}<div {{ block.shopify_attributes }}><b>{{ block.settings.value }}</b><span>{% render 'i18n-text', default: block.settings.label, en: block.settings.label_en, pt: block.settings.label_pt %}</span></div>{%- endif -%}{%- endfor -%}
+    </div>
+    <div class="cta">
+      {%- if s.btn1_link != blank -%}<a class="sp-btn solid" href="{{ s.btn1_link }}">{% render 'i18n-text', default: s.btn1, en: s.btn1_en, pt: s.btn1_pt %}</a>{%- endif -%}
+      {%- if s.btn2_link != blank -%}<a class="sp-btn" href="{{ s.btn2_link }}">{% render 'i18n-text', default: s.btn2, en: s.btn2_en, pt: s.btn2_pt %}</a>{%- endif -%}
+    </div>
+  </div>
+  <div class="pic">
+    {%- if s.image != blank -%}{{ s.image | image_url: width: 1600 | image_tag: loading: 'eager', alt: s.image.alt | default: 'Fruttita Baobab Pulp Shot' }}
+    {%- else -%}<img src="{{ 'fruttita-packshot-shot.png' | asset_url }}" alt="Fruttita Baobab Pulp Shot" loading="eager" width="1024" height="1024">{%- endif -%}
+    {%- if s.callout_en != blank -%}<div class="callout"><i>{% render 'i18n-text', default: s.callout_label, en: s.callout_label_en, pt: s.callout_label_pt %}</i>{% render 'i18n-text', default: s.callout, en: s.callout_en, pt: s.callout_pt %}</div>{%- endif -%}
+    {%- if s.placeholder_note != blank -%}<div class="sp-ph">{{ s.placeholder_note }}</div>{%- endif -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "SP · Hero",
+  "settings": [
+    {"type":"text","id":"title","label":"标题 (zh)","default":"猴面包树，开盖即饮。两种配料。"},
+    {"type":"text","id":"title_en","label":"Title (en)","default":"Baobab, ready to drink. Two ingredients."},
+    {"type":"text","id":"title_pt","label":"Título (pt)","default":"Múcua, pronta a beber. Dois ingredientes."},
+    {"type":"textarea","id":"sub","label":"副标 (zh)"},
+    {"type":"textarea","id":"sub_en","label":"Sub (en)"},
+    {"type":"textarea","id":"sub_pt","label":"Sub (pt)"},
+    {"type":"text","id":"btn1","label":"按钮1 (zh)"},{"type":"text","id":"btn1_en","label":"Button 1 (en)"},{"type":"text","id":"btn1_pt","label":"Botão 1 (pt)"},{"type":"url","id":"btn1_link","label":"Button 1 link"},
+    {"type":"text","id":"btn2","label":"按钮2 (zh)"},{"type":"text","id":"btn2_en","label":"Button 2 (en)"},{"type":"text","id":"btn2_pt","label":"Botão 2 (pt)"},{"type":"url","id":"btn2_link","label":"Button 2 link"},
+    {"type":"image_picker","id":"image","label":"Bottle image (fallback: theme packshot)"},
+    {"type":"range","id":"image_scale","label":"Image scale %","min":50,"max":130,"step":2,"default":78},
+    {"type":"text","id":"callout_label","label":"引线标签 (zh)"},{"type":"text","id":"callout_label_en","label":"Callout label (en)"},{"type":"text","id":"callout_label_pt","label":"Callout label (pt)"},
+    {"type":"text","id":"callout","label":"引线文字 (zh)"},{"type":"text","id":"callout_en","label":"Callout (en)"},{"type":"text","id":"callout_pt","label":"Callout (pt)"},
+    {"type":"text","id":"placeholder_note","label":"Placeholder note (internal, leave blank on live)"}
+  ],
+  "blocks": [
+    {"type":"eyebrow","name":"Eyebrow item","settings":[{"type":"text","id":"text","label":"zh"},{"type":"text","id":"text_en","label":"en"},{"type":"text","id":"text_pt","label":"pt"}]},
+    {"type":"fact","name":"Fact","settings":[{"type":"text","id":"value","label":"Value (e.g. 3 g)"},{"type":"text","id":"label","label":"zh"},{"type":"text","id":"label_en","label":"en"},{"type":"text","id":"label_pt","label":"pt"}]}
+  ],
+  "presets": [{"name":"SP · Hero"}]
+}
+{% endschema %}

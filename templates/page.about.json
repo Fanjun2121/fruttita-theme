@@ -139,8 +139,8 @@
             "subtitle": "CLEAN",
             "subtitle_en": "CLEAN",
             "subtitle_pt": "CLEAN",
-            "body": "0 钠。0 添加。0 脂。\n\n我们不往里面加东西。我们做减法。\n\n配料表极简，因为好原料不需要修饰。\n\n当市面上的“健康饮品“配料表长得像一篇论文的时候，我们选择只留下本质。\n\n少，不是缺少。是刚刚好。",
-            "body_en": "0 sodium. 0 additives. 0 fat.\n\nWe don't add. We subtract.\n\nThe ingredient list is short because the ingredient is good.\n\nOther \"health drinks\" have labels that read like a chemistry textbook. Ours reads like a grocery list — if you only bought one thing.",
+            "body": "",
+            "body_en": "",
             "body_pt": "0 sódio. 0 aditivos. 0 gordura.\n\nNão adicionamos. Subtraímos.\n\nA lista de ingredientes é curta porque o ingrediente é bom.\n\nOutras \"bebidas saudáveis\" têm rótulos que parecem manuais de química. O nosso parece uma lista de compras — se só comprasses uma coisa.",
             "bg_color": "#4F2C1D",
             "text_color": "#F4E3C9"
@@ -155,9 +155,9 @@
             "subtitle": "WILD",
             "subtitle_en": "WILD",
             "subtitle_pt": "WILD",
-            "body": "高钾。高 VC。高纤维。\n\n猴面包树在非洲旷野活了三千年，不施肥，不浇水，不依赖任何人。\n\n它的营养密度，不是实验室调配出来的，是大自然自己长出来的。\n\n420mg+ 维生素 C。380mg+ 钾。10g+ 膳食纤维。828mg 总多酚。\n\n这些数字不是我们设计的。是旷野给的。",
-            "body_en": "High potassium. High Vitamin C. High fiber.\n\nThe baobab has survived in the African wild for 3,000 years. No fertilizer. No irrigation. No help from anyone.\n\nIts nutrition wasn't formulated. It evolved.\n\n420mg+ Vitamin C. 380mg+ Potassium. 10g+ Fiber. 828mg Polyphenols.\n\nWe didn't design these numbers. The tree did.",
-            "body_pt": "Rico em potássio. Rico em Vitamina C. Rico em fibra.\n\nO imbondeiro sobrevive na natureza africana há 3.000 anos. Sem fertilizantes. Sem irrigação. Sem ajuda de ninguém.\n\nA sua composição nutricional não foi formulada. Evoluiu.\n\n420mg+ Vitamina C. 380mg+ Potássio. 10g+ Fibra. 828mg Polifenóis.\n\nNão definimos estes números. Foi a árvore.",
+            "body": "",
+            "body_en": "",
+            "body_pt": "",
             "bg_color": "#4F2C1D",
             "text_color": "#F4E3C9"
           }

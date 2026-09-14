@@ -123,13 +123,13 @@
         "nd_vc": {
           "type": "metric",
           "settings": {
-            "label": "维生素 C",
-            "label_en": "Vitamin C",
-            "label_pt": "Vitamina C",
+            "label": "",
+            "label_en": "",
+            "label_pt": "",
             "value": "420mg+",
-            "description": "相当于 6 个橙子",
-            "description_en": "About 6 oranges worth",
-            "description_pt": "Equivalente a 6 laranjas",
+            "description": "",
+            "description_en": "",
+            "description_pt": "",
             "bar_pct": 95
           }
         },
@@ -141,7 +141,7 @@
             "label_pt": "Potássio",
             "value": "380mg+",
             "description": "天然电解质，帮助身体排出多余的钠",
-            "description_en": "Natural electrolyte. Counterbalances sodium.",
+            "description_en": "",
             "description_pt": "Eletrólito natural. Contrabalança o sódio.",
             "bar_pct": 85
           }
@@ -179,9 +179,9 @@
             "label_en": "Total Polyphenols",
             "label_pt": "Polifenóis Totais",
             "value": "828mg",
-            "description": "比 VC 更稳定的天然抗氧化物质",
-            "description_en": "A natural antioxidant more stable than Vitamin C",
-            "description_pt": "Antioxidante natural mais estável do que a Vitamina C",
+            "description": "",
+            "description_en": "",
+            "description_pt": "",
             "bar_pct": 92
           }
         }
@@ -347,8 +347,8 @@
             "title": "03 原浆提取",
             "title_en": "03 Pulp Extraction",
             "title_pt": "03 Extração da Polpa",
-            "description": "果实去壳后提取原浆，\n全程不添加糖、防腐剂或其他成分。\n你拿到的，就是果实本来的样子。",
-            "description_en": "Shelled and extracted. No sugar, preservatives, or additives. What you get is the fruit.",
+            "description": "果实去壳后取出果肉。\n你拿到的，就是果实本来的样子。",
+            "description_en": "",
             "description_pt": "Retira-se a casca e extrai-se a polpa. Sem açúcar, conservantes ou aditivos. O que recebes é o fruto."
           }
         },
@@ -359,9 +359,9 @@
             "title": "04 灌装成品",
             "title_en": "04 Bottled & Packed",
             "title_pt": "04 Embalamento Final",
-            "description": "Pouch 在安哥拉产地直接灌装，原产成品进口。\nShot 由安哥拉原浆运至越南完成玻璃瓶灌装。\n不同产品，同一棵树，同一份纯粹。",
-            "description_en": "THE POUCH: filled at origin in Angola, imported as-is. THE SHOT: Angolan pulp, bottled in glass in Vietnam. Different products. Same tree.",
-            "description_pt": "THE POUCH: embalado na origem em Angola, importado sem alterações. THE SHOT: polpa angolana, engarrafada em vidro no Vietname. Produtos diferentes. A mesma árvore."
+            "description": "Pouch 在非洲产地直接灌装，原产成品进口。\nShot 由非洲原浆运至越南完成玻璃瓶灌装。\n不同产品，同一棵树，同一份纯粹。",
+            "description_en": "THE POUCH: filled at origin in Africa, imported as-is. THE SHOT: African pulp, bottled in glass in Vietnam. Different products. Same tree.",
+            "description_pt": "THE POUCH: embalado na origem em Africa, importado sem alterações. THE SHOT: polpa africana, engarrafada em vidro no Vietname. Produtos diferentes. A mesma árvore."
           }
         }
       },

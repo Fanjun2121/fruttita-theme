@@ -1,0 +1,23 @@
+{%- comment -%} Fruttita Specimen · 03 Full-bleed photo with one line {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-fullbleed">
+  {%- if s.image != blank -%}{{ s.image | image_url: width: 2400 | image_tag: loading: 'lazy', alt: s.image.alt | default: '' }}
+  {%- else -%}<img src="{{ 'sp-placeholder-fruit.jpg' | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- endif -%}
+  <div class="cap">
+    <h2>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</h2>
+    <div class="sp-lab">{% render 'i18n-text', default: s.label, en: s.label_en, pt: s.label_pt %}</div>
+  </div>
+  {%- if s.placeholder_note != blank -%}<div class="sp-ph">{{ s.placeholder_note }}</div>{%- endif -%}
+</section>
+{% schema %}
+{
+  "name": "SP · Full-bleed photo",
+  "settings": [
+    {"type":"image_picker","id":"image","label":"Image (fallback: placeholder)"},
+    {"type":"text","id":"title","label":"标题 (zh)"},{"type":"text","id":"title_en","label":"Title (en)"},{"type":"text","id":"title_pt","label":"Título (pt)"},
+    {"type":"text","id":"label","label":"小标 (zh)"},{"type":"text","id":"label_en","label":"Label (en)"},{"type":"text","id":"label_pt","label":"Etiqueta (pt)"},
+    {"type":"text","id":"placeholder_note","label":"Placeholder note (internal)"}
+  ],
+  "presets": [{"name":"SP · Full-bleed photo"}]
+}
+{% endschema %}

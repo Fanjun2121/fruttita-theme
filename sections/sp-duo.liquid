@@ -1,0 +1,39 @@
+{%- comment -%} Fruttita Specimen · 06 Two brand cards: Origin (photo) + Quality (list) {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp"><div class="sp-wrap"><div class="sp-duo">
+  <a class="sp-card" href="{{ s.a_link | default: '#' }}">
+    {%- if s.a_image != blank -%}{{ s.a_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ 'sp-placeholder-tree.jpg' | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- endif -%}
+    <div class="sh"></div>
+    {%- if s.a_placeholder != blank -%}<div class="sp-ph">{{ s.a_placeholder }}</div>{%- endif -%}
+    <div class="sp-lab">{% render 'i18n-text', default: s.a_eyebrow, en: s.a_eyebrow_en, pt: s.a_eyebrow_pt %}</div>
+    <h3>{% render 'i18n-text', default: s.a_title, en: s.a_title_en, pt: s.a_title_pt %}</h3>
+    <p>{% render 'i18n-text', default: s.a_text, en: s.a_text_en, pt: s.a_text_pt %}</p>
+    <span class="go">{% render 'i18n-text', default: s.a_go, en: s.a_go_en, pt: s.a_go_pt %}</span>
+  </a>
+  <a class="sp-card q" href="{{ s.b_link | default: '#' }}">
+    <div class="sp-lab">{% render 'i18n-text', default: s.b_eyebrow, en: s.b_eyebrow_en, pt: s.b_eyebrow_pt %}</div>
+    <h3>{% render 'i18n-text', default: s.b_title, en: s.b_title_en, pt: s.b_title_pt %}</h3>
+    <p>{% render 'i18n-text', default: s.b_text, en: s.b_text_en, pt: s.b_text_pt %}</p>
+    <ul class="sp-certs">{%- for block in section.blocks -%}<li {{ block.shopify_attributes }}><b>{{ block.settings.name }}</b></li>{%- endfor -%}</ul>
+    <span class="go">{% render 'i18n-text', default: s.b_go, en: s.b_go_en, pt: s.b_go_pt %}</span>
+  </a>
+</div></div></section>
+{% schema %}
+{
+  "name": "SP · Origin + Quality",
+  "settings": [
+    {"type":"image_picker","id":"a_image","label":"Card A image (fallback: placeholder tree)"},{"type":"url","id":"a_link","label":"Card A link"},{"type":"text","id":"a_placeholder","label":"Card A placeholder note (internal)"},
+    {"type":"text","id":"a_eyebrow","label":"A 眉题 zh"},{"type":"text","id":"a_eyebrow_en","label":"A eyebrow en"},{"type":"text","id":"a_eyebrow_pt","label":"A pt"},
+    {"type":"text","id":"a_title","label":"A 标题 zh"},{"type":"text","id":"a_title_en","label":"A title en"},{"type":"text","id":"a_title_pt","label":"A pt"},
+    {"type":"textarea","id":"a_text","label":"A 正文 zh"},{"type":"textarea","id":"a_text_en","label":"A text en"},{"type":"textarea","id":"a_text_pt","label":"A pt"},
+    {"type":"text","id":"a_go","label":"A 链接文字 zh"},{"type":"text","id":"a_go_en","label":"A link text en"},{"type":"text","id":"a_go_pt","label":"A pt"},
+    {"type":"url","id":"b_link","label":"Card B link"},
+    {"type":"text","id":"b_eyebrow","label":"B 眉题 zh"},{"type":"text","id":"b_eyebrow_en","label":"B eyebrow en"},{"type":"text","id":"b_eyebrow_pt","label":"B pt"},
+    {"type":"text","id":"b_title","label":"B 标题 zh"},{"type":"text","id":"b_title_en","label":"B title en"},{"type":"text","id":"b_title_pt","label":"B pt"},
+    {"type":"textarea","id":"b_text","label":"B 正文 zh"},{"type":"textarea","id":"b_text_en","label":"B text en"},{"type":"textarea","id":"b_text_pt","label":"B pt"},
+    {"type":"text","id":"b_go","label":"B 链接文字 zh"},{"type":"text","id":"b_go_en","label":"B link text en"},{"type":"text","id":"b_go_pt","label":"B pt"}
+  ],
+  "blocks": [{"type":"cert","name":"Cert badge","settings":[{"type":"text","id":"name","label":"Name"}]}],
+  "presets": [{"name":"SP · Origin + Quality cards"}]
+}
+{% endschema %}

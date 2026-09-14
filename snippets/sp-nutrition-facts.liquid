@@ -1,0 +1,28 @@
+{%- comment -%}
+  sp-nutrition-facts.liquid — FDA Nutrition Facts facsimile for The Shot (50 mL).
+  Values = US Label v2.1 (2026-09-08). Single source: 50ml-Shot-US-Label-v2-2026-09-07.md
+  Accepts: tips (boolean) — show hover explainers on 11% / 4%.
+{%- endcomment -%}
+<div class="sp-nf" aria-label="Nutrition Facts">
+  <div class="t">Nutrition Facts</div>
+  <div class="sm">1 serving per container</div>
+  <div class="r med"><b>Serving size</b><b>1 bottle (50 mL)</b></div>
+  <div class="sm" style="padding-top:4px"><b>Amount per serving</b></div>
+  <div class="cal"><span class="l">Calories</span><span class="n">10</span></div>
+  <div class="dv">% Daily Value*</div>
+  <div class="r"><span><b>Total Fat</b> 0g</span><b>0%</b></div>
+  <div class="r in"><span>Saturated Fat 0g</span><b>0%</b></div>
+  <div class="r in"><span>Trans Fat 0g</span><span></span></div>
+  <div class="r"><span><b>Cholesterol</b> 0mg</span><b>0%</b></div>
+  <div class="r"><span><b>Sodium</b> 0mg</span><b>0%</b></div>
+  <div class="r"><span><b>Total Carbohydrate</b> 4g</span><b>2%</b></div>
+  <div class="r in"><span>Dietary Fiber 3g</span>{% if tips %}<b class="sp-dvq" tabindex="0" data-tip="11% of your day in one 50 mL shot. Per the FDA's 240 mL reference amount that is 54%, which is why it may be called an excellent source.">11%</b>{% else %}<b>11%</b>{% endif %}</div>
+  <div class="r in"><span>Total Sugars less than 1g</span><span></span></div>
+  <div class="r in2"><span>Includes 0g Added Sugars</span><b>0%</b></div>
+  <div class="r thick"><span><b>Protein</b> 0g</span><span></span></div>
+  <div class="r"><span>Vitamin D 0mcg</span><span>0%</span></div>
+  <div class="r"><span>Calcium 10mg</span><span>0%</span></div>
+  <div class="r"><span>Iron 0mg</span><span>0%</span></div>
+  <div class="r med"><span>Potassium 160mg</span>{% if tips %}<span class="sp-dvq" tabindex="0" data-tip="4% per shot. Per 240 mL reference amount it is 16%, which meets the FDA's bar for a good source. Both numbers are true; the label shows the honest small one.">4%</span>{% else %}<span>4%</span>{% endif %}</div>
+  <div class="foot">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</div>
+</div>

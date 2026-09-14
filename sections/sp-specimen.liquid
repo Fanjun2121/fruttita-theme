@@ -1,0 +1,45 @@
+{%- comment -%} Fruttita Specimen · 04a Record head + Specimen row (prose + kv + moisture bars) {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-record" id="record"><div class="sp-wrap">
+  {%- if s.head_en != blank -%}
+  <div class="sp-rec-head"><div class="sp-lab dim">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div><div><h2>{% render 'i18n-text', default: s.head, en: s.head_en, pt: s.head_pt %}</h2></div></div>
+  {%- endif -%}
+  <div class="sp-row">
+    <div class="k"><span class="sp-lab">{% render 'i18n-text', default: s.k_label, en: s.k_label_en, pt: s.k_label_pt %}</span><b>{{ s.k_value }}</b></div>
+    <div class="v">
+      <div>{% render 'i18n-text', default: s.prose, en: s.prose_en, pt: s.prose_pt %}</div>
+      <dl class="sp-kv">
+        {%- for block in section.blocks -%}{%- if block.type == 'kv' -%}<dt {{ block.shopify_attributes }}>{% render 'i18n-text', default: block.settings.k, en: block.settings.k_en, pt: block.settings.k_pt %}</dt><dd>{% render 'i18n-text', default: block.settings.v, en: block.settings.v_en, pt: block.settings.v_pt %}</dd>{%- endif -%}{%- endfor -%}
+      </dl>
+      {%- if s.show_bars -%}
+      <div class="one" style="padding-top:8px">
+        <div class="sp-lab dim" style="margin-bottom:10px">{% render 'i18n-text', default: s.bars_title, en: s.bars_title_en, pt: s.bars_title_pt %}</div>
+        <div class="sp-bars">
+          {%- for block in section.blocks -%}{%- if block.type == 'bar' -%}<div {{ block.shopify_attributes }}><span>{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}</span><i style="--w:{{ block.settings.pct }}%"></i><b>≈ {{ block.settings.pct }}%</b></div>{%- endif -%}{%- endfor -%}
+        </div>
+        <p class="sp-fn">{% render 'i18n-text', default: s.bars_note, en: s.bars_note_en, pt: s.bars_note_pt %}</p>
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div></section>
+{% schema %}
+{
+  "name": "SP · Record: Specimen",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"眉题 (zh)","default":"记录"},{"type":"text","id":"eyebrow_en","label":"Eyebrow (en)","default":"Record"},{"type":"text","id":"eyebrow_pt","label":"(pt)","default":"Registo"},
+    {"type":"text","id":"head","label":"大标题 (zh)"},{"type":"text","id":"head_en","label":"Heading (en)"},{"type":"text","id":"head_pt","label":"(pt)"},
+    {"type":"text","id":"k_label","label":"行标签 (zh)","default":"标本"},{"type":"text","id":"k_label_en","label":"Row label (en)","default":"Specimen"},{"type":"text","id":"k_label_pt","label":"(pt)","default":"Espécime"},
+    {"type":"text","id":"k_value","label":"Row value (mono)","default":"Adansonia digitata"},
+    {"type":"richtext","id":"prose","label":"正文 (zh)"},{"type":"richtext","id":"prose_en","label":"Prose (en)"},{"type":"richtext","id":"prose_pt","label":"(pt)"},
+    {"type":"checkbox","id":"show_bars","label":"Show moisture bars","default":true},
+    {"type":"text","id":"bars_title","label":"横条标题 (zh)"},{"type":"text","id":"bars_title_en","label":"Bars title (en)"},{"type":"text","id":"bars_title_pt","label":"(pt)"},
+    {"type":"textarea","id":"bars_note","label":"横条脚注 (zh)"},{"type":"textarea","id":"bars_note_en","label":"Bars note (en)"},{"type":"textarea","id":"bars_note_pt","label":"(pt)"}
+  ],
+  "blocks": [
+    {"type":"kv","name":"Key / value","settings":[{"type":"text","id":"k","label":"key zh"},{"type":"text","id":"k_en","label":"key en"},{"type":"text","id":"k_pt","label":"key pt"},{"type":"text","id":"v","label":"value zh"},{"type":"text","id":"v_en","label":"value en"},{"type":"text","id":"v_pt","label":"value pt"}]},
+    {"type":"bar","name":"Bar","settings":[{"type":"text","id":"name","label":"zh"},{"type":"text","id":"name_en","label":"en"},{"type":"text","id":"name_pt","label":"pt"},{"type":"range","id":"pct","label":"%","min":0,"max":100,"step":1,"default":50}]}
+  ],
+  "presets": [{"name":"SP · Record: Specimen"}]
+}
+{% endschema %}

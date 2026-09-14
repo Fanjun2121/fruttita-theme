@@ -14,16 +14,28 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "footer_company": {
+          "type": "text",
+          "settings": {
+            "heading": "公司",
+            "heading_en": "Company",
+            "heading_pt": "Empresa",
+            "subtext": "<p><strong>Fruttita Limited</strong><br>RM 1911 Lee Garden One, 33 Hysan Avenue<br>Causeway Bay, Hong Kong<br><a href=\"mailto:hello@fruttita.com\">hello@fruttita.com</a></p>",
+            "subtext_en": "<p><strong>Fruttita Limited</strong><br>RM 1911 Lee Garden One, 33 Hysan Avenue<br>Causeway Bay, Hong Kong<br><a href=\"mailto:hello@fruttita.com\">hello@fruttita.com</a></p>",
+            "subtext_pt": "<p><strong>Fruttita Limited</strong><br>RM 1911 Lee Garden One, 33 Hysan Avenue<br>Causeway Bay, Hong Kong<br><a href=\"mailto:hello@fruttita.com\">hello@fruttita.com</a></p>",
+            "subtext_zh": "<p><strong>Fruttita Limited</strong><br>RM 1911 Lee Garden One, 33 Hysan Avenue<br>Causeway Bay, Hong Kong<br><a href=\"mailto:hello@fruttita.com\">hello@fruttita.com</a></p>"
+          }
+        },
         "footer_products": {
           "type": "text",
           "settings": {
             "heading": "产品",
-            "heading_en": "Products",
-            "heading_pt": "Produtos",
-            "subtext": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT 原浆饮<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH 纯果浆<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER 猴面包树水<\/a><\/p>",
-            "subtext_en": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT Baobab Pulp<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH Pure Pulp<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER Baobab Water<\/a><\/p>",
-            "subtext_pt": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT Polpa de Múcua<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH Polpa Pura<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER Água de Múcua<\/a><\/p>",
-            "subtext_zh": "<p><a href=\"\/products\/the-baobab-pulp-shot\">THE SHOT 原浆饮<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-pouch\">THE POUCH 纯果浆<\/a><\/p>\n<p><a href=\"\/products\/the-baobab-water\">THE WATER 猴面包树水<\/a><\/p>"
+            "heading_en": "Product",
+            "heading_pt": "Produto",
+            "subtext": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · 即将进入美国</a></p>",
+            "subtext_en": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · coming to the US</a></p>",
+            "subtext_pt": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · a chegar aos EUA</a></p>",
+            "subtext_zh": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · 即将进入美国</a></p>"
           }
         },
         "footer_brand": {
@@ -32,39 +44,30 @@
             "heading": "品牌",
             "heading_en": "Brand",
             "heading_pt": "Marca",
-            "subtext": "<p><a href=\"\/pages\/about\">关于我们<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">猴面包树<\/a><\/p>",
-            "subtext_en": "<p><a href=\"\/pages\/about\">About Us<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">Baobab<\/a><\/p>",
-            "subtext_pt": "<p><a href=\"\/pages\/about\">Sobre Nós<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">Imbondeiro<\/a><\/p>",
-            "subtext_zh": "<p><a href=\"\/pages\/about\">关于我们<\/a><\/p>\n<p><a href=\"\/pages\/baobab\">猴面包树<\/a><\/p>"
+            "subtext": "<p><a href=\"/pages/baobab\">为什么是猴面包树</a></p><p><a href=\"/pages/about\">品牌出身</a></p><p><a href=\"/pages/baobab\">品质</a></p><p><a href=\"/pages/contact\">联系</a></p>",
+            "subtext_en": "<p><a href=\"/pages/baobab\">Why Baobab</a></p><p><a href=\"/pages/about\">Our Origin</a></p><p><a href=\"/pages/baobab\">Quality</a></p><p><a href=\"/pages/contact\">Contact</a></p>",
+            "subtext_pt": "<p><a href=\"/pages/baobab\">Porquê a múcua</a></p><p><a href=\"/pages/about\">A nossa origem</a></p><p><a href=\"/pages/baobab\">Qualidade</a></p><p><a href=\"/pages/contact\">Contacto</a></p>",
+            "subtext_zh": "<p><a href=\"/pages/baobab\">为什么是猴面包树</a></p><p><a href=\"/pages/about\">品牌出身</a></p><p><a href=\"/pages/baobab\">品质</a></p><p><a href=\"/pages/contact\">联系</a></p>"
           }
         },
-        "footer_collab": {
+        "footer_trade": {
           "type": "text",
           "settings": {
-            "heading": "合作",
-            "heading_en": "Partnerships",
-            "heading_pt": "Parcerias",
-            "subtext": "<p><a href=\"mailto:hello@fruttita.com\">商务合作<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">媒体联系<\/a><\/p>",
-            "subtext_en": "<p><a href=\"mailto:hello@fruttita.com\">Business Enquiries<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">Media Contact<\/a><\/p>",
-            "subtext_pt": "<p><a href=\"mailto:hello@fruttita.com\">Parcerias Comerciais<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">Contacto de Media<\/a><\/p>",
-            "subtext_zh": "<p><a href=\"mailto:hello@fruttita.com\">商务合作<\/a><\/p>\n<p><a href=\"mailto:hello@fruttita.com\">媒体联系<\/a><\/p>"
-          }
-        },
-        "footer_contact": {
-          "type": "text",
-          "settings": {
-            "heading": "联系",
-            "heading_en": "Contact",
-            "heading_pt": "Contacto",
-            "subtext": "<p><a href=\"mailto:hello@fruttita.com\">hello@fruttita.com<\/a><\/p>"
+            "heading": "贸易",
+            "heading_en": "Trade",
+            "heading_pt": "Comércio",
+            "subtext": "<p><a href=\"mailto:business@fruttita.com\">贸易合作与资料索取</a></p><p><a href=\"mailto:media@fruttita.com\">媒体</a></p>",
+            "subtext_en": "<p><a href=\"mailto:business@fruttita.com\">Trade enquiries &amp; documents</a></p><p><a href=\"mailto:media@fruttita.com\">Press</a></p>",
+            "subtext_pt": "<p><a href=\"mailto:business@fruttita.com\">Parcerias comerciais e documentação</a></p><p><a href=\"mailto:media@fruttita.com\">Imprensa</a></p>",
+            "subtext_zh": "<p><a href=\"mailto:business@fruttita.com\">贸易合作与资料索取</a></p><p><a href=\"mailto:media@fruttita.com\">媒体</a></p>"
           }
         }
       },
       "block_order": [
+        "footer_company",
         "footer_products",
         "footer_brand",
-        "footer_collab",
-        "footer_contact"
+        "footer_trade"
       ],
       "settings": {
         "color_scheme": "scheme-1",
@@ -76,7 +79,7 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
-        "show_policy": false,
+        "show_policy": true,
         "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36

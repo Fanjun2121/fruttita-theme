@@ -1,0 +1,14 @@
+{%- comment -%} Fruttita Specimen · 02 Facts ticker {%- endcomment -%}
+<div class="sp sp-ticker" aria-hidden="true"><div class="track">
+  {%- for i in (1..2) -%}
+    {%- for block in section.blocks -%}<span {{ block.shopify_attributes }}>{% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}</span>{%- endfor -%}
+  {%- endfor -%}
+</div></div>
+{% schema %}
+{
+  "name": "SP · Ticker",
+  "settings": [],
+  "blocks": [{"type":"item","name":"Item","settings":[{"type":"text","id":"text","label":"zh (HTML ok: <b>)"},{"type":"text","id":"text_en","label":"en"},{"type":"text","id":"text_pt","label":"pt"}]}],
+  "presets": [{"name":"SP · Ticker"}]
+}
+{% endschema %}

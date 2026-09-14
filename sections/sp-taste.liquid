@@ -1,0 +1,44 @@
+{%- comment -%} Fruttita Specimen · 05 Taste: photo/placeholder + tasting note + pH scale + triplet {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="sp sp-taste">
+  <div class="pic">
+    {%- if s.image != blank -%}{{ s.image | image_url: width: 1600 | image_tag: loading: 'lazy', alt: s.image.alt | default: '' }}
+    {%- else -%}<div class="empty"><b>{% render 'i18n-text', default: s.empty_big, en: s.empty_big_en, pt: s.empty_big_pt %}</b>{{ s.placeholder_note }}</div>{%- endif -%}
+  </div>
+  <div class="txt">
+    <div class="sp-lab dim">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div>
+    <h2>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</h2>
+    <p style="max-width:44ch">{% render 'i18n-text', default: s.text, en: s.text_en, pt: s.text_pt %}</p>
+    {%- if s.show_ph -%}
+    <div class="sp-ph-scale" aria-label="Acidity scale">
+      <div class="sp-ph-line">
+        {%- for block in section.blocks -%}{%- if block.type == 'ph' -%}<i {{ block.shopify_attributes }}{% if block.settings.us %} class="us"{% endif %} style="left:{{ block.settings.pos }}%{% if block.settings.us %};width:{{ block.settings.width }}%{% endif %}"><b>{{ block.settings.value }}</b><span>{% render 'i18n-text', default: block.settings.name, en: block.settings.name_en, pt: block.settings.name_pt %}</span></i>{%- endif -%}{%- endfor -%}
+      </div>
+      <div class="sp-lab dim" style="margin-top:34px">{% render 'i18n-text', default: s.ph_note, en: s.ph_note_en, pt: s.ph_note_pt %}</div>
+    </div>
+    {%- endif -%}
+    <div class="sp-trip">
+      {%- for block in section.blocks -%}{%- if block.type == 'note' -%}<div {{ block.shopify_attributes }}><span class="sp-lab">{{ forloop.index | prepend: '0' }}</span><b>{% render 'i18n-text', default: block.settings.title, en: block.settings.title_en, pt: block.settings.title_pt %}</b><p>{% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}</p></div>{%- endif -%}{%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "SP · Taste",
+  "settings": [
+    {"type":"image_picker","id":"image","label":"Photo (left)"},
+    {"type":"text","id":"empty_big","label":"占位大字 (zh)"},{"type":"text","id":"empty_big_en","label":"Placeholder big text (en)","default":"Shake → open → drink."},{"type":"text","id":"empty_big_pt","label":"(pt)"},
+    {"type":"text","id":"placeholder_note","label":"Placeholder note (internal)"},
+    {"type":"text","id":"eyebrow","label":"眉题 (zh)","default":"口感说明"},{"type":"text","id":"eyebrow_en","label":"Eyebrow (en)","default":"Tasting note"},{"type":"text","id":"eyebrow_pt","label":"(pt)","default":"Nota de prova"},
+    {"type":"text","id":"title","label":"标题 (zh)"},{"type":"text","id":"title_en","label":"Title (en)"},{"type":"text","id":"title_pt","label":"(pt)"},
+    {"type":"textarea","id":"text","label":"正文 (zh)"},{"type":"textarea","id":"text_en","label":"Text (en)"},{"type":"textarea","id":"text_pt","label":"(pt)"},
+    {"type":"checkbox","id":"show_ph","label":"Show pH scale","default":true},
+    {"type":"text","id":"ph_note","label":"pH 注 (zh)"},{"type":"text","id":"ph_note_en","label":"pH note (en)","default":"pH · typical values, lower is more acidic"},{"type":"text","id":"ph_note_pt","label":"(pt)"}
+  ],
+  "blocks": [
+    {"type":"ph","name":"pH marker","settings":[{"type":"text","id":"value","label":"Value"},{"type":"text","id":"name","label":"zh"},{"type":"text","id":"name_en","label":"en"},{"type":"text","id":"name_pt","label":"pt"},{"type":"range","id":"pos","label":"Position %","min":0,"max":100,"step":1,"default":50},{"type":"checkbox","id":"us","label":"This is us (range band)","default":false},{"type":"range","id":"width","label":"Band width % (if us)","min":4,"max":40,"step":1,"default":16}]},
+    {"type":"note","name":"Tasting note","settings":[{"type":"text","id":"title","label":"zh"},{"type":"text","id":"title_en","label":"en"},{"type":"text","id":"title_pt","label":"pt"},{"type":"textarea","id":"text","label":"text zh"},{"type":"textarea","id":"text_en","label":"text en"},{"type":"textarea","id":"text_pt","label":"text pt"}]}
+  ],
+  "presets": [{"name":"SP · Taste"}]
+}
+{% endschema %}
