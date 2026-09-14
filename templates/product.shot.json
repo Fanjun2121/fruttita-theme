@@ -22,9 +22,9 @@
         "btn2_en": "Read the label",
         "btn2_pt": "Ler o rótulo",
         "btn2_link": "#label",
-        "made": "<p>配料：水、猴面包树果浆。<br>非洲猴面包树果浆，在越南 GFSI 认证工厂灌装。Fruttita™</p>",
-        "made_en": "<p>Ingredients: water, baobab fruit pulp.<br>Bottled in Vietnam by a GFSI-certified partner, from African baobab pulp. Fruttita™</p>",
-        "made_pt": "<p>Ingredientes: água, polpa de múcua.<br>Engarrafado no Vietname por um parceiro certificado GFSI, a partir de polpa de múcua africana. Fruttita™</p>"
+        "made": "<p>配料：水、猴面包树果浆。Fruttita™</p>",
+        "made_en": "<p>Ingredients: water, baobab fruit pulp. Fruttita™</p>",
+        "made_pt": "<p>Ingredientes: água, polpa de múcua. Fruttita™</p>"
       },
       "blocks": {
         "sp_pdp_hero_b0": {
