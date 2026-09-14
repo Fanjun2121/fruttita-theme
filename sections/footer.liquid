@@ -84,7 +84,7 @@
                     {% render block %}
                   {%- when 'text' -%}
                     <div class="footer-block__details-content rte">
-                      {%- capture sp_ft %}{% render 'i18n-text', default: block.settings.subtext, en: block.settings.subtext_en, pt: block.settings.subtext_pt, zh: block.settings.subtext_zh %}{% endcapture -%}{%- assign sp_rootdir = routes.root_url | append: '/' | replace: '//', '/' -%}{%- assign sp_root = 'href="' | append: sp_rootdir -%}{{ sp_ft | replace: 'href="/', sp_root | replace: 'href="//', 'href="/' }}
+                      {%- capture sp_ft %}{% render 'i18n-text', default: block.settings.subtext, en: block.settings.subtext_en, pt: block.settings.subtext_pt, zh: block.settings.subtext_zh %}{% endcapture -%}{%- assign sp_rootdir = routes.root_url | append: '/' | replace: '//', '/' -%}{%- assign sp_root = 'href="' | append: sp_rootdir -%}{%- assign sp_tmp = sp_ft | replace: sp_root, 'href="@@ROOT@@' | replace: 'href="/', sp_root | replace: 'href="//', 'href="/' | replace: 'href="@@ROOT@@', sp_root -%}{{ sp_tmp }}
                     </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
