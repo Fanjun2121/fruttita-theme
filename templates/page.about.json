@@ -26,7 +26,9 @@
         "label": "Fazenda27 · 安哥拉高原",
         "label_en": "Fazenda27 · Angolan highlands",
         "label_pt": "Fazenda27 · planalto angolano",
-        "placeholder_note": "Placeholder → 素材 ⑦c 采集 / ⑦d Fazenda27 加工（Jorge）"
+        "placeholder_note": "",
+        "asset": "sp-photo-origin-mist.jpg",
+        "alt": "Imbondeiro trees in the cacimbo morning mist, Angola"
       }
     },
     "rows": {
@@ -52,7 +54,9 @@
             "body": "<p>果浆来自 Fazenda27，一家在安哥拉高原瓦库昆戈的家族食品公司。多年来，他们一直向当地食品业供应 múcua。每一支瓶子都从那里开始。</p>",
             "body_en": "<p>The pulp comes from Fazenda27, a family food company in Waku-Kungo, in the highlands of Angola, that has supplied múcua to the local food industry for years. Every bottle starts there.</p>",
             "body_pt": "<p>A polpa vem da Fazenda27, uma empresa alimentar familiar no Waku-Kungo, no planalto de Angola, que há anos fornece múcua à indústria alimentar local. Cada garrafa começa ali.</p>",
-            "ph": "Placeholder → 素材 ⑦e 旱季地貌 / 场地"
+            "ph": "",
+            "asset": "sp-photo-waku-kungo.jpg",
+            "alt": "The valley around Waku-Kungo, Angola, in morning mist"
           }
         },
         "rows_b1": {
@@ -103,7 +107,7 @@
       "type": "sp-duo",
       "settings": {
         "a_link": "/pages/baobab",
-        "a_placeholder": "Placeholder → 素材 ⑦a 整棵树",
+        "a_placeholder": "",
         "a_eyebrow": "这棵树",
         "a_eyebrow_en": "The tree",
         "a_eyebrow_pt": "A árvore",
@@ -128,7 +132,8 @@
         "b_text_pt": "Cada lote testado como produto acabado, duas certificações GFSI, documentos a pedido.",
         "b_go": "看证书 →",
         "b_go_en": "See the certificates →",
-        "b_go_pt": "Ver os certificados →"
+        "b_go_pt": "Ver os certificados →",
+        "a_asset": "sp-photo-imbondeiro-hero.jpg"
       },
       "blocks": {
         "duo_b0": {

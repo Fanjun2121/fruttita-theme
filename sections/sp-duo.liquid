@@ -2,7 +2,7 @@
 {%- assign s = section.settings -%}
 <section class="sp"><div class="sp-wrap"><div class="sp-duo">
   <a class="sp-card" href="{{ s.a_link | default: '#' }}">
-    {%- if s.a_image != blank -%}{{ s.a_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ 'sp-placeholder-tree.jpg' | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- endif -%}
+    {%- if s.a_image != blank -%}{{ s.a_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ s.a_asset | default: 'sp-placeholder-tree.jpg' | asset_url }}" alt="" loading="lazy" width="1200" height="800">{%- endif -%}
     <div class="sh"></div>
     {%- if s.a_placeholder != blank -%}<div class="sp-ph">{{ s.a_placeholder }}</div>{%- endif -%}
     <div class="sp-lab">{% render 'i18n-text', default: s.a_eyebrow, en: s.a_eyebrow_en, pt: s.a_eyebrow_pt %}</div>
@@ -22,7 +22,7 @@
 {
   "name": "SP · Origin + Quality",
   "settings": [
-    {"type":"image_picker","id":"a_image","label":"Card A image (fallback: placeholder tree)"},{"type":"url","id":"a_link","label":"Card A link"},{"type":"text","id":"a_placeholder","label":"Card A placeholder note (internal)"},
+    {"type":"image_picker","id":"a_image","label":"Card A image (fallback: asset below)"},{"type":"text","id":"a_asset","label":"Card A theme asset (fallback)","default":"sp-placeholder-tree.jpg"},{"type":"url","id":"a_link","label":"Card A link"},{"type":"text","id":"a_placeholder","label":"Card A placeholder note (internal)"},
     {"type":"text","id":"a_eyebrow","label":"A 眉题 zh"},{"type":"text","id":"a_eyebrow_en","label":"A eyebrow en"},{"type":"text","id":"a_eyebrow_pt","label":"A pt"},
     {"type":"text","id":"a_title","label":"A 标题 zh"},{"type":"text","id":"a_title_en","label":"A title en"},{"type":"text","id":"a_title_pt","label":"A pt"},
     {"type":"textarea","id":"a_text","label":"A 正文 zh"},{"type":"textarea","id":"a_text_en","label":"A text en"},{"type":"textarea","id":"a_text_pt","label":"A pt"},

@@ -180,7 +180,9 @@
         "label": "果实 · Adansonia digitata",
         "label_en": "The fruit · Adansonia digitata",
         "label_pt": "O fruto · Adansonia digitata",
-        "placeholder_note": "Placeholder → 素材 ② 果壳 + 果肉（现图为 AI 生成）"
+        "placeholder_note": "",
+        "asset": "sp-photo-home-fruit.jpg",
+        "alt": "A baobab fruit next to one cut open, showing the chalky white pulp"
       }
     },
     "sp_specimen": {
@@ -521,7 +523,7 @@
       "type": "sp-duo",
       "settings": {
         "a_link": "/pages/about",
-        "a_placeholder": "Placeholder → 素材 ⑦ Fazenda27 实景（Jorge）",
+        "a_placeholder": "",
         "a_eyebrow": "品牌出身",
         "a_eyebrow_en": "Our origin",
         "a_eyebrow_pt": "A nossa origem",
@@ -546,7 +548,8 @@
         "b_text_pt": "Cada lote da dose é analisado como produto acabado. A fábrica de engarrafamento tem duas certificações GFSI. A papelada é aborrecida de propósito.",
         "b_go": "看证书 →",
         "b_go_en": "See the certificates →",
-        "b_go_pt": "Ver os certificados →"
+        "b_go_pt": "Ver os certificados →",
+        "a_asset": "sp-photo-imbondeiro-hero.jpg"
       },
       "blocks": {
         "sp_duo_b0": {

@@ -26,7 +26,9 @@
         "label": "Imbondeiro · 旱季",
         "label_en": "Imbondeiro · dry season",
         "label_pt": "Imbondeiro · estação seca",
-        "placeholder_note": "Placeholder → 素材 ⑦a 整棵树带果实（旱季，Jorge）"
+        "placeholder_note": "",
+        "asset": "sp-photo-imbondeiro-hero.jpg",
+        "alt": "An imbondeiro (baobab) tree in the dry season, Angola"
       }
     },
     "rows": {
@@ -67,7 +69,9 @@
             "body": "<p>它长在非洲南部的干旱稀树草原上，一年里有大半年不下雨。它靠树干里存的水活过旱季，能活上几百年。没有人给它浇水、施肥、打药，也没有人种它。我们的果实全部来自野生的树。</p><p>我们摘果，树留下。</p>",
             "body_en": "<p>It grows on the dry savanna of southern Africa, where most of the year it does not rain. It lives through the dry season on the water stored in its trunk, and it lives for centuries. Nobody waters it, feeds it, or sprays it, and nobody plants it. All of our fruit comes from wild trees.</p><p>We pick the fruit. The tree stays.</p>",
             "body_pt": "<p>Cresce na savana seca do sul de África, onde na maior parte do ano não chove. Sobrevive à estação seca com a água guardada no tronco, e vive séculos. Ninguém a rega, aduba ou pulveriza, e ninguém a planta. Todo o nosso fruto vem de árvores selvagens.</p><p>Colhemos o fruto. A árvore fica.</p>",
-            "ph": "Placeholder → 素材 ⑦b 树干 / 树皮特写"
+            "ph": "",
+            "asset": "sp-photo-fruit-branch.jpg",
+            "alt": "Múcua, the baobab fruit, hanging from a bare branch in Angola"
           }
         },
         "rows_b2": {
@@ -80,7 +84,9 @@
             "body": "<p>果实挂在枝头上自己变干，掉下来的时候壳是硬的，里面是白垩质的、酸的、粉状的果肉，含水只有约 11%。这就是为什么它不加任何东西也能放很多年，也是为什么我们能把水加回去，而不是把水抽出来。</p>",
             "body_en": "<p>The fruit dries while it still hangs on the branch. By the time it falls, the shell is hard and the inside is a chalky, tart, powdery pulp with about 11% water left. That is why it keeps for years with nothing added, and why we can add the water back instead of taking it out.</p>",
             "body_pt": "<p>O fruto seca ainda pendurado no ramo. Quando cai, a casca está dura e o interior é uma polpa calcária, ácida e farinhenta com cerca de 11% de água. Por isso se conserva anos sem nada adicionado, e por isso podemos devolver a água em vez de a retirar.</p>",
-            "ph": "Placeholder → 素材 ② 果壳掰开 + ③ 果肉质感"
+            "ph": "",
+            "asset": "sp-photo-pulp.jpg",
+            "alt": "Chunks of dried baobab pulp with red fibres"
           }
         },
         "rows_b3": {
