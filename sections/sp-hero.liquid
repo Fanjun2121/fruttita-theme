@@ -5,7 +5,8 @@
     <div class="spec sp-lab">
       {%- for block in section.blocks -%}{%- if block.type == 'eyebrow' -%}<span {{ block.shopify_attributes }}>{% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}</span>{%- endif -%}{%- endfor -%}
     </div>
-    <h1>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</h1>
+    {%- capture h1 %}{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}{% endcapture -%}
+    <h1>{{ h1 | strip | newline_to_br }}</h1>
     <p class="sub">{% render 'i18n-text', default: s.sub, en: s.sub_en, pt: s.sub_pt %}</p>
     <div class="facts">
       {%- for block in section.blocks -%}{%- if block.type == 'fact' -%}<div {{ block.shopify_attributes }}><b>{{ block.settings.value }}</b><span>{% render 'i18n-text', default: block.settings.label, en: block.settings.label_en, pt: block.settings.label_pt %}</span></div>{%- endif -%}{%- endfor -%}
