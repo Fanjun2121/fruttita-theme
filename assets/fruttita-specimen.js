@@ -68,10 +68,15 @@
       reveal(e.target);
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-  Array.prototype.forEach.call(groups, function (g) { io.observe(g); });
+  Array.prototype.forEach.call(groups, function (g) {
+    // Anything already inside the first viewport (hero facts on phones) reveals right away;
+    // the observer only handles what the reader scrolls to.
+    if (g.getBoundingClientRect().top < window.innerHeight) { reveal(g); return; }
+    io.observe(g);
+  });
 
-  // Safety: whatever is still hidden after 6 s (observer quirks, editor iframes) is shown.
-  setTimeout(function () { Array.prototype.forEach.call(groups, function (g) { if (!g.classList.contains('in')) reveal(g); }); }, 6000);
+  // Safety: whatever is still hidden after 3 s (observer quirks, editor iframes) is shown.
+  setTimeout(function () { Array.prototype.forEach.call(groups, function (g) { if (!g.classList.contains('in')) reveal(g); }); }, 3000);
 
   // Theme editor: re-run for re-rendered sections.
   document.addEventListener('shopify:section:load', function (ev) {
