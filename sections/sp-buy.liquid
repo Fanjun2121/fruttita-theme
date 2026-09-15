@@ -14,7 +14,7 @@
     {%- if s.china_en != blank -%}<div class="china">{% render 'i18n-text', default: s.china, en: s.china_en, pt: s.china_pt %}</div>{%- endif -%}
   </div>
   <div class="box">
-    {%- if s.image != blank -%}{{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- elsif s.box_asset != blank -%}<img src="{{ s.box_asset | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- else -%}<span>{{ s.box_text }}</span>{%- endif -%}
+    {%- if s.image != blank -%}{{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- elsif s.box_asset != blank -%}<img src="{{ s.box_asset | asset_url }}" alt="" loading="lazy" decoding="async" width="1024" height="1024">{%- else -%}<span>{{ s.box_text }}</span>{%- endif -%}
   </div>
 </div></div></section>
 {% schema %}

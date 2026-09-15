@@ -9,7 +9,7 @@
     {%- if has_img and block.settings.overlay -%}
     <div class="v plate">
       <div class="sp-plate">
-        {%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 2000 | image_tag: loading: 'lazy', alt: block.settings.alt | escape }}{%- else -%}<img src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy" width="2000" height="1400">{%- endif -%}
+        {%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 2000 | image_tag: loading: 'lazy', alt: block.settings.alt | escape }}{%- else -%}<img src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy" decoding="async" width="2000" height="1400">{%- endif -%}
         <div class="plate-text">{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>
       </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="v{% if block.settings.image == blank and block.settings.aside_en == blank %} single{% endif %}">
       <div>{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>
       {%- if block.settings.image != blank -%}<div class="sp-rowimg">{{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
-      {%- elsif block.settings.asset != blank -%}<div class="sp-rowimg"><img src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy" width="1600" height="1200">{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
+      {%- elsif block.settings.asset != blank -%}<div class="sp-rowimg"><img src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy" decoding="async" width="1600" height="1200">{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
       {%- elsif block.settings.ph != blank -%}<div class="sp-rowimg empty"><div class="sp-ph">{{ block.settings.ph }}</div></div>
       {%- elsif block.settings.aside_en != blank -%}<div class="sp-aside">{% render 'i18n-text', default: block.settings.aside, en: block.settings.aside_en, pt: block.settings.aside_pt %}</div>{%- endif -%}
     </div>

@@ -2,7 +2,7 @@
 {%- assign s = section.settings -%}
 <section class="sp sp-fullbleed">
   {%- if s.image != blank -%}{{ s.image | image_url: width: 2400 | image_tag: loading: 'lazy', alt: s.image.alt | default: '' }}
-  {%- else -%}<img src="{{ s.asset | default: 'sp-placeholder-fruit.jpg' | asset_url }}" alt="{{ s.alt | escape }}" loading="lazy" width="2400" height="1600">{%- endif -%}
+  {%- else -%}<img src="{{ s.asset | default: 'sp-placeholder-fruit.jpg' | asset_url }}" alt="{{ s.alt | escape }}" loading="lazy" decoding="async" width="2400" height="1600">{%- endif -%}
   <div class="cap">
     <h2>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</h2>
     <div class="sp-lab">{% render 'i18n-text', default: s.label, en: s.label_en, pt: s.label_pt %}</div>

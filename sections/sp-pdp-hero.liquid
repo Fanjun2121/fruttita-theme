@@ -3,9 +3,9 @@
 <section class="sp sp-pdp-hero" style="--sp-pdp-scale:{{ s.image_scale | default: 100 | divided_by: 100.0 }};--sp-photo-bg:{{ s.photo_bg | default: '#E1D6CC' }}">
   <div class="pic">
     {%- if s.image != blank -%}{{ s.image | image_url: width: 1600 | image_tag: loading: 'eager', alt: product.title }}
-    {%- elsif s.asset != blank -%}<img src="{{ s.asset | asset_url }}" alt="{{ product.title }}" loading="eager" width="1024" height="1024">
+    {%- elsif s.asset != blank -%}<img src="{{ s.asset | asset_url }}" alt="{{ product.title }}" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
     {%- elsif product.featured_image != blank -%}{{ product.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', alt: product.title }}
-    {%- else -%}<img src="{{ 'fruttita-packshot-shot.jpg' | asset_url }}" alt="{{ product.title }}" loading="eager" width="1024" height="1024">{%- endif -%}
+    {%- else -%}<img src="{{ 'fruttita-packshot-shot.jpg' | asset_url }}" alt="{{ product.title }}" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">{%- endif -%}
     {%- if s.placeholder_note != blank -%}<div class="sp-ph">{{ s.placeholder_note }}</div>{%- endif -%}
   </div>
   <div class="txt">

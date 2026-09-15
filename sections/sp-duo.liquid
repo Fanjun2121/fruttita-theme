@@ -2,7 +2,7 @@
 {%- assign s = section.settings -%}
 <section class="sp"><div class="sp-wrap"><div class="sp-duo">
   <a class="sp-card" href="{% render 'sp-url', url: s.a_link %}">
-    {%- if s.a_image != blank -%}{{ s.a_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ s.a_asset | default: 'sp-placeholder-tree.jpg' | asset_url }}" alt="" loading="lazy" width="1200" height="800">{%- endif -%}
+    {%- if s.a_image != blank -%}{{ s.a_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ s.a_asset | default: 'sp-placeholder-tree.jpg' | asset_url }}" alt="" loading="lazy" decoding="async" width="1200" height="800">{%- endif -%}
     {%- if s.a_placeholder != blank -%}<div class="sp-ph">{{ s.a_placeholder }}</div>{%- endif -%}
     <div class="body">
       <div class="sp-lab">{% render 'i18n-text', default: s.a_eyebrow, en: s.a_eyebrow_en, pt: s.a_eyebrow_pt %}</div>
