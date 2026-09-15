@@ -264,16 +264,15 @@
     <link rel="preload" as="font" href="{{ 'Switzer-Semibold.woff2' | asset_url }}" type="font/woff2" crossorigin>
 
     {% comment %} Fruttita Brand VI: CJK font CDN stylesheets (split subsets) {% endcomment %}
-    <link rel="stylesheet" href="https://static.zeoseven.com/zsft/83/medium/result.css" media="print" onload="this.media='all'">
+    {%- if request.locale.iso_code contains 'zh' -%}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/harmonyos-sans-webfont-splitted@1.2.1/dist/HarmonyOS_Sans_SC/index.min.css" media="print" onload="this.media='all'">
+    {%- endif -%}
 
     {% comment %} Fruttita Brand VI: main brand stylesheet {% endcomment %}
     {{ 'fruttita-brand.css' | asset_url | stylesheet_tag }}
 
     {% comment %} Fruttita Specimen Sheet (US site, 2026-09) {% endcomment %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="preload" as="font" href="{{ 'IBMPlexMono-Regular.woff2' | asset_url }}" type="font/woff2" crossorigin>
     {{ 'fruttita-specimen.css' | asset_url | stylesheet_tag }}
 
     {% comment %} Fruttita micro-interactions {% endcomment %}

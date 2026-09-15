@@ -18,7 +18,7 @@
   </div>
   <div class="pic">
     {%- if s.image != blank -%}{{ s.image | image_url: width: 1600 | image_tag: loading: 'eager', alt: s.image.alt | default: 'Fruttita Baobab Pulp Shot' }}
-    {%- else -%}<img src="{{ 'fruttita-packshot-shot.png' | asset_url }}" alt="Fruttita Baobab Pulp Shot" loading="eager" width="1024" height="1024">{%- endif -%}
+    {%- else -%}<img src="{{ 'fruttita-packshot-shot.jpg' | asset_url }}" alt="Fruttita Baobab Pulp Shot" loading="eager" width="1024" height="1024">{%- endif -%}
     {%- if s.callout_en != blank -%}<div class="callout"><i>{% render 'i18n-text', default: s.callout_label, en: s.callout_label_en, pt: s.callout_label_pt %}</i>{% render 'i18n-text', default: s.callout, en: s.callout_en, pt: s.callout_pt %}</div>{%- endif -%}
     {%- if s.placeholder_note != blank -%}<div class="sp-ph">{{ s.placeholder_note }}</div>{%- endif -%}
   </div>
