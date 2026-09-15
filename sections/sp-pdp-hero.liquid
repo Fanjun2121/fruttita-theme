@@ -3,6 +3,7 @@
 <section class="sp sp-pdp-hero" style="--sp-pdp-scale:{{ s.image_scale | default: 100 | divided_by: 100.0 }};--sp-photo-bg:{{ s.photo_bg | default: '#E1D6CC' }}">
   <div class="pic">
     {%- if s.image != blank -%}{{ s.image | image_url: width: 1600 | image_tag: loading: 'eager', alt: product.title }}
+    {%- elsif s.asset != blank -%}<img src="{{ s.asset | asset_url }}" alt="{{ product.title }}" loading="eager" width="1024" height="1024">
     {%- elsif product.featured_image != blank -%}{{ product.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', alt: product.title }}
     {%- else -%}<img src="{{ 'fruttita-packshot-shot.png' | asset_url }}" alt="{{ product.title }}" loading="eager" width="1024" height="1024">{%- endif -%}
     {%- if s.placeholder_note != blank -%}<div class="sp-ph">{{ s.placeholder_note }}</div>{%- endif -%}
@@ -23,7 +24,7 @@
 {
   "name": "SP · Product hero",
   "settings": [
-    {"type":"image_picker","id":"image","label":"Override image (else product featured image)"},
+    {"type":"image_picker","id":"image","label":"Override image (else product featured image)"},{"type":"text","id":"asset","label":"Image theme asset filename (overrides product image)"},
     {"type":"color","id":"photo_bg","label":"Photo panel background (match the photo's own background)","default":"#E1D6CC"},
     {"type":"range","id":"image_scale","label":"Image scale %","min":50,"max":140,"step":2,"default":100},
     {"type":"text","id":"placeholder_note","label":"Placeholder note (internal)"},

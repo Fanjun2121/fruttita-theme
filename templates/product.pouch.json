@@ -1,529 +1,527 @@
+/*
+ * Fruttita US site · The Pouch PDP (Specimen Sheet) · 2026-09-15
+ */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "sp_pdp_hero": {
+      "type": "sp-pdp-hero",
+      "settings": {
+        "image_scale": 100,
+        "asset": "fruttita-packshot-pouch.jpg",
+        "placeholder_note": "",
+        "title": "猴面包树果浆",
+        "title_en": "Baobab Pulp",
+        "title_pt": "Polpa de Múcua",
+        "sub": "整果非洲猴面包树果浆，100 g。稠，酸，有点像吃土。拌进什么里，或者直接舀一勺。",
+        "sub_en": "Whole-fruit African baobab pulp, 100 g. Thick, tart, a little chalky. Made to be stirred into something, or eaten off a spoon.",
+        "sub_pt": "Polpa de múcua africana de fruto inteiro, 100 g. Espessa, ácida, um pouco calcária. Feita para misturar em alguma coisa, ou comer à colher.",
+        "btn1": "购买渠道",
+        "btn1_en": "Where to buy",
+        "btn1_pt": "Onde comprar",
+        "btn1_link": "#where-to-buy",
+        "btn2": "看标签",
+        "btn2_en": "Read the label",
+        "btn2_pt": "Ler o rótulo",
+        "btn2_link": "#label",
+        "made": "<p>配料：猴面包树果浆。Fruttita™</p>",
+        "made_en": "<p>Ingredients: baobab fruit pulp. Fruttita™</p>",
+        "made_pt": "<p>Ingredientes: polpa de múcua. Fruttita™</p>"
+      },
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "collapsible-ingredients": {
-          "type": "collapsible_tab",
+        "h_e0": {
+          "type": "eyebrow",
           "settings": {
-            "heading": "配料表",
+            "text": "The Pouch",
+            "text_en": "The Pouch",
+            "text_pt": "The Pouch"
+          }
+        },
+        "h_e1": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "100 g",
+            "text_en": "100 g (3.5 oz)",
+            "text_pt": "100 g"
+          }
+        },
+        "h_e2": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "Brix 12",
+            "text_en": "Brix 12",
+            "text_pt": "Brix 12"
+          }
+        },
+        "h_f0": {
+          "type": "fact",
+          "settings": {
+            "value": "100 g",
+            "label": "净含量",
+            "label_en": "Net weight",
+            "label_pt": "Peso líquido"
+          }
+        },
+        "h_f1": {
+          "type": "fact",
+          "settings": {
+            "value": "≈10.5 g",
+            "label": "膳食纤维 / 100 g",
+            "label_en": "Fiber per 100 g",
+            "label_pt": "Fibra / 100 g"
+          }
+        },
+        "h_f2": {
+          "type": "fact",
+          "settings": {
+            "value": "≈350 mg",
+            "label": "多酚 / 100 g",
+            "label_en": "Polyphenols per 100 g",
+            "label_pt": "Polifenóis / 100 g"
+          }
+        }
+      },
+      "block_order": [
+        "h_e0",
+        "h_e1",
+        "h_e2",
+        "h_f0",
+        "h_f1",
+        "h_f2"
+      ]
+    },
+    "sp_label": {
+      "type": "sp-accordion",
+      "settings": {
+        "anchor": "label",
+        "eyebrow": "标签",
+        "eyebrow_en": "The label",
+        "eyebrow_pt": "O rótulo"
+      },
+      "blocks": {
+        "l0": {
+          "type": "item",
+          "settings": {
+            "open": true,
+            "heading": "配料",
             "heading_en": "Ingredients",
             "heading_pt": "Ingredientes",
-            "icon": "health",
-            "content": "<p>猴面包树果浆</p>",
-            "content_en": "<p>Baobab fruit pulp</p>",
-            "content_pt": "<p>Polpa de múcua</p>",
-            "page": ""
+            "body": "<p>猴面包树果浆。</p>",
+            "body_en": "<p>Baobab fruit pulp.</p>",
+            "body_pt": "<p>Polpa de múcua.</p>",
+            "fn": "就这一行。",
+            "fn_en": "That is the whole list.",
+            "fn_pt": "É toda a lista."
           }
         },
-        "collapsible-specs": {
-          "type": "collapsible_tab",
+        "l1": {
+          "type": "item",
           "settings": {
-            "heading": "规格",
-            "heading_en": "Specifications",
-            "heading_pt": "Especificações",
-            "icon": "ruler",
-            "content": "<p>规格：100g / 袋</p><p>浓度：Brix 12</p><p>产地：非洲（原产成品进口）</p>",
-            "content_en": "<p>Size: 100g / pouch</p><p>Concentration: Brix 12</p><p>Origin: Africa (imported as finished product)</p>",
-            "content_pt": "<p>Formato: 100g / saqueta</p><p>Concentração: Brix 12</p><p>Origem: Africa (importado como produto acabado)</p>",
-            "page": ""
+            "open": false,
+            "heading": "里面有什么",
+            "heading_en": "What is in it",
+            "heading_pt": "O que tem",
+            "body": "<p>每 100 g 果浆（欧陆成品实测）：膳食纤维约 10.5 g，总多酚约 350 mg，钠未检出。美国版营养成分表会在 Pouch 进入美国时放到这里。</p>",
+            "body_en": "<p>Per 100 g of pulp, Eurofins finished-product analysis: dietary fiber about 10.5 g, total polyphenols about 350 mg, sodium not detected. The US Nutrition Facts panel goes here when the Pouch launches in the US.</p>",
+            "body_pt": "<p>Por 100 g de polpa, análise Eurofins ao produto acabado: cerca de 10,5 g de fibra, cerca de 350 mg de polifenóis totais, sódio não detetado. O painel nutricional americano entra aqui quando o Pouch chegar aos EUA.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
           }
         },
-        "collapsible-storage": {
-          "type": "collapsible_tab",
+        "l2": {
+          "type": "item",
           "settings": {
-            "heading": "保质期 & 储存",
-            "heading_en": "Shelf Life & Storage",
-            "heading_pt": "Validade e Conservação",
-            "icon": "truck",
-            "content": "<p>保质期：12 个月（未开封）</p><p>未开封：常温阴凉处保存</p><p>开封后：务必冷藏，7 天内食用完毕</p>",
-            "content_en": "<p>Shelf life: 12 months (unopened)</p><p>Unopened: store at room temperature in a cool place</p><p>After opening: must refrigerate, consume within 7 days</p>",
-            "content_pt": "<p>Validade: 12 meses (por abrir)</p><p>Por abrir: conservar à temperatura ambiente num local fresco</p><p>Após abrir: refrigerar obrigatoriamente e consumir em 7 dias</p><p>Zero conservantes — consumir rapidamente após abrir</p>",
-            "page": ""
+            "open": false,
+            "heading": "储存",
+            "heading_en": "Storage",
+            "heading_pt": "Conservação",
+            "body": "<p>阴凉干燥避光保存。开封后冷藏，3 天内吃完。保质期以袋身喷码为准。</p>",
+            "body_en": "<p>Store in a cool, dry place away from sunlight. Refrigerate after opening and finish within 3 days. The date is printed on the pouch.</p>",
+            "body_pt": "<p>Guardar em local fresco e seco, ao abrigo da luz. Refrigerar depois de aberto e consumir em 3 dias. A data está impressa na embalagem.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
           }
         },
-        "collapsible-serving": {
-          "type": "collapsible_tab",
+        "l3": {
+          "type": "item",
           "settings": {
-            "heading": "食用建议",
-            "heading_en": "Serving Suggestions",
-            "heading_pt": "Sugestões de Consumo",
-            "icon": "heart",
-            "content": "<p>搭配酸奶、燕麦、果昔等食用</p><p>每次用量：1-2 勺（约 20-30g）</p><p>挤到勺子或碗里，不建议对嘴吸</p>",
-            "content_en": "<p>Pair with yogurt, oats, smoothies, etc.</p><p>Serving size: 1-2 spoonfuls (approx. 20-30g)</p><p>Squeeze onto a spoon or into a bowl — don't suck directly from the pouch</p>",
-            "content_pt": "<p>Combina com iogurte, aveia, batidos, etc.</p><p>Porção: 1-2 colheres (aprox. 20-30g)</p><p>Espreme para uma colher ou tigela — não chupes diretamente da saqueta</p>",
-            "page": ""
+            "open": false,
+            "heading": "怎么用",
+            "heading_en": "How to use",
+            "heading_pt": "Como usar",
+            "body": "<p>先揉一揉袋子，纤维会沉底。挤到勺子里或碗里，别对着嘴嘬。一到两勺（20–30 g）拌进酸奶、燕麦或奶昔是常见用量；整袋正好打一杯。</p>",
+            "body_en": "<p>Knead the pouch first; the fiber settles. Squeeze onto a spoon or into a bowl rather than from the spout. One or two spoonfuls (20–30 g) into yogurt, oats or a smoothie is the usual amount; a whole pouch fits one blender.</p>",
+            "body_pt": "<p>Amasse primeiro a embalagem; a fibra assenta. Esprema para uma colher ou uma taça, não diretamente do bico. Uma ou duas colheres (20–30 g) em iogurte, aveia ou batido é a quantidade habitual; uma embalagem inteira dá para um copo de liquidificador.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
+          }
+        },
+        "l4": {
+          "type": "item",
+          "settings": {
+            "open": false,
+            "heading": "在哪里生产？",
+            "heading_en": "Where is it made?",
+            "heading_pt": "Onde é feita?",
+            "body": "<p>果实在非洲野生采集，果浆在当地我们自己的工厂处理、灌装。中间没有别的地方。</p>",
+            "body_en": "<p>The fruit is wild-harvested in Africa, and the pulp is processed and packed there, at our own plant. It does not go anywhere else in between.</p>",
+            "body_pt": "<p>O fruto é colhido na natureza em África, e a polpa é processada e embalada lá, na nossa própria fábrica. Não passa por mais lado nenhum.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
           }
         }
       },
       "block_order": [
-        "title",
-        "description",
-        "collapsible-ingredients",
-        "collapsible-specs",
-        "collapsible-storage",
-        "collapsible-serving"
-      ],
+        "l0",
+        "l1",
+        "l2",
+        "l3",
+        "l4"
+      ]
+    },
+    "sp_taste": {
+      "type": "sp-taste",
       "settings": {
-        "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "cover",
-        "gallery_layout": "stacked",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "show_ph": true,
+        "empty_big": "稠。酸。",
+        "empty_big_en": "Thick. Tart.",
+        "empty_big_pt": "Espessa. Ácida.",
+        "placeholder_note": "",
+        "eyebrow": "口感说明",
+        "eyebrow_en": "Tasting note",
+        "eyebrow_pt": "Nota de prova",
+        "title": "先说好：它是酸的，而且稠。",
+        "title_en": "Fair warning: it's tart, and thick.",
+        "title_pt": "Aviso: é ácida, e espessa.",
+        "text": "pH 在 3 左右，接近柠檬汁，但质地更像果泥而不是果汁：Brix 12，接近果酱。直接舀着吃是酸的；拌进酸奶或蜂蜜就缓和了。",
+        "text_en": "pH about 3, like lemon juice, but the texture is closer to a fruit puree than a juice: Brix 12, near jam. Off the spoon it is sour; with yogurt or honey it settles down.",
+        "text_pt": "pH perto de 3, como sumo de limão, mas a textura está mais perto de um puré do que de um sumo: Brix 12, quase doce. À colher é azeda; com iogurte ou mel acalma.",
+        "ph_note": "pH · 典型值，越低越酸",
+        "ph_note_en": "pH · typical values, lower is more acidic",
+        "ph_note_pt": "pH · valores típicos, quanto mais baixo mais ácido"
+      },
+      "blocks": {
+        "t0": {
+          "type": "ph",
+          "settings": {
+            "value": "2.3",
+            "pos": 8,
+            "us": false,
+            "width": 16,
+            "name": "柠檬汁",
+            "name_en": "Lemon juice",
+            "name_pt": "Limão"
+          }
+        },
+        "t1": {
+          "type": "ph",
+          "settings": {
+            "value": "3–4",
+            "pos": 22,
+            "us": true,
+            "width": 16,
+            "name": "猴面包树果浆",
+            "name_en": "Baobab pulp",
+            "name_pt": "Múcua"
+          }
+        },
+        "t2": {
+          "type": "ph",
+          "settings": {
+            "value": "3.8",
+            "pos": 52,
+            "us": false,
+            "width": 16,
+            "name": "橙汁",
+            "name_en": "Orange juice",
+            "name_pt": "Laranja"
+          }
+        },
+        "t3": {
+          "type": "ph",
+          "settings": {
+            "value": "5.0",
+            "pos": 72,
+            "us": false,
+            "width": 16,
+            "name": "黑咖啡",
+            "name_en": "Coffee",
+            "name_pt": "Café"
+          }
+        },
+        "t4": {
+          "type": "ph",
+          "settings": {
+            "value": "7.0",
+            "pos": 93,
+            "us": false,
+            "width": 16,
+            "name": "水",
+            "name_en": "Water",
+            "name_pt": "Água"
+          }
+        },
+        "t5": {
+          "type": "note",
+          "settings": {
+            "title": "酸",
+            "title_en": "Tart",
+            "title_pt": "Ácida",
+            "text": "天然酸性。不加糖。",
+            "text_en": "Naturally acidic. No sugar added.",
+            "text_pt": "Naturalmente ácida. Sem açúcar adicionado."
+          }
+        },
+        "t6": {
+          "type": "note",
+          "settings": {
+            "title": "稠",
+            "title_en": "Thick",
+            "title_pt": "Espessa",
+            "text": "Brix 12，接近果酱。",
+            "text_en": "Brix 12. Nearly a jam.",
+            "text_pt": "Brix 12. Quase um doce."
+          }
+        },
+        "t7": {
+          "type": "note",
+          "settings": {
+            "title": "像吃土",
+            "title_en": "Chalky",
+            "title_pt": "Calcária",
+            "text": "不溶性纤维。那就是果实。",
+            "text_en": "Insoluble fiber. That is the fruit.",
+            "text_pt": "Fibra insolúvel. É o fruto."
+          }
+        }
+      },
+      "block_order": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ]
+    },
+    "sp_use": {
+      "type": "sp-steps",
+      "settings": {
+        "dark": false,
+        "eyebrow": "怎么用",
+        "eyebrow_en": "How to use it",
+        "eyebrow_pt": "Como usar",
+        "head": "拌进什么里。",
+        "head_en": "Stir it into something.",
+        "head_pt": "Misture em alguma coisa.",
+        "note": "只是建议。它配得上的东西比你想的多。",
+        "note_en": "Suggestions, not rules. It goes with more than you would think.",
+        "note_pt": "Sugestões, não regras. Combina com mais coisas do que imagina."
+      },
+      "blocks": {
+        "u0": {
+          "type": "step",
+          "settings": {
+            "where": "",
+            "where_en": "",
+            "where_pt": "",
+            "title": "酸奶",
+            "title_en": "Yogurt",
+            "title_pt": "Iogurte",
+            "text": "一到两勺拌进原味酸奶。酸奶把酸压下去。",
+            "text_en": "One or two spoonfuls into plain yogurt. The yogurt takes the edge off.",
+            "text_pt": "Uma ou duas colheres em iogurte natural. O iogurte tira a aresta."
+          }
+        },
+        "u1": {
+          "type": "step",
+          "settings": {
+            "where": "",
+            "where_en": "",
+            "where_pt": "",
+            "title": "燕麦",
+            "title_en": "Oats",
+            "title_pt": "Aveia",
+            "text": "头天晚上拌进隔夜燕麦。早上打开。",
+            "text_en": "Into overnight oats the night before. Open in the morning.",
+            "text_pt": "Na aveia de um dia para o outro. Abrir de manhã."
+          }
+        },
+        "u2": {
+          "type": "step",
+          "settings": {
+            "where": "",
+            "where_en": "",
+            "where_pt": "",
+            "title": "奶昔",
+            "title_en": "Smoothie",
+            "title_pt": "Batido",
+            "text": "整袋、一根香蕉、200 mL 牛奶。三十秒。",
+            "text_en": "A whole pouch, a banana, 200 mL of milk. Thirty seconds.",
+            "text_pt": "Uma embalagem, uma banana, 200 mL de leite. Trinta segundos."
+          }
+        },
+        "u3": {
+          "type": "step",
+          "settings": {
+            "where": "",
+            "where_en": "",
+            "where_pt": "",
+            "title": "直接吃",
+            "title_en": "Straight",
+            "title_pt": "Ao natural",
+            "text": "喜欢酸的话就舀着吃。从小勺开始。",
+            "text_en": "Off a spoon, if you like sour. Start with a small one.",
+            "text_pt": "À colher, se gosta de azedo. Comece por uma pequena."
+          }
+        }
+      },
+      "block_order": [
+        "u0",
+        "u1",
+        "u2",
+        "u3"
+      ]
+    },
+    "sp_faq": {
+      "type": "sp-accordion",
+      "settings": {
+        "anchor": "faq",
+        "eyebrow": "常见问题",
+        "eyebrow_en": "Questions",
+        "eyebrow_pt": "Perguntas"
+      },
+      "blocks": {
+        "q0": {
+          "type": "item",
+          "settings": {
+            "open": false,
+            "heading": "和 Shot 有什么区别？",
+            "heading_en": "How is it different from the Shot?",
+            "heading_pt": "Qual é a diferença para a dose?",
+            "body": "<p>同一种果实。Shot 是果浆加水稀释到一口喝完；Pouch 是 Brix 12 的果浆，浓度高出约三分之一，是拿来拌的。</p>",
+            "body_en": "<p>Same fruit. The Shot is the pulp diluted with water to drink in one go. The Pouch is the pulp at Brix 12, about a third more concentrated, and meant to be mixed.</p>",
+            "body_pt": "<p>O mesmo fruto. A dose é a polpa diluída em água para beber de uma vez. O Pouch é a polpa a Brix 12, cerca de um terço mais concentrada, feita para misturar.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
+          }
+        },
+        "q1": {
+          "type": "item",
+          "settings": {
+            "open": false,
+            "heading": "小孩能吃吗？",
+            "heading_en": "Can children eat it?",
+            "heading_pt": "As crianças podem comer?",
+            "body": "<p>它是食品，不是保健品。挺酸的，小孩一般从拌酸奶开始。</p>",
+            "body_en": "<p>It is a food, not a supplement. It is quite tart; mixed into yogurt is the usual way in for kids.</p>",
+            "body_pt": "<p>É um alimento, não um suplemento. É bastante ácido; para as crianças, misturado em iogurte é o caminho habitual.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "open": false,
+            "heading": "一袋能吃几次？",
+            "heading_en": "How many servings in a pouch?",
+            "heading_pt": "Quantas doses tem uma embalagem?",
+            "body": "<p>拌酸奶一次 20–30 g，三到五次。打奶昔，一次。</p>",
+            "body_en": "<p>With yogurt at 20–30 g a time, three to five. In a smoothie, one.</p>",
+            "body_pt": "<p>Com iogurte, 20–30 g de cada vez, dá três a cinco. Num batido, uma.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "open": false,
+            "heading": "为什么分层了？",
+            "heading_en": "Why has it separated?",
+            "heading_pt": "Porque é que separou?",
+            "body": "<p>果肉往下沉，上面留一层颜色浅一点的。那是果实，不是坏了。挤之前揉一揉袋子。</p>",
+            "body_en": "<p>The pulp settles and a lighter layer sits on top. That is the fruit, not a fault. Knead the pouch before squeezing.</p>",
+            "body_pt": "<p>A polpa assenta e fica uma camada mais clara por cima. É o fruto, não um defeito. Amasse a embalagem antes de espremer.</p>",
+            "fn": "",
+            "fn_en": "",
+            "fn_pt": ""
+          }
+        }
+      },
+      "block_order": [
+        "q0",
+        "q1",
+        "q2",
+        "q3"
+      ]
+    },
+    "sp_also": {
+      "type": "sp-also",
+      "settings": {
+        "link": "/products/the-baobab-pulp-shot",
+        "asset": "fruttita-packshot-shot.png",
+        "eyebrow": "同一颗果实",
+        "eyebrow_en": "Also from the fruit",
+        "eyebrow_pt": "Também do fruto",
+        "tag": "即饮版本",
+        "tag_en": "The ready-to-drink version",
+        "tag_pt": "A versão pronta a beber",
+        "title": "The Shot · 猴面包树原浆饮，50 mL",
+        "title_en": "The Shot · Baobab Pulp Shot, 50 mL",
+        "title_pt": "The Shot · Dose de Polpa de Múcua, 50 mL",
+        "text": "Múcua 加水，没有别的。酸，微涩，一口喝完。",
+        "text_en": "Múcua and water, nothing else. Tart, a little astringent, gone in one go.",
+        "text_pt": "Múcua e água, mais nada. Ácida, ligeiramente adstringente, bebida de uma vez.",
+        "go": "看产品 →",
+        "go_en": "See the Shot →",
+        "go_pt": "Ver a dose →"
       }
     },
-    "scene-cards": {
-      "type": "fruttita-scene-cards",
-      "blocks": {
-        "card-1": {
-          "type": "card",
-          "settings": {
-            "emoji": "🥣",
-            "title": "早餐搭配",
-            "title_en": "Breakfast Boost",
-            "title_pt": "Reforço ao Pequeno-Almoço",
-            "description": "挤一勺拌酸奶、配燕麦、抹吐司——一顿普通早餐瞬间升级。",
-            "description_en": "A spoonful into yogurt, oats, or toast. Breakfast, upgraded.",
-            "description_pt": "Uma colher no iogurte, aveia ou torrada. Pequeno-almoço melhorado."
-          }
-        },
-        "card-2": {
-          "type": "card",
-          "settings": {
-            "emoji": "🥤",
-            "title": "DIY 调饮",
-            "title_en": "DIY Drinks",
-            "title_pt": "Bebidas DIY",
-            "description": "兑水、兑气泡水、加蜂蜜、打果昔——怎么搭都行，你说了算。",
-            "description_en": "Water, sparkling water, honey, smoothies. Your rules.",
-            "description_pt": "Água, água com gás, mel, batidos. As tuas regras."
-          }
-        },
-        "card-3": {
-          "type": "card",
-          "settings": {
-            "emoji": "🧘",
-            "title": "日常补给",
-            "title_en": "Daily Nutrition",
-            "title_pt": "Nutrição Diária",
-            "description": "",
-            "description_en": "",
-            "description_pt": ""
-          }
-        }
-      },
-      "block_order": [
-        "card-1",
-        "card-2",
-        "card-3"
-      ],
+    "sp_buy": {
+      "type": "sp-buy",
       "settings": {
-        "subtitle": "For You",
-        "title": "什么时候需要它？",
-        "title_en": "When you'll want one.",
-        "title_pt": "Quando vais querer um.",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D",
-        "columns_desktop": "3"
-      }
-    },
-    "nutrition": {
-      "type": "fruttita-nutrition-table",
-      "blocks": {
-        "row-k": {
-          "type": "row",
-          "settings": {
-            "label": "钾",
-            "label_en": "Potassium",
-            "label_pt": "Potássio",
-            "value": "380mg+",
-            "value_2": "",
-            "plain_text": "",
-            "highlight": true
-          }
-        },
-        "row-fiber": {
-          "type": "row",
-          "settings": {
-            "label": "膳食纤维",
-            "label_en": "Dietary Fiber",
-            "label_pt": "Fibra Alimentar",
-            "value": "10.5g（42% NRV）",
-            "value_2": "",
-            "plain_text": "膳食纤维 ≈ 4 个苹果",
-            "plain_text_en": "Fiber ≈ 4 apples",
-            "plain_text_pt": "Fibra ≈ 4 maçãs",
-            "highlight": true
-          }
-        },
-        "row-polyphenol": {
-          "type": "row",
-          "settings": {
-            "label": "总多酚",
-            "label_en": "Total Polyphenols",
-            "label_pt": "Polifenóis Totais",
-            "value": "828mg",
-            "value_2": "",
-            "plain_text": "",
-            "highlight": false
-          }
-        },
-        "row-na": {
-          "type": "row",
-          "settings": {
-            "label": "钠",
-            "label_en": "Sodium",
-            "label_pt": "Sódio",
-            "value": "0mg",
-            "value_2": "",
-            "plain_text": "",
-            "highlight": true
-          }
-        },
-        "row-sugar": {
-          "type": "row",
-          "settings": {
-            "label": "糖",
-            "label_en": "Sugar",
-            "label_pt": "Açúcar",
-            "value": "",
-            "value_en": "",
-            "value_pt": "2.3g (açúcares não livres, compatíveis com a glicemia)",
-            "value_2": "",
-            "plain_text": "",
-            "highlight": false
-          }
-        },
-        "row-cal": {
-          "type": "row",
-          "settings": {
-            "label": "热量",
-            "label_en": "Calories",
-            "label_pt": "Calorias",
-            "value": "≈36kcal",
-            "value_2": "",
-            "plain_text": "热量 ≈ 半个苹果",
-            "plain_text_en": "About half an apple",
-            "plain_text_pt": "Cerca de meia maçã",
-            "highlight": false
-          }
-        },
-        "row-fat": {
-          "type": "row",
-          "settings": {
-            "label": "脂肪",
-            "label_en": "Fat",
-            "label_pt": "Gordura",
-            "value": "0g",
-            "value_2": "",
-            "plain_text": "配料表：猴面包树果浆。就这一项。",
-            "plain_text_en": "Ingredients: baobab fruit pulp. That's it.",
-            "plain_text_pt": "Ingredientes: polpa de múcua. É tudo.",
-            "highlight": false
-          }
-        }
-      },
-      "block_order": [
-        "row-k",
-        "row-fiber",
-        "row-polyphenol",
-        "row-na",
-        "row-sugar",
-        "row-cal",
-        "row-fat"
-      ],
-      "settings": {
-        "subtitle": "The Nutrition",
-        "title": "100g 纯果浆的营养密度",
-        "title_en": "What's in 100g of pulp.",
-        "title_pt": "O que há em 100g de polpa.",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9",
-        "layout": "single",
-        "col1_label": "每 100g",
-        "col1_label_en": "Per 100g",
-        "col1_label_pt": "Por 100g",
-        "col2_label": "",
-        "footnote": "",
-        "source_note": "数据来源：SGS / Eurofins 第三方实验室检测报告。NRV = 营养素参考值百分比（中国标准）。",
-        "source_note_en": "Source: SGS / Eurofins lab reports. NRV = Nutrient Reference Value.",
-        "source_note_pt": "Fonte: relatórios SGS / Eurofins. NRV = Valor de Referência Nutricional."
-      }
-    },
-    "pairing-cards": {
-      "type": "fruttita-scene-cards",
-      "blocks": {
-        "card-1": {
-          "type": "card",
-          "settings": {
-            "emoji": "🥣",
-            "title": "果浆 + 希腊酸奶",
-            "title_en": "Pulp + Greek Yogurt",
-            "title_pt": "Polpa + Iogurte Grego",
-            "description": "挤 1-2 勺拌匀。酸奶的醇厚刚好中和果浆的酸。纤维 + 蛋白质，一顿扎实的早餐。",
-            "description_en": "1-2 spoonfuls, mixed in. Yogurt balances the tartness. Fiber + protein for a real breakfast.",
-            "description_pt": "1-2 colheres, misturadas. O iogurte equilibra a acidez. Fibra + proteína para um verdadeiro pequeno-almoço."
-          }
-        },
-        "card-2": {
-          "type": "card",
-          "settings": {
-            "emoji": "🥤",
-            "title": "果浆 + 气泡水 + 蜂蜜",
-            "title_en": "Pulp + Sparkling Water + Honey",
-            "title_pt": "Polpa + Água com Gás + Mel",
-            "description": "兑 200ml 气泡水，加一点蜂蜜调味。自制“非洲版康普茶”，清爽开胃。",
-            "description_en": "200ml sparkling water + a drizzle of honey. Homemade kombucha vibes.",
-            "description_pt": "200ml de água com gás + um fio de mel. Ares de kombucha caseira."
-          }
-        },
-        "card-3": {
-          "type": "card",
-          "settings": {
-            "emoji": "🫙",
-            "title": "果浆 + 燕麦 + 坚果",
-            "title_en": "Pulp + Oats + Nuts",
-            "title_pt": "Polpa + Aveia + Frutos Secos",
-            "description": "隔夜燕麦里挤一勺，第二天早上开盖即食。懒人版超级早餐。",
-            "description_en": "Spoonful into overnight oats. Open next morning. Eat.",
-            "description_pt": "Uma colher na aveia de véspera. Abre na manhã seguinte. Come."
-          }
-        },
-        "card-4": {
-          "type": "card",
-          "settings": {
-            "emoji": "🍌",
-            "title": "果浆 + 香蕉 + 牛奶",
-            "title_en": "Pulp + Banana + Milk",
-            "title_pt": "Polpa + Banana + Leite",
-            "description": "一袋果浆 + 一根香蕉 + 200ml 牛奶，搅拌机打 30 秒。浓稠、饱腹、好喝。",
-            "description_en": "One pouch + one banana + 200ml milk. Blend 30 seconds.",
-            "description_pt": "Uma saqueta + uma banana + 200ml de leite. Tritura durante 30 segundos."
-          }
-        }
-      },
-      "block_order": [
-        "card-1",
-        "card-2",
-        "card-3",
-        "card-4"
-      ],
-      "settings": {
-        "subtitle": "Recipes",
-        "title": "几种我们喜欢的吃法",
-        "title_en": "Ways we like it.",
-        "title_pt": "Como gostamos de a comer.",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D",
-        "columns_desktop": "4",
-        "footer_text": "以上只是建议。怎么吃由你决定——这袋果浆的自由度很高。",
-        "footer_text_en": "Just suggestions. It goes with more than you'd think.",
-        "footer_text_pt": "Apenas sugestões. Combina com mais do que pensas."
-      }
-    },
-    "prose-taste": {
-      "type": "fruttita-prose",
-      "blocks": {
-        "p1": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "比 Shot 更浓稠——Brix 12，接近果酱的质地。酸度更明显，果肉纤维感更强。",
-            "text_paragraph_en": "Thicker than the Shot — Brix 12, almost jam consistency. Tarter, more textured.",
-            "text_paragraph_pt": "Mais espesso do que o Shot — Brix 12, quase com consistência de compota. Mais ácido, mais textura."
-          }
-        },
-        "p2": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "直接吃？可以，但会很酸。我们更建议搭配其他食材一起吃，让酸奶、蜂蜜、水果来帮它“交朋友”。",
-            "text_paragraph_en": "You can eat it straight. It'll be tart. We'd pair it with yogurt, honey, or fruit.",
-            "text_paragraph_pt": "Podes comê-la pura. Será ácida. Preferimos combiná-la com iogurte, mel ou fruta."
-          }
-        },
-        "p3": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "瓶底（其实是袋底）的沉淀是天然纤维。挤之前揉一揉袋子就好。",
-            "text_paragraph_en": "Sediment is natural fiber. Knead the pouch before squeezing.",
-            "text_paragraph_pt": "O sedimento é fibra natural. Amassa a saqueta antes de espremer."
-          }
-        }
-      },
-      "block_order": [
-        "p1",
-        "p2",
-        "p3"
-      ],
-      "settings": {
-        "subtitle": "Taste Preview",
-        "title": "直接吃是什么感觉？",
-        "title_en": "Straight from the pouch?",
-        "title_pt": "Direto da saqueta?",
-        "bg_color": "#3A2015",
-        "text_color": "#F4E3C9"
-      }
-    },
-    "prose-storage": {
-      "type": "fruttita-prose",
-      "blocks": {
-        "p1": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "未开封：常温阴凉处，保质期 12 个月。开封后：务必冷藏，7 天内吃完。",
-            "text_paragraph_en": "Unopened: room temperature, 12 months. Opened: refrigerate, finish within 7 days.",
-            "text_paragraph_pt": "Por abrir: temperatura ambiente, 12 meses. Depois de aberto: refrigerar e consumir em 7 dias."
-          }
-        },
-        "p2": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "为什么这么严格？因为配料表只有果浆一项。开封后就是和空气、细菌赛跑。",
-            "text_paragraph_en": "",
-            "text_paragraph_pt": "Porquê tanto rigor? Zero conservantes. Assim que se abre, o relógio começa."
-          }
-        },
-        "p3": {
-          "type": "text_paragraph",
-          "settings": {
-            "text_paragraph": "食用建议：挤到勺子或碗里，不要对嘴吸。更卫生，也方便控制用量。",
-            "text_paragraph_en": "Squeeze onto a spoon or into a bowl. Easier to portion, more hygienic.",
-            "text_paragraph_pt": "Espreme para uma colher ou tigela. Mais fácil de porcionar, mais higiénico."
-          }
-        }
-      },
-      "block_order": [
-        "p1",
-        "p2",
-        "p3"
-      ],
-      "settings": {
-        "subtitle": "Storage",
-        "title": "关于保存，认真说几句",
-        "title_en": "Storage matters.",
-        "title_pt": "A conservação importa.",
-        "bg_color": "#4F2C1D",
-        "text_color": "#F4E3C9"
-      }
-    },
-    "faq": {
-      "type": "fruttita-faq",
-      "blocks": {
-        "faq-1": {
-          "type": "faq_item",
-          "settings": {
-            "question": "和 Shot 有什么区别？",
-            "question_en": "How is it different from the Shot?",
-            "question_pt": "Qual é a diferença em relação ao Shot?",
-            "answer": "浓度更高（Brix 12 vs 8.5），营养密度更高，但不建议直接喝——更适合搭配其他食材。Shot 是“回神”，Pouch 是“日常”。",
-            "answer_en": "Higher concentration (Brix 12 vs 8.5), more nutrition per gram. The Shot is grab-and-go. The Pouch is mix-and-make.",
-            "answer_pt": "Maior concentração (Brix 12 vs 8.5), mais nutrição por grama. O Shot é para pegar e beber. O Pouch, para misturar e criar."
-          }
-        },
-        "faq-2": {
-          "type": "faq_item",
-          "settings": {
-            "question": "小孩能吃吗？",
-            "question_en": "Can children eat it?",
-            "question_pt": "As crianças podem comer?",
-            "answer": "本品为普通食品，但酸度较高。建议兑水或拌酸奶后给孩子食用，观察接受度。",
-            "answer_en": "It's food, not a supplement. It is quite tart — try mixing with yogurt for kids first.",
-            "answer_pt": "É comida, não um suplemento. É bastante ácida — experimenta misturá-la com iogurte antes de a dar às crianças."
-          }
-        },
-        "faq-3": {
-          "type": "faq_item",
-          "settings": {
-            "question": "一袋 100g 能吃几次？",
-            "question_en": "How many servings in one 100g pouch?",
-            "question_pt": "Quantas porções tem uma saqueta de 100g?",
-            "answer": "如果每次拌酸奶用 1-2 勺（约 20-30g），一袋大概 3-5 次。打果昔的话，一次可能就用完了。",
-            "answer_en": "With yogurt (20-30g per serving): 3-5 times. In a smoothie: probably all at once.",
-            "answer_pt": "Com iogurte (20-30g por porção): 3-5 vezes. Num batido: provavelmente tudo de uma vez."
-          }
-        },
-        "faq-4": {
-          "type": "faq_item",
-          "settings": {
-            "question": "为什么是非洲原产进口？",
-            "question_en": "Why is it imported directly from Africa?",
-            "question_pt": "Porque é importado diretamente de Africa?",
-            "answer": "这款是在非洲产地直接灌装的成品，不经过二次加工，最大程度保留原浆的完整性。",
-            "answer_en": "Filled and sealed at origin in Africa. No secondary processing. Maximum pulp integrity.",
-            "answer_pt": "Embalado e selado na origem em Africa. Sem processamento secundário. Máxima integridade da polpa."
-          }
-        }
-      },
-      "block_order": [
-        "faq-1",
-        "faq-2",
-        "faq-3",
-        "faq-4"
-      ],
-      "settings": {
-        "subtitle": "FAQ",
-        "title": "常见问题",
-        "title_en": "FAQ",
-        "title_pt": "Perguntas Frequentes",
-        "bg_color": "#F9F1E6",
-        "text_color": "#4F2C1D"
-      }
-    },
-    "cross-sell": {
-      "type": "fruttita-cross-sell",
-      "blocks": {
-        "product-1": {
-          "type": "product_link",
-          "settings": {
-            "name_cn": "猴面包树原浆饮",
-            "name_cn_en": "Baobab Pulp Shot",
-            "name_cn_pt": "Shot de Polpa de Múcua",
-            "name_en": "The Shot",
-            "packshot_asset": "fruttita-packshot-shot.png",
-            "tagline": "赶时间？50ml 一口闷，高浓缩回神装。",
-            "tagline_en": "50ml, one gulp. When you need it fast.",
-            "tagline_pt": "50ml, um gole. Quando precisas, sem demora.",
-            "link": "/products/the-baobab-pulp-shot",
-            "link_text": "了解更多",
-            "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais"
-          }
-        }
-      },
-      "block_order": [
-        "product-1"
-      ],
-      "settings": {
-        "subtitle": "More to Explore",
-        "title": "找到适合你节奏的那款",
-        "title_en": "Also from the tree.",
-        "title_pt": "Também da árvore.",
-        "bg_color": "#3A2015",
-        "text_color": "#F4E3C9"
+        "tag": "us-notify",
+        "placeholder": "you@email.com",
+        "box_text": "",
+        "box_asset": "fruttita-packshot-pouch.jpg",
+        "eyebrow": "购买渠道",
+        "eyebrow_en": "Where to buy",
+        "eyebrow_pt": "Onde comprar",
+        "title": "接下来进入美国。",
+        "title_en": "Coming to the US next.",
+        "title_pt": "A chegar aos EUA a seguir.",
+        "text": "Shot 先上，Pouch 随后。留下邮箱，任何一款在美国上架时告诉你。只发一封，不发周报。",
+        "text_en": "The Shot goes first; the Pouch follows. Leave your email and we'll tell you when either one lands in the US. One email, not weekly.",
+        "text_pt": "A dose vai primeiro; o Pouch vem a seguir. Deixe o email e dizemos-lhe quando qualquer um deles chegar aos EUA. Um email só, não é semanal.",
+        "btn": "通知我",
+        "btn_en": "Notify me",
+        "btn_pt": "Avisem-me",
+        "ok": "收到。就这一封。",
+        "ok_en": "Noted. That's the one email.",
+        "ok_pt": "Anotado. Foi esse o email.",
+        "china": "中国大陆：天猫国际、抖音全球购有售。",
+        "china_en": "Available now in China on Tmall Global and Douyin.",
+        "china_pt": "Já disponível na China, na Tmall Global e Douyin."
       }
     }
   },
   "order": [
-    "main",
-    "scene-cards",
-    "nutrition",
-    "pairing-cards",
-    "prose-taste",
-    "prose-storage",
-    "faq",
-    "cross-sell"
+    "sp_pdp_hero",
+    "sp_label",
+    "sp_taste",
+    "sp_use",
+    "sp_faq",
+    "sp_also",
+    "sp_buy"
   ]
 }
