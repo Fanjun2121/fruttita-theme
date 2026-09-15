@@ -297,3 +297,27 @@
 .sp-motion .in .sp-kv>*{transition-delay:calc(var(--i,0)*70ms + 160ms)}
 .sp-motion .in .sp-certs>li{transition-delay:calc(var(--i,0)*45ms + 120ms)}
 @media print{.sp-motion .sp-rv{opacity:1!important;transform:none!important}.sp-motion .sp-bars i:after{width:var(--w)!important}}
+
+/* ---- mobile fixes (2026-09-15, audited at 375px) ---- */
+@media (max-width:900px){
+  /* full-bleed caption: label was taking the row, h2 collapsed to one letter per line */
+  .sp-fullbleed .cap{grid-template-columns:1fr;gap:10px;padding:22px 20px 24px}
+  .sp-fullbleed .cap h2{max-width:none;font-size:clamp(24px,7vw,32px)}
+  .sp-fullbleed .cap .sp-lab{order:-1}
+  /* pH scale: alternate label rows so five labels fit in 335px */
+  .sp-ph-line i span{width:64px;font-size:9.5px;letter-spacing:.02em}
+  .sp-ph-line i:nth-child(even) span{top:34px}
+  .sp-ph-scale>.sp-lab{margin-top:74px!important}
+  /* plate rows: photo on top, text panel below instead of covering the photo */
+  .sp-plate{min-height:0;display:flex;flex-direction:column}
+  .sp-plate img{position:static;height:260px;width:100%}
+  .sp-plate .plate-text{position:static;margin:0;max-width:none;border-radius:0;-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--sp-dark);padding:20px 20px 22px}
+  /* product hero: shorter photo block, facts wrap cleanly */
+  .sp-pdp-hero .pic{min-height:380px}
+  .sp-pdp-hero .facts{flex-wrap:wrap}
+  .sp-pdp-hero .facts div{padding:12px 14px 12px 0;margin-right:14px}
+  .sp-pdp-hero .facts b{font-size:20px}
+  .sp-hero .facts div{padding-right:18px;margin-right:18px}
+  /* certificates: one column on phones */
+  .sp-certs{grid-template-columns:1fr}
+}
