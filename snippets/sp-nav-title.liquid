@@ -1,0 +1,39 @@
+{%- comment -%}
+  sp-nav-title.liquid — localize main-menu link titles for zh / pt without Translate & Adapt.
+  Usage: {% render 'sp-nav-title', title: link.title %}
+  Maps the five main-menu titles (English, as set in Navigation). Unknown titles, or titles already
+  translated by Translate & Adapt, pass through unchanged. Output is escaped.
+  zh / pt wording matches the footer and section eyebrows already live (2026-09-15).
+{%- endcomment -%}
+{%- liquid
+  assign lang = request.locale.iso_code | slice: 0, 2
+  assign out = title
+  if lang == 'zh'
+    case title
+      when 'Why Baobab'
+        assign out = '为什么是猴面包树'
+      when 'Our Origin'
+        assign out = '品牌出身'
+      when 'Quality'
+        assign out = '品质'
+      when 'Where to Buy'
+        assign out = '购买渠道'
+      when 'Contact'
+        assign out = '联系'
+    endcase
+  elsif lang == 'pt'
+    case title
+      when 'Why Baobab'
+        assign out = 'Porquê a múcua'
+      when 'Our Origin'
+        assign out = 'A nossa origem'
+      when 'Quality'
+        assign out = 'Qualidade'
+      when 'Where to Buy'
+        assign out = 'Onde comprar'
+      when 'Contact'
+        assign out = 'Contacto'
+    endcase
+  endif
+  echo out | escape
+-%}
