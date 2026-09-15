@@ -103,12 +103,28 @@
             "aside_en": "<p>There is potassium too, a good amount, but it varies between harvests more than we are willing to print. We'll add the number when the retest locks it.</p>",
             "aside_pt": "<p>Também há potássio, e bastante, mas varia entre colheitas mais do que estamos dispostos a imprimir. Publicamos o número quando a reanálise o fixar.</p>"
           }
+        },
+        "rows_home": {
+          "type": "row",
+          "settings": {
+            "k": "在家怎么吃",
+            "k_en": "At home",
+            "k_pt": "Em casa",
+            "kv": "Sumo · gelado · mousse",
+            "body": "<p>在树生长的地方，没有人管它叫超级食物。果肉直接从籽上嚼着吃；泡进水里就是一杯酸酸的饮料，有人加糖，有人兑牛奶；也做成冰淇淋和慕斯。到了季节，人们在路边一家一家地卖它。它首先是一种零食，然后才是别的。</p>",
+            "body_en": "<p>Where the tree grows, nobody calls it a superfood. The pulp is chewed straight off the seeds. It is stirred into water for a tart drink, sometimes with sugar, sometimes with milk. It goes into ice cream and into a mousse. In the season, families sell it by the roadside. It is a snack before it is anything else.</p>",
+            "body_pt": "<p>Onde a árvore cresce, ninguém lhe chama superalimento. A polpa come-se logo das sementes. Mistura-se em água para uma bebida ácida, às vezes com açúcar, às vezes com leite. Vai para o gelado e para a mousse. Na época, as famílias vendem-na à beira da estrada. É um lanche antes de ser qualquer outra coisa.</p>",
+            "aside": "",
+            "aside_en": "",
+            "aside_pt": ""
+          }
         }
       },
       "block_order": [
         "rows_b0",
         "rows_b1",
         "rows_b2",
+        "rows_home",
         "rows_b3"
       ]
     },
