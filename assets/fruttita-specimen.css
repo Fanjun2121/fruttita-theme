@@ -173,8 +173,8 @@
 .sp-notify input::placeholder{color:#9C7F66}
 .sp-notify button{appearance:none;border:0;background:var(--sp-amber);color:var(--sp-ink);border-radius:999px;padding:13px 20px;font:600 14px/1.2 var(--sp-font);cursor:pointer;white-space:nowrap}
 .sp-buy .china{margin-top:22px;font-family:var(--sp-mono);font-size:12px;color:#9C7F66;letter-spacing:.02em}
-.sp-buy .box{position:relative;border:1px solid var(--sp-line-dark);border-radius:10px;min-height:300px;display:flex;align-items:center;justify-content:center;color:#C9A06E;font-family:var(--sp-mono);font-size:12px;letter-spacing:.08em;text-align:center;line-height:1.9;overflow:hidden}
-.sp-buy .box img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.sp-buy .box{position:relative;border:1px solid var(--sp-line-dark);border-radius:10px;aspect-ratio:4/3;min-height:300px;display:flex;align-items:center;justify-content:center;color:#C9A06E;font-family:var(--sp-mono);font-size:12px;letter-spacing:.08em;text-align:center;line-height:1.9;overflow:hidden}
+.sp-buy .box img{width:100%;height:100%;object-fit:cover;object-position:center 55%;position:absolute;inset:0}
 .sp-buy .ok{color:#F3C98B;font-family:var(--sp-mono);font-size:12px;margin-top:10px}
 
 /* pdp */

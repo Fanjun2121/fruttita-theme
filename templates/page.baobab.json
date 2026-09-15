@@ -194,6 +194,7 @@
     "also": {
       "type": "sp-also",
       "settings": {
+        "asset": "fruttita-packshot-shot.png",
         "link": "/products/the-baobab-pulp-shot",
         "eyebrow": "试试看",
         "eyebrow_en": "Try it",

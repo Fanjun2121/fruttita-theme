@@ -3,7 +3,7 @@
 <section class="sp sp-also"><div class="sp-wrap"><div class="g">
   <div class="sp-lab dim">{% render 'i18n-text', default: s.eyebrow, en: s.eyebrow_en, pt: s.eyebrow_pt %}</div>
   <div class="item">
-    <div class="im">{%- if s.image != blank -%}{{ s.image | image_url: width: 400 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}<img src="{{ 'fruttita-packshot-pouch.png' | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- endif -%}</div>
+    <div class="im">{%- if s.image != blank -%}{{ s.image | image_url: width: 400 | image_tag: loading: 'lazy', alt: '' }}{%- elsif s.asset != blank -%}<img src="{{ s.asset | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- else -%}<img src="{{ 'fruttita-packshot-pouch.png' | asset_url }}" alt="" loading="lazy" width="1024" height="1024">{%- endif -%}</div>
     <div><span class="sp-lab">{% render 'i18n-text', default: s.tag, en: s.tag_en, pt: s.tag_pt %}</span><b>{% render 'i18n-text', default: s.title, en: s.title_en, pt: s.title_pt %}</b><p>{% render 'i18n-text', default: s.text, en: s.text_en, pt: s.text_pt %}</p>{%- if s.link != blank -%}<a href="{% render 'sp-url', url: s.link %}" class="sp-lab" style="color:var(--sp-liquid)">{% render 'i18n-text', default: s.go, en: s.go_en, pt: s.go_pt %}</a>{%- endif -%}</div>
   </div>
 </div></div></section>
@@ -12,7 +12,7 @@
   "name": "SP · Also from the fruit",
   "settings": [
     {"type":"text","id":"eyebrow","label":"眉题 zh"},{"type":"text","id":"eyebrow_en","label":"Eyebrow en","default":"Also from the fruit"},{"type":"text","id":"eyebrow_pt","label":"pt"},
-    {"type":"image_picker","id":"image","label":"Image (fallback: pouch packshot)"},
+    {"type":"image_picker","id":"image","label":"Image"},{"type":"text","id":"asset","label":"Image theme asset (e.g. fruttita-packshot-shot.png; blank = pouch packshot)","default":"fruttita-packshot-pouch.png"},
     {"type":"text","id":"tag","label":"标签 zh"},{"type":"text","id":"tag_en","label":"Tag en"},{"type":"text","id":"tag_pt","label":"pt"},
     {"type":"text","id":"title","label":"标题 zh"},{"type":"text","id":"title_en","label":"Title en"},{"type":"text","id":"title_pt","label":"pt"},
     {"type":"textarea","id":"text","label":"正文 zh"},{"type":"textarea","id":"text_en","label":"Text en"},{"type":"textarea","id":"text_pt","label":"pt"},
