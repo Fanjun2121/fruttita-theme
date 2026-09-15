@@ -501,28 +501,10 @@
             "link_text_en": "Learn more",
             "link_text_pt": "Saber mais"
           }
-        },
-        "product-2": {
-          "type": "product_link",
-          "settings": {
-            "name_cn": "猴面包树水",
-            "name_cn_en": "Baobab Water",
-            "name_cn_pt": "Água de Múcua",
-            "name_en": "The Water",
-            "packshot_asset": "fruttita-packshot-water.png",
-            "tagline": "想轻松补水？一瓶水的口感，一整天的天然电解质。",
-            "tagline_en": "Drinks like water. Delivers more than you'd think.",
-            "tagline_pt": "Bebe-se como água. Dá-te mais do que pensas.",
-            "link": "/products/the-baobab-water",
-            "link_text": "了解更多",
-            "link_text_en": "Learn more",
-            "link_text_pt": "Saber mais"
-          }
         }
       },
       "block_order": [
-        "product-1",
-        "product-2"
+        "product-1"
       ],
       "settings": {
         "subtitle": "More to Explore",

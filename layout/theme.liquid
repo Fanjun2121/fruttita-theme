@@ -2,6 +2,7 @@
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
     <script>if(location.pathname.indexOf('/zh-cn')===0)location.replace(location.href.replace('/zh-cn','/zh'));</script>
+    <script>if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('sp-motion');</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -278,6 +279,7 @@
     {% comment %} Fruttita micro-interactions {% endcomment %}
     {{ 'fruttita-micro.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'fruttita-micro.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'fruttita-specimen.js' | asset_url }}" defer="defer"></script>
 
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
