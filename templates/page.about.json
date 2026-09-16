@@ -72,20 +72,20 @@
             "body_pt": "<p>A Fruttita é feita pela Fazenda 27, a nossa empresa alimentar no planalto de Angola. Fazemos o sumo, o leite e o molho de tomate que os angolanos põem em quase tudo, e há anos que processamos múcua para o mercado local. A Fruttita é a marca que criámos para levar o fruto para fora, tal como se bebe em Angola: polpa e água, mais nada. O nome vem da própria quinta: era a fazenda número 27.</p>",
             "asset": "sp-photo-fazenda27-plant.jpg",
             "alt": "Fazenda 27's plant on the red earth outside Waku-Kungo, Angola",
-            "overlay": true,
+            "overlay": false,
             "ph": ""
           }
         },
         "rows_b2": {
           "type": "row",
           "settings": {
-            "k": "灌装",
-            "k_en": "Bottling",
-            "k_pt": "Engarrafamento",
-            "kv": "",
-            "body": "<p>我们的工厂负责果肉处理，目前还没有 50 mL 玻璃瓶的灌装线。所以 Shot 由越南的合作工厂灌装：一家持有 BRCGS A+ 与 FSSC 22000 认证、擅长玻璃瓶的工厂，位置正好在我们的亚洲和北美市场之间，让我们能以合理的成本、从一个地方灵活供应各个市场。我们宁愿在这里说清楚，也不想让你从标签上自己发现。</p>",
-            "body_en": "<p>Our plant processes the pulp, but it does not yet run a 50 mL glass-bottle line. So the Shot is filled by a partner in Vietnam: a GFSI-certified facility (BRCGS Grade A+, FSSC 22000) that specialises in glass, sits between our Asian and North American markets, and lets us supply each of them from one place, flexibly and at a sensible cost. We would rather explain that here than have you find it on the label.</p>",
-            "body_pt": "<p>A nossa fábrica processa a polpa, mas ainda não tem uma linha de engarrafamento em vidro de 50 mL. Por isso a dose é engarrafada por um parceiro no Vietname: uma fábrica certificada GFSI (BRCGS Grau A+, FSSC 22000), especializada em vidro, situada entre os nossos mercados asiáticos e norte-americanos, que nos permite abastecer cada um deles a partir de um só lugar, com flexibilidade e a um custo sensato. Preferimos explicá-lo aqui a deixar que o descubra no rótulo.</p>",
+            "k": "从这里出发",
+            "k_en": "From here",
+            "k_pt": "Daqui",
+            "kv": "Pulp · Pouch · Shot",
+            "body": "<p>一切从果肉开始，果肉在这里处理。Pouch 也在这里做好、装好，原样发往海外。Shot 则是把果肉运到越南一家擅长玻璃瓶灌装的合作工厂，从那里供应中国、美国和东南亚。一个来源，两条出路，每个市场按它需要的方式供货。</p>",
+            "body_en": "<p>Everything starts with the pulp, which we process here. The Pouch is made and packed here too, and ships abroad as it is. For the Shot, we send the pulp to a partner plant in Vietnam that specialises in glass bottling, and from there it reaches China, the United States and Southeast Asia. One source, two ways out, so each market gets supplied the way it needs.</p>",
+            "body_pt": "<p>Tudo começa na polpa, que processamos aqui. O Pouch também é feito e embalado aqui, e segue para fora tal como está. Para a dose, enviamos a polpa para uma fábrica parceira no Vietname, especializada em engarrafamento em vidro, e dali chega à China, aos Estados Unidos e ao Sudeste Asiático. Uma origem, duas saídas, para servir cada mercado como ele precisa.</p>",
             "asset": "sp-photo-f27-line-wide.jpg",
             "alt": "Inside Fazenda27's plant: the processing line",
             "overlay": true
