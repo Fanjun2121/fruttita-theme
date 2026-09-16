@@ -12,17 +12,17 @@
         "title": "生在树长的地方。",
         "title_en": "Born where the tree grows.",
         "title_pt": "Nascida onde a árvore cresce.",
-        "sub": "Fruttita 不是从会议室开始的。它开始于一棵 imbondeiro 下面。",
-        "sub_en": "Fruttita didn't start in a boardroom. It started under an imbondeiro.",
-        "sub_pt": "A Fruttita não começou numa sala de reuniões. Começou debaixo de um imbondeiro."
+        "sub": "我们不是从会议室开始的，是从一棵 imbondeiro 树下开始的。",
+        "sub_en": "We didn't start in a boardroom. We started under an imbondeiro.",
+        "sub_pt": "Não começámos numa sala de reuniões. Começámos debaixo de um imbondeiro."
       }
     },
     "photo": {
       "type": "sp-fullbleed",
       "settings": {
-        "title": "先有果实和采果的人，然后才有牌子。",
-        "title_en": "The fruit and the people who collect it came first. The brand came after.",
-        "title_pt": "Primeiro o fruto e quem o colhe. A marca veio depois.",
+        "title": "Cacimbo。高原旱季的晨雾，和站在雾里的树。",
+        "title_en": "Cacimbo. The dry-season mist of the highlands, and the trees that stand in it.",
+        "title_pt": "Cacimbo. A neblina da estação seca no planalto, e as árvores que ficam dentro dela.",
         "label": "Fazenda27 · 安哥拉高原",
         "label_en": "Fazenda27 · Angolan highlands",
         "label_pt": "Fazenda27 · planalto angolano",
@@ -39,9 +39,9 @@
         "eyebrow": "记录",
         "eyebrow_en": "Record",
         "eyebrow_pt": "Registo",
-        "head": "这个牌子从哪来",
-        "head_en": "Where this brand comes from",
-        "head_pt": "De onde vem esta marca"
+        "head": "我们从哪里来",
+        "head_en": "Where we come from",
+        "head_pt": "De onde vimos"
       },
       "blocks": {
         "rows_b0": {
@@ -51,12 +51,12 @@
             "k_en": "Where",
             "k_pt": "Onde",
             "kv": "Waku-Kungo, Angola",
-            "body": "<p>果浆来自安哥拉高原的瓦库昆戈，我们的工厂就在那里。每一支瓶子都从那里开始。</p>",
-            "body_en": "<p>The pulp comes from Waku-Kungo, in the highlands of Angola, where our plant is. Every bottle starts there.</p>",
-            "body_pt": "<p>A polpa vem do Waku-Kungo, no planalto de Angola, onde fica a nossa fábrica. Cada garrafa começa ali.</p>",
+            "body": "<p>安哥拉高原的瓦库昆戈。我们的工厂在这里，每一支瓶子都从这里开始。</p>",
+            "body_en": "<p>Waku-Kungo, in the highlands of Angola. This is where our plant is, and where every bottle starts.</p>",
+            "body_pt": "<p>Waku-Kungo, no planalto de Angola. É aqui que fica a nossa fábrica, e é aqui que começa cada garrafa.</p>",
             "ph": "",
-            "asset": "sp-photo-fazenda27-plant.jpg",
-            "alt": "Fazenda27's plant on the red earth outside Waku-Kungo, Angola",
+            "asset": "sp-photo-waku-kungo.jpg",
+            "alt": "Waku-Kungo in the morning mist, central highlands of Angola",
             "overlay": true
           }
         },
@@ -70,8 +70,10 @@
             "body": "<p>Fruttita 由 Fazenda 27 出品，那是我们在安哥拉高原的食品公司。安哥拉人几乎什么都要挤一点的番茄沙司，还有果汁和牛奶，都是我们做的；múcua 我们也为本地市场加工了很多年。Fruttita 是我们为了把这种果实带出国门而创的牌子，做法就是安哥拉人平常喝它的方式：果肉加水，没有别的。Fazenda 是农场的意思，27 是这座农场的编号。</p>",
             "body_en": "<p>Fruttita is made by Fazenda 27, our food company in the highlands of Angola. We make the juice, the milk and the tomato sauce that Angolans put on almost everything, and we have processed múcua for the local market for years. Fruttita is the brand we built to take the fruit abroad the way people drink it in Angola: pulp and water, nothing else. Fazenda means farm. 27 was the farm's number.</p>",
             "body_pt": "<p>A Fruttita é feita pela Fazenda 27, a nossa empresa alimentar no planalto de Angola. Fazemos o sumo, o leite e o molho de tomate que os angolanos põem em quase tudo, e há anos que processamos múcua para o mercado local. A Fruttita é a marca que criámos para levar o fruto para fora, tal como se bebe em Angola: polpa e água, mais nada. O nome vem da própria quinta: era a fazenda número 27.</p>",
-            "asset": "",
-            "alt": ""
+            "asset": "sp-photo-fazenda27-plant.jpg",
+            "alt": "Fazenda 27's plant on the red earth outside Waku-Kungo, Angola",
+            "overlay": true,
+            "ph": ""
           }
         },
         "rows_b2": {
