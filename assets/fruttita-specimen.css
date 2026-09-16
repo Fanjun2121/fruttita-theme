@@ -107,8 +107,8 @@
 .sp-nfhint{font-family:var(--sp-mono);font-size:11px;color:var(--sp-ink-2);letter-spacing:.04em;margin-top:-6px}
 
 /* fig. 1 sediment */
-.sp-fig{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center}
-.sp-fig svg{width:150px;height:auto;display:block}
+.sp-fig{display:grid;grid-template-columns:185px 1fr;gap:22px;align-items:center}
+.sp-fig svg{width:185px;height:auto;display:block}
 .sp-fig .cap{font-size:14px;color:var(--sp-ink);max-width:36ch}
 .sp-fig .cap .sp-lab{display:block;margin-bottom:6px;color:var(--sp-ink-2)}
 .sp-fig button{appearance:none;border:1.5px solid var(--sp-ink);background:transparent;color:var(--sp-ink);border-radius:999px;padding:8px 14px;font:600 13px/1.2 var(--sp-font);cursor:pointer;margin-top:8px}
