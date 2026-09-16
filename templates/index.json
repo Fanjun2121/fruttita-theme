@@ -318,9 +318,9 @@
         "fig_label": "图 1 · 沉淀",
         "fig_label_en": "Fig. 1 · Sediment",
         "fig_label_pt": "Fig. 1 · Sedimento",
-        "fig_cap": "纤维不溶于水，比水重。静置一会儿，它会在瓶底沉成一层浅色。你正在看它发生。那一层就是那 3 克。",
-        "fig_cap_en": "The fiber is insoluble and heavier than water. Left alone it settles into a pale layer at the bottom. You're watching that happen. That layer is the 3 grams.",
-        "fig_cap_pt": "A fibra é insolúvel e mais pesada que a água. Em repouso, assenta numa camada clara no fundo. Está a ver acontecer. Essa camada são os 3 gramas.",
+        "fig_cap": "纤维有两种。可溶的那部分溶在液体里，看不见；不可溶的那部分比水重，静置一会儿，会在瓶底沉成一层浅色。你正在看它发生。标签上的 3 克，两种都算在内。",
+        "fig_cap_en": "The fiber comes in two kinds. The soluble part is dissolved in the liquid, where you can't see it. The insoluble part is heavier than water; left alone it settles into a pale layer at the bottom. You're watching that happen. The 3 grams on the label count both.",
+        "fig_cap_pt": "A fibra é de dois tipos. A parte solúvel está dissolvida no líquido, onde não se vê. A parte insolúvel é mais pesada que a água; em repouso, assenta numa camada clara no fundo. Está a ver acontecer. Os 3 gramas do rótulo contam as duas.",
         "fig_btn": "摇匀",
         "fig_btn_en": "Shake well",
         "fig_btn_pt": "Agitar bem"
