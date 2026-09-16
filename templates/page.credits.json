@@ -1,0 +1,61 @@
+/*
+ * Fruttita US site · Image credits · 2026-09-16
+ */
+{
+  "sections": {
+    "title": {
+      "type": "sp-title",
+      "settings": {
+        "light": true,
+        "eyebrow": "本站",
+        "eyebrow_en": "This site",
+        "eyebrow_pt": "Este site",
+        "title": "图片来源",
+        "title_en": "Image credits",
+        "title_pt": "Créditos de imagem",
+        "sub": "我们自己拍的照片会逐步替换这里的图库图。",
+        "sub_en": "Our own photographs will replace these over time.",
+        "sub_pt": "As nossas próprias fotografias irão substituir estas com o tempo."
+      }
+    },
+    "rows": {
+      "type": "sp-prose",
+      "settings": {
+        "pad_top": 56,
+        "last": true,
+        "eyebrow": "",
+        "eyebrow_en": "",
+        "eyebrow_pt": "",
+        "head": "",
+        "head_en": "",
+        "head_pt": ""
+      },
+      "blocks": {
+        "rows_b0": {
+          "type": "row",
+          "settings": {
+            "k": "来源",
+            "k_en": "Sources",
+            "k_pt": "Fontes",
+            "kv": "CC BY · CC BY-SA",
+            "body": "<p>本站照片按 Creative Commons 许可使用，经裁切与调色：</p><p>Baobab fruit — Ton Rulkens, <a href=\"https://commons.wikimedia.org/wiki/File:Baobab_-_fruit_(8750413322).jpg\">Wikimedia Commons</a>, CC BY-SA 2.0 · Dried baobab pulp — Kadjia18, <a href=\"https://commons.wikimedia.org/wiki/File:Pain_de_singe_bouyy.jpg\">Wikimedia Commons</a>, CC BY-SA 4.0 · Imbondeiro tree — Alfred Weidinger, <a href=\"https://commons.wikimedia.org/wiki/File:Imbondeiro_Tree.jpg\">Wikimedia Commons</a>, CC BY 2.0 · Imbondeiro in the cacimbo mist — L. Willms, <a href=\"https://commons.wikimedia.org/wiki/File:Imbondeiro_en-nevoa-do-kacimbo_LWS906.JPG\">Wikimedia Commons</a>, CC BY-SA 3.0 · Múcua on the branch — L. Willms, <a href=\"https://commons.wikimedia.org/wiki/File:Fruta-de-Imbondeiro-Angola_LWS724.JPG\">Wikimedia Commons</a>, CC BY 3.0 · Waku-Kungo valley — Rogério Melo, <a href=\"https://commons.wikimedia.org/wiki/File:Waku_Kungo_-_panoramio_-_Rog%C3%A9rio_Melo_(4).jpg\">Wikimedia Commons</a>, CC BY 3.0. Photographs of Fazenda 27's plant: Fruttita. Map of Angola drawn by Fruttita from <a href=\"https://www.geoboundaries.org\">geoBoundaries</a> province data (CC BY 4.0) and <a href=\"https://www.naturalearthdata.com\">Natural Earth</a> (public domain).</p>",
+            "body_en": "<p>Photographs on this site are used under Creative Commons licences, cropped and colour-adjusted:</p><p>Baobab fruit — Ton Rulkens, <a href=\"https://commons.wikimedia.org/wiki/File:Baobab_-_fruit_(8750413322).jpg\">Wikimedia Commons</a>, CC BY-SA 2.0 · Dried baobab pulp — Kadjia18, <a href=\"https://commons.wikimedia.org/wiki/File:Pain_de_singe_bouyy.jpg\">Wikimedia Commons</a>, CC BY-SA 4.0 · Imbondeiro tree — Alfred Weidinger, <a href=\"https://commons.wikimedia.org/wiki/File:Imbondeiro_Tree.jpg\">Wikimedia Commons</a>, CC BY 2.0 · Imbondeiro in the cacimbo mist — L. Willms, <a href=\"https://commons.wikimedia.org/wiki/File:Imbondeiro_en-nevoa-do-kacimbo_LWS906.JPG\">Wikimedia Commons</a>, CC BY-SA 3.0 · Múcua on the branch — L. Willms, <a href=\"https://commons.wikimedia.org/wiki/File:Fruta-de-Imbondeiro-Angola_LWS724.JPG\">Wikimedia Commons</a>, CC BY 3.0 · Waku-Kungo valley — Rogério Melo, <a href=\"https://commons.wikimedia.org/wiki/File:Waku_Kungo_-_panoramio_-_Rog%C3%A9rio_Melo_(4).jpg\">Wikimedia Commons</a>, CC BY 3.0. Photographs of Fazenda 27's plant: Fruttita. Map of Angola drawn by Fruttita from <a href=\"https://www.geoboundaries.org\">geoBoundaries</a> province data (CC BY 4.0) and <a href=\"https://www.naturalearthdata.com\">Natural Earth</a> (public domain).</p>",
+            "body_pt": "<p>As fotografias deste site são usadas ao abrigo de licenças Creative Commons, recortadas e com cor ajustada:</p><p>Baobab fruit — Ton Rulkens, <a href=\"https://commons.wikimedia.org/wiki/File:Baobab_-_fruit_(8750413322).jpg\">Wikimedia Commons</a>, CC BY-SA 2.0 · Dried baobab pulp — Kadjia18, <a href=\"https://commons.wikimedia.org/wiki/File:Pain_de_singe_bouyy.jpg\">Wikimedia Commons</a>, CC BY-SA 4.0 · Imbondeiro tree — Alfred Weidinger, <a href=\"https://commons.wikimedia.org/wiki/File:Imbondeiro_Tree.jpg\">Wikimedia Commons</a>, CC BY 2.0 · Imbondeiro in the cacimbo mist — L. Willms, <a href=\"https://commons.wikimedia.org/wiki/File:Imbondeiro_en-nevoa-do-kacimbo_LWS906.JPG\">Wikimedia Commons</a>, CC BY-SA 3.0 · Múcua on the branch — L. Willms, <a href=\"https://commons.wikimedia.org/wiki/File:Fruta-de-Imbondeiro-Angola_LWS724.JPG\">Wikimedia Commons</a>, CC BY 3.0 · Waku-Kungo valley — Rogério Melo, <a href=\"https://commons.wikimedia.org/wiki/File:Waku_Kungo_-_panoramio_-_Rog%C3%A9rio_Melo_(4).jpg\">Wikimedia Commons</a>, CC BY 3.0. Photographs of Fazenda 27's plant: Fruttita. Map of Angola drawn by Fruttita from <a href=\"https://www.geoboundaries.org\">geoBoundaries</a> province data (CC BY 4.0) and <a href=\"https://www.naturalearthdata.com\">Natural Earth</a> (public domain).</p>",
+            "asset": "",
+            "alt": "",
+            "aside": "",
+            "aside_en": "",
+            "aside_pt": ""
+          }
+        }
+      },
+      "block_order": [
+        "rows_b0"
+      ]
+    }
+  },
+  "order": [
+    "title",
+    "rows"
+  ]
+}
