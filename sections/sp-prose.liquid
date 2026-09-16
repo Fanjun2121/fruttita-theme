@@ -14,7 +14,7 @@
       </div>
     </div>
     {%- else -%}
-    <div class="v{% if block.settings.image == blank and block.settings.aside_en == blank %} single{% endif %}">
+    <div class="v{% if block.settings.image == blank and block.settings.asset == blank and block.settings.aside_en == blank %} single{% endif %}">
       <div>{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>
       {%- if block.settings.image != blank -%}<div class="sp-rowimg">{{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
       {%- elsif block.settings.asset != blank -%}<div class="sp-rowimg"><img src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy" decoding="async" width="1600" height="1200">{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
