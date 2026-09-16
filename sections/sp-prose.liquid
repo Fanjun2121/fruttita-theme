@@ -15,7 +15,11 @@
     </div>
     {%- else -%}
     <div class="v{% if block.settings.image == blank and block.settings.asset == blank and block.settings.aside_en == blank %} single{% endif %}">
+      {%- if block.settings.mark != blank -%}
+      <div class="has-mark"><div>{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>{% if block.settings.mark_link != blank %}<a class="sp-mark" href="{{ block.settings.mark_link }}" target="_blank" rel="noopener">{% else %}<span class="sp-mark">{% endif %}<img src="{{ block.settings.mark | asset_url }}" alt="{{ block.settings.mark_alt | escape }}" loading="lazy" decoding="async" width="438" height="306">{% if block.settings.mark_link != blank %}</a>{% else %}</span>{% endif %}</div>
+      {%- else -%}
       <div>{% render 'i18n-text', default: block.settings.body, en: block.settings.body_en, pt: block.settings.body_pt %}</div>
+      {%- endif -%}
       {%- if block.settings.image != blank -%}<div class="sp-rowimg">{{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: '' }}{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
       {%- elsif block.settings.asset == 'sp-map-origin.svg' -%}<div class="sp-rowimg svg" role="img" aria-label="{{ block.settings.alt | escape }}">{% render 'sp-map-origin' %}</div>
       {%- elsif block.settings.asset != blank -%}<div class="sp-rowimg"><img src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy" decoding="async" width="1600" height="1200">{% if block.settings.ph != blank %}<div class="sp-ph">{{ block.settings.ph }}</div>{% endif %}</div>
@@ -39,7 +43,7 @@
     {"type":"text","id":"k","label":"行标签 zh"},{"type":"text","id":"k_en","label":"Row label en"},{"type":"text","id":"k_pt","label":"pt"},{"type":"text","id":"kv","label":"Row value (mono, optional)"},
     {"type":"richtext","id":"body","label":"正文 zh"},{"type":"richtext","id":"body_en","label":"Body en"},{"type":"richtext","id":"body_pt","label":"pt"},
     {"type":"richtext","id":"aside","label":"右栏 zh (optional)"},{"type":"richtext","id":"aside_en","label":"Aside en"},{"type":"richtext","id":"aside_pt","label":"pt"},
-    {"type":"checkbox","id":"overlay","label":"Set text on top of the image (plate layout)","default":false},{"type":"image_picker","id":"image","label":"Right image (optional)"},{"type":"text","id":"asset","label":"Theme asset filename (fallback image)"},{"type":"text","id":"alt","label":"Alt text"},{"type":"text","id":"ph","label":"Placeholder note (internal)"}
+    {"type":"checkbox","id":"overlay","label":"Set text on top of the image (plate layout)","default":false},{"type":"image_picker","id":"image","label":"Right image (optional)"},{"type":"text","id":"asset","label":"Theme asset filename (fallback image)"},{"type":"text","id":"alt","label":"Alt text"},{"type":"text","id":"mark","label":"Mark / logo asset under the text (bottom-aligned)"},{"type":"url","id":"mark_link","label":"Mark link"},{"type":"text","id":"mark_alt","label":"Mark alt text"},{"type":"text","id":"ph","label":"Placeholder note (internal)"}
   ]}],
   "presets": [{"name":"SP · Record rows"}]
 }

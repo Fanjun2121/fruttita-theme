@@ -73,7 +73,10 @@
             "asset": "sp-map-origin.svg",
             "alt": "Map of Angola with the Fazenda 27 plant at Waku-Kungo and the wild-harvest provinces Cuanza Sul, Cuanza Norte and Benguela shaded",
             "overlay": false,
-            "ph": ""
+            "ph": "",
+            "mark": "fazenda27-logo.png",
+            "mark_link": "https://fazenda27.com",
+            "mark_alt": "Fazenda 27"
           }
         },
         "rows_b2": {
