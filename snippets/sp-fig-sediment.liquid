@@ -4,16 +4,17 @@
 {%- endcomment -%}
 <div class="sp-fig" id="spfig-{{ uid }}">
   <svg class="figsvg" viewBox="0 0 150 300" aria-label="Diagram of the bottle with fiber sediment">
-    <defs><clipPath id="spglass-{{ uid }}"><path d="M50 40 h50 v22 q12 8 12 26 v190 q0 12-12 12 h-50 q-12 0-12-12 v-190 q0-18 12-26z"/></clipPath></defs>
-    <rect x="52" y="14" width="46" height="26" rx="4" fill="#2A1A12"/>
-    <path d="M50 40 h50 v22 q12 8 12 26 v190 q0 12-12 12 h-50 q-12 0-12-12 v-190 q0-18 12-26z" fill="#8C4A1E" opacity=".9"/>
+    <defs><clipPath id="spglass-{{ uid }}"><path d="M41 56 h68 v12 Q125.5 68 125.5 100 v180 q0 12-12 12 h-77 q-12 0-12-12 v-180 Q24.5 68 41 68z"/></clipPath></defs>
+    <rect x="37.5" y="8" width="75" height="48" rx="6" fill="#2A1A12"/>
+    <path d="M41 56 h68 v12 Q125.5 68 125.5 100 v180 q0 12-12 12 h-77 q-12 0-12-12 v-180 Q24.5 68 41 68z" fill="#8C4A1E" opacity=".9"/>
+    <rect x="34" y="118" width="82" height="126" rx="3" fill="none" stroke="#2A1A12" stroke-width="0.8" opacity=".35"/>
     <g clip-path="url(#spglass-{{ uid }})">
       <circle class="sed" cx="50" cy="270" r="3.2" style="--x:-14px;--y:-170px"/><circle class="sed" cx="64" cy="278" r="2.6" style="--x:20px;--y:-120px"/><circle class="sed" cx="78" cy="266" r="3.6" style="--x:-22px;--y:-200px"/><circle class="sed" cx="92" cy="279" r="2.8" style="--x:8px;--y:-90px"/><circle class="sed" cx="104" cy="270" r="3" style="--x:-30px;--y:-150px"/><circle class="sed" cx="56" cy="282" r="2.2" style="--x:36px;--y:-60px"/><circle class="sed" cx="70" cy="260" r="2.4" style="--x:-10px;--y:-215px"/><circle class="sed" cx="86" cy="284" r="3.4" style="--x:14px;--y:-180px"/><circle class="sed" cx="98" cy="258" r="2.4" style="--x:-40px;--y:-100px"/><circle class="sed" cx="60" cy="268" r="2.9" style="--x:28px;--y:-140px"/><circle class="sed" cx="82" cy="274" r="2.1" style="--x:-18px;--y:-40px"/><circle class="sed" cx="108" cy="282" r="2.5" style="--x:-34px;--y:-190px"/><circle class="sed" cx="74" cy="286" r="2.8" style="--x:22px;--y:-225px"/><circle class="sed" cx="46" cy="262" r="2.3" style="--x:40px;--y:-80px"/>
-      <rect class="layer" x="38" y="252" width="74" height="40"/>
-      <rect class="haze" x="30" y="40" width="90" height="260"/>
+      <rect class="layer" x="24.5" y="250" width="101" height="42"/>
+      <rect class="haze" x="20" y="56" width="110" height="240"/>
     </g>
-    <path d="M50 40 h50 v22 q12 8 12 26 v190 q0 12-12 12 h-50 q-12 0-12-12 v-190 q0-18 12-26z" fill="none" stroke="#2A1A12" stroke-width="1.5"/>
-    <g class="fiberlab"><line x1="118" y1="252" x2="146" y2="252" stroke="#2A1A12" stroke-width="1"/><text x="146" y="248" font-family="IBM Plex Mono,monospace" font-size="8" text-anchor="end" fill="#2A1A12">fiber</text></g>
+    <path d="M41 56 h68 v12 Q125.5 68 125.5 100 v180 q0 12-12 12 h-77 q-12 0-12-12 v-180 Q24.5 68 41 68z" fill="none" stroke="#2A1A12" stroke-width="1.5"/>
+    <g class="fiberlab"><line x1="128" y1="250" x2="146" y2="250" stroke="#2A1A12" stroke-width="1"/><text x="146" y="246" font-family="IBM Plex Mono,monospace" font-size="8" text-anchor="end" fill="#2A1A12">fiber</text></g>
   </svg>
   <div class="cap"><span class="sp-lab">{{ label }}</span>{{ caption }}<br><button type="button" class="sp-fig-btn">{{ button }}</button></div>
 </div>
