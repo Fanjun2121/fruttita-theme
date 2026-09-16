@@ -23,7 +23,7 @@
 .sp-lab{font-family:var(--sp-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.5}
 .sp-lab.dim{color:var(--sp-ink-2)}
 .sp-mono{font-family:var(--sp-mono)}
-.sp-fn{font-family:var(--sp-mono);font-size:11.5px;line-height:1.55;color:var(--sp-ink-2);letter-spacing:.01em;max-width:60ch}
+.sp-fn,.sp p.sp-fn{font-family:var(--sp-mono);font-size:11.5px;line-height:1.55;color:var(--sp-ink-2);letter-spacing:.01em;max-width:60ch;margin:0 0 10px}
 .sp-fn sup{font-size:9px}
 .sp-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none;border:1.5px solid currentColor;letter-spacing:.01em;transition:transform .15s ease;line-height:1.2;font-family:var(--sp-font)}
 .sp-btn:hover{transform:translateY(-1px)}
