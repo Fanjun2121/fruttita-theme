@@ -405,7 +405,7 @@
         "title": "先说好：它是酸的。",
         "title_en": "Fair warning: it's tart.",
         "title_pt": "Aviso: é ácida.",
-        "text": "猴面包树果浆的 pH 在 3 左右，接近柠檬汁。我们不加糖去盖它，所以第一口是尖的，第二口有点涩。然后就没了。",
+        "text": "猴面包树果浆的 pH 在 3 左右，接近柠檬汁。配料只有果肉和水，没有东西盖它，所以第一口是尖的，第二口有点涩。然后就没了。",
         "text_en": "Baobab pulp sits around pH 3, close to lemon juice. We don't add sugar to hide it, so the first sip is sharp and the second is a little dry. Then it's gone.",
         "text_pt": "A polpa de múcua anda perto de pH 3, como sumo de limão. Não adicionamos açúcar para o disfarçar: o primeiro gole é vivo, o segundo um pouco adstringente. E acabou.",
         "show_ph": true,
@@ -480,7 +480,7 @@
             "title": "酸",
             "title_en": "Tart",
             "title_pt": "Ácida",
-            "text": "天然酸性水果。不加糖，也不需要加糖才能喝。",
+            "text": "天然酸性水果。配料只有果肉和水，直接就能喝。",
             "text_en": "Naturally acidic fruit. No sugar added, none needed to make it drinkable.",
             "text_pt": "Fruto naturalmente ácido. Sem açúcar adicionado, e sem precisar dele."
           }

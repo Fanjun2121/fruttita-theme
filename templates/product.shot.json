@@ -122,9 +122,9 @@
             "body": "",
             "body_en": "",
             "body_pt": "",
-            "fn": "每支约 10 千卡、膳食纤维 3 g、钾 160 mg、钠未检出；总多酚约 140 mg/支（欧陆成品实测）。",
-            "fn_en": "Excellent source of fiber and good source of potassium per 240 mL reference amount (21 CFR 101.12). About 140 mg total polyphenols per shot, Eurofins finished-product analysis.",
-            "fn_pt": "Por dose: cerca de 10 kcal, 3 g de fibra, 160 mg de potássio, sódio não detetado; cerca de 140 mg de polifenóis totais (análise Eurofins ao produto acabado)."
+            "fn": "每支约 10 千卡，换来膳食纤维 3 g 和钾 160 mg。碳水 4 g，其中 3 g 是膳食纤维；糖不到 1 g；钠未检出。总多酚约 140 mg/支（欧陆成品实测）。",
+            "fn_en": "Ten calories a bottle, and they come with 3 g of fiber (11% of the Daily Value) and 160 mg of potassium. 4 g of carbohydrate, 3 of them fiber; less than 1 g of sugar, none of it added. Excellent source of fiber and good source of potassium per 240 mL reference amount (21 CFR 101.12). About 140 mg total polyphenols per shot, Eurofins finished-product analysis.",
+            "fn_pt": "Por dose: cerca de 10 kcal, que trazem 3 g de fibra e 160 mg de potássio. 4 g de hidratos de carbono, 3 dos quais fibra; menos de 1 g de açúcar, nenhum adicionado; sódio não detetado. Cerca de 140 mg de polifenóis totais (análise Eurofins ao produto acabado)."
           }
         },
         "sp_label_b2": {
@@ -269,7 +269,7 @@
             "title": "酸",
             "title_en": "Tart",
             "title_pt": "Ácida",
-            "text": "天然酸性。不加糖。",
+            "text": "天然酸性。糖不到 1 g。",
             "text_en": "Naturally acidic. No sugar added.",
             "text_pt": "Naturalmente ácida. Sem açúcar adicionado."
           }
@@ -324,7 +324,7 @@
             "heading": "为什么这么酸？坏了吗？",
             "heading_en": "Why is it so sour? Has it gone bad?",
             "heading_pt": "Porque é tão ácida? Estragou-se?",
-            "body": "<p>没有。猴面包树天然就酸，我们不加糖去盖它。如果有气泡感或异味，那是另一回事：带上瓶颈上的批号联系我们。</p>",
+            "body": "<p>没有。猴面包树天然就酸，配料只有果肉和水，酸就是它本来的味道。如果有气泡感或异味，那是另一回事：带上瓶颈上的批号联系我们。</p>",
             "body_en": "<p>No. Baobab is naturally acidic and we don't add sugar to hide it. If it ever tastes fizzy or smells off, that's a different story; contact us with the lot number on the neck.</p>",
             "body_pt": "<p>Não. A múcua é naturalmente ácida e não adicionamos açúcar para o disfarçar. Se alguma vez souber a gás ou cheirar mal, é outra história: contacte-nos com o número de lote do gargalo.</p>",
             "fn": "",
