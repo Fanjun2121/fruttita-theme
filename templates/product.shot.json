@@ -291,9 +291,9 @@
             "title": "沉淀",
             "title_en": "Sediment",
             "title_pt": "Sedimento",
-            "text": "不溶性纤维。摇一摇。",
-            "text_en": "Insoluble fiber. Shake it.",
-            "text_pt": "Fibra insolúvel. Agite."
+            "text": "果肉，主要是纤维和水。摇一摇。",
+            "text_en": "Fruit pulp, mostly fiber and water. Shake it.",
+            "text_pt": "Polpa de fruto, sobretudo fibra e água. Agite."
           }
         }
       },
@@ -339,9 +339,9 @@
             "heading": "瓶底那层是什么？",
             "heading_en": "What's the stuff at the bottom?",
             "heading_pt": "O que é aquilo no fundo?",
-            "body": "<p>果实纤维。我们特意留着。开盖前摇一摇。</p>",
-            "body_en": "<p>Fruit fiber. We keep it in on purpose. Shake before opening.</p>",
-            "body_pt": "<p>Fibra do fruto. Deixamo-la de propósito. Agite antes de abrir.</p>",
+            "body": "<p>果肉，主要是纤维，含着水。我们特意留着。开盖前摇一摇。</p>",
+            "body_en": "<p>Fruit pulp: fiber holding water. We keep it in on purpose. Shake before opening.</p>",
+            "body_pt": "<p>Polpa do fruto: fibra a reter água. Deixamo-la de propósito. Agite antes de abrir.</p>",
             "fn": "",
             "fn_en": "",
             "fn_pt": ""
