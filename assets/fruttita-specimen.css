@@ -379,3 +379,11 @@ html.sp-motion .sp-proc.is-on .mv-heat{animation:sp-mv-heat .8s ease-out forward
   html.sp-motion .sp-proc.is-on li:not(:last-child) .dot{animation-name:sp-proc-run-v}
   @keyframes sp-proc-run-v{0%{opacity:1;top:104px}85%{opacity:1}100%{opacity:0;top:calc(100% + 22px)}}
 }
+
+/* Fig. 2 · bottle station: sediment settles (same idea as Fig. 1) */
+html.sp-motion .sp-proc .mv-sed-layer,html.sp-motion .sp-proc .mv-sed-dots{transform-box:fill-box}
+html.sp-motion .sp-proc .mv-sed-layer{transform-origin:center bottom}
+html.sp-motion .sp-proc.is-on .mv-sed-layer{animation:sp-mv-settle 1.6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--d) + .3s)}
+html.sp-motion .sp-proc.is-on .mv-sed-dots{animation:sp-mv-sink 1.6s ease-in both;animation-delay:calc(var(--d) + .3s)}
+@keyframes sp-mv-settle{0%{transform:scaleY(0)}100%{transform:scaleY(1)}}
+@keyframes sp-mv-sink{0%{transform:translateY(-36px);opacity:.35}100%{transform:none;opacity:1}}
