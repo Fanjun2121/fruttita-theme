@@ -11,32 +11,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "即将登陆美国 · 上架时只发一封邮件通知 →",
-            "text_en": "Coming to the US · Get one email when it lands →",
-            "text_pt": "A chegar aos EUA · Um email quando estiver disponível →",
-            "link": "/#where-to-buy"
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0"
-      ],
-      "settings": {
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-a0d5e2d5-fa4c-4e80-be88-15d4811d0aa8",
-        "show_line_separator": true,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -68,7 +42,6 @@
     }
   },
   "order": [
-    "announcement-bar",
     "header",
     "custom_liquid_WNrgBg"
   ]

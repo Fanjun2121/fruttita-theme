@@ -203,9 +203,9 @@
         "chain_b3": {
           "type": "step",
           "settings": {
-            "where": "美国",
-            "where_en": "United States",
-            "where_pt": "Estados Unidos",
+            "where": "零售",
+            "where_en": "Retail",
+            "where_pt": "Retalho",
             "title": "零售分销",
             "title_en": "Retail distribution",
             "title_pt": "Distribuição no retalho",

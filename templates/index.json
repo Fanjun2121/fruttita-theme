@@ -590,12 +590,12 @@
         "eyebrow": "购买渠道",
         "eyebrow_en": "Where to buy",
         "eyebrow_pt": "Onde comprar",
-        "title": "即将登陆美国。",
-        "title_en": "Coming to the US.",
-        "title_pt": "A chegar aos EUA.",
-        "text": "Shot 六支装正在进入美国零售渠道。留下邮箱，上架当天告诉你在哪买。只发一封，不发周报。",
-        "text_en": "The Shot 6-pack is on its way to US retail. Leave your email and we'll tell you the day it's live, and where. We'll email you once. Not weekly.",
-        "text_pt": "O pack de 6 doses está a caminho do retalho americano. Deixe o email e dizemos-lhe o dia em que estiver disponível, e onde. Um email só. Não é semanal.",
+        "title": "货架上还没有。",
+        "title_en": "Not on a shelf near you yet.",
+        "title_pt": "Ainda não está numa prateleira perto de si.",
+        "text": "留下邮箱，上架那天告诉你在哪买。只发一封，不发周报。",
+        "text_en": "Leave your email and we'll tell you the day it is, and where. One email. Not weekly.",
+        "text_pt": "Deixe o email e dizemos-lhe o dia em que estiver, e onde. Um email só. Não é semanal.",
         "tag": "us-notify",
         "placeholder": "you@email.com",
         "btn": "通知我",
@@ -610,6 +610,28 @@
         "box_text": "",
         "box_asset": "fruttita-packshot-shot.jpg"
       }
+    },
+    "sp_pouch": {
+      "type": "sp-also",
+      "settings": {
+        "link": "/products/the-baobab-pulp-pouch",
+        "asset": "fruttita-packshot-pouch.jpg",
+        "eyebrow": "同一颗果实",
+        "eyebrow_en": "Also from the fruit",
+        "eyebrow_pt": "Também do fruto",
+        "tag": "拌着吃的那款",
+        "tag_en": "The one you stir in",
+        "tag_pt": "A que se mistura",
+        "title": "猴面包树果浆，100 g",
+        "title_en": "Baobab Pulp, 100 g",
+        "title_pt": "Polpa de Múcua, 100 g",
+        "text": "整果果浆，配酸奶、燕麦、奶昔。配料一项。中国大陆现售。",
+        "text_en": "Whole-fruit baobab pulp for yogurt, oats and smoothies. One ingredient. Available now in China.",
+        "text_pt": "Polpa de múcua de fruto inteiro para iogurte, aveia e batidos. Um ingrediente. Já disponível na China.",
+        "go": "了解更多 →",
+        "go_en": "Learn more →",
+        "go_pt": "Saber mais →"
+      }
     }
   },
   "order": [
@@ -621,6 +643,7 @@
     "sp_certs",
     "sp_taste",
     "sp_duo",
+    "sp_pouch",
     "sp_buy"
   ]
 }
