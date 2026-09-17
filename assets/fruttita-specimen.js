@@ -83,3 +83,28 @@
     Array.prototype.forEach.call(ev.target.querySelectorAll(GROUPS), function (g) { prepare(g); reveal(g); });
   });
 })();
+
+/* Fruttita Specimen · motion 3 of 3 (2026-09-17)
+   Fig. 2 process figure: stations, connectors and a travelling pulp dot play once when scrolled
+   into view; "Play again" restarts. Same guard: nothing runs without <html class="sp-motion">. */
+(function () {
+  'use strict';
+  if (!document.documentElement.classList.contains('sp-motion')) return;
+  var secs = document.querySelectorAll('.sp-proc');
+  if (!secs.length) return;
+  function play(sec) { sec.classList.remove('is-on'); void sec.offsetWidth; sec.classList.add('is-on'); }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting || e.intersectionRatio < 0.3) return;
+      io.unobserve(e.target); play(e.target);
+    });
+  }, { threshold: [0.3] });
+  Array.prototype.forEach.call(secs, function (sec) {
+    var btn = sec.querySelector('.sp-proc-replay');
+    if (btn) btn.addEventListener('click', function () { play(sec); });
+    var r = sec.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.7 && r.bottom > 0) { play(sec); return; }
+    io.observe(sec);
+  });
+  setTimeout(function () { Array.prototype.forEach.call(secs, function (s) { if (!s.classList.contains('is-on')) s.classList.add('is-on'); }); }, 6000);
+})();
