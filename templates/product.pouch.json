@@ -23,9 +23,9 @@
         "btn2_en": "Read the label",
         "btn2_pt": "Ler o rótulo",
         "btn2_link": "#label",
-        "made": "<p>配料：猴面包树果浆。Fruttita™</p>",
-        "made_en": "<p>Ingredients: baobab fruit pulp. Fruttita™</p>",
-        "made_pt": "<p>Ingredientes: polpa de múcua. Fruttita™</p>"
+        "made": "<p>配料：水、猴面包树果肉。Fruttita™</p>",
+        "made_en": "<p>Ingredients: water, baobab fruit pulp. Fruttita™</p>",
+        "made_pt": "<p>Ingredientes: água, polpa de múcua. Fruttita™</p>"
       },
       "blocks": {
         "h_e0": {
@@ -105,12 +105,12 @@
             "heading": "配料",
             "heading_en": "Ingredients",
             "heading_pt": "Ingredientes",
-            "body": "<p>猴面包树果浆。</p>",
-            "body_en": "<p>Baobab fruit pulp.</p>",
-            "body_pt": "<p>Polpa de múcua.</p>",
-            "fn": "就这一行。",
-            "fn_en": "That is the whole list.",
-            "fn_pt": "É toda a lista."
+            "body": "<p>水、猴面包树果肉。</p>",
+            "body_en": "<p>Water, baobab fruit pulp.</p>",
+            "body_pt": "<p>Água, polpa de múcua.</p>",
+            "fn": "就这两行。包装依欧盟规则不列复原干果肉所用的水，这里按完整口径写。",
+            "fn_en": "That is the whole list. The pouch itself follows EU labelling, which leaves out water used to rehydrate a dried ingredient; we list it here anyway.",
+            "fn_pt": "É toda a lista. A embalagem segue as regras da UE, que omitem a água usada para reidratar um ingrediente seco; aqui listamo-la na mesma."
           }
         },
         "l1": {
@@ -120,9 +120,9 @@
             "heading": "里面有什么",
             "heading_en": "What is in it",
             "heading_pt": "O que tem",
-            "body": "<p>每 100 g 果浆（欧陆成品实测）：膳食纤维约 10.5 g，总多酚约 350 mg，钠未检出。完整营养成分表随下一批次检测报告一起放上来。</p>",
-            "body_en": "<p>Per 100 g of pulp, Eurofins finished-product analysis: dietary fiber about 10.5 g, total polyphenols about 350 mg, sodium not detected. The full nutrition panel goes here with the next batch report.</p>",
-            "body_pt": "<p>Por 100 g de polpa, análise Eurofins ao produto acabado: cerca de 10,5 g de fibra, cerca de 350 mg de polifenóis totais, sódio não detetado. O painel nutricional completo entra aqui com o relatório do próximo lote.</p>",
+            "body": "<p>每 100 g 果浆（欧陆成品实测）：膳食纤维约 10.5 g，总多酚约 350 mg，钠未检出。美国格式的营养成分表见下一栏。</p>",
+            "body_en": "<p>Per 100 g of pulp, Eurofins finished-product analysis: dietary fiber about 10.5 g, total polyphenols about 350 mg, sodium not detected. The same data in the US label format is in the next item.</p>",
+            "body_pt": "<p>Por 100 g de polpa, análise Eurofins ao produto acabado: cerca de 10,5 g de fibra, cerca de 350 mg de polifenóis totais, sódio não detetado. Os mesmos dados no formato do rótulo americano estão no item seguinte.</p>",
             "fn": "",
             "fn_en": "",
             "fn_pt": ""
@@ -172,11 +172,28 @@
             "fn_en": "",
             "fn_pt": ""
           }
+        },
+        "l1n": {
+          "type": "nutrition",
+          "settings": {
+            "open": false,
+            "product": "pouch",
+            "heading": "营养成分（美国标签格式）",
+            "heading_en": "Nutrition Facts",
+            "heading_pt": "Informação nutricional (formato EUA)",
+            "body": "",
+            "body_en": "",
+            "body_pt": "",
+            "fn": "每袋约 25 千卡，换来膳食纤维 11 g 和钾 420 mg。碳水 13 g，其中 11 g 是膳食纤维；糖 2 g；钠未检出。总多酚约 350 mg/100 g（欧陆成品实测，Brix 12 批次）。",
+            "fn_en": "About 25 calories a pouch, and they come with 11 g of fiber (39% of the Daily Value) and 420 mg of potassium. 13 g of carbohydrate, 11 of them fiber; 2 g of sugars; sodium not detected. Total polyphenols about 350 mg per 100 g (Eurofins, finished product, Brix 12 batch).",
+            "fn_pt": "Cerca de 25 calorias por saqueta, com 11 g de fibra (39% do valor diário) e 420 mg de potássio. 13 g de hidratos de carbono, 11 deles fibra; 2 g de açúcares; sódio não detetado. Polifenóis totais cerca de 350 mg por 100 g (Eurofins, produto acabado, lote Brix 12)."
+          }
         }
       },
       "block_order": [
         "l0",
         "l1",
+        "l1n",
         "l2",
         "l3",
         "l4"
