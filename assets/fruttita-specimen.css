@@ -326,3 +326,22 @@
   /* certificates: one column on phones */
   .sp-certs{grid-template-columns:1fr}
 }
+
+/* ── sp-process (Fig. 2 · how it is made) ── */
+.sp-proc{padding:56px 0 64px}
+.sp-proc .sp-proclist{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0 18px}
+.sp-proc .sp-proclist.n5{grid-template-columns:repeat(5,1fr)}
+.sp-proc .sp-proclist li{position:relative;min-width:0}
+.sp-proc .ic{width:120px;height:120px;margin-bottom:14px}
+.sp-proc .ic svg{width:100%;height:100%;display:block}
+.sp-proc .sp-proclist li:not(:last-child)::after{content:"";position:absolute;left:130px;right:-8px;top:60px;border-top:1.5px solid var(--sp-line-dark)}
+.sp-proc .sp-proclist .sp-lab{display:block;color:var(--sp-ink-2);margin-bottom:6px}
+.sp-proc .sp-proclist b{display:block;font-size:17px;line-height:1.3;letter-spacing:-.01em;text-wrap:balance}
+@media (max-width:900px){
+  .sp-proc{padding:40px 0 48px}
+  .sp-proc .sp-proclist,.sp-proc .sp-proclist.n5{grid-template-columns:1fr;gap:26px}
+  .sp-proc .sp-proclist li{display:grid;grid-template-columns:96px 1fr;column-gap:16px;align-items:start}
+  .sp-proc .ic{width:96px;height:96px;margin:0;grid-row:1/3}
+  .sp-proc .sp-proclist li:not(:last-child)::after{left:47px;right:auto;top:104px;bottom:-30px;border-top:0;border-left:1.5px solid var(--sp-line-dark)}
+  .sp-proc .sp-proclist b{font-size:16px}
+}

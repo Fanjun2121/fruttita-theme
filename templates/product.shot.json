@@ -432,12 +432,91 @@
         "china_pt": "Também disponível na China, na Tmall Global e Douyin.",
         "box_asset": "fruttita-packshot-shot.jpg"
       }
+    },
+    "sp_process": {
+      "type": "sp-process",
+      "settings": {
+        "anchor": "how-it-is-made",
+        "fig_label": "图 2 · 从果实到瓶",
+        "fig_label_en": "Fig. 2 · From fruit to bottle",
+        "fig_label_pt": "Fig. 2 · Do fruto à garrafa"
+      },
+      "blocks": {
+        "p0": {
+          "type": "step",
+          "settings": {
+            "icon": "fruit",
+            "where": "非洲",
+            "where_en": "Africa",
+            "where_pt": "África",
+            "title": "采集果实",
+            "title_en": "Fruit collected",
+            "title_pt": "Fruto colhido"
+          }
+        },
+        "p1": {
+          "type": "step",
+          "settings": {
+            "icon": "split",
+            "where": "瓦库昆戈",
+            "where_en": "Waku-Kungo",
+            "where_pt": "Waku-Kungo",
+            "title": "去壳去籽",
+            "title_en": "Shell and seeds out",
+            "title_pt": "Casca e sementes fora"
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "icon": "water",
+            "where": "瓦库昆戈",
+            "where_en": "Waku-Kungo",
+            "where_pt": "Waku-Kungo",
+            "title": "加水打浆",
+            "title_en": "Water added, pulped",
+            "title_pt": "Água adicionada, polpa feita"
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "icon": "bag",
+            "where": "瓦库昆戈",
+            "where_en": "Waku-Kungo",
+            "where_pt": "Waku-Kungo",
+            "title": "杀菌，无菌袋封装",
+            "title_en": "Pasteurized, sealed in aseptic bags",
+            "title_pt": "Pasteurizada, selada em sacos assépticos"
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "icon": "bottle",
+            "where": "胡志明市",
+            "where_en": "Ho Chi Minh City",
+            "where_pt": "Cidade de Ho Chi Minh",
+            "title": "杀菌，玻璃瓶灌装",
+            "title_en": "Pasteurized, filled in glass",
+            "title_pt": "Pasteurizada, engarrafada em vidro"
+          }
+        }
+      },
+      "block_order": [
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
     }
   },
   "order": [
     "sp_pdp_hero",
     "sp_label",
     "sp_taste",
+    "sp_process",
     "sp_faq",
     "sp_also",
     "sp_buy"
