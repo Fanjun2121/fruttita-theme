@@ -32,10 +32,10 @@
             "heading": "产品",
             "heading_en": "Product",
             "heading_pt": "Produto",
-            "subtext": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · 即将进入美国</a></p>",
-            "subtext_en": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · coming to the US</a></p>",
-            "subtext_pt": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · a chegar aos EUA</a></p>",
-            "subtext_zh": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch · 即将进入美国</a></p>"
+            "subtext": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch</a></p>",
+            "subtext_en": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch</a></p>",
+            "subtext_pt": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch</a></p>",
+            "subtext_zh": "<p><a href=\"/products/the-baobab-pulp-shot\">The Shot</a></p><p><a href=\"/products/the-baobab-pulp-pouch\">The Pouch</a></p>"
           }
         },
         "footer_brand": {
