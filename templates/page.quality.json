@@ -181,9 +181,9 @@
             "title": "果肉处理",
             "title_en": "Pulp processing",
             "title_pt": "Processamento da polpa",
-            "text": "去壳去籽，果肉保持整果。以干果肉出口。",
-            "text_en": "Shell and seed removed, pulp kept whole. Exported as dry pulp.",
-            "text_pt": "Casca e sementes removidas, polpa inteira. Exportada como polpa seca."
+            "text": "去壳去籽，果肉保持整果。加水，无菌桶装。",
+            "text_en": "Shell and seed removed, pulp kept whole. Water added, filled into aseptic drums.",
+            "text_pt": "Casca e sementes removidas, polpa inteira. Água adicionada, enchida em tambores assépticos."
           }
         },
         "chain_b2": {
@@ -195,9 +195,9 @@
             "title": "灌装",
             "title_en": "Bottling",
             "title_pt": "Engarrafamento",
-            "text": "加水复原，巴氏杀菌，玻璃瓶灌装。BRCGS A+ / FSSC 22000 / FDA 注册工厂。",
-            "text_en": "Water added back, pasteurized, filled in glass. BRCGS A+ / FSSC 22000 / FDA-registered facility.",
-            "text_pt": "Água devolvida, pasteurizada, engarrafada em vidro. Fábrica BRCGS A+ / FSSC 22000 / registada na FDA."
+            "text": "巴氏杀菌，玻璃瓶灌装。BRCGS A+ / FSSC 22000 / FDA 注册工厂。",
+            "text_en": "Pasteurized, filled in glass. BRCGS A+ / FSSC 22000 / FDA-registered facility.",
+            "text_pt": "Pasteurizada, engarrafada em vidro. Fábrica BRCGS A+ / FSSC 22000 / registada na FDA."
           }
         },
         "chain_b3": {
