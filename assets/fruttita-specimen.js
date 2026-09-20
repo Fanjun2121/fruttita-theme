@@ -33,6 +33,8 @@
       if (t < 1) requestAnimationFrame(frame); else el.textContent = txt;
     }
     setTimeout(function () { requestAnimationFrame(frame); }, delay);
+    // Fallback: where rAF is throttled or paused (background tabs, screenshot renderers) the real value still lands.
+    setTimeout(function () { el.textContent = txt; }, delay + dur + 400);
   }
 
   function prepare(group) {
