@@ -55,10 +55,10 @@
         "h_f0": {
           "type": "fact",
           "settings": {
-            "value": "100 g",
-            "label": "净含量",
-            "label_en": "Net weight",
-            "label_pt": "Peso líquido"
+            "value": "≈380 mg",
+            "label": "钾 / 100 g",
+            "label_en": "Potassium per 100 g",
+            "label_pt": "Potássio / 100 g"
           }
         },
         "h_f1": {
@@ -184,9 +184,9 @@
             "body": "",
             "body_en": "",
             "body_pt": "",
-            "fn": "每袋约 25 千卡，换来膳食纤维 11 g 和钾 420 mg。碳水 13 g，其中 11 g 是膳食纤维；糖 2 g；钠未检出。总多酚约 350 mg/100 g（欧陆成品实测，Brix 12 批次）。",
-            "fn_en": "About 25 calories a pouch, and they come with 11 g of fiber (39% of the Daily Value) and 420 mg of potassium. 13 g of carbohydrate, 11 of them fiber; 2 g of sugars; sodium not detected. Total polyphenols about 350 mg per 100 g (Eurofins, finished product, Brix 12 batch).",
-            "fn_pt": "Cerca de 25 calorias por saqueta, com 11 g de fibra (39% do valor diário) e 420 mg de potássio. 13 g de hidratos de carbono, 11 deles fibra; 2 g de açúcares; sódio não detetado. Polifenóis totais cerca de 350 mg por 100 g (Eurofins, produto acabado, lote Brix 12)."
+            "fn": "每袋约 25 千卡，换来膳食纤维 11 g 和钾 380 mg。碳水 13 g，其中 11 g 是膳食纤维；糖 2 g；钠未检出。总多酚约 350 mg/100 g（欧陆成品实测，Brix 12 批次）。",
+            "fn_en": "About 25 calories a pouch, and they come with 11 g of fiber (39% of the Daily Value) and 380 mg of potassium. 13 g of carbohydrate, 11 of them fiber; 2 g of sugars; sodium not detected. Total polyphenols about 350 mg per 100 g (Eurofins, finished product, Brix 12 batch).",
+            "fn_pt": "Cerca de 25 calorias por saqueta, com 11 g de fibra (39% do valor diário) e 380 mg de potássio. 13 g de hidratos de carbono, 11 deles fibra; 2 g de açúcares; sódio não detetado. Polifenóis totais cerca de 350 mg por 100 g (Eurofins, produto acabado, lote Brix 12)."
           }
         }
       },
