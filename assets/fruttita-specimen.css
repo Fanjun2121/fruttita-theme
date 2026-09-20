@@ -387,3 +387,18 @@ html.sp-motion .sp-proc.is-on .mv-sed-layer{animation:sp-mv-settle 1.6s cubic-be
 html.sp-motion .sp-proc.is-on .mv-sed-dots{animation:sp-mv-sink 1.6s ease-in both;animation-delay:calc(var(--d) + .3s)}
 @keyframes sp-mv-settle{0%{transform:scaleY(0)}100%{transform:scaleY(1)}}
 @keyframes sp-mv-sink{0%{transform:translateY(-36px);opacity:.35}100%{transform:none;opacity:1}}
+
+/* ── sp-hero · photo layout (B1, 2026-09-20): fruit photo full-bleed, packshot as an inset card ── */
+.sp-hero.photo .pic{background:#8A4B2A}
+.sp-hero.photo .pic img.ph{width:100%;height:100%;object-fit:cover;object-position:center 45%;transform:none;-webkit-mask-image:none;mask-image:none}
+.sp-hero.photo .figlab{position:absolute;left:28px;top:28px;color:#F6EBDA;font-size:12px;line-height:1.5;max-width:230px;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.sp-hero.photo .figlab i{font-style:normal;display:block;color:#F1D3A2;letter-spacing:.12em;text-transform:uppercase;font-size:11px}
+.sp-hero.photo .inset{position:absolute;right:28px;bottom:28px;width:150px;background:#E1D6CC;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.28);text-decoration:none;display:block}
+.sp-hero.photo .inset img{width:100%;height:170px;object-fit:cover;object-position:center 58%;transform:scale(1.5);-webkit-mask-image:none;mask-image:none;display:block}
+.sp-hero.photo .inset span{display:block;position:relative;padding:8px 10px;font-family:var(--sp-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sp-ink);background:var(--sp-cream)}
+@media (max-width:900px){
+  .sp-hero.photo .pic{order:-1;min-height:340px}
+  .sp-hero.photo .figlab{left:16px;top:16px}
+  .sp-hero.photo .inset{width:104px;right:14px;bottom:14px}
+  .sp-hero.photo .inset img{height:118px}
+}

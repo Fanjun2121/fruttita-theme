@@ -6,12 +6,12 @@
     "sp_hero": {
       "type": "sp-hero",
       "settings": {
-        "title": "猴面包树，开盖即饮。\n两种配料。",
-        "title_en": "Baobab, ready to drink.\nTwo ingredients.",
-        "title_pt": "Múcua, pronta a beber.\nDois ingredientes.",
-        "sub": "野生采集的非洲猴面包树果浆，加水。没有别的。一支 50 mL，来自一种在枝头上自然风干的果实。",
-        "sub_en": "Wild-harvested African baobab pulp and water. Nothing else. A 50 mL shot of a fruit that dries on the branch.",
-        "sub_pt": "Polpa de múcua africana colhida na natureza e água. Mais nada. Uma dose de 50 mL de um fruto que seca no ramo.",
+        "title": "一颗果实。\n加水。\n就是这一支。",
+        "title_en": "One fruit.\nWater.\nThat's the shot.",
+        "title_pt": "Um fruto.\nÁgua.\nÉ esta a dose.",
+        "sub": "它在枝头上自己风干，所以只需要加水。每支 3 g 膳食纤维、160 mg 钾、约 10 千卡，钠未检出。配料只有水和果浆。",
+        "sub_en": "It dries on the branch, so nothing needs adding. 3 g of fiber, 160 mg of potassium, 10 calories. No sodium, no added sugars.",
+        "sub_pt": "Seca no ramo, por isso não é preciso juntar mais nada. 3 g de fibra, 160 mg de potássio, 10 calorias. Sem sódio, sem açúcares adicionados.",
         "btn1": "购买渠道",
         "btn1_en": "Where to buy",
         "btn1_pt": "Onde comprar",
@@ -27,7 +27,20 @@
         "callout": "",
         "callout_en": "",
         "callout_pt": "",
-        "placeholder_note": ""
+        "placeholder_note": "",
+        "photo_asset": "sp-photo-hero-fruit.jpg",
+        "photo_alt": "A baobab fruit next to one cut open, showing the chalky white pulp",
+        "fig_label": "图 0",
+        "fig_label_en": "Fig. 0",
+        "fig_label_pt": "Fig. 0",
+        "fig_text": "果实落地时的样子。已经是干的。",
+        "fig_text_en": "The fruit, as it falls. Already dry.",
+        "fig_text_pt": "O fruto, tal como cai. Já seco.",
+        "inset_asset": "fruttita-packshot-shot.jpg",
+        "inset_link": "/products/the-baobab-pulp-shot",
+        "inset_caption": "The Shot · 50 mL",
+        "inset_caption_en": "The Shot · 50 mL",
+        "inset_caption_pt": "The Shot · 50 mL"
       },
       "blocks": {
         "sp_hero_b0": {
@@ -174,15 +187,15 @@
     "sp_fruit": {
       "type": "sp-fullbleed",
       "settings": {
-        "title": "它在枝头上自己风干。里面是粉状的果肉。我们加水，没有别的。",
-        "title_en": "It dries on the branch. Inside is a chalky pulp. We add water, nothing else.",
-        "title_pt": "Seca no ramo. Por dentro é uma polpa farinhenta. Juntamos água, mais nada.",
-        "label": "果实 · Adansonia digitata",
-        "label_en": "The fruit · Adansonia digitata",
-        "label_pt": "O fruto · Adansonia digitata",
+        "title": "最大限度原生。",
+        "title_en": "Unimproved on purpose.",
+        "title_pt": "Sem melhorias, de propósito.",
+        "label": "这些树，没有人种",
+        "label_en": "Nobody plants these trees",
+        "label_pt": "Ninguém planta estas árvores",
         "placeholder_note": "",
-        "asset": "sp-photo-home-fruit.jpg",
-        "alt": "A baobab fruit next to one cut open, showing the chalky white pulp"
+        "asset": "sp-photo-imbondeiro-hero.jpg",
+        "alt": "A leafless baobab tree standing alone in dry savanna"
       }
     },
     "sp_specimen": {
@@ -549,7 +562,7 @@
         "b_go": "看证书 →",
         "b_go_en": "See the certificates →",
         "b_go_pt": "Ver os certificados →",
-        "a_asset": "sp-photo-imbondeiro-hero.jpg"
+        "a_asset": "sp-photo-origin-mist.jpg"
       },
       "blocks": {
         "sp_duo_b0": {

@@ -1,6 +1,6 @@
 {%- comment -%} Fruttita Specimen · 01 Hero {%- endcomment -%}
 {%- assign s = section.settings -%}
-<section class="sp sp-hero" style="--sp-hero-scale:{{ s.image_scale | default: 78 | divided_by: 100.0 }};--sp-photo-bg:{{ s.photo_bg | default: '#E1D6CC' }}">
+<section class="sp sp-hero{% if s.photo_asset != blank %} photo{% endif %}" style="--sp-hero-scale:{{ s.image_scale | default: 78 | divided_by: 100.0 }};--sp-photo-bg:{{ s.photo_bg | default: '#E1D6CC' }}">
   <div class="txt">
     <div class="spec sp-lab">
       {%- for block in section.blocks -%}{%- if block.type == 'eyebrow' -%}<span {{ block.shopify_attributes }}>{% render 'i18n-text', default: block.settings.text, en: block.settings.text_en, pt: block.settings.text_pt %}</span>{%- endif -%}{%- endfor -%}
@@ -17,10 +17,16 @@
     </div>
   </div>
   <div class="pic">
+    {%- if s.photo_asset != blank -%}
+      <img class="ph" src="{{ s.photo_asset | asset_url }}" alt="{{ s.photo_alt | escape }}" loading="eager" fetchpriority="high" decoding="async" width="1500" height="1125">
+      {%- if s.fig_text_en != blank -%}<div class="figlab sp-mono"><i>{% render 'i18n-text', default: s.fig_label, en: s.fig_label_en, pt: s.fig_label_pt %}</i>{% render 'i18n-text', default: s.fig_text, en: s.fig_text_en, pt: s.fig_text_pt %}</div>{%- endif -%}
+      {%- if s.inset_asset != blank -%}<a class="inset" href="{% render 'sp-url', url: s.inset_link %}"><img src="{{ s.inset_asset | asset_url }}" alt="" loading="eager" decoding="async" width="300" height="300"><span>{% render 'i18n-text', default: s.inset_caption, en: s.inset_caption_en, pt: s.inset_caption_pt %}</span></a>{%- endif -%}
+    {%- else -%}
     {%- if s.image != blank -%}{{ s.image | image_url: width: 1600 | image_tag: loading: 'eager', alt: s.image.alt | default: 'Fruttita Baobab Pulp Shot' }}
     {%- else -%}<img src="{{ 'fruttita-packshot-shot.jpg' | asset_url }}" alt="Fruttita Baobab Pulp Shot" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">{%- endif -%}
     {%- if s.callout_en != blank -%}<div class="callout"><i>{% render 'i18n-text', default: s.callout_label, en: s.callout_label_en, pt: s.callout_label_pt %}</i>{% render 'i18n-text', default: s.callout, en: s.callout_en, pt: s.callout_pt %}</div>{%- endif -%}
     {%- if s.placeholder_note != blank -%}<div class="sp-ph">{{ s.placeholder_note }}</div>{%- endif -%}
+    {%- endif -%}
   </div>
 </section>
 {% schema %}
@@ -40,7 +46,15 @@
     {"type":"range","id":"image_scale","label":"Image scale %","min":50,"max":130,"step":2,"default":78},
     {"type":"text","id":"callout_label","label":"引线标签 (zh)"},{"type":"text","id":"callout_label_en","label":"Callout label (en)"},{"type":"text","id":"callout_label_pt","label":"Callout label (pt)"},
     {"type":"text","id":"callout","label":"引线文字 (zh)"},{"type":"text","id":"callout_en","label":"Callout (en)"},{"type":"text","id":"callout_pt","label":"Callout (pt)"},
-    {"type":"text","id":"placeholder_note","label":"Placeholder note (internal, leave blank on live)"}
+    {"type":"text","id":"placeholder_note","label":"Placeholder note (internal, leave blank on live)"},
+    {"type":"header","content":"Photo layout (set a photo asset to switch on)"},
+    {"type":"text","id":"photo_asset","label":"Full-bleed photo: theme asset filename"},
+    {"type":"text","id":"photo_alt","label":"Photo alt text"},
+    {"type":"text","id":"fig_label","label":"图注编号 (zh)"},{"type":"text","id":"fig_label_en","label":"Figure no. (en)"},{"type":"text","id":"fig_label_pt","label":"Figure no. (pt)"},
+    {"type":"text","id":"fig_text","label":"图注 (zh)"},{"type":"text","id":"fig_text_en","label":"Figure text (en)"},{"type":"text","id":"fig_text_pt","label":"Figure text (pt)"},
+    {"type":"text","id":"inset_asset","label":"Inset packshot: theme asset filename"},
+    {"type":"url","id":"inset_link","label":"Inset link"},
+    {"type":"text","id":"inset_caption","label":"小卡文字 (zh)"},{"type":"text","id":"inset_caption_en","label":"Inset caption (en)"},{"type":"text","id":"inset_caption_pt","label":"Inset caption (pt)"}
   ],
   "blocks": [
     {"type":"eyebrow","name":"Eyebrow item","settings":[{"type":"text","id":"text","label":"zh"},{"type":"text","id":"text_en","label":"en"},{"type":"text","id":"text_pt","label":"pt"}]},
